@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E14B32</color>
+    <color name="colorPrimaryDark">#A12828</color>
+    <color name="colorAccent">#E14B32</color>
+    <color name="colorText">#000000</color>
+    <color name="colorBackground">#FFF</color>
+    <color name="colorBackgroundCardView">#FFF</color>
+    <color name="colorNavigationItem">#333</color>
+    <color name="colorDivider">#666</color>
+    <color name="textColorPrimary">#BA0000</color>
+
+    <color name="colorAdCreatorImage">#EEE</color>
+
+    <color name="entranceStartColor">#E14B32</color>
+    <color name="entranceEndColor">#CC2C3F</color>
+
+    <color name="photoStartColor">#b6fbff</color>
+    <color name="photoEndColor">#83a4d4</color>
+
+    <color name="colorAdsDate">#EEE</color>
+    <color name="colorBlack">#000</color>
+    <color name="colorWhite">#FFF</color>
+    <color name="colorTransparent">#0000</color>
+</resources>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_entrance"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aldrich"
+            android:paddingTop="15dp"
+            android:text="Vape"
+            android:textAlignment="center"
+            android:textColor="@color/colorAdsDate"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aldrich"
+            android:text="Барахолка"
+            android:textAlignment="center"
+            android:textColor="@color/colorAdsDate"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Первый раз у нас?"
+            android:textColor="@color/colorAdsDate"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorBackgroundCardView"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/gradient_entrance">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/signButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:background="@color/colorTransparent"
+                android:textColor="@color/colorAdsDate"
+                android:text="Регистрация" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorBackgroundCardView"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/logButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:background="@color/colorTransparent"
+                android:textColor="@color/colorAdsDate"
+                android:gravity="center"
+                android:text="Вход" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

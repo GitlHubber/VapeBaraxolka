@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="all"
+        android:id="@+id/general_group">
+        <item
+            android:id="@+id/ADS"
+            android:icon="@drawable/ic_ads"
+            android:title="Объявления"/>
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/secondary_group">
+        <item
+            android:id="@+id/MY_ADS"
+            android:icon="@drawable/ic_my_ads"
+            android:title="Мои объявления" />
+        <item
+            android:id="@+id/FAVOURITES"
+            android:icon="@drawable/ic_bookmark"
+            android:title="Закладки" />
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/thrid_group">
+        <item
+            android:id="@+id/RULES"
+            android:icon="@drawable/ic_rules"
+            android:title="Правила" />
+        <item
+            android:id="@+id/Technical_SUPPORT"
+            android:icon="@drawable/ic_build_black_24dp"
+            android:title="Техническая поддержка" />
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/SETTINGS_group">
+        <item
+            android:id="@+id/SETTINGS"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="Настройки" />
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/ADMIN_group">
+        <item
+            android:id="@+id/MODERATOR"
+            android:visible="false"
+            android:title="Рассмотрение"
+            app:actionLayout="@layout/menu_counter"/>
+        <item
+            android:id="@+id/ADMIN"
+            android:visible="false"
+            android:title="Назначить редактора" />
+    </group>
+
+</menu>

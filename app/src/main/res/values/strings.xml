@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">Baraxolka</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="favourites">Закладки</string>
+
+    <string name="ads">Объявления</string>
+    <string name="account">Аккаунт</string>
+    <string name="adCreating">Создание объявления</string>
+
+    <string-array name="Spinner_email_items">
+        <item>"@mail.ru"</item>
+        <item>"@gmail.com"</item>
+        <item>"@yandex.by"</item>
+    </string-array>
+
+    <string-array name="Spinner_region_items">
+        <item>"Не указано"</item>
+        <item>"Брестская обл."</item>
+        <item>"Витебская обл."</item>
+        <item>"Гомельская обл."</item>
+        <item>"Гродненская обл."</item>
+        <item>"Минская обл."</item>
+        <item>"Могилевская обл."</item>
+    </string-array>
+
+    <string-array name="Spinner_category_items">
+        <item>"Не выбрано"</item>
+        <item>"Vape"</item>
+        <item>"Кальяны"</item>
+        <item>"Vape комплектующие"</item>
+    </string-array>
+
+    <string-array name="Spinner_vape_items">
+        <item>"Не выбрано"</item>
+        <item>"Вэйп большой"</item>
+        <item>"Вэйп поменьше"</item>
+    </string-array>
+
+    <string-array name="Spinner_kalyan_items">
+        <item>"Не выбрано"</item>
+        <item>"Кальян MYA"</item>
+        <item>"Кальян SkySeven"</item>
+    </string-array>
+
+    <string-array name="Spinner_vape_components_items">
+        <item>"Не выбрано"</item>
+        <item>"Плата"</item>
+        <item>"Аккумулятор iJust 3"</item>
+        <item>"Аккумулятор Samsung 40T 21700"</item>
+    </string-array>
+
+    <string-array name="NothingSelected">
+        <item>"Не выбрано"</item>
+    </string-array>
+
+    <string-array name="Nothing">
+        <item>"Не указано"</item>
+    </string-array>
+
+    <string-array name="BrestRegion">
+        <item>"Брест"</item>
+    </string-array>
+
+    <string-array name="VitebskRegion">
+        <item>"Витебск"</item>
+    </string-array>
+
+    <string-array name="GomelRegion">
+        <item>"Гомель"</item>
+    </string-array>
+
+    <string-array name="GrodnoRegion">
+        <item>"Гродно"</item>
+    </string-array>
+
+    <string-array name="MinskRegion">
+        <item>"Минск"</item>
+        <item>"Логойск"</item>
+    </string-array>
+
+    <string-array name="MogilevRegion">
+        <item>"Могилев"</item>
+    </string-array>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_full_ad">FullAd</string>
+    <string name="title_activity_seller_profile">SellerProfileActivity</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="my_ads">Мои объявления</string>
+    <string name="settings">Настройки</string>
+    <string name="authorization">Вход</string>
+</resources>

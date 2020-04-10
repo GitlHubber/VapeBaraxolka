@@ -1,0 +1,125 @@
+package ragalik.baraxolka.network;
+
+import java.util.List;
+
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
+import ragalik.baraxolka.network.entities.AdsCount;
+import ragalik.baraxolka.network.entities.RegisterResponse;
+import ragalik.baraxolka.network.entities.ServerResponse;
+import ragalik.baraxolka.network.entities.User;
+import ragalik.baraxolka.network.entities.UserResponse;
+import ragalik.baraxolka.paging_feed.AdResponse;
+import ragalik.baraxolka.paging_feed.FullAdResponse;
+import retrofit2.Call;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
+import retrofit2.http.Multipart;
+import retrofit2.http.POST;
+import retrofit2.http.Part;
+import retrofit2.http.Query;
+
+public interface IApi {
+
+    //GET---GET
+
+    @GET("/scripts/getUserInfo.php")
+    Call<List<User>> getUserInfo(@Query("id") int id);
+
+    @GET("/scripts/getAds.php")
+    Call<AdResponse> getAds(@Query("page") int page,
+                            @Query("status_number") int status_number,
+                            @Query("id") int id);
+
+    @GET("/scripts/getAdsCount.php")
+    Call<AdsCount> getAdsCount(@Query("status_number") int status_number);
+
+    @GET("/scripts/getMyAds.php")
+    Call<AdResponse> getMyAds(@Query("page") int page,
+                              @Query("status_number") int status_number,
+                              @Query("id") int id,
+                              @Query("user_id") int user_id);
+
+    @GET("/scripts/getSearchAds.php")
+    Call<AdResponse> getSearchAds(@Query("page") int page,
+                              @Query("status_number") int status_number,
+                              @Query("where") String where,
+                              @Query("sort_field") String sort_field,
+                              @Query("sort_type") String sort_type,
+                              @Query("user_id") int user_id);
+
+    @GET("/scripts/getFavouritesAds.php")
+    Call<AdResponse> getFavouritesAds(@Query("page") int page,
+                                      @Query("id") int id);
+
+    @GET("/scripts/acceptRejectAd.php")
+    Call<ServerResponse> acceptRejectAd(@Query("id") int id,
+                                        @Query("status") int status,
+                                        @Query("dateTime") String datetime);
+
+    @GET("/scripts/getFullAd.php")
+    Call<FullAdResponse> getFullAd(@Query("id_ad") int id_ad,
+                                   @Query("user_id") int user_id);
+
+    @GET("/scripts/authorization.php")
+    Call<UserResponse> auth(@Query("email_or_number") String email_or_number,
+                            @Query("flag") String flag,
+                            @Query("password") String password);
+
+    @GET("/scripts/getMyAdsCount.php")
+    Call<AdsCount> getMyAdsCount(@Query("status_number") int status,
+                                 @Query("id") int id);
+
+    @GET("/scripts/getSearchAdsCount.php")
+    Call<AdsCount> getSearchAdsCount(@Query("status_number") int status,
+                                 @Query("where") String where);
+
+
+
+    //POST---POST
+
+    @FormUrlEncoded
+    @POST("/scripts/deleteUserImage.php")
+    Call<ServerResponse> deleteAccountImage(@Field("id") int id,
+                                            @Field("filename") String filename);
+
+    @FormUrlEncoded
+    @POST("/scripts/setDeleteBookmark.php")
+    Call<ServerResponse> setDeleteBookmark(@Field("ad_id") int ad_id,
+                                           @Field("user_id") int user_id,
+                                           @Field("datetime") String datetime,
+                                           @Field("flag") String flag);
+
+    @FormUrlEncoded
+    @POST("/scripts/registration.php")
+    Call<RegisterResponse> register(@Field("nickname") String nickname,
+                                    @Field("email") String email,
+                                    @Field("phoneNumber") String phoneNumber,
+                                    @Field("region") String region,
+                                    @Field("town") String town,
+                                    @Field("password") String password);
+
+
+
+    //MULTIPART---MULTIPART
+
+    @Multipart
+    @POST("/scripts/uploadAccountImage.php")
+    Call<String> uploadAccountImage(@Part MultipartBody.Part file,
+                                    @Part("email") RequestBody email);
+
+    @Multipart
+    @POST("/scripts/insertAd.php")
+    Call<ServerResponse> insertAd(@Part("title") RequestBody title,
+                                  @Part("description") RequestBody description,
+                                  @Part MultipartBody.Part image1,
+                                  @Part MultipartBody.Part image2,
+                                  @Part MultipartBody.Part image3,
+                                  @Part MultipartBody.Part image4,
+                                  @Part MultipartBody.Part image5,
+                                  @Part("price") RequestBody price,
+                                  @Part("nickname") RequestBody nickname,
+                                  @Part("dateTime") RequestBody datetime,
+                                  @Part("subcategory") RequestBody subcategory);
+}
