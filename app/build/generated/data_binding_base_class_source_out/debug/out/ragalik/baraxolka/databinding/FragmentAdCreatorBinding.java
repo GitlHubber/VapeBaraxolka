@@ -11,7 +11,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
-import androidx.appcompat.widget.AppCompatRadioButton;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewbinding.ViewBinding;
@@ -59,13 +58,7 @@ public final class FragmentAdCreatorBinding implements ViewBinding {
   public final TextInputLayout descriptionEditText;
 
   @NonNull
-  public final AppCompatRadioButton newState;
-
-  @NonNull
   public final TextInputLayout priceEditText;
-
-  @NonNull
-  public final AppCompatRadioButton secondaryState;
 
   @NonNull
   public final Spinner subcategorySpinner;
@@ -83,9 +76,6 @@ public final class FragmentAdCreatorBinding implements ViewBinding {
   public final TextView tv1;
 
   @NonNull
-  public final TextView tv2;
-
-  @NonNull
   public final TextView tv3;
 
   @NonNull
@@ -96,11 +86,10 @@ public final class FragmentAdCreatorBinding implements ViewBinding {
       @NonNull Toolbar adCreatorToolbar, @NonNull ImageView adPhoto1, @NonNull ImageView adPhoto2,
       @NonNull ImageView adPhoto3, @NonNull ImageView adPhoto4, @NonNull ImageView adPhoto5,
       @NonNull AppCompatButton addAdButton, @NonNull Spinner categorySpinner,
-      @NonNull TextInputLayout descriptionEditText, @NonNull AppCompatRadioButton newState,
-      @NonNull TextInputLayout priceEditText, @NonNull AppCompatRadioButton secondaryState,
+      @NonNull TextInputLayout descriptionEditText, @NonNull TextInputLayout priceEditText,
       @NonNull Spinner subcategorySpinner, @NonNull TextView textView4,
       @NonNull TextInputLayout titleEditText, @NonNull TextView tv, @NonNull TextView tv1,
-      @NonNull TextView tv2, @NonNull TextView tv3, @NonNull TextView uploadPhotoCounterAdCreator) {
+      @NonNull TextView tv3, @NonNull TextView uploadPhotoCounterAdCreator) {
     this.rootView = rootView;
     this.adCreatorFrame = adCreatorFrame;
     this.adCreatorMainLabel = adCreatorMainLabel;
@@ -113,15 +102,12 @@ public final class FragmentAdCreatorBinding implements ViewBinding {
     this.addAdButton = addAdButton;
     this.categorySpinner = categorySpinner;
     this.descriptionEditText = descriptionEditText;
-    this.newState = newState;
     this.priceEditText = priceEditText;
-    this.secondaryState = secondaryState;
     this.subcategorySpinner = subcategorySpinner;
     this.textView4 = textView4;
     this.titleEditText = titleEditText;
     this.tv = tv;
     this.tv1 = tv1;
-    this.tv2 = tv2;
     this.tv3 = tv3;
     this.uploadPhotoCounterAdCreator = uploadPhotoCounterAdCreator;
   }
@@ -208,19 +194,9 @@ public final class FragmentAdCreatorBinding implements ViewBinding {
         missingId = "descriptionEditText";
         break missingId;
       }
-      AppCompatRadioButton newState = rootView.findViewById(R.id.newState);
-      if (newState == null) {
-        missingId = "newState";
-        break missingId;
-      }
       TextInputLayout priceEditText = rootView.findViewById(R.id.priceEditText);
       if (priceEditText == null) {
         missingId = "priceEditText";
-        break missingId;
-      }
-      AppCompatRadioButton secondaryState = rootView.findViewById(R.id.secondaryState);
-      if (secondaryState == null) {
-        missingId = "secondaryState";
         break missingId;
       }
       Spinner subcategorySpinner = rootView.findViewById(R.id.subcategorySpinner);
@@ -248,11 +224,6 @@ public final class FragmentAdCreatorBinding implements ViewBinding {
         missingId = "tv1";
         break missingId;
       }
-      TextView tv2 = rootView.findViewById(R.id.tv2);
-      if (tv2 == null) {
-        missingId = "tv2";
-        break missingId;
-      }
       TextView tv3 = rootView.findViewById(R.id.tv3);
       if (tv3 == null) {
         missingId = "tv3";
@@ -265,9 +236,8 @@ public final class FragmentAdCreatorBinding implements ViewBinding {
       }
       return new FragmentAdCreatorBinding((FrameLayout) rootView, adCreatorFrame,
           adCreatorMainLabel, adCreatorToolbar, adPhoto1, adPhoto2, adPhoto3, adPhoto4, adPhoto5,
-          addAdButton, categorySpinner, descriptionEditText, newState, priceEditText,
-          secondaryState, subcategorySpinner, textView4, titleEditText, tv, tv1, tv2, tv3,
-          uploadPhotoCounterAdCreator);
+          addAdButton, categorySpinner, descriptionEditText, priceEditText, subcategorySpinner,
+          textView4, titleEditText, tv, tv1, tv3, uploadPhotoCounterAdCreator);
     }
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }

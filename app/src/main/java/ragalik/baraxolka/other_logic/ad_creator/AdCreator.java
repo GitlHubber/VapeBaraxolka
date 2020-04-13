@@ -66,22 +66,21 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
     public static ArrayList<File> files;
     private ArrayAdapter<CharSequence> adapterCategory;
     private ArrayAdapter<CharSequence> adapterSubcategory;
-    private AppCompatRadioButton newState;
-    private AppCompatRadioButton secondaryState;
+    //private AppCompatRadioButton newState;
+    //private AppCompatRadioButton secondaryState;
+    //private String goodsState;
+    // private boolean state;
     public static TextView uploadAmountTW;
     public static AppCompatTextView mainLabel;
     public static String uploadedCounterStr;
     public static AppCompatActivity activity;
     public static ArrayList<String> uris;
     static Uri selectedImageUri;
-    private boolean state;
     public static Uri outputFileUri;
     public static AppCompatActivity appCompatActivity;
 
     public static File fileWithUri;
-
     private ProgressDialog pDialog;
-
     private static ArrayList<MultipartBody.Part> parts = new ArrayList<>();
 
 
@@ -179,10 +178,10 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
             public void onNothingSelected(AdapterView<?> parent) {}
         });
 
-        newState = findViewById(R.id.newState);
-        secondaryState = findViewById(R.id.secondaryState);
-        newState.setOnClickListener(this);
-        secondaryState.setOnClickListener(this);
+//        newState = findViewById(R.id.newState);
+//        secondaryState = findViewById(R.id.secondaryState);
+//        newState.setOnClickListener(this);
+//        secondaryState.setOnClickListener(this);
 
         descriptionEditText = findViewById(R.id.descriptionEditText);
         priceEditText = findViewById(R.id.priceEditText);
@@ -195,7 +194,6 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) {
             if (requestCode == 1) {
-
                 if (fileWithUri == null) {
                     fileWithUri = new File(PathUtils.getPath(this, data.getData()));
 
@@ -209,7 +207,6 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
                 ImageView imageView = new ImageView(this);
                 imageView.setImageDrawable(getResources().getDrawable(R.drawable.ad_creator_image_style));
 
-                //getResizeBitmap(selectedImageUri);
                 addImage();
             }
         }
@@ -267,16 +264,18 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
     public void onClick(View v) {
         boolean flag = false;
         switch (v.getId()) {
-            case R.id.newState :
-                state = true;
-                newState.setChecked(true);
-                secondaryState.setChecked(false);
-                break;
-            case R.id.secondaryState :
-                state = false;
-                secondaryState.setChecked(true);
-                newState.setChecked(false);
-                break;
+//            case R.id.newState :
+//                state = true;
+//                newState.setChecked(true);
+//                secondaryState.setChecked(false);
+//                goodsState = "Новое";
+//                break;
+//            case R.id.secondaryState :
+//                state = false;
+//                secondaryState.setChecked(true);
+//                newState.setChecked(false);
+//                goodsState = "Б/У";
+//                break;
             case R.id.adPhoto1 :
                 choosedIndex = 0;
                 flag = true;
@@ -307,10 +306,8 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
                 break;
             case R.id.addAdButton:
                 insertAd();
-                if(this != null) {
-                    InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
-                    inputMethodManager.hideSoftInputFromWindow(v.getWindowToken(), 0);
-                }
+                InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+                inputMethodManager.hideSoftInputFromWindow(v.getWindowToken(), 0);
                 break;
         }
 

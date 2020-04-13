@@ -38,7 +38,7 @@ public class ADS extends Fragment {
     private static SwipeRefreshLayout swipeRefreshLayout;
     public static boolean isFilteredAds;
     private SearchViewModel searchViewModel;
-    private AdViewModel adViewModel;
+    public static AdViewModel adViewModel;
     public static ProgressBar progressBar;
 
     private RecyclerView adsRecyclerView;

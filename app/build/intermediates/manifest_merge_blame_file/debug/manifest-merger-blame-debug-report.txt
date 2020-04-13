@@ -6,228 +6,229 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml
+8-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml
+9-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-11-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:6:5-79
-11-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:6:22-76
+11-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:6:5-79
+11-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:6:22-76
 12    <uses-permission android:name="android.permission.INTERNET" />
-12-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:7:5-67
-12-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:7:22-64
+12-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:7:5-67
+12-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:7:22-64
 13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-13-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:8:5-80
-13-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:8:22-78
+13-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:8:5-80
+13-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:8:22-78
 14
 15    <supports-screens
-15-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:10:5-14:40
+15-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:10:5-14:40
 16        android:largeScreens="true"
-16-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:11:9-36
+16-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:11:9-36
 17        android:normalScreens="true"
-17-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:12:9-37
+17-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:12:9-37
 18        android:smallScreens="true"
-18-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:13:9-36
+18-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:13:9-36
 19        android:xlargeScreens="true" />
-19-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:14:9-37
+19-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:14:9-37
 20
 21    <application
-21-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:16:5-110:19
+21-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:16:5-110:19
 22        android:allowBackup="true"
-22-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:17:9-35
+22-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:17:9-35
 23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 23-->[androidx.core:core:1.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\163ba80aa74cf2b66a97b31641e8ba82\core-1.2.0\AndroidManifest.xml:24:18-86
 24        android:debuggable="true"
 25        android:icon="@mipmap/ic_launcher"
-25-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:18:9-43
+25-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:18:9-43
 26        android:label="@string/app_name"
-26-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:19:9-41
+26-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:19:9-41
 27        android:largeHeap="true"
-27-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:20:9-33
+27-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:20:9-33
 28        android:roundIcon="@mipmap/ic_launcher_round"
-28-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:21:9-54
+28-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:21:9-54
 29        android:supportsRtl="true"
-29-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:22:9-35
-30        android:usesCleartextTraffic="true" >
-30-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:23:9-44
-31        <activity
-31-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:25:9-33:20
-32            android:name="ragalik.baraxolka.paging_feed.search.SearchActivity"
-32-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:26:13-62
-33            android:label="@string/title_activity_search"
-33-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:27:13-58
-34            android:parentActivityName="ragalik.baraxolka.MainActivity"
-34-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:28:13-55
-35            android:theme="@style/AppTheme" >
-35-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:29:13-44
-36            <meta-data
-36-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:30:13-32:49
-37                android:name="android.support.PARENT_ACTIVITY"
-37-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:31:17-63
-38                android:value=".MainActivity" />
-38-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:32:17-46
-39        </activity>
-40        <activity
-40-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:34:9-42:20
-41            android:name="ragalik.baraxolka.other_logic.ad_creator.AdCreator"
-41-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:35:13-61
-42            android:label="@string/title_activity_settings"
-42-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:36:13-60
-43            android:parentActivityName="ragalik.baraxolka.MainActivity"
-43-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:37:13-55
-44            android:theme="@style/AppTheme" >
-44-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:38:13-44
-45            <meta-data
-45-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:30:13-32:49
-46                android:name="android.support.PARENT_ACTIVITY"
-46-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:31:17-63
-47                android:value=".MainActivity" />
-47-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:32:17-46
-48        </activity>
-49        <activity
-49-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:43:9-51:20
-50            android:name="ragalik.baraxolka.other_logic.activities.SettingsActivity"
-50-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:44:13-68
-51            android:label="@string/title_activity_settings"
-51-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:45:13-60
-52            android:parentActivityName="ragalik.baraxolka.MainActivity"
-52-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:46:13-55
-53            android:theme="@style/AppTheme" >
-53-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:47:13-44
-54            <meta-data
-54-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:30:13-32:49
-55                android:name="android.support.PARENT_ACTIVITY"
-55-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:31:17-63
-56                android:value=".MainActivity" />
-56-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:32:17-46
-57        </activity>
-58        <activity
-58-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:52:9-60:20
-59            android:name="ragalik.baraxolka.paging_feed.seller.SellerProfileActivity"
-59-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:53:13-69
-60            android:label="@string/title_activity_seller_profile"
-60-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:54:13-66
-61            android:parentActivityName="ragalik.baraxolka.other_logic.full_ad.FullAdActivity"
-61-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:55:13-77
-62            android:theme="@style/AppTheme" >
-62-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:56:13-44
-63            <meta-data
-63-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:30:13-32:49
-64                android:name="android.support.PARENT_ACTIVITY"
-64-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:31:17-63
-65                android:value=".other_logic.full_ad.FullAdActivity" />
-65-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:32:17-46
-66        </activity>
-67        <activity
-67-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:61:9-70:20
-68            android:name="ragalik.baraxolka.other_logic.full_ad.FullAdActivity"
-68-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:62:13-63
-69            android:label="@string/title_activity_full_ad"
-69-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:63:13-59
-70            android:launchMode="singleTop"
-70-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:64:13-43
-71            android:parentActivityName="ragalik.baraxolka.MainActivity"
-71-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:65:13-55
-72            android:theme="@style/AppTheme" >
-72-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:66:13-44
-73            <meta-data
-73-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:30:13-32:49
-74                android:name="android.support.PARENT_ACTIVITY"
-74-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:31:17-63
-75                android:value=".MainActivity" />
-75-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:32:17-46
-76        </activity>
-77        <activity
-77-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:71:9-78:20
-78            android:name="ragalik.baraxolka.other_logic.account.Account"
-78-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:72:13-56
-79            android:parentActivityName="ragalik.baraxolka.MainActivity"
-79-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:73:13-55
-80            android:theme="@style/AppTheme" >
-80-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:74:13-44
-81            <meta-data
-81-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:30:13-32:49
-82                android:name="android.support.PARENT_ACTIVITY"
-82-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:31:17-63
-83                android:value=".MainActivity" />
-83-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:32:17-46
-84        </activity>
-85        <activity
-85-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:79:9-86:20
-86            android:name="ragalik.baraxolka.other_logic.activities.SplashScreenActivity"
-86-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:79:19-78
-87            android:theme="@style/AppTheme" >
-87-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:80:13-44
-88            <intent-filter>
-88-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:81:13-85:29
-89                <action android:name="android.intent.action.MAIN" />
-89-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:82:17-69
-89-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:82:25-66
-90
-91                <category android:name="android.intent.category.LAUNCHER" />
-91-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:84:17-77
-91-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:84:27-74
-92            </intent-filter>
-93        </activity>
-94        <activity
-94-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:87:9-91:46
-95            android:name="ragalik.baraxolka.MainActivity"
-95-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:88:13-41
-96            android:label="@string/app_name"
-96-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:89:13-45
-97            android:launchMode="singleTop"
-97-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:90:13-43
-98            android:theme="@style/AppTheme" />
-98-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:91:13-44
-99
-100        <meta-data
-100-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:93:9-95:57
-101            android:name="preloaded_fonts"
-101-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:94:13-43
-102            android:resource="@array/preloaded_fonts" />
-102-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:95:13-54
-103
-104        <uses-library
-104-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:97:9-99:40
-105            android:name="org.apache.http.legacy"
-105-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:98:13-50
-106            android:required="false" />
-106-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:99:13-37
-107
-108        <provider
-109            android:name="androidx.core.content.FileProvider"
-109-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:102:13-62
-110            android:authorities="ragalik.baraxolka.provider"
-110-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:103:13-60
-111            android:exported="false"
-111-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:104:13-37
-112            android:grantUriPermissions="true" >
-112-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:105:13-47
-113            <meta-data
-113-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:106:13-108:57
-114                android:name="android.support.FILE_PROVIDER_PATHS"
-114-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:107:17-67
-115                android:resource="@xml/provider_paths" />
-115-->C:\Users\Ragalik\Desktop\Baraxolka\app\src\main\AndroidManifest.xml:108:17-55
-116        </provider>
-117        <provider
-117-->[com.squareup.picasso:picasso:2.71828] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\667ff8d4df10af93da4f15cd70b3392d\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
-118            android:name="com.squareup.picasso.PicassoProvider"
-118-->[com.squareup.picasso:picasso:2.71828] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\667ff8d4df10af93da4f15cd70b3392d\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
-119            android:authorities="ragalik.baraxolka.com.squareup.picasso"
-119-->[com.squareup.picasso:picasso:2.71828] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\667ff8d4df10af93da4f15cd70b3392d\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
-120            android:exported="false" />
-120-->[com.squareup.picasso:picasso:2.71828] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\667ff8d4df10af93da4f15cd70b3392d\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
-121        <provider
-121-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\0cb84a9f6b2cae5c973ef025c366f9e5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
-122            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-122-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\0cb84a9f6b2cae5c973ef025c366f9e5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
-123            android:authorities="ragalik.baraxolka.lifecycle-process"
-123-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\0cb84a9f6b2cae5c973ef025c366f9e5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
-124            android:exported="false"
-124-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\0cb84a9f6b2cae5c973ef025c366f9e5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
-125            android:multiprocess="true" />
-125-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\0cb84a9f6b2cae5c973ef025c366f9e5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
-126    </application>
-127
-128</manifest>
+29-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:22:9-35
+30        android:testOnly="true"
+31        android:usesCleartextTraffic="true" >
+31-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:23:9-44
+32        <activity
+32-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:25:9-33:20
+33            android:name="ragalik.baraxolka.paging_feed.search.SearchActivity"
+33-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:26:13-62
+34            android:label="@string/title_activity_search"
+34-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:27:13-58
+35            android:parentActivityName="ragalik.baraxolka.MainActivity"
+35-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:28:13-55
+36            android:theme="@style/AppTheme" >
+36-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:29:13-44
+37            <meta-data
+37-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:30:13-32:49
+38                android:name="android.support.PARENT_ACTIVITY"
+38-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:31:17-63
+39                android:value=".MainActivity" />
+39-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:32:17-46
+40        </activity>
+41        <activity
+41-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:34:9-42:20
+42            android:name="ragalik.baraxolka.other_logic.ad_creator.AdCreator"
+42-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:35:13-61
+43            android:label="@string/title_activity_settings"
+43-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:36:13-60
+44            android:parentActivityName="ragalik.baraxolka.MainActivity"
+44-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:37:13-55
+45            android:theme="@style/AppTheme" >
+45-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:38:13-44
+46            <meta-data
+46-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:30:13-32:49
+47                android:name="android.support.PARENT_ACTIVITY"
+47-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:31:17-63
+48                android:value=".MainActivity" />
+48-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:32:17-46
+49        </activity>
+50        <activity
+50-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:43:9-51:20
+51            android:name="ragalik.baraxolka.other_logic.activities.SettingsActivity"
+51-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:44:13-68
+52            android:label="@string/title_activity_settings"
+52-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:45:13-60
+53            android:parentActivityName="ragalik.baraxolka.MainActivity"
+53-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:46:13-55
+54            android:theme="@style/AppTheme" >
+54-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:47:13-44
+55            <meta-data
+55-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:30:13-32:49
+56                android:name="android.support.PARENT_ACTIVITY"
+56-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:31:17-63
+57                android:value=".MainActivity" />
+57-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:32:17-46
+58        </activity>
+59        <activity
+59-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:52:9-60:20
+60            android:name="ragalik.baraxolka.paging_feed.seller.SellerProfileActivity"
+60-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:53:13-69
+61            android:label="@string/title_activity_seller_profile"
+61-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:54:13-66
+62            android:parentActivityName="ragalik.baraxolka.other_logic.full_ad.FullAdActivity"
+62-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:55:13-77
+63            android:theme="@style/AppTheme" >
+63-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:56:13-44
+64            <meta-data
+64-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:30:13-32:49
+65                android:name="android.support.PARENT_ACTIVITY"
+65-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:31:17-63
+66                android:value=".other_logic.full_ad.FullAdActivity" />
+66-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:32:17-46
+67        </activity>
+68        <activity
+68-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:61:9-70:20
+69            android:name="ragalik.baraxolka.other_logic.full_ad.FullAdActivity"
+69-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:62:13-63
+70            android:label="@string/title_activity_full_ad"
+70-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:63:13-59
+71            android:launchMode="singleTop"
+71-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:64:13-43
+72            android:parentActivityName="ragalik.baraxolka.MainActivity"
+72-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:65:13-55
+73            android:theme="@style/AppTheme" >
+73-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:66:13-44
+74            <meta-data
+74-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:30:13-32:49
+75                android:name="android.support.PARENT_ACTIVITY"
+75-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:31:17-63
+76                android:value=".MainActivity" />
+76-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:32:17-46
+77        </activity>
+78        <activity
+78-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:71:9-78:20
+79            android:name="ragalik.baraxolka.other_logic.account.Account"
+79-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:72:13-56
+80            android:parentActivityName="ragalik.baraxolka.MainActivity"
+80-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:73:13-55
+81            android:theme="@style/AppTheme" >
+81-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:74:13-44
+82            <meta-data
+82-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:30:13-32:49
+83                android:name="android.support.PARENT_ACTIVITY"
+83-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:31:17-63
+84                android:value=".MainActivity" />
+84-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:32:17-46
+85        </activity>
+86        <activity
+86-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:79:9-86:20
+87            android:name="ragalik.baraxolka.other_logic.activities.SplashScreenActivity"
+87-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:79:19-78
+88            android:theme="@style/AppTheme" >
+88-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:80:13-44
+89            <intent-filter>
+89-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:81:13-85:29
+90                <action android:name="android.intent.action.MAIN" />
+90-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:82:17-69
+90-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:82:25-66
+91
+92                <category android:name="android.intent.category.LAUNCHER" />
+92-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:84:17-77
+92-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:84:27-74
+93            </intent-filter>
+94        </activity>
+95        <activity
+95-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:87:9-91:46
+96            android:name="ragalik.baraxolka.MainActivity"
+96-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:88:13-41
+97            android:label="@string/app_name"
+97-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:89:13-45
+98            android:launchMode="singleTop"
+98-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:90:13-43
+99            android:theme="@style/AppTheme" />
+99-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:91:13-44
+100
+101        <meta-data
+101-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:93:9-95:57
+102            android:name="preloaded_fonts"
+102-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:94:13-43
+103            android:resource="@array/preloaded_fonts" />
+103-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:95:13-54
+104
+105        <uses-library
+105-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:97:9-99:40
+106            android:name="org.apache.http.legacy"
+106-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:98:13-50
+107            android:required="false" />
+107-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:99:13-37
+108
+109        <provider
+110            android:name="androidx.core.content.FileProvider"
+110-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:102:13-62
+111            android:authorities="ragalik.baraxolka.provider"
+111-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:103:13-60
+112            android:exported="false"
+112-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:104:13-37
+113            android:grantUriPermissions="true" >
+113-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:105:13-47
+114            <meta-data
+114-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:106:13-108:57
+115                android:name="android.support.FILE_PROVIDER_PATHS"
+115-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:107:17-67
+116                android:resource="@xml/provider_paths" />
+116-->D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:108:17-55
+117        </provider>
+118        <provider
+118-->[com.squareup.picasso:picasso:2.71828] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\667ff8d4df10af93da4f15cd70b3392d\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+119            android:name="com.squareup.picasso.PicassoProvider"
+119-->[com.squareup.picasso:picasso:2.71828] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\667ff8d4df10af93da4f15cd70b3392d\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+120            android:authorities="ragalik.baraxolka.com.squareup.picasso"
+120-->[com.squareup.picasso:picasso:2.71828] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\667ff8d4df10af93da4f15cd70b3392d\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+121            android:exported="false" />
+121-->[com.squareup.picasso:picasso:2.71828] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\667ff8d4df10af93da4f15cd70b3392d\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+122        <provider
+122-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\0cb84a9f6b2cae5c973ef025c366f9e5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+123            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+123-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\0cb84a9f6b2cae5c973ef025c366f9e5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+124            android:authorities="ragalik.baraxolka.lifecycle-process"
+124-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\0cb84a9f6b2cae5c973ef025c366f9e5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+125            android:exported="false"
+125-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\0cb84a9f6b2cae5c973ef025c366f9e5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+126            android:multiprocess="true" />
+126-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\0cb84a9f6b2cae5c973ef025c366f9e5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+127    </application>
+128
+129</manifest>

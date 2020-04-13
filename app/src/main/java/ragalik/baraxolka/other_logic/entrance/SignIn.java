@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatSpinner;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -19,7 +20,6 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
@@ -33,6 +33,8 @@ import ragalik.baraxolka.network.entities.RegisterResponse;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
+import static ragalik.baraxolka.paging_feed.ads.ADS.adViewModel;
 
 
 /**
@@ -55,9 +57,9 @@ public class SignIn extends Fragment implements View.OnClickListener {
     private static String regionFromSpinner;
     private static String townFromSpinner;
     private static boolean isRegionSelected;
-    private Spinner regionSpinner;
+    private AppCompatSpinner regionSpinner;
     private Toolbar toolbar;
-    private Spinner townSpinner;
+    private AppCompatSpinner townSpinner;
     private ArrayAdapter<CharSequence> adapterRegion;
     private ArrayAdapter<CharSequence> adapterTown;
     //private TextView privacyPolicyTW;
@@ -98,8 +100,8 @@ public class SignIn extends Fragment implements View.OnClickListener {
 //        privacyPolicyTW.setOnClickListener(this);
 
         if (getContext() != null) {
-            adapterRegion = ArrayAdapter.createFromResource(getContext(), R.array.Spinner_region_items, android.R.layout.simple_spinner_item);
-            adapterRegion.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            adapterRegion = ArrayAdapter.createFromResource(getContext(), R.array.Spinner_region_items, R.layout.text_color);
+            adapterRegion.setDropDownViewResource(R.layout.dropdown_text_color);
             regionSpinner.setAdapter(adapterRegion);
             regionSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
@@ -108,25 +110,25 @@ public class SignIn extends Fragment implements View.OnClickListener {
                     isRegionSelected = true;
                     if (getContext() != null) {
                         switch (text) {
-                            case ("Не указано") : adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.Nothing, android.R.layout.simple_spinner_item);
+                            case ("Не указано") : adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.Nothing, R.layout.text_color);
                                 isRegionSelected = false;
                                 break;
-                            case ("Брестская обл.") : adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.BrestRegion, android.R.layout.simple_spinner_item);
+                            case ("Брестская обл.") : adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.BrestRegion, R.layout.text_color);
                                 break;
-                            case ("Витебская обл.") : adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.VitebskRegion, android.R.layout.simple_spinner_item);
+                            case ("Витебская обл.") : adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.VitebskRegion, R.layout.text_color);
                                 break;
-                            case ("Гомельская обл.") : adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.GomelRegion, android.R.layout.simple_spinner_item);
+                            case ("Гомельская обл.") : adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.GomelRegion, R.layout.text_color);
                                 break;
-                            case ("Гродненская обл.") : adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.GrodnoRegion, android.R.layout.simple_spinner_item);
+                            case ("Гродненская обл.") : adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.GrodnoRegion, R.layout.text_color);
                                 break;
-                            case ("Минская обл.") : adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.MinskRegion, android.R.layout.simple_spinner_item);
+                            case ("Минская обл.") : adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.MinskRegion, R.layout.text_color);
                                 break;
-                            case ("Могилевская обл.") : adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.MogilevRegion, android.R.layout.simple_spinner_item);
+                            case ("Могилевская обл.") : adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.MogilevRegion, R.layout.text_color);
                                 break;
                             default : break;
                         }
                         regionFromSpinner = text;
-                        adapterTown.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        adapterTown.setDropDownViewResource(R.layout.dropdown_text_color);
                         townSpinner.setAdapter(adapterTown);
                     }
                 }
@@ -240,6 +242,7 @@ public class SignIn extends Fragment implements View.OnClickListener {
                         fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right);
                         fragmentTransaction.replace(R.id.constrLayout, MainActivity.adsFragment).commit();
                         MainActivity.showItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
+                        adViewModel.getLiveDataSource().getValue().invalidate();
                     }
                     Toast.makeText(getContext(), "Регистрация прошла успешно!", Toast.LENGTH_LONG).show();
                     getActivity().setTitle("Объявления ");

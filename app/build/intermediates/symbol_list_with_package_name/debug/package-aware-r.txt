@@ -2073,7 +2073,6 @@ id nav_view
 id navigationDrawerPhoto
 id navigation_header_container
 id never
-id newState
 id nickname
 id nightThemeSwitcher
 id noScroll
@@ -2202,7 +2201,6 @@ id search_src_text
 id search_top_bar
 id search_voice_btn
 id searchview
-id secondaryState
 id secondary_group
 id select_dialog_listview
 id selected
@@ -2330,7 +2328,6 @@ id transition_transform
 id transparent_view
 id tv
 id tv1
-id tv2
 id tv3
 id tv_description
 id tv_title

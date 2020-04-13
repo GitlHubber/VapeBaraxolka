@@ -44,8 +44,10 @@ class Ad {
 
     @field:SerializedName("region")
     var region: String? = null
+
     @field:SerializedName("town")
     var town: String? = null
+
     @field:SerializedName("subcategory_name")
     var subcategoryName: String? = null
 

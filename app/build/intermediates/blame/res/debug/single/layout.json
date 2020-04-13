@@ -1,190 +1,178 @@
 [
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\text_color.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\text_color.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_sign_in.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_sign_in.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\full_ad_loader.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\full_ad_loader.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\text_color.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\text_color.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\non_active_ads.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\non_active_ads.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_splash_screen.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\activity_splash_screen.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_settings.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\activity_settings.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_view_items.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\list_view_items.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_administrator.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_administrator.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_ad_creator_image_menu.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_ad_creator_image_menu.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_main.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\content_main.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_search.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\activity_search.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_ad.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\item_ad.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_log_in.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_log_in.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_ad_creator.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_ad_creator.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_account_image_menu.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_account_image_menu.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_rules.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_rules.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\no_favourites.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\no_favourites.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\no_favourites.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\no_favourites.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_search.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\content_search.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_main.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\content_main.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_full_image_layout.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_full_image_layout.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_settings.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\activity_settings.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\ad_loading.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\ad_loading.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_full_ad.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\activity_full_ad.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_privacy_policy.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_privacy_policy.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\nav_header_main.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\nav_header_main.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\menu_counter.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\menu_counter.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_seller_profile.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\content_seller_profile.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_seller_profile.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\content_seller_profile.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\ad_loading.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\ad_loading.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dropdown_text_color.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\dropdown_text_color.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_full_ad.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\content_full_ad.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_ad_moderator.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_ad_moderator.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_ad.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\item_ad.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_search.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\activity_search.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_favourites.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_favourites.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_ad_creator_image_menu.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_ad_creator_image_menu.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_settings.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\content_settings.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\app_bar_main.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\app_bar_main.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\app_bar_main.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\app_bar_main.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_price.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_price.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_ad_moderator.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_ad_moderator.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_seller_profile.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\activity_seller_profile.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\full_ad_loader.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\full_ad_loader.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_no_internet_connection.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_no_internet_connection.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_seller_profile.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\activity_seller_profile.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\on_moderate_ads.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\on_moderate_ads.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_full_image_layout.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_full_image_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_forgot_password.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_forgot_password.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_sort.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_sort.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_full_ad.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\content_full_ad.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\new_ad_window.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\new_ad_window.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_view_items.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\list_view_items.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_technical_support.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_technical_support.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_ad_creator.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_ad_creator.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\start_login_window.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\start_login_window.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\moderator_ad.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\moderator_ad.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_search.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\content_search.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_full_ad.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\activity_full_ad.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\menu_counter.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\menu_counter.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_favourites.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_favourites.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_administrator.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_administrator.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\nav_header_main.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\nav_header_main.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_my_ads.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_my_ads.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\rejected_ads.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\rejected_ads.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\active_ads.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\active_ads.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_ads.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_ads.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_ads.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_ads.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\active_ads.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\active_ads.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_account_image_menu.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_account_image_menu.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_sign_in.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_sign_in.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_price.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_price.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_rules.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_rules.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\non_active_ads.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\non_active_ads.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_settings.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\content_settings.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\on_moderate_ads.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\on_moderate_ads.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\start_login_window.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\start_login_window.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dropdown_text_color.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\dropdown_text_color.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_log_in.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_log_in.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_account.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\activity_account.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_no_internet_connection.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_no_internet_connection.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_technical_support.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_technical_support.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\rejected_ads.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\rejected_ads.xml"
     },
     {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_my_ads.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_my_ads.xml"
-    },
-    {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\new_ad_window.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\new_ad_window.xml"
-    },
-    {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_sort.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_sort.xml"
-    },
-    {
-        "merged": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_splash_screen.xml",
-        "source": "C:\\Users\\Ragalik\\Desktop\\Baraxolka\\app\\src\\main\\res\\layout\\activity_splash_screen.xml"
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_account.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\activity_account.xml"
     }
 ]

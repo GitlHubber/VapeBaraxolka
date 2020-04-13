@@ -3,7 +3,6 @@ package ragalik.baraxolka.paging_feed.search;
 import android.content.Intent;
 import android.os.Bundle;
 
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.SearchView;
@@ -32,7 +31,7 @@ public class SearchActivity extends AppCompatActivity implements  SearchView.OnQ
 
     private SearchView searchView;
     private ArrayList<Ad> ads;
-    private ListViewAdapter adapter;
+    //private ListViewAdapter adapter;
     private ArrayAdapter<CharSequence> adapterCategory;
     private ArrayAdapter<CharSequence> adapterSubcategory;
     private Spinner categorySpinner;
@@ -66,7 +65,7 @@ public class SearchActivity extends AppCompatActivity implements  SearchView.OnQ
         searchRequests = new HashMap<>();
         activity = this;
         showAdsButton = findViewById(R.id.showAdsButton);
-        adapter = new ListViewAdapter(this, ads);
+       // adapter = new ListViewAdapter(this, ads);
 
         from = -1;
         to = -1;

@@ -144,7 +144,6 @@ public class FullAdActivity extends AppCompatActivity {
                     viewPager.setAdapter(fullAdViewPagerAdapter);
                     indicator.setViewPager(viewPager);
 
-
                     title = findViewById(R.id.titleTextFullAd);
                     //numberPhotoFullAd = findViewById(R.id.numberPhotoFullAd);
                     category = findViewById(R.id.categoryTextFullAd);

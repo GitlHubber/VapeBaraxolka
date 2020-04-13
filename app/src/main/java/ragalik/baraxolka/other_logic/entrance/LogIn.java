@@ -34,6 +34,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static ragalik.baraxolka.paging_feed.ads.ADS.adViewModel;
+
 
 public class LogIn extends Fragment implements View.OnClickListener {
 
@@ -178,7 +180,6 @@ public class LogIn extends Fragment implements View.OnClickListener {
                 passwordStr = password.getText().toString();
                 if (nickPassValidate()) {
                     logIn();
-                    //new LogInApp().execute();
                 }
                 hideKeyboard(v);
                 break;
@@ -227,6 +228,7 @@ public class LogIn extends Fragment implements View.OnClickListener {
                     fragmentTransaction.replace(R.id.constrLayout, MainActivity.adsFragment).commit();
                     getActivity().setTitle("Объявления");
                     SharedPreferences.Editor editor = MainActivity.sp.edit();
+                    adViewModel.getLiveDataSource().getValue().invalidate();
 
                     editor.putString("image", user.getImage());
                     editor.apply();
