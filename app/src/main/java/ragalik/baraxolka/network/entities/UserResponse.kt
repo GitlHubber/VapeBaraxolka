@@ -39,3 +39,17 @@ class UserResponse {
     @field:SerializedName("user")
     val user: List<User>? = null
 }
+
+class RegisterResponse {
+    @field:SerializedName("success")
+    val success: Boolean? = null
+
+    @field:SerializedName("id_user")
+    var idUser: Int? = null
+
+    @field:SerializedName("email_exist")
+    val isEmailExist: Boolean? = null
+
+    @field:SerializedName("number_exist")
+    val isNumberExist: Boolean? = null
+}

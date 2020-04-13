@@ -4,9 +4,9 @@
     <color name="colorPrimaryDark">#171717</color>
     <color name="colorAccent">#5B418E</color>
     <color name="colorText">#D3D3D3</color>
+    <color name="colorSecondaryText">#999</color>
     <color name="colorBackground">#333</color>
     <color name="colorBackgroundCardView">#222</color>
-    <color name="colorDivider">#111</color>
     <color name="colorNavigationItem">#DDD</color>
 
     <color name="colorAdCreatorImage">#222</color>

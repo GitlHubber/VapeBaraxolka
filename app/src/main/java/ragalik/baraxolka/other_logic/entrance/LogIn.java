@@ -39,16 +39,11 @@ import static ragalik.baraxolka.paging_feed.ads.ADS.adViewModel;
 
 public class LogIn extends Fragment implements View.OnClickListener {
 
-    private static final Pattern EMAIL_START = Pattern.compile("^[A-Za-z][A-Za-z0-9-]{1,40}$");
-    private static final Pattern EMAIL = Pattern.compile("^[A-Za-z][A-Za-z0-9_.-]{2,25}@[a-zA-Z]{3,10}\\.[a-z]{2,4}$");
+    private static final String EMAIL = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
-    private static final Pattern PHONE_NUMBER_START = Pattern.compile("(^80|^\\+375)");
-    private static final Pattern PHONE_NUMBER = Pattern.compile("(^80\\d{9}|^\\+375\\d{9})");
+    private static final String PHONE_NUMBER_START = "(^80|^\\+375)";
+    private static final String PHONE_NUMBER = "(^80\\d{9}|^\\+375\\d{9})";
     //public static final Pattern PASSWORD = Pattern.compile("[a-zA-Z0-9_]{5,20}");
-
-    private static final String TAG_USER = "user";
-    private static final String TAG_NICKNAME = "nickname";
-
 
     private static TextInputLayout numberOrEmailLayout;
     private static TextInputLayout passwordLayout;
@@ -96,7 +91,7 @@ public class LogIn extends Fragment implements View.OnClickListener {
             public void onTextChanged(CharSequence s, int start, int before, int count) {}
             @Override
             public void afterTextChanged(Editable s) {
-                if (numberOrEmail.getText().toString().matches(PHONE_NUMBER_START.toString())) {
+                if (numberOrEmail.getText().toString().matches(PHONE_NUMBER_START)) {
                     numberOrEmailLayout.setCounterEnabled(true);
                     if (numberOrEmail.getText().charAt(0) == '+') {
                         numberOrEmailLayout.setCounterMaxLength(13);
@@ -105,7 +100,7 @@ public class LogIn extends Fragment implements View.OnClickListener {
                     }
 
                     inputManager = "phoneNumber";
-                } else if (numberOrEmail.getText().toString().matches(EMAIL_START.toString())) {
+                } else if (numberOrEmail.getText().toString().matches(EMAIL)) {
                     numberOrEmailLayout.setCounterEnabled(true);
                     numberOrEmailLayout.setCounterMaxLength(40);
                     inputManager = "email";
@@ -192,10 +187,10 @@ public class LogIn extends Fragment implements View.OnClickListener {
 
         if (nick.isEmpty() || pass.isEmpty()) {
             return false;
-        } else if (inputManager.equals("phoneNumber") && (!numberOrEmail.getText().toString().matches(PHONE_NUMBER.toString()))) {
+        } else if (inputManager.equals("phoneNumber") && (!nick.matches(PHONE_NUMBER))) {
             Toast.makeText(getContext(), "Номер телефона указан неверно!", Toast.LENGTH_SHORT).show();
             return false;
-        } else if (inputManager.equals("email") && (!numberOrEmail.getText().toString().matches(EMAIL.toString()))) {
+        } else if (inputManager.equals("email") && (!nick.matches(EMAIL))) {
             Toast.makeText(getContext(), "Адрес электронной почты указан неверно!", Toast.LENGTH_SHORT).show();
             return false;
         }
@@ -227,9 +222,9 @@ public class LogIn extends Fragment implements View.OnClickListener {
                     fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right);
                     fragmentTransaction.replace(R.id.constrLayout, MainActivity.adsFragment).commit();
                     getActivity().setTitle("Объявления");
-                    SharedPreferences.Editor editor = MainActivity.sp.edit();
-                    adViewModel.getLiveDataSource().getValue().invalidate();
 
+                    adViewModel.getLiveDataSource().getValue().invalidate();
+                    SharedPreferences.Editor editor = MainActivity.sp.edit();
                     editor.putString("image", user.getImage());
                     editor.apply();
 

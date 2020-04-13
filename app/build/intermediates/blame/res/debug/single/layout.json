@@ -4,12 +4,12 @@
         "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\fragment_sign_in.xml"
     },
     {
-        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\text_color.xml",
-        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\text_color.xml"
-    },
-    {
         "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_splash_screen.xml",
         "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\activity_splash_screen.xml"
+    },
+    {
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\text_color.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\layout\\text_color.xml"
     },
     {
         "merged": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_view_items.xml",

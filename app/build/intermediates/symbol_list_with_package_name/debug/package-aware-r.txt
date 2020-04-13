@@ -63,12 +63,12 @@ animator scale_with_alpha
 array BrestRegion
 array GomelRegion
 array GrodnoRegion
+array Minsk
 array MinskRegion
 array MogilevRegion
 array Nothing
 array NothingSelected
 array Spinner_category_items
-array Spinner_email_items
 array Spinner_kalyan_items
 array Spinner_region_items
 array Spinner_vape_components_items
@@ -909,10 +909,10 @@ color colorAdsDate
 color colorBackground
 color colorBackgroundCardView
 color colorBlack
-color colorDivider
 color colorNavigationItem
 color colorPrimary
 color colorPrimaryDark
+color colorSecondaryText
 color colorText
 color colorTransparent
 color colorWhite
@@ -2591,7 +2591,6 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string account
 string action_settings
-string adCreating
 string ads
 string app_name
 string appbar_scrolling_view_behavior
@@ -2607,7 +2606,6 @@ string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string favourites
-string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string mtrl_badge_numberless_content_description

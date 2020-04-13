@@ -4,10 +4,10 @@
     <color name="colorPrimaryDark">#A12828</color>
     <color name="colorAccent">#E14B32</color>
     <color name="colorText">#000000</color>
+    <color name="colorSecondaryText">#777</color>
     <color name="colorBackground">#FFF</color>
     <color name="colorBackgroundCardView">#FFF</color>
     <color name="colorNavigationItem">#333</color>
-    <color name="colorDivider">#666</color>
     <color name="textColorPrimary">#BA0000</color>
 
     <color name="colorAdCreatorImage">#EEE</color>

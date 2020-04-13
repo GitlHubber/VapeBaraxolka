@@ -3,10 +3,12 @@ package ragalik.baraxolka.other_logic.entrance;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatSpinner;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
@@ -19,12 +21,10 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
-
-import java.util.regex.Pattern;
 
 import ragalik.baraxolka.MainActivity;
 import ragalik.baraxolka.R;
@@ -34,7 +34,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static ragalik.baraxolka.paging_feed.ads.ADS.adViewModel;
 
 
 /**
@@ -42,14 +41,19 @@ import static ragalik.baraxolka.paging_feed.ads.ADS.adViewModel;
  */
 public class SignIn extends Fragment implements View.OnClickListener {
 
-    private static final Pattern NICKNAME = Pattern.compile("[a-zA-Z0-9#&_.+@]{1,20}");
+    private static final String NICKNAME = "[а-яА-Яa-zA-Z0-9#&_.+@]{1,18}";
+    private static final String EMAIL = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+    private static final String PHONE_NUMBER = "[0-9+]{1,20}";
+    private static final String PASSWORD = "^(?=.*[0-9])(?=.*[a-z])(?=.*[a-zA-Z])(?=\\S+$).{8,18}$";
 
     private TextInputLayout nickname = null;
     private TextInputLayout email = null;
     private TextInputLayout phoneNumber = null;
     private TextInputLayout password = null;
+    private TextView town;
+    private TextView region;
 
-    private Button accept;
+    private AppCompatButton accept;
     private static String nicknameFromEditText;
     private static String emailFromEditText;
     private static String phoneNumberFromEditText;
@@ -91,6 +95,8 @@ public class SignIn extends Fragment implements View.OnClickListener {
         phoneNumber = v.findViewById(R.id.si_phone_number);
         password = v.findViewById(R.id.si_password);
         accept = v.findViewById(R.id.Registration_button);
+        town = v.findViewById(R.id.SITown);
+        region = v.findViewById(R.id.SIRegion);
 
         regionSpinner = v.findViewById(R.id.SIRegionSpinner);
         townSpinner = v.findViewById(R.id.SITownSpinner);
@@ -108,10 +114,16 @@ public class SignIn extends Fragment implements View.OnClickListener {
                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                     String text = adapterView.getItemAtPosition(i).toString();
                     isRegionSelected = true;
+                    region.setText("Область");
+                    town.setText("Город");
                     if (getContext() != null) {
                         switch (text) {
                             case ("Не указано") : adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.Nothing, R.layout.text_color);
                                 isRegionSelected = false;
+                                break;
+                            case ("Минск") : adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.Minsk, R.layout.text_color);
+                                region.setText("Город");
+                                town.setText("Район");
                                 break;
                             case ("Брестская обл.") : adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.BrestRegion, R.layout.text_color);
                                 break;
@@ -158,13 +170,16 @@ public class SignIn extends Fragment implements View.OnClickListener {
         phoneNumberFromEditText = phoneNumber.getEditText().getText().toString().trim();
         passwordFromEditText = password.getEditText().getText().toString().trim();
         String str = "";
-        if (!nickname.getEditText().getText().toString().matches(NICKNAME.toString()) || nicknameFromEditText.isEmpty()) {
+        if (!nicknameFromEditText.matches(NICKNAME) || nicknameFromEditText.isEmpty()) {
             str += "Имя пользователя  ";
         }
-        if (!email.getEditText().getText().toString().matches(NICKNAME.toString()) || emailFromEditText.isEmpty()) {
+        if (!emailFromEditText.matches(EMAIL) || emailFromEditText.isEmpty()) {
             str += "Электронная почта  ";
         }
-        if (!password.getEditText().getText().toString().matches(NICKNAME.toString()) || passwordFromEditText.isEmpty()) {
+        if (!phoneNumberFromEditText.matches(PHONE_NUMBER) && !phoneNumberFromEditText.isEmpty()) {
+            str += "Номер телефона ";
+        }
+        if (!passwordFromEditText.matches(PASSWORD) || passwordFromEditText.isEmpty()) {
             str += "Пароль";
         }
         if (!str.equals("")) {
@@ -232,7 +247,7 @@ public class SignIn extends Fragment implements View.OnClickListener {
             @Override
             public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
                 pDialog.dismiss();
-                if (getActivity() != null && response.body() != null) {
+                if (getActivity() != null && response.body().getSuccess()) {
                     MainActivity.createUserData(response.body().getIdUser(), nicknameFromEditText, emailFromEditText, phoneNumberFromEditText, regionFromSpinner, townFromSpinner, "1");
                     MainActivity.setNavHeaderText(getActivity());
 
@@ -242,10 +257,16 @@ public class SignIn extends Fragment implements View.OnClickListener {
                         fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right);
                         fragmentTransaction.replace(R.id.constrLayout, MainActivity.adsFragment).commit();
                         MainActivity.showItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
-                        adViewModel.getLiveDataSource().getValue().invalidate();
+                        SharedPreferences.Editor editor = MainActivity.sp.edit();
+                        editor.putString("image", "null");
+                        editor.apply();
                     }
                     Toast.makeText(getContext(), "Регистрация прошла успешно!", Toast.LENGTH_LONG).show();
                     getActivity().setTitle("Объявления ");
+                } else if (!response.body().getSuccess() && response.body().isEmailExist()) {
+                    Toast.makeText(getContext(), "Аккаунт с таким email существует! ", Toast.LENGTH_LONG).show();
+                } else if (!response.body().getSuccess() && response.body().isNumberExist()) {
+                    Toast.makeText(getContext(), "Аккаунт с таким номером телефона существует! ", Toast.LENGTH_LONG).show();
                 }
             }
 

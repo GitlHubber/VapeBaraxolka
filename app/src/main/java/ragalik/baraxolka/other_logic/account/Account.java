@@ -191,7 +191,7 @@ public class Account extends AppCompatActivity {
             accountImageMenu.show(activity.getSupportFragmentManager(), "");
         });
 
-        if (!MainActivity.sp.getString("image", "").equals("null")) {
+        if (!MainActivity.sp.getString("image", "null").equals("null")) {
             String temp = MainActivity.sp.getString("image", "");
             Picasso.get().invalidate(temp);
             Picasso.get().load(temp).networkPolicy(NetworkPolicy.NO_CACHE).memoryPolicy(MemoryPolicy.NO_CACHE).into(accountPhoto);
@@ -216,8 +216,10 @@ public class Account extends AppCompatActivity {
                     editor.putString("phoneNumber", user.getPhoneNumber());
                     editor.putString("region", user.getRegion());
                     editor.putString("town", user.getTown());
-                    editor.putString("image", user.getImage());
-                    editor.apply();
+                    if (user.getImage() != null) {
+                        editor.putString("image", user.getImage());
+                        editor.apply();
+                    }
                     startAccountView();
                 } else {
                     Toast.makeText(getApplicationContext(), "Ошибка загрузки профиля", Toast.LENGTH_LONG).show();

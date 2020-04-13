@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Baraxolka</string>
+    <string name="app_name">Vape Барахолка</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
@@ -7,16 +7,10 @@
 
     <string name="ads">Объявления</string>
     <string name="account">Аккаунт</string>
-    <string name="adCreating">Создание объявления</string>
-
-    <string-array name="Spinner_email_items">
-        <item>"@mail.ru"</item>
-        <item>"@gmail.com"</item>
-        <item>"@yandex.by"</item>
-    </string-array>
 
     <string-array name="Spinner_region_items">
         <item>"Не указано"</item>
+        <item>"Минск"</item>
         <item>"Брестская обл."</item>
         <item>"Витебская обл."</item>
         <item>"Гомельская обл."</item>
@@ -59,32 +53,170 @@
         <item>"Не указано"</item>
     </string-array>
 
+    <string-array name="Minsk">
+        <item>"Центральный"</item>
+        <item>"Советский"</item>
+        <item>"Первомайский"</item>
+        <item>"Партизанский"</item>
+        <item>"Заводской"</item>
+        <item>"Ленинский"</item>
+        <item>"Октябрьский"</item>
+        <item>"Московский"</item>
+        <item>"Фрунзенский"</item>
+    </string-array>
+
     <string-array name="BrestRegion">
         <item>"Брест"</item>
+        <item>"Барановичи"</item>
+        <item>"Береза"</item>
+        <item>"Белоозёрск"</item>
+        <item>"Ганцевичи"</item>
+        <item>"Дрогичин"</item>
+        <item>"Жабинка"</item>
+        <item>"Иваново"</item>
+        <item>"Иванцевичи"</item>
+        <item>"Каменец"</item>
+        <item>"Кобрин"</item>
+        <item>"Лунинец"</item>
+        <item>"Ляховичи"</item>
+        <item>"Малорита"</item>
+        <item>"Пинск"</item>
+        <item>"Пружаны"</item>
+        <item>"Столин"</item>
+        <item>"Другой город"</item>
     </string-array>
 
     <string-array name="VitebskRegion">
         <item>"Витебск"</item>
+        <item>"Бешенковичи"</item>
+        <item>"Барань"</item>
+        <item>"Браслав"</item>
+        <item>"Верхнедвинск"</item>
+        <item>"Глубокое"</item>
+        <item>"Городок"</item>
+        <item>"Докшицы"</item>
+        <item>"Дубровно"</item>
+        <item>"Лепель"</item>
+        <item>"Лиозно"</item>
+        <item>"Миоры"</item>
+        <item>"Новолукомль"</item>
+        <item>"Новополоцк"</item>
+        <item>"Орша"</item>
+        <item>"Полоцк"</item>
+        <item>"Поставы"</item>
+        <item>"Россоны"</item>
+        <item>"Сенно"</item>
+        <item>"Толочин"</item>
+        <item>"Ушачи"</item>
+        <item>"Чашники"</item>
+        <item>"Шарковщина"</item>
+        <item>"Шумилино"</item>
+        <item>"Другой город"</item>
     </string-array>
 
     <string-array name="GomelRegion">
         <item>"Гомель"</item>
+        <item>"Брагин"</item>
+        <item>"Буда-Кошелево"</item>
+        <item>"Ветка"</item>
+        <item>"Добруш"</item>
+        <item>"Ельск"</item>
+        <item>"Житовичи"</item>
+        <item>"Жлобин"</item>
+        <item>"Калинковичи"</item>
+        <item>"Корма"</item>
+        <item>"Лельчицы"</item>
+        <item>"Лоев"</item>
+        <item>"Мозырь"</item>
+        <item>"Октябрьский"</item>
+        <item>"Наровля"</item>
+        <item>"Петриков"</item>
+        <item>"Речица"</item>
+        <item>"Рогачев"</item>
+        <item>"Светлогорск"</item>
+        <item>"Хойники"</item>
+        <item>"Чечерск"</item>
+        <item>"Другой город"</item>
     </string-array>
 
     <string-array name="GrodnoRegion">
         <item>"Гродно"</item>
+        <item>"Березовка"</item>
+        <item>"Берестовица"</item>
+        <item>"Волковыск"</item>
+        <item>"Вороново"</item>
+        <item>"Дятлово"</item>
+        <item>"Зельва"</item>
+        <item>"Ивье"</item>
+        <item>"Кореличи"</item>
+        <item>"Лида"</item>
+        <item>"Мосты"</item>
+        <item>"Новогрудок"</item>
+        <item>"Островец"</item>
+        <item>"Ошмяны"</item>
+        <item>"Свислочь"</item>
+        <item>"Скидель"</item>
+        <item>"Слоним"</item>
+        <item>"Сморгонь"</item>
+        <item>"Щучин"</item>
+        <item>"Другой город"</item>
     </string-array>
 
     <string-array name="MinskRegion">
-        <item>"Минск"</item>
+        <item>"Минский район"</item>
+        <item>"Березино"</item>
+        <item>"Борисов"</item>
+        <item>"Вилейка"</item>
+        <item>"Воложин"</item>
+        <item>"Дзержинск"</item>
+        <item>"Жодино"</item>
+        <item>"Заславль"</item>
+        <item>"Клецк"</item>
+        <item>"Копыль"</item>
+        <item>"Крупки"</item>
         <item>"Логойск"</item>
+        <item>"Любань"</item>
+        <item>"Марьина Горка"</item>
+        <item>"Молодечно"</item>
+        <item>"Мядель"</item>
+        <item>"Несвиж"</item>
+        <item>"Руденск"</item>
+        <item>"Слуцк"</item>
+        <item>"Смолевичи"</item>
+        <item>"Солигорск"</item>
+        <item>"Старые дороги"</item>
+        <item>"Столбцы"</item>
+        <item>"Узда"</item>
+        <item>"Фаниполь"</item>
+        <item>"Червень"</item>
+        <item>"Другой город"</item>
     </string-array>
 
     <string-array name="MogilevRegion">
         <item>"Могилев"</item>
+        <item>"Белыничи"</item>
+        <item>"Бобруйск"</item>
+        <item>"Быхов"</item>
+        <item>"Глуск"</item>
+        <item>"Горки"</item>
+        <item>"Дрибин"</item>
+        <item>"Кировск"</item>
+        <item>"Климовичи"</item>
+        <item>"Кличев"</item>
+        <item>"Краснополье"</item>
+        <item>"Круглое"</item>
+        <item>"Костюковичи"</item>
+        <item>"Кричев"</item>
+        <item>"Мстиславль"</item>
+        <item>"Осиповичи"</item>
+        <item>"Славгород"</item>
+        <item>"Чаусы"</item>
+        <item>"Чериков"</item>
+        <item>"Шклов"</item>
+        <item>"Хотимск"</item>
+        <item>"Другой город"</item>
     </string-array>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_full_ad">FullAd</string>
     <string name="title_activity_seller_profile">SellerProfileActivity</string>
     <string name="title_activity_settings">SettingsActivity</string>
