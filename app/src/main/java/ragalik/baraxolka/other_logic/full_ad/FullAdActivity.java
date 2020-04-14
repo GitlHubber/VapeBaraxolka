@@ -85,7 +85,7 @@ public class FullAdActivity extends AppCompatActivity {
         description.setText(ad.getDescription());
         temp = ad.getViews() + "";
         views.setText(temp);
-        town.setText(ad.getTown());
+        town.setText(ad.getRegion() + " | г. " + ad.getTown());
         userNickname.setText(ad.getUserNickname());
 
         Picasso.get().invalidate(ad.getUserImage());

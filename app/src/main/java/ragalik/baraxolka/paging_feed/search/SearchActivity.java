@@ -79,7 +79,6 @@ public class SearchActivity extends AppCompatActivity implements  SearchView.OnQ
         subcategorySpinner = findViewById(R.id.subcategorySearchSpinner);
         categorySpinner = findViewById(R.id.categorySearchSpinner);
 
-
         getSearchAdsCount(searchRequests);
 
         adapterCategory = ArrayAdapter.createFromResource(this, R.array.Spinner_category_items, R.layout.text_color);

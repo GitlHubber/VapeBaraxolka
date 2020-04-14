@@ -1,6 +1,7 @@
 package ragalik.baraxolka.paging_feed.ads;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -9,7 +10,9 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Transformations;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.paging.LivePagedListBuilder;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 
@@ -21,6 +24,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
+
+import com.google.android.material.chip.Chip;
 
 import ragalik.baraxolka.MainActivity;
 import ragalik.baraxolka.R;
@@ -37,12 +42,13 @@ public class ADS extends Fragment {
 
     private static SwipeRefreshLayout swipeRefreshLayout;
     public static boolean isFilteredAds;
+    private static boolean isChipCanceled;
     private SearchViewModel searchViewModel;
     public static AdViewModel adViewModel;
     public static ProgressBar progressBar;
+    private Chip searchChip;
 
     private RecyclerView adsRecyclerView;
-    public static AppCompatActivity activity;
     private boolean isReloaded;
     private static View v;
 
@@ -76,6 +82,14 @@ public class ADS extends Fragment {
             progressBar.setVisibility(View.VISIBLE);
         }
 
+        searchChip = v.findViewById(R.id.search_chip);
+        searchChip.setOnCloseIconClickListener(v -> {
+            searchChip.setVisibility(View.GONE);
+            isFilteredAds = false;
+            isChipCanceled = true;
+            getActivity().recreate();
+        });
+
         if (!MainActivity.sp.getString("nickname", "").equals("")) {
             MainActivity.fab.show();
         } else {
@@ -107,6 +121,8 @@ public class ADS extends Fragment {
 
     private void showAds () {
         if (isFilteredAds) {
+            searchChip.setVisibility(View.VISIBLE);
+
             String where = "";
             for (String str : SearchActivity.searchRequests.values()) {
                 where += str + " AND ";
@@ -132,7 +148,8 @@ public class ADS extends Fragment {
             searchViewModel.getSearchPagedList().observe(getViewLifecycleOwner(), searchAdapter::submitList);
             adsRecyclerView.setAdapter(searchAdapter);
 
-        } else {
+        } else if (isChipCanceled || !isFilteredAds) {
+            searchChip.setVisibility(View.GONE);
             AdAdapter adAdapter = new AdAdapter();
             adsRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
             adViewModel = new ViewModelProvider(this).get(AdViewModel.class);

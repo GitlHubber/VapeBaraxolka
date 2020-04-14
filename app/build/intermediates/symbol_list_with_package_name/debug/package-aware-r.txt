@@ -1979,7 +1979,6 @@ id fullImagePager
 id general_group
 id ghost_view
 id ghost_view_holder
-id glide_custom_view_target_tag
 id gone
 id group_divider
 id groups
@@ -2191,6 +2190,7 @@ id searchTextView
 id search_badge
 id search_bar
 id search_button
+id search_chip
 id search_close_btn
 id search_edit_frame
 id search_go_btn
@@ -2329,7 +2329,7 @@ id transparent_view
 id tv
 id tv1
 id tv3
-id tv_description
+id tv_location
 id tv_title
 id typeTextFullAd
 id unchecked

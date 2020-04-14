@@ -1,4 +1,4 @@
-#Tue Apr 14 02:13:18 MSK 2020
+#Tue Apr 14 15:27:17 MSK 2020
 base.0=D\:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex

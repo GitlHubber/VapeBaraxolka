@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.viewbinding.ViewBinding;
 import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.chip.Chip;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -37,16 +38,20 @@ public final class FragmentAdsBinding implements ViewBinding {
   @NonNull
   public final SwipeRefreshLayout refresherAds;
 
+  @NonNull
+  public final Chip searchChip;
+
   private FragmentAdsBinding(@NonNull CoordinatorLayout rootView,
       @NonNull RecyclerView ADSRecyclerView, @NonNull Toolbar adsToolbar,
       @NonNull AppBarLayout appBarLayout, @NonNull ProgressBar progressAds,
-      @NonNull SwipeRefreshLayout refresherAds) {
+      @NonNull SwipeRefreshLayout refresherAds, @NonNull Chip searchChip) {
     this.rootView = rootView;
     this.ADSRecyclerView = ADSRecyclerView;
     this.adsToolbar = adsToolbar;
     this.appBarLayout = appBarLayout;
     this.progressAds = progressAds;
     this.refresherAds = refresherAds;
+    this.searchChip = searchChip;
   }
 
   @Override
@@ -101,8 +106,13 @@ public final class FragmentAdsBinding implements ViewBinding {
         missingId = "refresherAds";
         break missingId;
       }
+      Chip searchChip = rootView.findViewById(R.id.search_chip);
+      if (searchChip == null) {
+        missingId = "searchChip";
+        break missingId;
+      }
       return new FragmentAdsBinding((CoordinatorLayout) rootView, ADSRecyclerView, adsToolbar,
-          appBarLayout, progressAds, refresherAds);
+          appBarLayout, progressAds, refresherAds, searchChip);
     }
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }

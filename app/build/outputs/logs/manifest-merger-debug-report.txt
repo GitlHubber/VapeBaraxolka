@@ -1,20 +1,20 @@
 -- Merging decision tree log ---
 provider#androidx.core.content.FileProvider
-INJECTED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:101:9-109:20
+INJECTED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:110:9-118:20
 	android:grantUriPermissions
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:105:13-47
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:114:13-47
 	android:authorities
 		INJECTED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:103:13-60
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:112:13-60
 	android:exported
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:104:13-37
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:113:13-37
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:102:13-62
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:111:13-62
 manifest
-ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:2:1-112:12
-INJECTED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:2:1-112:12
-INJECTED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:2:1-112:12
-INJECTED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:2:1-112:12
+ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:2:1-121:12
+INJECTED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:2:1-121:12
+INJECTED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:2:1-121:12
+INJECTED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:2:1-121:12
 MERGED from [androidx.databinding:viewbinding:3.6.2] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\dd05b6840c94fbe2a8023234aa8988bb\jetified-viewbinding-3.6.2\AndroidManifest.xml:17:1-22:12
 MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\4068706e6020092d2da8715c05c56bb5\jetified-materialsearchview-1.4.0\AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\97f9388465737975a6d1fbcf74822f8f\material-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -25,7 +25,6 @@ MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Ragalik\.gradle\c
 MERGED from [me.relex:circleindicator:2.1.4] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\3d13e208b5aaa44b612697280f166b4e\jetified-circleindicator-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [com.nightonke:boommenu:2.1.1] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\c229c42e8d6d345528e287239630eaa8\jetified-boommenu-2.1.1\AndroidManifest.xml:2:1-16:12
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\5c5a0b2e6ec01266b11b6f5974cbc87a\lifecycle-extensions-2.2.0\AndroidManifest.xml:17:1-27:12
-MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\ea4cc970b12177215c93fc934e0a8e98\jetified-glide-4.11.0\AndroidManifest.xml:2:1-12:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\272dacf8d55bb61d6890f4c3e146dad7\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment:1.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\869460743d2d8859ff0976f58971bf5b\fragment-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\4691400a687fd412019aaa8868c723b7\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -61,29 +60,28 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] C:\Users\Ragalik\.grad
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\f34d75680eb5d61716225d80511948f1\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\e6330fc3e1915180cc6f43644ffa072f\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\b7f5997d82bad9c108acd7259400c2f9\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\078f3d386b82eb7a75da108538ed48d8\jetified-gifdecoder-4.11.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\dda3ef105836629c9f0d0d73c5720338\exifinterface-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\747c2e8702ed76048c41784ade9c53ec\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\4773b33123e524fadeb6148319682470\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\265ef73c3bd816800f2aa4ce0f3734d4\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\d92f63e6125dd1ac0accc128e2c8d1ea\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\0ab39d7c6c6d488cc96801c21fb2054b\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
-INJECTED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:2:1-112:12
-INJECTED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:2:1-112:12
-INJECTED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:2:1-112:12
+INJECTED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:2:1-121:12
+INJECTED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:2:1-121:12
+INJECTED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:2:1-121:12
 	package
 		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:4:5-32
 		INJECTED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml
 		INJECTED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:2:1-112:12
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:2:1-121:12
 		INJECTED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:2:1-112:12
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:2:1-121:12
 		INJECTED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:2:11-69
@@ -110,7 +108,7 @@ ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:
 	android:xlargeScreens
 		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:14:9-37
 application
-ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:16:5-110:19
+ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:16:5-119:19
 MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\4068706e6020092d2da8715c05c56bb5\jetified-materialsearchview-1.4.0\AndroidManifest.xml:11:5-20
 MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\4068706e6020092d2da8715c05c56bb5\jetified-materialsearchview-1.4.0\AndroidManifest.xml:11:5-20
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\97f9388465737975a6d1fbcf74822f8f\material-1.1.0\AndroidManifest.xml:22:5-20
@@ -121,8 +119,6 @@ MERGED from [com.nightonke:boommenu:2.1.1] C:\Users\Ragalik\.gradle\caches\trans
 MERGED from [com.nightonke:boommenu:2.1.1] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\c229c42e8d6d345528e287239630eaa8\jetified-boommenu-2.1.1\AndroidManifest.xml:11:5-14:19
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\5c5a0b2e6ec01266b11b6f5974cbc87a\lifecycle-extensions-2.2.0\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\5c5a0b2e6ec01266b11b6f5974cbc87a\lifecycle-extensions-2.2.0\AndroidManifest.xml:24:5-25:19
-MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\ea4cc970b12177215c93fc934e0a8e98\jetified-glide-4.11.0\AndroidManifest.xml:10:5-20
-MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\ea4cc970b12177215c93fc934e0a8e98\jetified-glide-4.11.0\AndroidManifest.xml:10:5-20
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\667ff8d4df10af93da4f15cd70b3392d\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\667ff8d4df10af93da4f15cd70b3392d\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\820ff013169fe6543f2f875dbfbb59c8\jetified-circleimageview-3.1.0\AndroidManifest.xml:9:5-20
@@ -131,8 +127,6 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradl
 MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\0cb84a9f6b2cae5c973ef025c366f9e5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:24:5-30:19
 MERGED from [androidx.core:core:1.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\163ba80aa74cf2b66a97b31641e8ba82\core-1.2.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\163ba80aa74cf2b66a97b31641e8ba82\core-1.2.0\AndroidManifest.xml:24:5-89
-MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\078f3d386b82eb7a75da108538ed48d8\jetified-gifdecoder-4.11.0\AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\078f3d386b82eb7a75da108538ed48d8\jetified-gifdecoder-4.11.0\AndroidManifest.xml:9:5-20
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\0ab39d7c6c6d488cc96801c21fb2054b\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\0ab39d7c6c6d488cc96801c21fb2054b\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
 	android:appComponentFactory
@@ -154,7 +148,9 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ra
 	android:usesCleartextTraffic
 		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:23:9-44
 activity#ragalik.baraxolka.paging_feed.search.SearchActivity
-ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:25:9-33:20
+ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:25:9-34:20
+	android:screenOrientation
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:30:13-49
 	android:parentActivityName
 		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:28:13-55
 	android:label
@@ -164,99 +160,113 @@ ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:
 	android:name
 		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:26:13-62
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:30:13-32:49
+ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:31:13-33:49
 	android:value
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:32:17-46
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:33:17-46
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:31:17-63
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:32:17-63
 activity#ragalik.baraxolka.other_logic.ad_creator.AdCreator
-ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:34:9-42:20
+ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:35:9-44:20
+	android:screenOrientation
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:40:13-49
 	android:parentActivityName
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:37:13-55
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:38:13-55
 	android:label
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:36:13-60
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:37:13-60
 	android:theme
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:38:13-44
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:39:13-44
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:35:13-61
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:36:13-61
 activity#ragalik.baraxolka.other_logic.activities.SettingsActivity
-ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:43:9-51:20
+ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:45:9-54:20
+	android:screenOrientation
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:50:13-49
 	android:parentActivityName
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:46:13-55
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:48:13-55
 	android:label
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:45:13-60
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:47:13-60
 	android:theme
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:47:13-44
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:49:13-44
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:44:13-68
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:46:13-68
 activity#ragalik.baraxolka.paging_feed.seller.SellerProfileActivity
-ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:52:9-60:20
+ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:55:9-64:20
+	android:screenOrientation
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:60:13-49
 	android:parentActivityName
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:55:13-77
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:58:13-77
 	android:label
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:54:13-66
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:57:13-66
 	android:theme
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:56:13-44
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:59:13-44
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:53:13-69
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:56:13-69
 activity#ragalik.baraxolka.other_logic.full_ad.FullAdActivity
-ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:61:9-70:20
+ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:65:9-75:20
+	android:screenOrientation
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:71:13-49
 	android:parentActivityName
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:65:13-55
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:69:13-55
 	android:label
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:63:13-59
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:67:13-59
 	android:launchMode
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:64:13-43
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:68:13-43
 	android:theme
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:66:13-44
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:70:13-44
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:62:13-63
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:66:13-63
 activity#ragalik.baraxolka.other_logic.account.Account
-ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:71:9-78:20
+ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:76:9-84:20
+	android:screenOrientation
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:80:13-49
 	android:parentActivityName
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:73:13-55
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:78:13-55
 	android:theme
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:74:13-44
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:79:13-44
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:72:13-56
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:77:13-56
 activity#ragalik.baraxolka.other_logic.activities.SplashScreenActivity
-ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:79:9-86:20
+ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:85:9-94:20
+	android:screenOrientation
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:88:13-49
 	android:theme
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:80:13-44
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:87:13-44
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:79:19-78
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:86:13-72
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:81:13-85:29
+ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:89:13-93:29
 action#android.intent.action.MAIN
-ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:82:17-69
+ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:90:17-69
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:82:25-66
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:90:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:84:17-77
+ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:92:17-77
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:84:27-74
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:92:27-74
 activity#ragalik.baraxolka.MainActivity
-ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:87:9-91:46
+ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:95:9-100:51
+	android:screenOrientation
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:100:13-49
 	android:label
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:89:13-45
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:97:13-45
 	android:launchMode
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:90:13-43
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:98:13-43
 	android:theme
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:91:13-44
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:99:13-44
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:88:13-41
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:96:13-41
 meta-data#preloaded_fonts
-ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:93:9-95:57
+ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:102:9-104:57
 	android:resource
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:95:13-54
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:104:13-54
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:94:13-43
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:103:13-43
 uses-library#org.apache.http.legacy
-ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:97:9-99:40
+ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:106:9-108:40
 	android:required
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:99:13-37
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:108:13-37
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:98:13-50
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:107:13-50
 uses-sdk
 INJECTED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml
@@ -281,8 +291,6 @@ MERGED from [com.nightonke:boommenu:2.1.1] C:\Users\Ragalik\.gradle\caches\trans
 MERGED from [com.nightonke:boommenu:2.1.1] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\c229c42e8d6d345528e287239630eaa8\jetified-boommenu-2.1.1\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\5c5a0b2e6ec01266b11b6f5974cbc87a\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\5c5a0b2e6ec01266b11b6f5974cbc87a\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\ea4cc970b12177215c93fc934e0a8e98\jetified-glide-4.11.0\AndroidManifest.xml:6:5-8:41
-MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\ea4cc970b12177215c93fc934e0a8e98\jetified-glide-4.11.0\AndroidManifest.xml:6:5-8:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\272dacf8d55bb61d6890f4c3e146dad7\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\272dacf8d55bb61d6890f4c3e146dad7\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\869460743d2d8859ff0976f58971bf5b\fragment-1.2.0\AndroidManifest.xml:20:5-22:41
@@ -353,8 +361,6 @@ MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Ragalik\.gradle\cac
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\e6330fc3e1915180cc6f43644ffa072f\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\b7f5997d82bad9c108acd7259400c2f9\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\b7f5997d82bad9c108acd7259400c2f9\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\078f3d386b82eb7a75da108538ed48d8\jetified-gifdecoder-4.11.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\078f3d386b82eb7a75da108538ed48d8\jetified-gifdecoder-4.11.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\dda3ef105836629c9f0d0d73c5720338\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\dda3ef105836629c9f0d0d73c5720338\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\747c2e8702ed76048c41784ade9c53ec\documentfile-1.0.0\AndroidManifest.xml:20:5-44
@@ -378,11 +384,11 @@ INJECTED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.x
 		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml
 		INJECTED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:106:13-108:57
+ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:115:13-117:57
 	android:resource
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:108:17-55
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:117:17-55
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:107:17-67
+		ADDED from D:\ADROID_STUDIO_PROJECTS\Baraxolka\app\src\main\AndroidManifest.xml:116:17-67
 provider#com.squareup.picasso.PicassoProvider
 ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\667ff8d4df10af93da4f15cd70b3392d\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
 	android:authorities

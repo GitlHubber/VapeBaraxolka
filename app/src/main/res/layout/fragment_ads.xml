@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fitsSystemWindows="true"
-        android:elevation="5dp">
+        android:background="@color/colorBackground">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
@@ -43,7 +43,19 @@
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
+        <com.google.android.material.chip.Chip
+            android:id="@+id/search_chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Chip.Entry"
+            android:layout_marginStart="10dp"
+            android:background="@color/colorBackground"
+            android:checkable="false"
+            android:text="Поиск" />
+
     </com.google.android.material.appbar.AppBarLayout>
+
+
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/refresherAds"

@@ -99,14 +99,14 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, AdAdapter
     class AdViewHolder (view: View) : RecyclerView.ViewHolder(view) {
         private val imageView = view.iv_avatar
         private val title = view.tv_title
-        private val description = view.tv_description
+        private val location = view.tv_location
         private val datetime = view.ad_preview_date_time
         private val isFavouritesButton = view.bookmark_button_ads
         private val price = view.ad_preview_price
 
         fun bind (ad: Ad) {
             title.text = ad.title
-            description.text = ad.description
+            location.text = ad.town
             datetime.text = ad.dateTime
             isFavouritesButton.isChecked = ad.isFavourite!!
             price.text = ad.price.toString() + " Руб."

@@ -40,7 +40,7 @@ public final class ItemAdBinding implements ViewBinding {
   public final Button moderatorRejectButton;
 
   @NonNull
-  public final TextView tvDescription;
+  public final TextView tvLocation;
 
   @NonNull
   public final TextView tvTitle;
@@ -48,7 +48,7 @@ public final class ItemAdBinding implements ViewBinding {
   private ItemAdBinding(@NonNull CardView rootView, @NonNull TextView adPreviewDateTime,
       @NonNull TextView adPreviewPrice, @NonNull AppCompatCheckBox bookmarkButtonAds,
       @NonNull ImageView ivAvatar, @NonNull Button moderatorAcceptButton,
-      @NonNull Button moderatorRejectButton, @NonNull TextView tvDescription,
+      @NonNull Button moderatorRejectButton, @NonNull TextView tvLocation,
       @NonNull TextView tvTitle) {
     this.rootView = rootView;
     this.adPreviewDateTime = adPreviewDateTime;
@@ -57,7 +57,7 @@ public final class ItemAdBinding implements ViewBinding {
     this.ivAvatar = ivAvatar;
     this.moderatorAcceptButton = moderatorAcceptButton;
     this.moderatorRejectButton = moderatorRejectButton;
-    this.tvDescription = tvDescription;
+    this.tvLocation = tvLocation;
     this.tvTitle = tvTitle;
   }
 
@@ -118,9 +118,9 @@ public final class ItemAdBinding implements ViewBinding {
         missingId = "moderatorRejectButton";
         break missingId;
       }
-      TextView tvDescription = rootView.findViewById(R.id.tv_description);
-      if (tvDescription == null) {
-        missingId = "tvDescription";
+      TextView tvLocation = rootView.findViewById(R.id.tv_location);
+      if (tvLocation == null) {
+        missingId = "tvLocation";
         break missingId;
       }
       TextView tvTitle = rootView.findViewById(R.id.tv_title);
@@ -129,7 +129,7 @@ public final class ItemAdBinding implements ViewBinding {
         break missingId;
       }
       return new ItemAdBinding((CardView) rootView, adPreviewDateTime, adPreviewPrice,
-          bookmarkButtonAds, ivAvatar, moderatorAcceptButton, moderatorRejectButton, tvDescription,
+          bookmarkButtonAds, ivAvatar, moderatorAcceptButton, moderatorRejectButton, tvLocation,
           tvTitle);
     }
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
