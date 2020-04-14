@@ -6,5 +6,6 @@
     android:singleLine="true"
     android:layout_width="match_parent"
     android:layout_height="50dp"
+    android:background="@drawable/abc_spinner_mtrl_am_alpha"
     android:backgroundTint="@color/colorText"
     android:ellipsize="marquee" />

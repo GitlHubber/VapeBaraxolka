@@ -173,7 +173,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
                         android:paddingStart="10dp"
-                        android:entries="@array/Spinner_region_items" />
+                        android:entries="@array/Spinner_region_items"
+                        style="@style/Widget.AppCompat.Spinner"
+                        android:background="@drawable/gradient_spinner"
+                        android:dropDownWidth="300dp"
+                        android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
+                        android:paddingRight="14dp"
+                        android:popupBackground="@color/colorBackground"
+                        android:popupElevation="3dp"
+                        android:stateListAnimator="@drawable/spinner_sla"/>
 
                 </LinearLayout>
 
@@ -202,7 +210,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
                         android:paddingStart="10dp"
-                        android:layout_marginBottom="5dp" />
+                        android:layout_marginBottom="5dp"
+                        style="@style/Widget.AppCompat.Spinner"
+                        android:background="@drawable/gradient_spinner"
+                        android:dropDownWidth="300dp"
+                        android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
+                        android:paddingRight="14dp"
+                        android:popupBackground="@color/colorBackground"
+                        android:popupElevation="3dp"
+                        android:stateListAnimator="@drawable/spinner_sla"/>
                 </LinearLayout>
 
             </LinearLayout>

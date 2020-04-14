@@ -18,7 +18,17 @@ class MyAdsDataSource(private val adStatus : Int = 0, private val sellerId : Int
         val call = ApiClient.getApi().getMyAds(FIRST_PAGE, adStatus, sellerId, MainActivity.sp.getInt("id", 0))
         call.enqueue(object : Callback<AdResponse> {
             override fun onFailure(call: Call<AdResponse>, t: Throwable) {
-
+                if (!isSeller) {
+                    when (adStatus) {
+                        1 -> MyADS.pb_active.isVisible = false
+                        2 -> MyADS.pb_rejected.isVisible = false
+                        3 -> MyADS.pb_on_moderate.isVisible = false
+                        4 -> MyADS.pb_non_active.isVisible = false
+                        else -> {}
+                    }
+                } else {
+                    SellerProfileActivity.progressBar.isVisible = false
+                }
             }
 
             override fun onResponse(call: Call<AdResponse>, response: Response<AdResponse>) {

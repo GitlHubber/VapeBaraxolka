@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android"
     android:exitFadeDuration="@android:integer/config_mediumAnimTime">
-    <item android:state_pressed="true" android:drawable="@color/colorBackground" />
-    <item android:state_selected="true" android:drawable="@color/colorBackground" />
+    <item android:state_pressed="true" android:drawable="@color/colorAdCreatorImage" />
+    <item android:state_selected="true" android:drawable="@color/colorAdCreatorImage" />
     <item>
         <inset android:insetLeft="-1dp" android:insetRight="-1dp">
             <shape android:shape="rectangle">
                 <stroke android:width="1dp"
-                    android:color="@color/colorBackgroundCardView" />
-                <solid android:color="@color/colorBackgroundCardView" />
+                    android:color="@color/colorAdCreatorImage" />
+                <solid android:color="@color/colorAdCreatorImage" />
             </shape>
         </inset>
     </item>

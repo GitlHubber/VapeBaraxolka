@@ -1,15 +1,16 @@
 package ragalik.baraxolka.paging_feed.favourites
 
+import android.view.View
 import androidx.core.view.isVisible
 import androidx.paging.PageKeyedDataSource
 import ragalik.baraxolka.MainActivity
 import ragalik.baraxolka.network.ApiClient
 import ragalik.baraxolka.paging_feed.Ad
 import ragalik.baraxolka.paging_feed.AdResponse
-
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+
 
 class FavouritesDataSource : PageKeyedDataSource<Int, Ad>() {
 
@@ -17,7 +18,7 @@ class FavouritesDataSource : PageKeyedDataSource<Int, Ad>() {
         val call = ApiClient.getApi().getFavouritesAds(FIRST_PAGE, MainActivity.sp.getInt("id", 0))
         call.enqueue(object : Callback<AdResponse>{
             override fun onFailure(call: Call<AdResponse>, t: Throwable) {
-                FAVOURITES.progressBar.isVisible = false
+                FAVOURITES.progressBar.visibility = View.VISIBLE
             }
 
             override fun onResponse(call: Call<AdResponse>, response: Response<AdResponse>) {
@@ -54,7 +55,6 @@ class FavouritesDataSource : PageKeyedDataSource<Int, Ad>() {
                     }
                 }
             }
-
         })
     }
 
@@ -77,7 +77,6 @@ class FavouritesDataSource : PageKeyedDataSource<Int, Ad>() {
                     }
                 }
             }
-
         })
     }
 
