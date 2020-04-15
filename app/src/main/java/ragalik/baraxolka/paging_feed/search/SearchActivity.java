@@ -11,13 +11,17 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
 import ragalik.baraxolka.network.ApiClient;
 import ragalik.baraxolka.network.entities.AdsCount;
+import ragalik.baraxolka.network.entities.CategoryResponse;
+import ragalik.baraxolka.network.entities.Subcategories;
 import ragalik.baraxolka.old_xyina.Ad;
 import ragalik.baraxolka.old_xyina.ListViewAdapter;
 import ragalik.baraxolka.R;
@@ -32,8 +36,9 @@ public class SearchActivity extends AppCompatActivity implements  SearchView.OnQ
     private SearchView searchView;
     private ArrayList<Ad> ads;
     //private ListViewAdapter adapter;
-    private ArrayAdapter<CharSequence> adapterCategory;
-    private ArrayAdapter<CharSequence> adapterSubcategory;
+    private ArrayAdapter<String> adapterCategory;
+    private ArrayAdapter<String> adapterSubcategory;
+    private LinearLayout subcategorySearchLayout;
     private Spinner categorySpinner;
     private Spinner subcategorySpinner;
     private String categoryFromSpinner;
@@ -57,7 +62,9 @@ public class SearchActivity extends AppCompatActivity implements  SearchView.OnQ
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle("Поиск");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -78,56 +85,60 @@ public class SearchActivity extends AppCompatActivity implements  SearchView.OnQ
 
         subcategorySpinner = findViewById(R.id.subcategorySearchSpinner);
         categorySpinner = findViewById(R.id.categorySearchSpinner);
+        subcategorySearchLayout = findViewById(R.id.subcategorySearchLayout);
+        subcategorySearchLayout.setVisibility(View.GONE);
 
         getSearchAdsCount(searchRequests);
 
-        adapterCategory = ArrayAdapter.createFromResource(this, R.array.Spinner_category_items, R.layout.text_color);
-        adapterCategory.setDropDownViewResource(R.layout.dropdown_text_color);
-        categorySpinner.setAdapter(adapterCategory);
-        categorySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String text = parent.getItemAtPosition(position).toString();
-                switch (text) {
-                    case ("Не выбрано") : adapterSubcategory = ArrayAdapter.createFromResource(view.getContext(), R.array.NothingSelected, R.layout.text_color);
-                        isCategorySelected = false;
-                        break;
-                    case ("Vape") : adapterSubcategory = ArrayAdapter.createFromResource(view.getContext(), R.array.Spinner_vape_items, R.layout.text_color);
-                        isCategorySelected = true;
-                        break;
-                    case ("Кальяны") : adapterSubcategory = ArrayAdapter.createFromResource(view.getContext(), R.array.Spinner_kalyan_items, R.layout.text_color);
-                        isCategorySelected = true;
-                        break;
-                    case ("Vape комплектующие") : adapterSubcategory = ArrayAdapter.createFromResource(view.getContext(), R.array.Spinner_vape_components_items, R.layout.text_color);
-                        isCategorySelected = true;
-                        break;
-                    default : break;
-                }
+//        adapterCategory = ArrayAdapter.createFromResource(this, R.array.Spinner_category_items, R.layout.text_color);
+//        adapterCategory.setDropDownViewResource(R.layout.dropdown_text_color);
+//        categorySpinner.setAdapter(adapterCategory);
+//        categorySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                String text = parent.getItemAtPosition(position).toString();
+//                switch (text) {
+//                    case ("Не выбрано") : adapterSubcategory = ArrayAdapter.createFromResource(view.getContext(), R.array.NothingSelected, R.layout.text_color);
+//                        isCategorySelected = false;
+//                        break;
+//                    case ("Vape") : adapterSubcategory = ArrayAdapter.createFromResource(view.getContext(), R.array.Spinner_vape_items, R.layout.text_color);
+//                        isCategorySelected = true;
+//                        break;
+//                    case ("Кальяны") : adapterSubcategory = ArrayAdapter.createFromResource(view.getContext(), R.array.Spinner_kalyan_items, R.layout.text_color);
+//                        isCategorySelected = true;
+//                        break;
+//                    case ("Vape комплектующие") : adapterSubcategory = ArrayAdapter.createFromResource(view.getContext(), R.array.Spinner_vape_components_items, R.layout.text_color);
+//                        isCategorySelected = true;
+//                        break;
+//                    default : break;
+//                }
+//
+//                if (searchRequests.containsKey("subcategories")) {
+//                    searchRequests.remove("subcategories");
+//                }
+//
+//                if (isCategorySelected) {
+//                    categoryFromSpinner = "categories.category_name = '" + text + "'";
+//                    searchRequests.put("category", categoryFromSpinner);
+//                } else {
+//                    categoryFromSpinner = "";
+//                    if (searchRequests.containsKey("categories")) {
+//                        searchRequests.remove("category");
+//                    }
+//                }
+//                getSearchAdsCount(searchRequests);
+//
+//                adapterSubcategory.setDropDownViewResource(R.layout.dropdown_text_color);
+//                subcategorySpinner.setAdapter(adapterSubcategory);
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parent) {
+//
+//            }
+//        });
 
-                if (searchRequests.containsKey("subcategories")) {
-                    searchRequests.remove("subcategories");
-                }
-
-                if (isCategorySelected) {
-                    categoryFromSpinner = "categories.category_name = '" + text + "'";
-                    searchRequests.put("category", categoryFromSpinner);
-                } else {
-                    categoryFromSpinner = "";
-                    if (searchRequests.containsKey("categories")) {
-                        searchRequests.remove("category");
-                    }
-                }
-                getSearchAdsCount(searchRequests);
-
-                adapterSubcategory.setDropDownViewResource(R.layout.dropdown_text_color);
-                subcategorySpinner.setAdapter(adapterSubcategory);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
+        createCategorySpinner();
 
         priceButton = findViewById(R.id.SearchPriceButton);
         priceButton.setOnClickListener(v -> {
@@ -205,6 +216,91 @@ public class SearchActivity extends AppCompatActivity implements  SearchView.OnQ
         getSearchAdsCount(searchRequests);
         return false;
 //        adapter.filter(text);
+    }
+
+    private void createCategorySpinner() {
+
+        ApiClient.getApi().getCategoriesWithSubcategories().enqueue(new Callback<CategoryResponse>() {
+            @Override
+            public void onResponse(Call<CategoryResponse> call, Response<CategoryResponse> response) {
+
+                HashMap<String, ArrayList<Subcategories>> subcategoriesHashMap = new HashMap<>();
+                ArrayList<String> categories = new ArrayList<>();
+                categories.add("Не выбрано");
+
+                for (int i = 0; i < response.body().getCategories().size(); ++i) {
+                    categories.add(response.body().getCategories().get(i).getCategory_name());
+                    subcategoriesHashMap.put(response.body().getCategories().get(i).getCategory_name(), response.body().getCategories().get(i).getSubcategories());
+                }
+
+                adapterCategory = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item, categories);
+                adapterCategory.setDropDownViewResource(R.layout.dropdown_text_color);
+                categorySpinner.setAdapter(adapterCategory);
+                categorySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        ArrayList<String> subcategories = new ArrayList<>();
+                        subcategories.add("Не выбрано");
+
+                        if (subcategoriesHashMap.get(categorySpinner.getSelectedItem().toString()) != null) {
+                            if (position != 0) {
+                                subcategorySearchLayout.setVisibility(View.VISIBLE);
+
+                                for (int i = 0; i < subcategoriesHashMap.get(categorySpinner.getSelectedItem().toString()).size(); ++i) {
+                                    subcategories.add(subcategoriesHashMap.get(categorySpinner.getSelectedItem().toString()).get(i).getSubcategory_name());
+                                }
+
+                                if (searchRequests.containsKey("subcategories")) {
+                                    searchRequests.remove("subcategories");
+                                }
+
+                                if (isCategorySelected) {
+                                    categoryFromSpinner = "categories.category_name = '" + parent.getSelectedItem().toString() + "'";
+                                    searchRequests.put("category", categoryFromSpinner);
+                                } else {
+                                    categoryFromSpinner = "";
+                                    if (searchRequests.containsKey("categories")) {
+                                        searchRequests.remove("category");
+                                    }
+                                }
+                                getSearchAdsCount(searchRequests);
+
+                                categoryFromSpinner = categorySpinner.getSelectedItem().toString();
+                                adapterSubcategory = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item, subcategories);
+                                adapterSubcategory.setDropDownViewResource(R.layout.dropdown_text_color);
+                                subcategorySpinner.setAdapter(adapterSubcategory);
+                            } else {
+                                subcategorySearchLayout.setVisibility(View.GONE);
+                            }
+                        } else {
+                            subcategorySearchLayout.setVisibility(View.GONE);
+                        }
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {}
+                });
+
+                subcategorySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        if (parent.getItemAtPosition(position).toString().equals("Не выбрано")) {
+                            subcategoryFromSpinner = "";
+                        } else {
+                            subcategoryFromSpinner = subcategorySpinner.getSelectedItem().toString();
+                        }
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {}
+                });
+            }
+
+            @Override
+            public void onFailure(Call<CategoryResponse> call, Throwable t) {
+                Toast.makeText(SearchActivity.activity, "Не удалось получить список категорий. Проверьте интернет соединение.", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     public static void getSearchAdsCount (HashMap<String, String> requests) {

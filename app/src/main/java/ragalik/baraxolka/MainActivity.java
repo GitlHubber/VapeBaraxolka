@@ -16,6 +16,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.os.Handler;
 import android.view.View;
 import androidx.core.view.GravityCompat;
 
@@ -33,6 +34,7 @@ import android.view.Menu;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -76,6 +78,7 @@ public class MainActivity extends AppCompatActivity
     private int entrance_count = 0;
     public static Boolean isActualFragment = false;
     public static DrawerLayout drawer;
+    private boolean doubleBackToExitPressedOnce;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -230,7 +233,7 @@ public class MainActivity extends AppCompatActivity
     private void newTransaction (Fragment fragment, String fragmentName) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.setCustomAnimations(R.anim.enter_from_up, R.anim.exit_to_up);
-        fragmentTransaction.replace(R.id.constrLayout, fragment).addToBackStack(null).commit();
+        fragmentTransaction.replace(R.id.constrLayout, fragment).commit();
         this.setTitle(fragmentName);
     }
 
@@ -271,33 +274,33 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onBackPressed() {
 
+//        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+//        if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+//            getSupportFragmentManager().popBackStack();
+//        } else {
+//            super.onBackPressed();
+//        }
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
-            getSupportFragmentManager().popBackStack();
-        } else {
+        if (doubleBackToExitPressedOnce) {
             super.onBackPressed();
+            return;
+        } else {
+            if (drawer.isDrawerOpen(GravityCompat.START)) {
+                drawer.closeDrawer(GravityCompat.START);
+            }
         }
 
-//        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-//        if (doubleBackToExitPressedOnce) {
-//            super.onBackPressed();
-//            return;
-//        } else {
-//            if (drawer.isDrawerOpen(GravityCompat.START)) {
-//                drawer.closeDrawer(GravityCompat.START);
-//            }
-//        }
-//
-//        this.doubleBackToExitPressedOnce = true;
-//        Toast.makeText(this, "Нажмите 'назад' еще раз чтобы выйти", Toast.LENGTH_SHORT).show();
-//
-//        new Handler().postDelayed( new Runnable() {
-//
-//            @Override
-//            public void run() {
-//                doubleBackToExitPressedOnce = false;
-//            }
-//        }, 2000);
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Нажмите 'назад' еще раз чтобы выйти", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce = false;
+            }
+        }, 2000);
     }
 
     @Override
@@ -361,8 +364,6 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.ADMIN) {
             fragmentTransaction.replace(R.id.constrLayout, new Administrator()).commit();
         }
-
-        fragmentTransaction.addToBackStack(null);
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

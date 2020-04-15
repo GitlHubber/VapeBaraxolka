@@ -1,16 +1,16 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "D:\\ADROID_STUDIO_PROJECTS\\Baraxolka\\app\\src\\main\\res\\values-night\\colors.xml",
+                    "source": "/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/res/values-night/colors.xml",
                     "from": {
                         "startLines": "4,11,7,8,9,2,3,6,5,14,13,17,16",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "154,455,297,345,401,57,102,246,201,563,509,668,617",
+                        "startOffsets": "150,444,290,337,392,55,99,240,196,549,496,651,601",
                         "endColumns": "45,50,46,54,50,43,50,49,43,50,52,47,49",
-                        "endOffsets": "195,501,339,395,447,96,148,291,240,609,557,711,662"
+                        "endOffsets": "191,490,332,387,438,94,145,285,235,595,544,694,646"
                     },
                     "to": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Ragalik\\.gradle\\caches\\transforms-2\\files-2.1\\c718709a63172dec4cfffa1a59a58445\\appcompat-1.1.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "/home/kirill/.gradle/caches/transforms-2/files-2.1/c718709a63172dec4cfffa1a59a58445/appcompat-1.1.0/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Ragalik\\.gradle\\caches\\transforms-2\\files-2.1\\97f9388465737975a6d1fbcf74822f8f\\material-1.1.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "/home/kirill/.gradle/caches/transforms-2/files-2.1/97f9388465737975a6d1fbcf74822f8f/material-1.1.0/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

@@ -2247,6 +2247,8 @@ id start
 id stateTextFullAd
 id status_bar_latest_event_content
 id stretch
+id subcategoryLayout
+id subcategorySearchLayout
 id subcategorySearchSpinner
 id subcategorySpinner
 id submenuarrow

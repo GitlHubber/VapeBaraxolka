@@ -18,6 +18,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,6 +34,7 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Locale;
 import java.util.TimeZone;
 
@@ -42,7 +44,9 @@ import okhttp3.RequestBody;
 import ragalik.baraxolka.R;
 import ragalik.baraxolka.MainActivity;
 import ragalik.baraxolka.network.ApiClient;
+import ragalik.baraxolka.network.entities.CategoryResponse;
 import ragalik.baraxolka.network.entities.ServerResponse;
+import ragalik.baraxolka.network.entities.Subcategories;
 import ragalik.baraxolka.other_logic.account.PathUtils;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -64,8 +68,9 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
     private int choosedIndex = 0;
     public static int imageUploadCount;
     public static ArrayList<File> files;
-    private ArrayAdapter<CharSequence> adapterCategory;
-    private ArrayAdapter<CharSequence> adapterSubcategory;
+    private ArrayAdapter<String> adapterCategory;
+    private ArrayAdapter<String> adapterSubcategory;
+    private LinearLayout subcategoryLayout;
     //private AppCompatRadioButton newState;
     //private AppCompatRadioButton secondaryState;
     //private String goodsState;
@@ -98,6 +103,8 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
         subcategorySpinner = findViewById(R.id.subcategorySpinner);
         categorySpinner = findViewById(R.id.categorySpinner);
         mainLabel = findViewById(R.id.ad_creator_main_label);
+        subcategoryLayout = findViewById(R.id.subcategoryLayout);
+        subcategoryLayout.setVisibility(View.GONE);
 
         activity = this;
         uploadAmountTW = findViewById(R.id.uploadPhotoCounterAdCreator);
@@ -136,47 +143,7 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
 
         titleEditText = findViewById(R.id.titleEditText);
 
-        adapterCategory = ArrayAdapter.createFromResource(this, R.array.Spinner_category_items, R.layout.text_color);
-        adapterCategory.setDropDownViewResource(R.layout.dropdown_text_color);
-        categorySpinner.setAdapter(adapterCategory);
-        categorySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String text = parent.getItemAtPosition(position).toString();
-                switch (text) {
-                    case ("Не выбрано") : adapterSubcategory = ArrayAdapter.createFromResource(view.getContext(), R.array.NothingSelected, R.layout.text_color);
-                        break;
-                    case ("Vape") : adapterSubcategory = ArrayAdapter.createFromResource(view.getContext(), R.array.Spinner_vape_items, R.layout.text_color);
-                        break;
-                    case ("Кальяны") : adapterSubcategory = ArrayAdapter.createFromResource(view.getContext(), R.array.Spinner_kalyan_items, R.layout.text_color);
-                        break;
-                    case ("Vape комплектующие") : adapterSubcategory = ArrayAdapter.createFromResource(view.getContext(), R.array.Spinner_vape_components_items, R.layout.text_color);
-                        break;
-                    default : break;
-                }
-
-                categoryFromSpinner = text;
-                adapterSubcategory.setDropDownViewResource(R.layout.dropdown_text_color);
-                subcategorySpinner.setAdapter(adapterSubcategory);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {}
-        });
-
-        subcategorySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (parent.getItemAtPosition(position).toString().equals("Не выбрано")) {
-                    subcategoryFromSpinner = "";
-                } else {
-                    subcategoryFromSpinner = parent.getItemAtPosition(position).toString();
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {}
-        });
+        createCategorySpinner();
 
 //        newState = findViewById(R.id.newState);
 //        secondaryState = findViewById(R.id.secondaryState);
@@ -210,6 +177,76 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
                 addImage();
             }
         }
+    }
+
+    private void createCategorySpinner() {
+
+        ApiClient.getApi().getCategoriesWithSubcategories().enqueue(new Callback<CategoryResponse>() {
+            @Override
+            public void onResponse(Call<CategoryResponse> call, Response<CategoryResponse> response) {
+
+                HashMap<String, ArrayList<Subcategories>> subcategoriesHashMap = new HashMap<>();
+                ArrayList<String> categories = new ArrayList<>();
+                categories.add("Не выбрано");
+
+                for (int i = 0; i < response.body().getCategories().size(); ++i) {
+                    categories.add(response.body().getCategories().get(i).getCategory_name());
+                    subcategoriesHashMap.put(response.body().getCategories().get(i).getCategory_name(), response.body().getCategories().get(i).getSubcategories());
+                }
+
+                adapterCategory = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item, categories);
+                adapterCategory.setDropDownViewResource(R.layout.dropdown_text_color);
+                categorySpinner.setAdapter(adapterCategory);
+                categorySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        ArrayList<String> subcategories = new ArrayList<>();
+                        subcategories.add("Не выбрано");
+
+                        if (subcategoriesHashMap.get(categorySpinner.getSelectedItem().toString()) != null) {
+                            if (position != 0) {
+                                subcategoryLayout.setVisibility(View.VISIBLE);
+
+                                for (int i = 0; i < subcategoriesHashMap.get(categorySpinner.getSelectedItem().toString()).size(); ++i) {
+                                    subcategories.add(subcategoriesHashMap.get(categorySpinner.getSelectedItem().toString()).get(i).getSubcategory_name());
+                                }
+
+                                categoryFromSpinner = categorySpinner.getSelectedItem().toString();
+                                adapterSubcategory = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item, subcategories);
+                                adapterSubcategory.setDropDownViewResource(R.layout.dropdown_text_color);
+                                subcategorySpinner.setAdapter(adapterSubcategory);
+                            } else {
+                                subcategoryLayout.setVisibility(View.GONE);
+                            }
+                        } else {
+                            subcategoryLayout.setVisibility(View.GONE);
+                        }
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {}
+                });
+
+                subcategorySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        if (parent.getItemAtPosition(position).toString().equals("Не выбрано")) {
+                            subcategoryFromSpinner = "";
+                        } else {
+                            subcategoryFromSpinner = subcategorySpinner.getSelectedItem().toString();
+                        }
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {}
+                });
+            }
+
+            @Override
+            public void onFailure(Call<CategoryResponse> call, Throwable t) {
+                Toast.makeText(AdCreator.this, "Не удалось получить список категорий. Проверьте интернет соединение.", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void addImage() {

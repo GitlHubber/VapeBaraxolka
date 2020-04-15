@@ -4,6 +4,7 @@ package ragalik.baraxolka.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -36,18 +37,23 @@ public final class ContentSearchBinding implements ViewBinding {
   public final AppCompatButton showAdsButton;
 
   @NonNull
+  public final LinearLayout subcategorySearchLayout;
+
+  @NonNull
   public final Spinner subcategorySearchSpinner;
 
   private ContentSearchBinding(@NonNull CoordinatorLayout rootView,
       @NonNull AppCompatButton SearchPriceButton, @NonNull AppCompatButton SearchSortButton,
       @NonNull Spinner categorySearchSpinner, @NonNull SearchView searchview,
-      @NonNull AppCompatButton showAdsButton, @NonNull Spinner subcategorySearchSpinner) {
+      @NonNull AppCompatButton showAdsButton, @NonNull LinearLayout subcategorySearchLayout,
+      @NonNull Spinner subcategorySearchSpinner) {
     this.rootView = rootView;
     this.SearchPriceButton = SearchPriceButton;
     this.SearchSortButton = SearchSortButton;
     this.categorySearchSpinner = categorySearchSpinner;
     this.searchview = searchview;
     this.showAdsButton = showAdsButton;
+    this.subcategorySearchLayout = subcategorySearchLayout;
     this.subcategorySearchSpinner = subcategorySearchSpinner;
   }
 
@@ -103,6 +109,11 @@ public final class ContentSearchBinding implements ViewBinding {
         missingId = "showAdsButton";
         break missingId;
       }
+      LinearLayout subcategorySearchLayout = rootView.findViewById(R.id.subcategorySearchLayout);
+      if (subcategorySearchLayout == null) {
+        missingId = "subcategorySearchLayout";
+        break missingId;
+      }
       Spinner subcategorySearchSpinner = rootView.findViewById(R.id.subcategorySearchSpinner);
       if (subcategorySearchSpinner == null) {
         missingId = "subcategorySearchSpinner";
@@ -110,7 +121,7 @@ public final class ContentSearchBinding implements ViewBinding {
       }
       return new ContentSearchBinding((CoordinatorLayout) rootView, SearchPriceButton,
           SearchSortButton, categorySearchSpinner, searchview, showAdsButton,
-          subcategorySearchSpinner);
+          subcategorySearchLayout, subcategorySearchSpinner);
     }
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }

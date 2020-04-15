@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -61,6 +62,9 @@ public final class FragmentAdCreatorBinding implements ViewBinding {
   public final TextInputLayout priceEditText;
 
   @NonNull
+  public final LinearLayout subcategoryLayout;
+
+  @NonNull
   public final Spinner subcategorySpinner;
 
   @NonNull
@@ -87,9 +91,9 @@ public final class FragmentAdCreatorBinding implements ViewBinding {
       @NonNull ImageView adPhoto3, @NonNull ImageView adPhoto4, @NonNull ImageView adPhoto5,
       @NonNull AppCompatButton addAdButton, @NonNull Spinner categorySpinner,
       @NonNull TextInputLayout descriptionEditText, @NonNull TextInputLayout priceEditText,
-      @NonNull Spinner subcategorySpinner, @NonNull TextView textView4,
-      @NonNull TextInputLayout titleEditText, @NonNull TextView tv, @NonNull TextView tv1,
-      @NonNull TextView tv3, @NonNull TextView uploadPhotoCounterAdCreator) {
+      @NonNull LinearLayout subcategoryLayout, @NonNull Spinner subcategorySpinner,
+      @NonNull TextView textView4, @NonNull TextInputLayout titleEditText, @NonNull TextView tv,
+      @NonNull TextView tv1, @NonNull TextView tv3, @NonNull TextView uploadPhotoCounterAdCreator) {
     this.rootView = rootView;
     this.adCreatorFrame = adCreatorFrame;
     this.adCreatorMainLabel = adCreatorMainLabel;
@@ -103,6 +107,7 @@ public final class FragmentAdCreatorBinding implements ViewBinding {
     this.categorySpinner = categorySpinner;
     this.descriptionEditText = descriptionEditText;
     this.priceEditText = priceEditText;
+    this.subcategoryLayout = subcategoryLayout;
     this.subcategorySpinner = subcategorySpinner;
     this.textView4 = textView4;
     this.titleEditText = titleEditText;
@@ -199,6 +204,11 @@ public final class FragmentAdCreatorBinding implements ViewBinding {
         missingId = "priceEditText";
         break missingId;
       }
+      LinearLayout subcategoryLayout = rootView.findViewById(R.id.subcategoryLayout);
+      if (subcategoryLayout == null) {
+        missingId = "subcategoryLayout";
+        break missingId;
+      }
       Spinner subcategorySpinner = rootView.findViewById(R.id.subcategorySpinner);
       if (subcategorySpinner == null) {
         missingId = "subcategorySpinner";
@@ -236,8 +246,8 @@ public final class FragmentAdCreatorBinding implements ViewBinding {
       }
       return new FragmentAdCreatorBinding((FrameLayout) rootView, adCreatorFrame,
           adCreatorMainLabel, adCreatorToolbar, adPhoto1, adPhoto2, adPhoto3, adPhoto4, adPhoto5,
-          addAdButton, categorySpinner, descriptionEditText, priceEditText, subcategorySpinner,
-          textView4, titleEditText, tv, tv1, tv3, uploadPhotoCounterAdCreator);
+          addAdButton, categorySpinner, descriptionEditText, priceEditText, subcategoryLayout,
+          subcategorySpinner, textView4, titleEditText, tv, tv1, tv3, uploadPhotoCounterAdCreator);
     }
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }

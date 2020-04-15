@@ -5,6 +5,7 @@ import java.util.List;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import ragalik.baraxolka.network.entities.AdsCount;
+import ragalik.baraxolka.network.entities.CategoryResponse;
 import ragalik.baraxolka.network.entities.RegisterResponse;
 import ragalik.baraxolka.network.entities.ServerResponse;
 import ragalik.baraxolka.network.entities.User;
@@ -74,6 +75,9 @@ public interface IApi {
     @GET("/scripts/getSearchAdsCount.php")
     Call<AdsCount> getSearchAdsCount(@Query("status_number") int status,
                                  @Query("where") String where);
+
+    @GET("/scripts/getCategoriesWithSubcategories.php")
+    Call<CategoryResponse> getCategoriesWithSubcategories();
 
 
 

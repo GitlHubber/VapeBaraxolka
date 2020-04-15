@@ -210,36 +210,43 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/tv1"
+                <LinearLayout
+                    android:id="@+id/subcategoryLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Выберите подкатегорию"
-                    android:textColor="@color/colorText"
-                    android:textSize="20dp" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Выберите подкатегорию"
+                        android:textColor="@color/colorText"
+                        android:textSize="20dp" />
 
-                <Spinner
-                    android:id="@+id/subcategorySpinner"
-                    style="@style/Widget.AppCompat.Spinner"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_margin="10dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/gradient_spinner"
-                    android:dropDownWidth="300dp"
-                    android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
-                    android:paddingRight="14dp"
-                    android:popupBackground="@color/colorBackground"
-                    android:popupElevation="3dp"
-                    android:stateListAnimator="@drawable/spinner_sla"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <Spinner
+                        android:id="@+id/subcategorySpinner"
+                        style="@style/Widget.AppCompat.Spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/gradient_spinner"
+                        android:dropDownWidth="300dp"
+                        android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
+                        android:paddingRight="14dp"
+                        android:popupBackground="@color/colorBackground"
+                        android:popupElevation="3dp"
+                        android:stateListAnimator="@drawable/spinner_sla"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </LinearLayout>
+
 
                 <View
                     android:layout_width="match_parent"
