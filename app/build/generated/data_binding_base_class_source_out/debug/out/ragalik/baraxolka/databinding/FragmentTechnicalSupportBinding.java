@@ -23,26 +23,17 @@ public final class FragmentTechnicalSupportBinding implements ViewBinding {
   public final TextView Header;
 
   @NonNull
+  public final TextView VKGroupLink;
+
+  @NonNull
   public final Toolbar supportToolbar;
 
-  @NonNull
-  public final TextView title1TS;
-
-  @NonNull
-  public final TextView title2TS;
-
-  @NonNull
-  public final TextView title3;
-
   private FragmentTechnicalSupportBinding(@NonNull FrameLayout rootView, @NonNull TextView Header,
-      @NonNull Toolbar supportToolbar, @NonNull TextView title1TS, @NonNull TextView title2TS,
-      @NonNull TextView title3) {
+      @NonNull TextView VKGroupLink, @NonNull Toolbar supportToolbar) {
     this.rootView = rootView;
     this.Header = Header;
+    this.VKGroupLink = VKGroupLink;
     this.supportToolbar = supportToolbar;
-    this.title1TS = title1TS;
-    this.title2TS = title2TS;
-    this.title3 = title3;
   }
 
   @Override
@@ -77,28 +68,18 @@ public final class FragmentTechnicalSupportBinding implements ViewBinding {
         missingId = "Header";
         break missingId;
       }
+      TextView VKGroupLink = rootView.findViewById(R.id.VKGroupLink);
+      if (VKGroupLink == null) {
+        missingId = "VKGroupLink";
+        break missingId;
+      }
       Toolbar supportToolbar = rootView.findViewById(R.id.supportToolbar);
       if (supportToolbar == null) {
         missingId = "supportToolbar";
         break missingId;
       }
-      TextView title1TS = rootView.findViewById(R.id.title1TS);
-      if (title1TS == null) {
-        missingId = "title1TS";
-        break missingId;
-      }
-      TextView title2TS = rootView.findViewById(R.id.title2TS);
-      if (title2TS == null) {
-        missingId = "title2TS";
-        break missingId;
-      }
-      TextView title3 = rootView.findViewById(R.id.title3);
-      if (title3 == null) {
-        missingId = "title3";
-        break missingId;
-      }
-      return new FragmentTechnicalSupportBinding((FrameLayout) rootView, Header, supportToolbar,
-          title1TS, title2TS, title3);
+      return new FragmentTechnicalSupportBinding((FrameLayout) rootView, Header, VKGroupLink,
+          supportToolbar);
     }
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }

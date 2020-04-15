@@ -350,10 +350,12 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.FAVOURITES) {
             fragmentTransaction.replace(R.id.constrLayout, new FAVOURITES()).commit();
            // toolbar.setTitle("Закладки");
-        } else if (id == R.id.RULES) {
-            fragmentTransaction.replace(R.id.constrLayout, new RULES()).commit();
-           // toolbar.setTitle("Правила");
-        } else if (id == R.id.Technical_SUPPORT) {
+        }
+//        else if (id == R.id.RULES) {
+//            fragmentTransaction.replace(R.id.constrLayout, new RULES()).commit();
+//           // toolbar.setTitle("Правила");
+//        }
+        else if (id == R.id.Technical_SUPPORT) {
             fragmentTransaction.replace(R.id.constrLayout, new TechnicalSUPPORT()).commit();
            // toolbar.setTitle("Техническая поддержка");
         } else if (id == R.id.SETTINGS) {

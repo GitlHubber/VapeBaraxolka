@@ -69,6 +69,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Ваше имя"
                     android:paddingLeft="5dp"
+                    android:inputType="textCapSentences"
                     android:textColor="@color/colorText"
                     android:textColorHighlight="@color/colorText"
                     android:textColorLink="@color/colorText"

@@ -1,7 +1,7 @@
-#Wed Apr 15 14:05:44 MSK 2020
-base.0=/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/build/intermediates/dex/debug/mergeExtDexDebug/out/classes.dex
+#Wed Apr 15 16:53:35 MSK 2020
+base.0=D\:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex
+base.1=D\:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex

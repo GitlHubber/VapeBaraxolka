@@ -26,10 +26,10 @@
 
     <group android:checkableBehavior="single"
         android:id="@+id/thrid_group">
-        <item
-            android:id="@+id/RULES"
-            android:icon="@drawable/ic_rules"
-            android:title="Правила" />
+<!--        <item-->
+<!--            android:id="@+id/RULES"-->
+<!--            android:icon="@drawable/ic_rules"-->
+<!--            android:title="Правила" />-->
         <item
             android:id="@+id/Technical_SUPPORT"
             android:icon="@drawable/ic_build_black_24dp"

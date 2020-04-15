@@ -909,6 +909,7 @@ color colorAdsDate
 color colorBackground
 color colorBackgroundCardView
 color colorBlack
+color colorLink
 color colorNavigationItem
 color colorPrimary
 color colorPrimaryDark
@@ -1712,7 +1713,6 @@ id ModeratorAdsView
 id NonActiveAdsView
 id OnModerateAdsView
 id PhNumberOrEmailLayout
-id RULES
 id Registration_button
 id RejectedAdsView
 id SETTINGS
@@ -1730,6 +1730,7 @@ id SignInLogInButton
 id TOP_END
 id TOP_START
 id Technical_SUPPORT
+id VKGroupLink
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
 id accessibility_custom_action_1
@@ -2299,10 +2300,7 @@ id thrid_group
 id time
 id title
 id title1R
-id title1TS
 id title2R
-id title2TS
-id title3
 id title3R
 id titleDividerNoCustom
 id titleEditText

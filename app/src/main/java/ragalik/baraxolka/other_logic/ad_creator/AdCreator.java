@@ -215,6 +215,9 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
                                 adapterSubcategory = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item, subcategories);
                                 adapterSubcategory.setDropDownViewResource(R.layout.dropdown_text_color);
                                 subcategorySpinner.setAdapter(adapterSubcategory);
+                                if (subcategoriesHashMap.get(categorySpinner.getSelectedItem().toString()).size() == 1) {
+                                    subcategorySpinner.setSelection(1);
+                                }
                             } else {
                                 subcategoryLayout.setVisibility(View.GONE);
                             }
@@ -399,6 +402,7 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
 
             @Override
             public void onFailure(Call<ServerResponse> call, Throwable t) {
+                pDialog.dismiss();
                 Toast.makeText(getApplicationContext(), "Произошла ошибка", Toast.LENGTH_LONG).show();
             }
         });

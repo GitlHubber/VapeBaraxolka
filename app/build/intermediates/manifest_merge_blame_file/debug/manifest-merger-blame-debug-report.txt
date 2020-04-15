@@ -2,249 +2,248 @@
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="ragalik.baraxolka"
 4    android:versionCode="1"
-5    android:versionName="1.0" >
+5    android:versionName="0.0.1" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml
+8-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml
+9-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-11-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:6:5-79
-11-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:6:22-76
+11-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:6:5-79
+11-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:6:22-76
 12    <uses-permission android:name="android.permission.INTERNET" />
-12-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:7:5-67
-12-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:7:22-64
+12-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:7:5-67
+12-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:7:22-64
 13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-13-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:8:5-80
-13-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:8:22-78
+13-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:8:5-80
+13-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:8:22-78
 14
 15    <supports-screens
-15-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:10:5-14:40
+15-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:10:5-14:40
 16        android:largeScreens="true"
-16-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:11:9-36
+16-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:11:9-36
 17        android:normalScreens="true"
-17-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:12:9-37
+17-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:12:9-37
 18        android:smallScreens="true"
-18-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:13:9-36
+18-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:13:9-36
 19        android:xlargeScreens="true" />
-19-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:14:9-37
+19-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:14:9-37
 20
 21    <application
-21-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:16:5-119:19
+21-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:16:5-119:19
 22        android:allowBackup="true"
-22-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:17:9-35
+22-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:17:9-35
 23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-23-->[androidx.core:core:1.2.0] /home/kirill/.gradle/caches/transforms-2/files-2.1/163ba80aa74cf2b66a97b31641e8ba82/core-1.2.0/AndroidManifest.xml:24:18-86
+23-->[androidx.core:core:1.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\163ba80aa74cf2b66a97b31641e8ba82\core-1.2.0\AndroidManifest.xml:24:18-86
 24        android:debuggable="true"
 25        android:icon="@mipmap/ic_launcher"
-25-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:18:9-43
+25-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:18:9-43
 26        android:label="@string/app_name"
-26-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:19:9-41
+26-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:19:9-41
 27        android:largeHeap="true"
-27-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:20:9-33
+27-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:20:9-33
 28        android:roundIcon="@mipmap/ic_launcher_round"
-28-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:21:9-54
+28-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:21:9-54
 29        android:supportsRtl="true"
-29-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:22:9-35
-30        android:testOnly="true"
-31        android:usesCleartextTraffic="true" >
-31-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:23:9-44
-32        <activity
-32-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:25:9-34:20
-33            android:name="ragalik.baraxolka.paging_feed.search.SearchActivity"
-33-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:26:13-62
-34            android:label="@string/title_activity_search"
-34-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:27:13-58
-35            android:parentActivityName="ragalik.baraxolka.MainActivity"
-35-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:28:13-55
-36            android:screenOrientation="portrait"
-36-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:30:13-49
-37            android:theme="@style/AppTheme" >
-37-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:29:13-44
-38            <meta-data
-38-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:31:13-33:49
-39                android:name="android.support.PARENT_ACTIVITY"
-39-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:32:17-63
-40                android:value=".MainActivity" />
-40-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:33:17-46
-41        </activity>
-42        <activity
-42-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:35:9-44:20
-43            android:name="ragalik.baraxolka.other_logic.ad_creator.AdCreator"
-43-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:36:13-61
-44            android:label="@string/title_activity_settings"
-44-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:37:13-60
-45            android:parentActivityName="ragalik.baraxolka.MainActivity"
-45-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:38:13-55
-46            android:screenOrientation="portrait"
-46-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:40:13-49
-47            android:theme="@style/AppTheme" >
-47-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:39:13-44
-48            <meta-data
-48-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:31:13-33:49
-49                android:name="android.support.PARENT_ACTIVITY"
-49-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:32:17-63
-50                android:value=".MainActivity" />
-50-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:33:17-46
-51        </activity>
-52        <activity
-52-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:45:9-54:20
-53            android:name="ragalik.baraxolka.other_logic.activities.SettingsActivity"
-53-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:46:13-68
-54            android:label="@string/title_activity_settings"
-54-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:47:13-60
-55            android:parentActivityName="ragalik.baraxolka.MainActivity"
-55-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:48:13-55
-56            android:screenOrientation="portrait"
-56-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:50:13-49
-57            android:theme="@style/AppTheme" >
-57-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:49:13-44
-58            <meta-data
-58-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:31:13-33:49
-59                android:name="android.support.PARENT_ACTIVITY"
-59-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:32:17-63
-60                android:value=".MainActivity" />
-60-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:33:17-46
-61        </activity>
-62        <activity
-62-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:55:9-64:20
-63            android:name="ragalik.baraxolka.paging_feed.seller.SellerProfileActivity"
-63-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:56:13-69
-64            android:label="@string/title_activity_seller_profile"
-64-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:57:13-66
-65            android:parentActivityName="ragalik.baraxolka.other_logic.full_ad.FullAdActivity"
-65-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:58:13-77
-66            android:screenOrientation="portrait"
-66-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:60:13-49
-67            android:theme="@style/AppTheme" >
-67-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:59:13-44
-68            <meta-data
-68-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:31:13-33:49
-69                android:name="android.support.PARENT_ACTIVITY"
-69-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:32:17-63
-70                android:value=".other_logic.full_ad.FullAdActivity" />
-70-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:33:17-46
-71        </activity>
-72        <activity
-72-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:65:9-75:20
-73            android:name="ragalik.baraxolka.other_logic.full_ad.FullAdActivity"
-73-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:66:13-63
-74            android:label="@string/title_activity_full_ad"
-74-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:67:13-59
-75            android:launchMode="singleTop"
-75-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:68:13-43
-76            android:parentActivityName="ragalik.baraxolka.MainActivity"
-76-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:69:13-55
-77            android:screenOrientation="portrait"
-77-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:71:13-49
-78            android:theme="@style/AppTheme" >
-78-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:70:13-44
-79            <meta-data
-79-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:31:13-33:49
-80                android:name="android.support.PARENT_ACTIVITY"
-80-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:32:17-63
-81                android:value=".MainActivity" />
-81-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:33:17-46
-82        </activity>
-83        <activity
-83-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:76:9-84:20
-84            android:name="ragalik.baraxolka.other_logic.account.Account"
-84-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:77:13-56
-85            android:parentActivityName="ragalik.baraxolka.MainActivity"
-85-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:78:13-55
-86            android:screenOrientation="portrait"
-86-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:80:13-49
-87            android:theme="@style/AppTheme" >
-87-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:79:13-44
-88            <meta-data
-88-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:31:13-33:49
-89                android:name="android.support.PARENT_ACTIVITY"
-89-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:32:17-63
-90                android:value=".MainActivity" />
-90-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:33:17-46
-91        </activity>
-92        <activity
-92-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:85:9-94:20
-93            android:name="ragalik.baraxolka.other_logic.activities.SplashScreenActivity"
-93-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:86:13-72
-94            android:screenOrientation="portrait"
-94-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:88:13-49
-95            android:theme="@style/AppTheme" >
-95-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:87:13-44
-96            <intent-filter>
-96-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:89:13-93:29
-97                <action android:name="android.intent.action.MAIN" />
-97-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:90:17-69
-97-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:90:25-66
-98
-99                <category android:name="android.intent.category.LAUNCHER" />
-99-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:92:17-77
-99-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:92:27-74
-100            </intent-filter>
-101        </activity>
-102        <activity
-102-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:95:9-100:51
-103            android:name="ragalik.baraxolka.MainActivity"
-103-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:96:13-41
-104            android:label="@string/app_name"
-104-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:97:13-45
-105            android:launchMode="singleTop"
-105-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:98:13-43
-106            android:screenOrientation="portrait"
-106-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:100:13-49
-107            android:theme="@style/AppTheme" />
-107-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:99:13-44
-108
-109        <meta-data
-109-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:102:9-104:57
-110            android:name="preloaded_fonts"
-110-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:103:13-43
-111            android:resource="@array/preloaded_fonts" />
-111-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:104:13-54
-112
-113        <uses-library
-113-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:106:9-108:40
-114            android:name="org.apache.http.legacy"
-114-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:107:13-50
-115            android:required="false" />
-115-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:108:13-37
-116
-117        <provider
-118            android:name="androidx.core.content.FileProvider"
-118-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:111:13-62
-119            android:authorities="ragalik.baraxolka.provider"
-119-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:112:13-60
-120            android:exported="false"
-120-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:113:13-37
-121            android:grantUriPermissions="true" >
-121-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:114:13-47
-122            <meta-data
-122-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:115:13-117:57
-123                android:name="android.support.FILE_PROVIDER_PATHS"
-123-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:116:17-67
-124                android:resource="@xml/provider_paths" />
-124-->/home/kirill/AndroidStudioProjects/GIT/VapeBaraxolka/app/src/main/AndroidManifest.xml:117:17-55
-125        </provider>
-126        <provider
-126-->[com.squareup.picasso:picasso:2.71828] /home/kirill/.gradle/caches/transforms-2/files-2.1/4892734e6619250573e808730d771e40/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
-127            android:name="com.squareup.picasso.PicassoProvider"
-127-->[com.squareup.picasso:picasso:2.71828] /home/kirill/.gradle/caches/transforms-2/files-2.1/4892734e6619250573e808730d771e40/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
-128            android:authorities="ragalik.baraxolka.com.squareup.picasso"
-128-->[com.squareup.picasso:picasso:2.71828] /home/kirill/.gradle/caches/transforms-2/files-2.1/4892734e6619250573e808730d771e40/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
-129            android:exported="false" />
-129-->[com.squareup.picasso:picasso:2.71828] /home/kirill/.gradle/caches/transforms-2/files-2.1/4892734e6619250573e808730d771e40/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
-130        <provider
-130-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/kirill/.gradle/caches/transforms-2/files-2.1/0cb84a9f6b2cae5c973ef025c366f9e5/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
-131            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-131-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/kirill/.gradle/caches/transforms-2/files-2.1/0cb84a9f6b2cae5c973ef025c366f9e5/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
-132            android:authorities="ragalik.baraxolka.lifecycle-process"
-132-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/kirill/.gradle/caches/transforms-2/files-2.1/0cb84a9f6b2cae5c973ef025c366f9e5/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
-133            android:exported="false"
-133-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/kirill/.gradle/caches/transforms-2/files-2.1/0cb84a9f6b2cae5c973ef025c366f9e5/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
-134            android:multiprocess="true" />
-134-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/kirill/.gradle/caches/transforms-2/files-2.1/0cb84a9f6b2cae5c973ef025c366f9e5/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
-135    </application>
-136
-137</manifest>
+29-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:22:9-35
+30        android:usesCleartextTraffic="true" >
+30-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:23:9-44
+31        <activity
+31-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:25:9-34:20
+32            android:name="ragalik.baraxolka.paging_feed.search.SearchActivity"
+32-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:26:13-62
+33            android:label="@string/title_activity_search"
+33-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:27:13-58
+34            android:parentActivityName="ragalik.baraxolka.MainActivity"
+34-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:28:13-55
+35            android:screenOrientation="portrait"
+35-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:30:13-49
+36            android:theme="@style/AppTheme" >
+36-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:29:13-44
+37            <meta-data
+37-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:31:13-33:49
+38                android:name="android.support.PARENT_ACTIVITY"
+38-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:32:17-63
+39                android:value=".MainActivity" />
+39-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:33:17-46
+40        </activity>
+41        <activity
+41-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:35:9-44:20
+42            android:name="ragalik.baraxolka.other_logic.ad_creator.AdCreator"
+42-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:36:13-61
+43            android:label="@string/title_activity_settings"
+43-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:37:13-60
+44            android:parentActivityName="ragalik.baraxolka.MainActivity"
+44-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:38:13-55
+45            android:screenOrientation="portrait"
+45-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:40:13-49
+46            android:theme="@style/AppTheme" >
+46-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:39:13-44
+47            <meta-data
+47-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:31:13-33:49
+48                android:name="android.support.PARENT_ACTIVITY"
+48-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:32:17-63
+49                android:value=".MainActivity" />
+49-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:33:17-46
+50        </activity>
+51        <activity
+51-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:45:9-54:20
+52            android:name="ragalik.baraxolka.other_logic.activities.SettingsActivity"
+52-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:46:13-68
+53            android:label="@string/title_activity_settings"
+53-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:47:13-60
+54            android:parentActivityName="ragalik.baraxolka.MainActivity"
+54-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:48:13-55
+55            android:screenOrientation="portrait"
+55-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:50:13-49
+56            android:theme="@style/AppTheme" >
+56-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:49:13-44
+57            <meta-data
+57-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:31:13-33:49
+58                android:name="android.support.PARENT_ACTIVITY"
+58-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:32:17-63
+59                android:value=".MainActivity" />
+59-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:33:17-46
+60        </activity>
+61        <activity
+61-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:55:9-64:20
+62            android:name="ragalik.baraxolka.paging_feed.seller.SellerProfileActivity"
+62-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:56:13-69
+63            android:label="@string/title_activity_seller_profile"
+63-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:57:13-66
+64            android:parentActivityName="ragalik.baraxolka.other_logic.full_ad.FullAdActivity"
+64-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:58:13-77
+65            android:screenOrientation="portrait"
+65-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:60:13-49
+66            android:theme="@style/AppTheme" >
+66-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:59:13-44
+67            <meta-data
+67-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:31:13-33:49
+68                android:name="android.support.PARENT_ACTIVITY"
+68-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:32:17-63
+69                android:value=".other_logic.full_ad.FullAdActivity" />
+69-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:33:17-46
+70        </activity>
+71        <activity
+71-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:65:9-75:20
+72            android:name="ragalik.baraxolka.other_logic.full_ad.FullAdActivity"
+72-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:66:13-63
+73            android:label="@string/title_activity_full_ad"
+73-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:67:13-59
+74            android:launchMode="singleTop"
+74-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:68:13-43
+75            android:parentActivityName="ragalik.baraxolka.MainActivity"
+75-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:69:13-55
+76            android:screenOrientation="portrait"
+76-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:71:13-49
+77            android:theme="@style/AppTheme" >
+77-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:70:13-44
+78            <meta-data
+78-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:31:13-33:49
+79                android:name="android.support.PARENT_ACTIVITY"
+79-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:32:17-63
+80                android:value=".MainActivity" />
+80-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:33:17-46
+81        </activity>
+82        <activity
+82-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:76:9-84:20
+83            android:name="ragalik.baraxolka.other_logic.account.Account"
+83-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:77:13-56
+84            android:parentActivityName="ragalik.baraxolka.MainActivity"
+84-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:78:13-55
+85            android:screenOrientation="portrait"
+85-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:80:13-49
+86            android:theme="@style/AppTheme" >
+86-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:79:13-44
+87            <meta-data
+87-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:31:13-33:49
+88                android:name="android.support.PARENT_ACTIVITY"
+88-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:32:17-63
+89                android:value=".MainActivity" />
+89-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:33:17-46
+90        </activity>
+91        <activity
+91-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:85:9-94:20
+92            android:name="ragalik.baraxolka.other_logic.activities.SplashScreenActivity"
+92-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:86:13-72
+93            android:screenOrientation="portrait"
+93-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:88:13-49
+94            android:theme="@style/AppTheme" >
+94-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:87:13-44
+95            <intent-filter>
+95-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:89:13-93:29
+96                <action android:name="android.intent.action.MAIN" />
+96-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:90:17-69
+96-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:90:25-66
+97
+98                <category android:name="android.intent.category.LAUNCHER" />
+98-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:92:17-77
+98-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:92:27-74
+99            </intent-filter>
+100        </activity>
+101        <activity
+101-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:95:9-100:51
+102            android:name="ragalik.baraxolka.MainActivity"
+102-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:96:13-41
+103            android:label="@string/app_name"
+103-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:97:13-45
+104            android:launchMode="singleTop"
+104-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:98:13-43
+105            android:screenOrientation="portrait"
+105-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:100:13-49
+106            android:theme="@style/AppTheme" />
+106-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:99:13-44
+107
+108        <meta-data
+108-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:102:9-104:57
+109            android:name="preloaded_fonts"
+109-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:103:13-43
+110            android:resource="@array/preloaded_fonts" />
+110-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:104:13-54
+111
+112        <uses-library
+112-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:106:9-108:40
+113            android:name="org.apache.http.legacy"
+113-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:107:13-50
+114            android:required="false" />
+114-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:108:13-37
+115
+116        <provider
+117            android:name="androidx.core.content.FileProvider"
+117-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:111:13-62
+118            android:authorities="ragalik.baraxolka.provider"
+118-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:112:13-60
+119            android:exported="false"
+119-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:113:13-37
+120            android:grantUriPermissions="true" >
+120-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:114:13-47
+121            <meta-data
+121-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:115:13-117:57
+122                android:name="android.support.FILE_PROVIDER_PATHS"
+122-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:116:17-67
+123                android:resource="@xml/provider_paths" />
+123-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:117:17-55
+124        </provider>
+125        <provider
+125-->[com.squareup.picasso:picasso:2.71828] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\667ff8d4df10af93da4f15cd70b3392d\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+126            android:name="com.squareup.picasso.PicassoProvider"
+126-->[com.squareup.picasso:picasso:2.71828] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\667ff8d4df10af93da4f15cd70b3392d\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+127            android:authorities="ragalik.baraxolka.com.squareup.picasso"
+127-->[com.squareup.picasso:picasso:2.71828] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\667ff8d4df10af93da4f15cd70b3392d\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+128            android:exported="false" />
+128-->[com.squareup.picasso:picasso:2.71828] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\667ff8d4df10af93da4f15cd70b3392d\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+129        <provider
+129-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\0cb84a9f6b2cae5c973ef025c366f9e5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+130            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+130-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\0cb84a9f6b2cae5c973ef025c366f9e5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+131            android:authorities="ragalik.baraxolka.lifecycle-process"
+131-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\0cb84a9f6b2cae5c973ef025c366f9e5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+132            android:exported="false"
+132-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\0cb84a9f6b2cae5c973ef025c366f9e5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+133            android:multiprocess="true" />
+133-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\0cb84a9f6b2cae5c973ef025c366f9e5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+134    </application>
+135
+136</manifest>

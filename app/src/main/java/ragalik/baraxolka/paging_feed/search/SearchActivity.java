@@ -175,26 +175,26 @@ public class SearchActivity extends AppCompatActivity implements  SearchView.OnQ
             sort.show(activity.getSupportFragmentManager(), "");
         });
 
-        subcategorySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (parent.getItemAtPosition(position).toString().equals("Не выбрано")) {
-                    subcategoryFromSpinner = "";
-                    if (searchRequests.containsKey("subcategory")) {
-                        searchRequests.remove("subcategory");
-                        getSearchAdsCount(searchRequests);
-                    }
-                } else {
-                    searchRequests.remove("category");
-                    subcategoryFromSpinner = "subcategories.subcategory_name = '" + parent.getItemAtPosition(position).toString() + "'";
-                    searchRequests.put("subcategory", subcategoryFromSpinner);
-                    getSearchAdsCount(searchRequests);
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {}
-        });
+//        subcategorySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                if (parent.getItemAtPosition(position).toString().equals("Не выбрано")) {
+//                    subcategoryFromSpinner = "";
+//                    if (searchRequests.containsKey("subcategory")) {
+//                        searchRequests.remove("subcategory");
+//                        getSearchAdsCount(searchRequests);
+//                    }
+//                } else {
+//                    searchRequests.remove("category");
+//                    subcategoryFromSpinner = "subcategories.subcategory_name = '" + parent.getItemAtPosition(position).toString() + "'";
+//                    searchRequests.put("subcategory", subcategoryFromSpinner);
+//                    getSearchAdsCount(searchRequests);
+//                }
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parent) {}
+//        });
 
         showAdsButton = findViewById(R.id.showAdsButton);
         showAdsButton.setOnClickListener(v -> {
@@ -246,6 +246,8 @@ public class SearchActivity extends AppCompatActivity implements  SearchView.OnQ
                             if (position != 0) {
                                 subcategorySearchLayout.setVisibility(View.VISIBLE);
 
+                                isCategorySelected = true;
+
                                 for (int i = 0; i < subcategoriesHashMap.get(categorySpinner.getSelectedItem().toString()).size(); ++i) {
                                     subcategories.add(subcategoriesHashMap.get(categorySpinner.getSelectedItem().toString()).get(i).getSubcategory_name());
                                 }
@@ -266,9 +268,13 @@ public class SearchActivity extends AppCompatActivity implements  SearchView.OnQ
                                 getSearchAdsCount(searchRequests);
 
                                 categoryFromSpinner = categorySpinner.getSelectedItem().toString();
+
                                 adapterSubcategory = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item, subcategories);
                                 adapterSubcategory.setDropDownViewResource(R.layout.dropdown_text_color);
                                 subcategorySpinner.setAdapter(adapterSubcategory);
+                                if (subcategoriesHashMap.get(categorySpinner.getSelectedItem().toString()).size() == 1) {
+                                    subcategorySpinner.setSelection(1);
+                                }
                             } else {
                                 subcategorySearchLayout.setVisibility(View.GONE);
                             }
@@ -286,8 +292,15 @@ public class SearchActivity extends AppCompatActivity implements  SearchView.OnQ
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         if (parent.getItemAtPosition(position).toString().equals("Не выбрано")) {
                             subcategoryFromSpinner = "";
+                            if (searchRequests.containsKey("subcategory")) {
+                                searchRequests.remove("subcategory");
+                                getSearchAdsCount(searchRequests);
+                            }
                         } else {
-                            subcategoryFromSpinner = subcategorySpinner.getSelectedItem().toString();
+                            searchRequests.remove("category");
+                            subcategoryFromSpinner = "subcategories.subcategory_name = '" + parent.getItemAtPosition(position).toString() + "'";
+                            searchRequests.put("subcategory", subcategoryFromSpinner);
+                            getSearchAdsCount(searchRequests);
                         }
                     }
 
