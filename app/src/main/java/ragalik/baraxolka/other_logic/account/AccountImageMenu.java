@@ -104,9 +104,10 @@ public class AccountImageMenu extends BottomSheetDialogFragment {
             public void onClick(View view) {
 
                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
-                    int permissionStatus = getActivity().checkSelfPermission(WRITE_EXTERNAL_STORAGE);
+                    int permissionStatusWrite = getActivity().checkSelfPermission(WRITE_EXTERNAL_STORAGE);
+                    int permissionStatusRead = getActivity().checkSelfPermission(READ_EXTERNAL_STORAGE);
 
-                    if (permissionStatus == PackageManager.PERMISSION_GRANTED) {
+                    if (permissionStatusWrite == PackageManager.PERMISSION_GRANTED && permissionStatusRead == PackageManager.PERMISSION_GRANTED) {
                         takePicture(Account.activity);
                         dismiss();
                     } else {
