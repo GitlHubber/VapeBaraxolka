@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".other_logic.entrance.SignIn"
+    android:background="@color/colorBackground">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_registration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Регистрация"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:id="@+id/appName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:gravity="center"
+                android:text="Vape"
+                android:textColor="@color/colorText"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/appName2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:gravity="center"
+                android:paddingBottom="20dp"
+                android:text="Baraxolka"
+                android:textColor="@color/colorText"
+                android:textSize="36sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/si_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:counterEnabled="true"
+                app:counterMaxLength="18"
+                app:counterTextColor="@color/colorText">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ваше имя"
+                    android:paddingLeft="5dp"
+                    android:inputType="textCapSentences"
+                    android:textColor="@color/colorText"
+                    android:textColorHighlight="@color/colorText"
+                    android:textColorLink="@color/colorText"
+                    android:textCursorDrawable="@color/colorText"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/si_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:counterEnabled="true"
+                app:counterMaxLength="40"
+                app:counterTextColor="@color/colorText">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Электронная почта"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/colorText"
+                    android:textColorHighlight="@color/colorText"
+                    android:textColorLink="@color/colorText"
+                    android:textCursorDrawable="@color/colorText"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/si_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:counterEnabled="true"
+                app:helperText="Необязательно"
+                app:counterTextColor="@color/colorText"
+                app:counterMaxLength="13">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Номер телефона"
+                    android:inputType="phone"
+                    android:textColor="@color/colorText"
+                    android:textColorHighlight="@color/colorText"
+                    android:textColorLink="@color/colorText"
+                    android:textCursorDrawable="@color/colorText"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorText"
+                    android:textSize="18sp"
+                    android:text="Ваш город проживания "/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorSecondaryText"
+                    android:text="(необязательно)"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:paddingTop="10dp"
+                    android:background="@drawable/white_rectangle_for_signin"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/SIRegion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="Область"
+                        android:textColor="@color/colorText"
+                        android:textSize="16sp" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/SIRegionSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:paddingStart="10dp"
+                        android:entries="@array/Spinner_region_items"
+                        style="@style/Widget.AppCompat.Spinner"
+                        android:background="@drawable/gradient_spinner"
+                        android:dropDownWidth="300dp"
+                        android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
+                        android:paddingRight="14dp"
+                        android:popupBackground="@color/colorBackground"
+                        android:popupElevation="3dp"
+                        android:stateListAnimator="@drawable/spinner_sla"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/white_rectangle_for_signin"
+                    android:layout_weight="1"
+                    android:paddingTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/SITown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="Город"
+                        android:textColor="@color/colorText"
+                        android:textSize="16sp"/>
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/SITownSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:paddingStart="10dp"
+                        android:layout_marginBottom="5dp"
+                        style="@style/Widget.AppCompat.Spinner"
+                        android:background="@drawable/gradient_spinner"
+                        android:dropDownWidth="300dp"
+                        android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
+                        android:paddingRight="14dp"
+                        android:popupBackground="@color/colorBackground"
+                        android:popupElevation="3dp"
+                        android:stateListAnimator="@drawable/spinner_sla"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/si_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:counterTextColor="@color/colorText"
+                app:counterEnabled="true"
+                app:helperText="Латинские буквы, цифры (минимум 8 символов)"
+                app:passwordToggleEnabled="true"
+                app:counterMaxLength="18">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorText"
+                    android:textColorHighlight="@color/colorText"
+                    android:textColorLink="@color/colorText"
+                    android:textCursorDrawable="@color/colorText"
+                    android:hint="Пароль"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="35dp"
+                android:paddingTop="20dp"
+                android:paddingRight="35dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/Registration_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/colorPrimary"
+                    android:drawableEnd="@drawable/ic_arrow"
+                    android:paddingLeft="10dp"
+                    android:text="Зарегистрироваться"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAdsDate"
+                    android:textStyle="italic"
+                    android:layout_marginBottom="20dp"/>
+
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginBottom="30dp"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/SITermsText"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Нажимая Продолжить вы соглашаетесь с "-->
+<!--                    android:textColor="@color/colorText"-->
+<!--                    android:textSize="10sp" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/SIPrivacyPolicy"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="1dp"-->
+<!--                    android:text="Политикой конфиденциальности"-->
+<!--                    android:textColor="@color/colorText"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--            </LinearLayout>-->
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
