@@ -44,6 +44,7 @@ import retrofit2.Response;
 public class Account extends AppCompatActivity {
 
     private static final int PICK_FILE_REQUEST = 1000;
+    private final long MAX_PHOTO_SIZE = 12582912;
 
     private IApi apiClient;
     private Uri selectedUri;
@@ -89,6 +90,7 @@ public class Account extends AppCompatActivity {
     }
 
     private void uploadFile() {
+        if (AccountImageMenu.fileWithUri.length() < 12582912) {
             String filename = MainActivity.sp.getString("email", "") + ".png"; //user email to set filename
 
             pDialog = new ProgressDialog(this);
@@ -117,6 +119,9 @@ public class Account extends AppCompatActivity {
                     pDialog.dismiss();
                 }
             });
+        } else {
+            Toast.makeText(activity, "Размер фото превышает 12 мб.", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override

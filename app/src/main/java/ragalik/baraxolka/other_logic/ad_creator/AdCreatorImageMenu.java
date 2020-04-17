@@ -29,6 +29,7 @@ import java.util.ArrayList;
 import ragalik.baraxolka.other_logic.full_ad.FullAdViewPagerAdapter;
 import ragalik.baraxolka.R;
 
+import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static ragalik.baraxolka.other_logic.ad_creator.AdCreator.fileWithUri;
 import static ragalik.baraxolka.other_logic.ad_creator.AdCreator.outputFileUri;
@@ -137,13 +138,30 @@ public class AdCreatorImageMenu extends BottomSheetDialogFragment {
         ad_creator_load_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent();
-                intent.setType("image/*");
-                intent.setAction(Intent.ACTION_GET_CONTENT);
-                getActivity().startActivityForResult(Intent.createChooser(intent,
-                        "Select Picture"), 1);
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+                    int permissionStatus = getActivity().checkSelfPermission(READ_EXTERNAL_STORAGE);
 
-                dismiss();
+                    if (permissionStatus == PackageManager.PERMISSION_GRANTED) {
+                        Intent intent = new Intent();
+                        intent.setType("image/*");
+                        intent.setAction(Intent.ACTION_GET_CONTENT);
+                        getActivity().startActivityForResult(Intent.createChooser(intent,
+                                "Select Picture"), 1);
+
+                        dismiss();
+                    } else {
+                        getActivity().requestPermissions(new String[] {READ_EXTERNAL_STORAGE},
+                                1);
+                    }
+                } else {
+                    Intent intent = new Intent();
+                    intent.setType("image/*");
+                    intent.setAction(Intent.ACTION_GET_CONTENT);
+                    getActivity().startActivityForResult(Intent.createChooser(intent,
+                            "Select Picture"), 1);
+
+                    dismiss();
+                }
             }
         });
 
