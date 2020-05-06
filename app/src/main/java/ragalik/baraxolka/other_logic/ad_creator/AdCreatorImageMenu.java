@@ -180,6 +180,7 @@ public class AdCreatorImageMenu extends BottomSheetDialogFragment {
                     AdCreator.uris.remove(imageUploadCount - 1);
                     AdCreator.files.remove(imageUploadCount - 1);
 
+                    //Fix algoritm 06.05.20
                     if (imageUploadCount != adImages.size()) {
                         AdCreator.adImages.get(imageUploadCount).setImageDrawable(null);
                         AdCreator.adImages.get(imageUploadCount).setBackground(getResources().getDrawable(R.color.colorAdCreatorImage));
