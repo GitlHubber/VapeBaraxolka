@@ -30,6 +30,7 @@ import ragalik.baraxolka.other_logic.full_ad.FullAdViewPagerAdapter;
 import ragalik.baraxolka.R;
 
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+import static ragalik.baraxolka.other_logic.ad_creator.AdCreator.adImages;
 import static ragalik.baraxolka.other_logic.ad_creator.AdCreator.fileWithUri;
 import static ragalik.baraxolka.other_logic.ad_creator.AdCreator.outputFileUri;
 
@@ -161,8 +162,13 @@ public class AdCreatorImageMenu extends BottomSheetDialogFragment {
                     AdCreator.uris.remove(imageUploadCount - 1);
                     AdCreator.files.remove(imageUploadCount - 1);
 
-                    AdCreator.adImages.get(imageUploadCount).setImageDrawable(null);
-                    AdCreator.adImages.get(imageUploadCount).setBackground(getResources().getDrawable(R.color.colorAdCreatorImage));
+                    if (imageUploadCount != adImages.size()) {
+                        AdCreator.adImages.get(imageUploadCount).setImageDrawable(null);
+                        AdCreator.adImages.get(imageUploadCount).setBackground(getResources().getDrawable(R.color.colorAdCreatorImage));
+                    } else {
+                        AdCreator.adImages.get(imageUploadCount - 1).setImageDrawable(null);
+                        AdCreator.adImages.get(imageUploadCount - 1).setBackground(getResources().getDrawable(R.color.colorAdCreatorImage));
+                    }
 
                     imageUploadCount--;
                     AdCreator.imageUploadCount--;
