@@ -22,6 +22,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import ragalik.baraxolka.MainActivity;
 import ragalik.baraxolka.R;
 import ragalik.baraxolka.network.ApiClient;
 import ragalik.baraxolka.network.entities.User;
@@ -60,7 +61,7 @@ public class SellerProfileActivity extends AppCompatActivity {
         }
     }
 
-    public void startSellerProfileView() {
+    public void startSellerProfileView () {
         setContentView(R.layout.activity_seller_profile);
 
         progressBar = findViewById(R.id.progress_seller);
@@ -77,18 +78,31 @@ public class SellerProfileActivity extends AppCompatActivity {
 
         sellerRecyclerView = findViewById(R.id.sellerAdsProfile);
 
-        sellerEmail.setText(sellerProfile.getEmail());
+        sellerEmail.setText(sellerProfile.getEmail().substring(0, 1).toUpperCase() + sellerProfile.getEmail().substring(1));
 
-        if (sellerProfile.getPhoneNumber().equals("0")) {
-            sellerPhoneNumber.setText("Номер телефона не указан!");
-        } else {
-            sellerPhoneNumber.setText(sellerProfile.getPhoneNumber());
+        if (sellerProfile.getPhoneNumber().equals(sellerProfile.getEmail())) {
+            sellerPhoneNumber.setText("Номер телефона не указан");
+        } else if (sellerProfile.isPhoneHide() == 0) {
+            String pn = sellerProfile.getPhoneNumber();
+            String resultPN = pn.substring(0, 4) + " (" + pn.substring(4, 6) + ") " + pn.substring(6, 9) + "-"
+                    + pn.substring(9, 11) + "-" + pn.substring(11, 13);
+            sellerPhoneNumber.setText(resultPN);
+        } else if (sellerProfile.isPhoneHide() == 1) {
+            sellerPhoneNumber.setVisibility(View.GONE);
         }
 
-        if (sellerProfile.getRegion().equals("0")) {
-            sellerRegionTown.setText("Город не указан!");
+        String region = sellerProfile.getRegion();
+        String town = sellerProfile.getTown();
+
+        String townStr;
+        if (region.equals("Минск")) {
+            townStr = "г. " + region + " " + town + " р-н";
+            sellerRegionTown.setText(townStr);
+        } else if (region.equals("0")) {
+            sellerRegionTown.setText("Регион не указан");
         } else {
-            sellerRegionTown.setText(sellerProfile.getRegion() + " | г. " + sellerProfile.getTown());
+            townStr = region + " г. " + town;
+            sellerRegionTown.setText(townStr);
         }
 
 //        FloatingActionButton fab = findViewById(R.id.fab);

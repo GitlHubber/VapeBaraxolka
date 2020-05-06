@@ -6,9 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
@@ -32,10 +34,22 @@ public final class ActivityAccountBinding implements ViewBinding {
   public final TextView accountPhone;
 
   @NonNull
+  public final LinearLayout accountPnLayout;
+
+  @NonNull
+  public final LinearLayout accountRegionLayout;
+
+  @NonNull
   public final TextView accountTown;
 
   @NonNull
   public final AppBarLayout appBarLayoutAccount;
+
+  @NonNull
+  public final AppCompatCheckBox cbShowHidePN;
+
+  @NonNull
+  public final LinearLayout hidePhoneLayout;
 
   @NonNull
   public final ImageView profilePhoto;
@@ -46,20 +60,35 @@ public final class ActivityAccountBinding implements ViewBinding {
   @NonNull
   public final Toolbar toolbarAccount;
 
+  @NonNull
+  public final TextView twAccountInfo;
+
+  @NonNull
+  public final TextView twHidePhone;
+
   private ActivityAccountBinding(@NonNull CoordinatorLayout rootView,
       @NonNull CoordinatorLayout accountCoordinator, @NonNull TextView accountEmail,
-      @NonNull TextView accountPhone, @NonNull TextView accountTown,
-      @NonNull AppBarLayout appBarLayoutAccount, @NonNull ImageView profilePhoto,
-      @NonNull Button signOutButtonAccount, @NonNull Toolbar toolbarAccount) {
+      @NonNull TextView accountPhone, @NonNull LinearLayout accountPnLayout,
+      @NonNull LinearLayout accountRegionLayout, @NonNull TextView accountTown,
+      @NonNull AppBarLayout appBarLayoutAccount, @NonNull AppCompatCheckBox cbShowHidePN,
+      @NonNull LinearLayout hidePhoneLayout, @NonNull ImageView profilePhoto,
+      @NonNull Button signOutButtonAccount, @NonNull Toolbar toolbarAccount,
+      @NonNull TextView twAccountInfo, @NonNull TextView twHidePhone) {
     this.rootView = rootView;
     this.accountCoordinator = accountCoordinator;
     this.accountEmail = accountEmail;
     this.accountPhone = accountPhone;
+    this.accountPnLayout = accountPnLayout;
+    this.accountRegionLayout = accountRegionLayout;
     this.accountTown = accountTown;
     this.appBarLayoutAccount = appBarLayoutAccount;
+    this.cbShowHidePN = cbShowHidePN;
+    this.hidePhoneLayout = hidePhoneLayout;
     this.profilePhoto = profilePhoto;
     this.signOutButtonAccount = signOutButtonAccount;
     this.toolbarAccount = toolbarAccount;
+    this.twAccountInfo = twAccountInfo;
+    this.twHidePhone = twHidePhone;
   }
 
   @Override
@@ -104,6 +133,16 @@ public final class ActivityAccountBinding implements ViewBinding {
         missingId = "accountPhone";
         break missingId;
       }
+      LinearLayout accountPnLayout = rootView.findViewById(R.id.account_pn_layout);
+      if (accountPnLayout == null) {
+        missingId = "accountPnLayout";
+        break missingId;
+      }
+      LinearLayout accountRegionLayout = rootView.findViewById(R.id.account_region_layout);
+      if (accountRegionLayout == null) {
+        missingId = "accountRegionLayout";
+        break missingId;
+      }
       TextView accountTown = rootView.findViewById(R.id.account_town);
       if (accountTown == null) {
         missingId = "accountTown";
@@ -112,6 +151,16 @@ public final class ActivityAccountBinding implements ViewBinding {
       AppBarLayout appBarLayoutAccount = rootView.findViewById(R.id.appBarLayoutAccount);
       if (appBarLayoutAccount == null) {
         missingId = "appBarLayoutAccount";
+        break missingId;
+      }
+      AppCompatCheckBox cbShowHidePN = rootView.findViewById(R.id.cb_showHidePN);
+      if (cbShowHidePN == null) {
+        missingId = "cbShowHidePN";
+        break missingId;
+      }
+      LinearLayout hidePhoneLayout = rootView.findViewById(R.id.hide_phone_layout);
+      if (hidePhoneLayout == null) {
+        missingId = "hidePhoneLayout";
         break missingId;
       }
       ImageView profilePhoto = rootView.findViewById(R.id.profilePhoto);
@@ -129,9 +178,20 @@ public final class ActivityAccountBinding implements ViewBinding {
         missingId = "toolbarAccount";
         break missingId;
       }
+      TextView twAccountInfo = rootView.findViewById(R.id.tw_account_info);
+      if (twAccountInfo == null) {
+        missingId = "twAccountInfo";
+        break missingId;
+      }
+      TextView twHidePhone = rootView.findViewById(R.id.tw_hide_phone);
+      if (twHidePhone == null) {
+        missingId = "twHidePhone";
+        break missingId;
+      }
       return new ActivityAccountBinding((CoordinatorLayout) rootView, accountCoordinator,
-          accountEmail, accountPhone, accountTown, appBarLayoutAccount, profilePhoto,
-          signOutButtonAccount, toolbarAccount);
+          accountEmail, accountPhone, accountPnLayout, accountRegionLayout, accountTown,
+          appBarLayoutAccount, cbShowHidePN, hidePhoneLayout, profilePhoto, signOutButtonAccount,
+          toolbarAccount, twAccountInfo, twHidePhone);
     }
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }

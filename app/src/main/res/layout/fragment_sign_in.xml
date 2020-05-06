@@ -39,6 +39,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/aldrich"
                 android:gravity="center"
+                android:visibility="gone"
                 android:text="Vape"
                 android:textColor="@color/colorText"
                 android:textSize="36sp" />
@@ -50,7 +51,7 @@
                 android:fontFamily="@font/aldrich"
                 android:gravity="center"
                 android:paddingBottom="20dp"
-                android:text="Baraxolka"
+                android:text="Барахолка"
                 android:textColor="@color/colorText"
                 android:textSize="36sp" />
 
@@ -68,8 +69,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Ваше имя"
-                    android:paddingLeft="5dp"
-                    android:inputType="textCapSentences"
+                    android:inputType="textCapSentences|textMultiLine"
                     android:textColor="@color/colorText"
                     android:textColorHighlight="@color/colorText"
                     android:textColorLink="@color/colorText"
@@ -90,7 +90,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Электронная почта"
-                    android:inputType="textEmailAddress"
+                    android:inputType="textEmailAddress|textCapSentences"
                     android:textColor="@color/colorText"
                     android:textColorHighlight="@color/colorText"
                     android:textColorLink="@color/colorText"
@@ -169,20 +169,29 @@
                         android:textColor="@color/colorText"
                         android:textSize="16sp" />
 
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/SIRegionSpinner"
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:paddingStart="10dp"
-                        android:entries="@array/Spinner_region_items"
-                        style="@style/Widget.AppCompat.Spinner"
-                        android:background="@drawable/gradient_spinner"
-                        android:dropDownWidth="300dp"
-                        android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
-                        android:paddingRight="14dp"
-                        android:popupBackground="@color/colorBackground"
-                        android:popupElevation="3dp"
-                        android:stateListAnimator="@drawable/spinner_sla"/>
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:hint="Выберите категорию"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                        app:endIconMode="dropdown_menu"
+                        app:counterTextColor="@color/colorText">
+
+                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                            android:id="@+id/SIRegionSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorText"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:textColorHighlight="@color/colorText"
+                            android:textColorLink="@color/colorText"
+                            android:textCursorDrawable="@color/colorText"
+                            android:textSize="18sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
 
                 </LinearLayout>
 
@@ -206,20 +215,44 @@
                         android:textColor="@color/colorText"
                         android:textSize="16sp"/>
 
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/SITownSpinner"
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:paddingStart="10dp"
-                        android:layout_marginBottom="5dp"
-                        style="@style/Widget.AppCompat.Spinner"
-                        android:background="@drawable/gradient_spinner"
-                        android:dropDownWidth="300dp"
-                        android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
-                        android:paddingRight="14dp"
-                        android:popupBackground="@color/colorBackground"
-                        android:popupElevation="3dp"
-                        android:stateListAnimator="@drawable/spinner_sla"/>
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:hint="Выберите категорию"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                        app:endIconMode="dropdown_menu"
+                        app:counterTextColor="@color/colorText">
+
+                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                            android:id="@+id/SITownSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorText"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:textColorHighlight="@color/colorText"
+                            android:textColorLink="@color/colorText"
+                            android:textCursorDrawable="@color/colorText"
+                            android:textSize="18sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+<!--                    <androidx.appcompat.widget.AppCompatSpinner-->
+<!--                        android:id="@+id/SITownSpinner"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="30dp"-->
+<!--                        android:paddingStart="10dp"-->
+<!--                        android:layout_marginBottom="5dp"-->
+<!--                        style="@style/Widget.AppCompat.Spinner"-->
+<!--                        android:background="@drawable/gradient_spinner"-->
+<!--                        android:dropDownWidth="300dp"-->
+<!--                        android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"-->
+<!--                        android:paddingRight="14dp"-->
+<!--                        android:popupBackground="@color/colorBackground"-->
+<!--                        android:popupElevation="3dp"-->
+<!--                        android:stateListAnimator="@drawable/spinner_sla"/>-->
                 </LinearLayout>
 
             </LinearLayout>

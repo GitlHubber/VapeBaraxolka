@@ -19,11 +19,12 @@ public final class ActivitySearchBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
-  public final Toolbar toolbar;
+  public final Toolbar toolbarEditActivity;
 
-  private ActivitySearchBinding(@NonNull CoordinatorLayout rootView, @NonNull Toolbar toolbar) {
+  private ActivitySearchBinding(@NonNull CoordinatorLayout rootView,
+      @NonNull Toolbar toolbarEditActivity) {
     this.rootView = rootView;
-    this.toolbar = toolbar;
+    this.toolbarEditActivity = toolbarEditActivity;
   }
 
   @Override
@@ -53,12 +54,12 @@ public final class ActivitySearchBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     String missingId;
     missingId: {
-      Toolbar toolbar = rootView.findViewById(R.id.toolbar);
-      if (toolbar == null) {
-        missingId = "toolbar";
+      Toolbar toolbarEditActivity = rootView.findViewById(R.id.toolbar_edit_activity);
+      if (toolbarEditActivity == null) {
+        missingId = "toolbarEditActivity";
         break missingId;
       }
-      return new ActivitySearchBinding((CoordinatorLayout) rootView, toolbar);
+      return new ActivitySearchBinding((CoordinatorLayout) rootView, toolbarEditActivity);
     }
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }

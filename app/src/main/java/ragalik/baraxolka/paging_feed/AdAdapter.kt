@@ -2,9 +2,14 @@ package ragalik.baraxolka.paging_feed
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.text.SpannableStringBuilder
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Toast
+import androidx.core.text.bold
 import androidx.core.view.isVisible
 import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
@@ -15,6 +20,7 @@ import ragalik.baraxolka.R
 import ragalik.baraxolka.other_logic.full_ad.FullAdActivity
 import ragalik.baraxolka.MainActivity
 import ragalik.baraxolka.network.ApiClient
+import ragalik.baraxolka.network.entities.ReasonsResponse
 import ragalik.baraxolka.network.entities.ServerResponse
 import ragalik.baraxolka.paging_feed.favourites.SetDeleteBookmark
 import ragalik.baraxolka.paging_feed.moderator.AdModerator
@@ -23,11 +29,13 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.collections.ArrayList
 
-class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, AdAdapter.AdViewHolder>(AD_COMPARATOR) {
+class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, AdAdapter.AdViewHolder>(AD_COMPARATOR){
 
     companion object {
         var activity = MainActivity()
+        var reasonPosition = 1
         private val AD_COMPARATOR = object : DiffUtil.ItemCallback<Ad>() {
             override fun areItemsTheSame(oldItem: Ad, newItem: Ad): Boolean =
                 oldItem.dateTime == newItem.dateTime
@@ -47,53 +55,74 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, AdAdapter
 
     override fun onBindViewHolder(holder: AdViewHolder, position: Int) {
         val ad = getItem(position)
-        val acceptButton = holder.itemView.moderator_accept_button
-        val rejectButton = holder.itemView.moderator_reject_button
+        val view = holder.itemView
         val id = ad?.id
-        holder.itemView.setOnClickListener {
+
+        view.setOnClickListener {
             val myIntent = Intent(MainActivity.activity, FullAdActivity::class.java)
             myIntent.putExtra("adId", ad?.id)
             MainActivity.activity.startActivity(myIntent)
         }
-        holder.itemView.bookmark_button_ads.setOnClickListener {
-            if (holder.itemView.bookmark_button_ads.isChecked) {
+
+        view.bookmark_button_ads.setOnClickListener {
+            if (view.bookmark_button_ads.isChecked) {
                 SetDeleteBookmark.getInstance().setDeleteBookmark(id!!, it.bookmark_button_ads, "set", MainActivity.activity, ad)
             } else {
                 SetDeleteBookmark.getInstance().setDeleteBookmark(id!!, it.bookmark_button_ads, "delete", MainActivity.activity, ad)
             }
         }
 
-        holder.itemView.bookmark_button_ads.isVisible = MainActivity.sp.getInt("id", 0) != 0
+        view.bookmark_button_ads.isVisible = MainActivity.sp.getInt("id", 0) != 0
+
         if (flag == "MODERATOR") {
-            acceptButton.visibility = View.VISIBLE
-            rejectButton.visibility = View.VISIBLE
-        }
-        acceptButton.setOnClickListener {
-            acceptRejectAd(id!!, true)
-        }
-        rejectButton.setOnClickListener {
-            acceptRejectAd(id!!, false)
-        }
-        ad?.let { holder.bind(ad) }
-    }
+            var rejectFlag = true
 
-    private fun acceptRejectAd (id: Int, accepted: Boolean) {
-        val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.forLanguageTag("ru"))
-        dateFormat.timeZone = TimeZone.getTimeZone("GMT+3")
-        val datetime = dateFormat.format(Date())
-        val call = ApiClient.getApi().acceptRejectAd(id, if(accepted) 1 else 2, datetime)
-        call.enqueue(object : Callback<ServerResponse> {
+            view.moderator_layout.visibility = View.VISIBLE
 
-            override fun onResponse(call: Call<ServerResponse>, response: Response<ServerResponse>) {
-                if (response.body() != null) {
-                    AdModerator.itemViewModel.liveDataSource.value!!.invalidate()
+            view.moderator_accept_button.setOnClickListener {
+                acceptRejectAd(id!!, true)
+            }
+
+            view.moderator_reject_button.setOnClickListener {
+                if (rejectFlag) {
+                    view.rejectReasonLayout.visibility = View.VISIBLE
+                    getReasons(view)
+                } else {
+                    view.rejectReasonLayout.visibility = View.GONE
+                }
+                rejectFlag = !rejectFlag
+            }
+
+            view.acceptRejectButton.setOnClickListener {
+                if (reasonPosition == 1) {
+                    Toast.makeText(it.context, "Укажите причину", Toast.LENGTH_LONG).show()
+                } else {
+                    val rejectMessage = view.rejectMessageEditText.editText?.text.toString()
+                    acceptRejectAd(id!!, false, rejectMessage)
+                    view.rejectReasonLayout.visibility = View.GONE
+                    view.rejectMessageEditText.editText?.setText("")
+                    view.rejectReasonDropdown.editText?.setText("")
                 }
             }
+        } else if (flag == "REJECTED") {
+            view.rejected_ads_layout.visibility = View.VISIBLE
 
-            override fun onFailure(call: Call<ServerResponse>, t: Throwable) {
+            val customRejectReason = SpannableStringBuilder()
+                    .bold { append("Причина отклонения: ") }
+                    .append("${ad?.reasonName}")
+            view.tw_reject_reason.text = customRejectReason
 
+            if (ad?.rejectMessage.isNullOrEmpty()) {
+                view.tw_reject_message.visibility = View.GONE
+            } else {
+                val customRejectMes = SpannableStringBuilder()
+                        .bold { append("Комментарий к отклонению: ") }
+                        .append("${ad?.rejectMessage}")
+                view.tw_reject_message.text = customRejectMes
             }
-        })
+        }
+
+        ad?.let { holder.bind(ad) }
     }
 
     class AdViewHolder (view: View) : RecyclerView.ViewHolder(view) {
@@ -106,10 +135,21 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, AdAdapter
 
         fun bind (ad: Ad) {
             title.text = ad.title
-            location.text = ad.town
+            when (ad.region) {
+                "Минск" -> {
+                    location.text = "${ad.town} р-н"
+                }
+                "0" -> {
+                    location.text = "Регион не указан"
+                }
+                else -> {
+                    location.text = ad.town
+                }
+            }
+
             datetime.text = ad.dateTime
             isFavouritesButton.isChecked = ad.isFavourite!!
-            price.text = ad.price.toString() + " Руб."
+            price.text = "${ad.price.toString()} Руб."
 
 //            Glide.with(imageView.context)
 //                    .load(ad.image1url)
@@ -122,5 +162,43 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, AdAdapter
                     .centerCrop()
                     .into(imageView)
         }
+    }
+
+    private fun acceptRejectAd (id: Int, accepted: Boolean, rejectMessage: String = "") {
+        val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.forLanguageTag("ru"))
+        dateFormat.timeZone = TimeZone.getTimeZone("GMT+3")
+        val datetime = dateFormat.format(Date())
+        val call = ApiClient.getApi().acceptRejectAd(id, if(accepted) 1 else 2, datetime, reasonPosition, rejectMessage)
+        call.enqueue(object : Callback<ServerResponse> {
+
+            override fun onResponse(call: Call<ServerResponse>, response: Response<ServerResponse>) {
+                if (response.body() != null) {
+                    AdModerator.itemViewModel.liveDataSource.value!!.invalidate()
+                }
+            }
+
+            override fun onFailure(call: Call<ServerResponse>, t: Throwable) {}
+        })
+    }
+
+    private fun getReasons (view: View) {
+        val call = ApiClient.getApi().rejectReasons
+        call.enqueue(object : Callback<ReasonsResponse> {
+
+            override fun onResponse(call: Call<ReasonsResponse>, response: Response<ReasonsResponse>) {
+                if (response.body() != null) {
+                    val reasons = response.body()?.reasons!!
+                    val reasonsArr : ArrayList<String> = ArrayList()
+                    for (i in reasons) {
+                        i.reason_name?.let { reasonsArr.add(it) }
+                    }
+
+                    view.rejectReasonDropdownText.setAdapter(ArrayAdapter(MainActivity.activity, R.layout.dropdown_text_color, reasonsArr))
+                    view.rejectReasonDropdownText.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ -> reasonPosition = position + 2 }
+                }
+            }
+
+            override fun onFailure(call: Call<ReasonsResponse>, t: Throwable) {}
+        })
     }
 }

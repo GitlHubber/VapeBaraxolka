@@ -86,13 +86,10 @@ public class AdModerator extends Fragment {
         context = getContext();
 
         swipeRefreshLayout = view.findViewById(R.id.refresherModerator);
-        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                itemViewModel.getLiveDataSource().getValue().invalidate();
-                swipeRefreshLayout.setRefreshing(false);
-                progressBar.setVisibility(View.VISIBLE);
-            }
+        swipeRefreshLayout.setOnRefreshListener(() -> {
+            itemViewModel.getLiveDataSource().getValue().invalidate();
+            swipeRefreshLayout.setRefreshing(false);
+            progressBar.setVisibility(View.VISIBLE);
         });
         adModeratorView = view.findViewById(R.id.ModeratorAdsView);
         //new AdsFeed(STATUS_TAG, url_get_ads, url_get_ads_count, "Редактор", swipeRefreshLayout, adModeratorView, getContext(), getActivity());

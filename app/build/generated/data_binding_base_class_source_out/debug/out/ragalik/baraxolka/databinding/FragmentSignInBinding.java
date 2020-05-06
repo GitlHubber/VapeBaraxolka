@@ -8,8 +8,8 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatAutoCompleteTextView;
 import androidx.appcompat.widget.AppCompatButton;
-import androidx.appcompat.widget.AppCompatSpinner;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewbinding.ViewBinding;
 import com.google.android.material.textfield.TextInputLayout;
@@ -29,13 +29,13 @@ public final class FragmentSignInBinding implements ViewBinding {
   public final TextView SIRegion;
 
   @NonNull
-  public final AppCompatSpinner SIRegionSpinner;
+  public final AppCompatAutoCompleteTextView SIRegionSpinner;
 
   @NonNull
   public final TextView SITown;
 
   @NonNull
-  public final AppCompatSpinner SITownSpinner;
+  public final AppCompatAutoCompleteTextView SITownSpinner;
 
   @NonNull
   public final TextView appName;
@@ -60,8 +60,8 @@ public final class FragmentSignInBinding implements ViewBinding {
 
   private FragmentSignInBinding(@NonNull FrameLayout rootView,
       @NonNull AppCompatButton RegistrationButton, @NonNull TextView SIRegion,
-      @NonNull AppCompatSpinner SIRegionSpinner, @NonNull TextView SITown,
-      @NonNull AppCompatSpinner SITownSpinner, @NonNull TextView appName,
+      @NonNull AppCompatAutoCompleteTextView SIRegionSpinner, @NonNull TextView SITown,
+      @NonNull AppCompatAutoCompleteTextView SITownSpinner, @NonNull TextView appName,
       @NonNull TextView appName2, @NonNull TextInputLayout siEmail,
       @NonNull TextInputLayout siNickname, @NonNull TextInputLayout siPassword,
       @NonNull TextInputLayout siPhoneNumber, @NonNull Toolbar toolbarRegistration) {
@@ -117,7 +117,7 @@ public final class FragmentSignInBinding implements ViewBinding {
         missingId = "SIRegion";
         break missingId;
       }
-      AppCompatSpinner SIRegionSpinner = rootView.findViewById(R.id.SIRegionSpinner);
+      AppCompatAutoCompleteTextView SIRegionSpinner = rootView.findViewById(R.id.SIRegionSpinner);
       if (SIRegionSpinner == null) {
         missingId = "SIRegionSpinner";
         break missingId;
@@ -127,7 +127,7 @@ public final class FragmentSignInBinding implements ViewBinding {
         missingId = "SITown";
         break missingId;
       }
-      AppCompatSpinner SITownSpinner = rootView.findViewById(R.id.SITownSpinner);
+      AppCompatAutoCompleteTextView SITownSpinner = rootView.findViewById(R.id.SITownSpinner);
       if (SITownSpinner == null) {
         missingId = "SITownSpinner";
         break missingId;

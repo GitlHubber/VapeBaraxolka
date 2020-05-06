@@ -18,7 +18,7 @@ class FavouritesDataSource : PageKeyedDataSource<Int, Ad>() {
         val call = ApiClient.getApi().getFavouritesAds(FIRST_PAGE, MainActivity.sp.getInt("id", 0))
         call.enqueue(object : Callback<AdResponse>{
             override fun onFailure(call: Call<AdResponse>, t: Throwable) {
-                FAVOURITES.progressBar.visibility = View.VISIBLE
+                FAVOURITES.progressBar.visibility = View.GONE
             }
 
             override fun onResponse(call: Call<AdResponse>, response: Response<AdResponse>) {

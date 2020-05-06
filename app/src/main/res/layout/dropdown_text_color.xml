@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@android:id/text1"
-    android:textColor="@color/colorText"
-    android:background="@color/colorAdCreatorImage"
-    android:backgroundTint="@color/colorAdCreatorImage"
-    style="?attr/spinnerDropDownItemStyle"
-    android:singleLine="true"
     android:layout_width="match_parent"
-    android:layout_height="45dp"
-    android:ellipsize="marquee"/>
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:textSize="15sp"
+    android:textColor="@color/colorText"
+    android:background="@color/colorBackground"
+    android:textAppearance="?attr/textAppearanceSubtitle1"/>

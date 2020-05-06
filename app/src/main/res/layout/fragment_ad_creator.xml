@@ -36,7 +36,7 @@
                     android:layout_margin="10dp"
                     android:text="Добавьте фотографии"
                     android:textColor="@color/colorText"
-                    android:textSize="20dp" />
+                    android:textSize="19dp" />
 
                 <HorizontalScrollView
                     android:layout_width="match_parent"
@@ -154,23 +154,42 @@
 
                 </LinearLayout>
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="19sp"
+                    android:text="Заголовок объявления"
+                    android:textColor="@color/colorText"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="Отражает суть вашего объявления"
+                    android:textColor="@color/colorSecondaryText"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/titleEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingStart="10dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:paddingEnd="10dp"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:counterTextColor="@color/colorText"
-                    android:layout_marginBottom="20dp">
+                    app:counterEnabled="true"
+                    app:counterMaxLength="30"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:counterTextColor="@color/colorText">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Заголовок"
-                        android:inputType="textCapSentences"
+                        android:hint="Введите заголовок"
+                        android:inputType="textCapSentences|textMultiLine"
                         android:textColor="@color/colorText"
                         android:textColorHighlight="@color/colorText"
                         android:textColorLink="@color/colorText"
@@ -180,79 +199,86 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorAdCreatorImage" />
+
                 <TextView
-                    android:id="@+id/tv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Выберите категорию"
                     android:textColor="@color/colorText"
-                    android:textSize="20dp" />
+                    android:text="Категория товара"
+                    android:textSize="19sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"/>
 
-                <Spinner
-                    android:id="@+id/categorySpinner"
-                    style="@style/Widget.AppCompat.Spinner"
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_margin="10dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/gradient_spinner"
-                    android:dropDownWidth="300dp"
-                    android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
-                    android:entries="@array/Spinner_category_items"
-                    android:paddingRight="14dp"
-                    android:popupBackground="@color/colorBackground"
-                    android:popupElevation="3dp"
-                    android:stateListAnimator="@drawable/spinner_sla"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="Необходимо для удобного поиска"
+                    android:textColor="@color/colorSecondaryText"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp" />
 
-                <LinearLayout
-                    android:id="@+id/subcategoryLayout"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="Выберите категорию"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    app:endIconMode="dropdown_menu"
+                    app:counterTextColor="@color/colorText">
 
-                    <TextView
-                        android:id="@+id/tv1"
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/categorySpinner"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="10dp"
-                        android:text="Выберите подкатегорию"
                         android:textColor="@color/colorText"
-                        android:textSize="20dp" />
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:textColorHighlight="@color/colorText"
+                        android:textColorLink="@color/colorText"
+                        android:textCursorDrawable="@color/colorText"
+                        android:textSize="18sp" />
 
-                    <Spinner
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/subcategoryLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:hint="Выберите подкатегорию"
+                    android:visibility="gone"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    app:endIconMode="dropdown_menu"
+                    app:counterTextColor="@color/colorText">
+
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
                         android:id="@+id/subcategorySpinner"
-                        style="@style/Widget.AppCompat.Spinner"
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_margin="10dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:background="@drawable/gradient_spinner"
-                        android:dropDownWidth="300dp"
-                        android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
-                        android:paddingRight="14dp"
-                        android:popupBackground="@color/colorBackground"
-                        android:popupElevation="3dp"
-                        android:stateListAnimator="@drawable/spinner_sla"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </LinearLayout>
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorText"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:textColorHighlight="@color/colorText"
+                        android:textColorLink="@color/colorText"
+                        android:textCursorDrawable="@color/colorText"
+                        android:textSize="18sp" />
 
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
+                    android:layout_height="@dimen/divider"
                     android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
                     android:background="@color/colorAdCreatorImage" />
 
 <!--                <TextView-->
@@ -285,22 +311,43 @@
 <!--                    android:textColor="@color/colorText"-->
 <!--                    android:textColorLink="@color/colorText" />-->
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="19sp"
+                    android:text="Описание"
+                    android:textColor="@color/colorText"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="Должно соответствовать товару"
+                    android:maxEms="10"
+                    android:textColor="@color/colorSecondaryText"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp" />
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/descriptionEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:counterTextColor="@color/colorText"
-                    android:layout_marginBottom="20dp">
+                    android:layout_marginTop="5dp"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="150"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:counterTextColor="@color/colorText">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Описание"
+                        android:hint="Укажите описание"
                         android:textColor="@color/colorText"
-                        android:inputType="textCapSentences"
+                        android:inputType="textCapSentences|textMultiLine"
                         android:textColorHighlight="@color/colorText"
                         android:textColorLink="@color/colorText"
                         android:textCursorDrawable="@color/colorText"
@@ -309,20 +356,48 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorAdCreatorImage" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="19sp"
+                    android:text="Стоимость"
+                    android:textColor="@color/colorText"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="Указывайте реальную стоимость товара"
+                    android:maxEms="10"
+                    android:textColor="@color/colorSecondaryText"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="5dp"/>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/priceEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:suffixText="Руб."
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     app:counterTextColor="@color/colorText"
                     android:layout_marginBottom="20dp">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Стоимость"
+                        android:hint="Введите сумму"
                         android:paddingLeft="5dp"
                         android:textColor="@color/colorText"
                         android:textColorHighlight="@color/colorText"

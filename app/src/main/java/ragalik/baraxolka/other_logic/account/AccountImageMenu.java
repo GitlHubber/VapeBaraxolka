@@ -104,9 +104,9 @@ public class AccountImageMenu extends BottomSheetDialogFragment {
             public void onClick(View view) {
 
                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
-                    int permissionStatusWrite = getActivity().checkSelfPermission(WRITE_EXTERNAL_STORAGE);
+                    int permissionStatus = getActivity().checkSelfPermission(WRITE_EXTERNAL_STORAGE);
 
-                    if (permissionStatusWrite == PackageManager.PERMISSION_GRANTED) {
+                    if (permissionStatus == PackageManager.PERMISSION_GRANTED) {
                         takePicture(Account.activity);
                         dismiss();
                     } else {
@@ -124,20 +124,8 @@ public class AccountImageMenu extends BottomSheetDialogFragment {
         account_load_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
-                    int permissionStatusWrite = getActivity().checkSelfPermission(READ_EXTERNAL_STORAGE);
-
-                    if (permissionStatusWrite == PackageManager.PERMISSION_GRANTED) {
-                        chooseFile();
-                        dismiss();
-                    } else {
-                        getActivity().requestPermissions(new String[] {READ_EXTERNAL_STORAGE},
-                                1);
-                    }
-                } else {
-                    chooseFile();
-                    dismiss();
-                }
+                chooseFile();
+                dismiss();
             }
         });
 

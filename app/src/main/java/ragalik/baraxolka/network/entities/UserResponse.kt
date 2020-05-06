@@ -27,6 +27,9 @@ class User {
 
     @field:SerializedName("status_name")
     val statusName: String? = null
+
+    @field:SerializedName("isPhoneHide")
+    val isPhoneHide: Int? = null
 }
 
 class UserResponse {

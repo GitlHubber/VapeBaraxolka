@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.SwitchCompat;
 import androidx.appcompat.widget.Toolbar;
 
+import com.r0adkll.slidr.Slidr;
+
 import ragalik.baraxolka.MainActivity;
 import ragalik.baraxolka.R;
 
@@ -21,6 +23,7 @@ public class SettingsActivity extends AppCompatActivity {
         toolbar.setTitle("Настройки");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Slidr.attach(this);
 
         SwitchCompat nightThemeSwitcher = findViewById(R.id.nightThemeSwitcher);
 

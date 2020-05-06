@@ -82,7 +82,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="5dp"
                     android:text="Title"
-                    android:maxEms="9"
+                    android:maxEms="12"
                     android:textSize="18sp"
                     android:textColor="@color/colorText"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
@@ -109,7 +109,7 @@
                     android:id="@+id/ad_preview_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
+                    android:layout_marginEnd="8dp"
                     android:text="100 руб."
                     android:textColor="@color/colorText"
                     android:textSize="18sp" />
@@ -117,30 +117,127 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/moderator_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/moderator_accept_button"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
+                android:layout_height="35dp"
                 android:layout_weight="1"
                 android:text="Принять"
                 android:textColor="@color/colorAdsDate"
-                android:background="@drawable/gradient_for_signin_for_input"/>
+                android:background="@drawable/gradient_entrance"/>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/moderator_reject_button"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
+                android:layout_height="35dp"
                 android:layout_marginStart="10dp"
                 android:layout_weight="1"
                 android:textColor="@color/colorAdsDate"
-                android:background="@drawable/gradient_for_signin_for_input"
+                android:background="@drawable/reject_button_selection"
                 android:text="Отклонить"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rejectReasonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/rejectReasonDropdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Причина отклонения"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                app:endIconMode="dropdown_menu"
+                app:counterTextColor="@color/colorText">
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/rejectReasonDropdownText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorText"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:textColorHighlight="@color/colorText"
+                    android:textColorLink="@color/colorText"
+                    android:textCursorDrawable="@color/colorText"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/rejectMessageEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="150"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:counterTextColor="@color/colorText">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Комментарий к отклонению"
+                    android:textColor="@color/colorText"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:textColorHighlight="@color/colorText"
+                    android:textColorLink="@color/colorText"
+                    android:textCursorDrawable="@color/colorText"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/acceptRejectButton"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/colorAdsDate"
+                android:background="@drawable/gradient_entrance"
+                android:text="Отправить и отклонить"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rejected_ads_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tw_reject_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorText"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tw_reject_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorText"
+                android:textSize="16sp"
+                android:visibility="visible"/>
 
         </LinearLayout>
     </LinearLayout>
