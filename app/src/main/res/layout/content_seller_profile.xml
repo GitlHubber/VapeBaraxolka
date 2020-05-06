@@ -24,17 +24,18 @@
             android:layout_margin="15dp"
             android:drawableLeft="@drawable/ic_email"
             android:textColor="@color/colorText"
-            android:textSize="18sp" />
+            android:textSize="17sp" />
 
         <TextView
             android:id="@+id/sellerPhoneNumberProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/colorText"
+            android:visibility="visible"
             android:layout_margin="15dp"
             android:drawableLeft="@drawable/ic_phone_number"
             android:text="PhoneNumber"
-            android:textSize="18sp"/>
+            android:textSize="17sp"/>
 
         <TextView
             android:id="@+id/sellerRegionTownProfile"
@@ -44,11 +45,11 @@
             android:layout_margin="15dp"
             android:drawableLeft="@drawable/ic_location"
             android:text="Region"
-            android:textSize="18sp"/>
+            android:textSize="17sp"/>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
+            android:layout_height="@dimen/divider"
             android:layout_marginBottom="10dp"
             android:background="@color/colorAdCreatorImage" />
 
@@ -79,7 +80,6 @@
             android:id="@+id/sellerAdsProfile"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
-
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

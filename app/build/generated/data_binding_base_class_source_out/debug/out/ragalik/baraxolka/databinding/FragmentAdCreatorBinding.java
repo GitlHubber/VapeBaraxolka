@@ -6,11 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatAutoCompleteTextView;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.Toolbar;
@@ -53,7 +52,7 @@ public final class FragmentAdCreatorBinding implements ViewBinding {
   public final AppCompatButton addAdButton;
 
   @NonNull
-  public final Spinner categorySpinner;
+  public final AppCompatAutoCompleteTextView categorySpinner;
 
   @NonNull
   public final TextInputLayout descriptionEditText;
@@ -62,22 +61,16 @@ public final class FragmentAdCreatorBinding implements ViewBinding {
   public final TextInputLayout priceEditText;
 
   @NonNull
-  public final LinearLayout subcategoryLayout;
+  public final TextInputLayout subcategoryLayout;
 
   @NonNull
-  public final Spinner subcategorySpinner;
+  public final AppCompatAutoCompleteTextView subcategorySpinner;
 
   @NonNull
   public final TextView textView4;
 
   @NonNull
   public final TextInputLayout titleEditText;
-
-  @NonNull
-  public final TextView tv;
-
-  @NonNull
-  public final TextView tv1;
 
   @NonNull
   public final TextView tv3;
@@ -89,11 +82,12 @@ public final class FragmentAdCreatorBinding implements ViewBinding {
       @NonNull FrameLayout adCreatorFrame, @NonNull AppCompatTextView adCreatorMainLabel,
       @NonNull Toolbar adCreatorToolbar, @NonNull ImageView adPhoto1, @NonNull ImageView adPhoto2,
       @NonNull ImageView adPhoto3, @NonNull ImageView adPhoto4, @NonNull ImageView adPhoto5,
-      @NonNull AppCompatButton addAdButton, @NonNull Spinner categorySpinner,
+      @NonNull AppCompatButton addAdButton, @NonNull AppCompatAutoCompleteTextView categorySpinner,
       @NonNull TextInputLayout descriptionEditText, @NonNull TextInputLayout priceEditText,
-      @NonNull LinearLayout subcategoryLayout, @NonNull Spinner subcategorySpinner,
-      @NonNull TextView textView4, @NonNull TextInputLayout titleEditText, @NonNull TextView tv,
-      @NonNull TextView tv1, @NonNull TextView tv3, @NonNull TextView uploadPhotoCounterAdCreator) {
+      @NonNull TextInputLayout subcategoryLayout,
+      @NonNull AppCompatAutoCompleteTextView subcategorySpinner, @NonNull TextView textView4,
+      @NonNull TextInputLayout titleEditText, @NonNull TextView tv3,
+      @NonNull TextView uploadPhotoCounterAdCreator) {
     this.rootView = rootView;
     this.adCreatorFrame = adCreatorFrame;
     this.adCreatorMainLabel = adCreatorMainLabel;
@@ -111,8 +105,6 @@ public final class FragmentAdCreatorBinding implements ViewBinding {
     this.subcategorySpinner = subcategorySpinner;
     this.textView4 = textView4;
     this.titleEditText = titleEditText;
-    this.tv = tv;
-    this.tv1 = tv1;
     this.tv3 = tv3;
     this.uploadPhotoCounterAdCreator = uploadPhotoCounterAdCreator;
   }
@@ -189,7 +181,7 @@ public final class FragmentAdCreatorBinding implements ViewBinding {
         missingId = "addAdButton";
         break missingId;
       }
-      Spinner categorySpinner = rootView.findViewById(R.id.categorySpinner);
+      AppCompatAutoCompleteTextView categorySpinner = rootView.findViewById(R.id.categorySpinner);
       if (categorySpinner == null) {
         missingId = "categorySpinner";
         break missingId;
@@ -204,12 +196,12 @@ public final class FragmentAdCreatorBinding implements ViewBinding {
         missingId = "priceEditText";
         break missingId;
       }
-      LinearLayout subcategoryLayout = rootView.findViewById(R.id.subcategoryLayout);
+      TextInputLayout subcategoryLayout = rootView.findViewById(R.id.subcategoryLayout);
       if (subcategoryLayout == null) {
         missingId = "subcategoryLayout";
         break missingId;
       }
-      Spinner subcategorySpinner = rootView.findViewById(R.id.subcategorySpinner);
+      AppCompatAutoCompleteTextView subcategorySpinner = rootView.findViewById(R.id.subcategorySpinner);
       if (subcategorySpinner == null) {
         missingId = "subcategorySpinner";
         break missingId;
@@ -222,16 +214,6 @@ public final class FragmentAdCreatorBinding implements ViewBinding {
       TextInputLayout titleEditText = rootView.findViewById(R.id.titleEditText);
       if (titleEditText == null) {
         missingId = "titleEditText";
-        break missingId;
-      }
-      TextView tv = rootView.findViewById(R.id.tv);
-      if (tv == null) {
-        missingId = "tv";
-        break missingId;
-      }
-      TextView tv1 = rootView.findViewById(R.id.tv1);
-      if (tv1 == null) {
-        missingId = "tv1";
         break missingId;
       }
       TextView tv3 = rootView.findViewById(R.id.tv3);
@@ -247,7 +229,7 @@ public final class FragmentAdCreatorBinding implements ViewBinding {
       return new FragmentAdCreatorBinding((FrameLayout) rootView, adCreatorFrame,
           adCreatorMainLabel, adCreatorToolbar, adPhoto1, adPhoto2, adPhoto3, adPhoto4, adPhoto5,
           addAdButton, categorySpinner, descriptionEditText, priceEditText, subcategoryLayout,
-          subcategorySpinner, textView4, titleEditText, tv, tv1, tv3, uploadPhotoCounterAdCreator);
+          subcategorySpinner, textView4, titleEditText, tv3, uploadPhotoCounterAdCreator);
     }
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }

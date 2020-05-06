@@ -4,14 +4,17 @@ package ragalik.baraxolka.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatAutoCompleteTextView;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
+import com.google.android.material.textfield.TextInputLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -20,6 +23,9 @@ import ragalik.baraxolka.R;
 public final class ItemAdBinding implements ViewBinding {
   @NonNull
   private final CardView rootView;
+
+  @NonNull
+  public final AppCompatButton acceptRejectButton;
 
   @NonNull
   public final TextView adPreviewDateTime;
@@ -34,10 +40,28 @@ public final class ItemAdBinding implements ViewBinding {
   public final ImageView ivAvatar;
 
   @NonNull
-  public final Button moderatorAcceptButton;
+  public final AppCompatButton moderatorAcceptButton;
 
   @NonNull
-  public final Button moderatorRejectButton;
+  public final LinearLayout moderatorLayout;
+
+  @NonNull
+  public final AppCompatButton moderatorRejectButton;
+
+  @NonNull
+  public final TextInputLayout rejectMessageEditText;
+
+  @NonNull
+  public final TextInputLayout rejectReasonDropdown;
+
+  @NonNull
+  public final AppCompatAutoCompleteTextView rejectReasonDropdownText;
+
+  @NonNull
+  public final LinearLayout rejectReasonLayout;
+
+  @NonNull
+  public final LinearLayout rejectedAdsLayout;
 
   @NonNull
   public final TextView tvLocation;
@@ -45,20 +69,40 @@ public final class ItemAdBinding implements ViewBinding {
   @NonNull
   public final TextView tvTitle;
 
-  private ItemAdBinding(@NonNull CardView rootView, @NonNull TextView adPreviewDateTime,
-      @NonNull TextView adPreviewPrice, @NonNull AppCompatCheckBox bookmarkButtonAds,
-      @NonNull ImageView ivAvatar, @NonNull Button moderatorAcceptButton,
-      @NonNull Button moderatorRejectButton, @NonNull TextView tvLocation,
-      @NonNull TextView tvTitle) {
+  @NonNull
+  public final TextView twRejectMessage;
+
+  @NonNull
+  public final TextView twRejectReason;
+
+  private ItemAdBinding(@NonNull CardView rootView, @NonNull AppCompatButton acceptRejectButton,
+      @NonNull TextView adPreviewDateTime, @NonNull TextView adPreviewPrice,
+      @NonNull AppCompatCheckBox bookmarkButtonAds, @NonNull ImageView ivAvatar,
+      @NonNull AppCompatButton moderatorAcceptButton, @NonNull LinearLayout moderatorLayout,
+      @NonNull AppCompatButton moderatorRejectButton,
+      @NonNull TextInputLayout rejectMessageEditText, @NonNull TextInputLayout rejectReasonDropdown,
+      @NonNull AppCompatAutoCompleteTextView rejectReasonDropdownText,
+      @NonNull LinearLayout rejectReasonLayout, @NonNull LinearLayout rejectedAdsLayout,
+      @NonNull TextView tvLocation, @NonNull TextView tvTitle, @NonNull TextView twRejectMessage,
+      @NonNull TextView twRejectReason) {
     this.rootView = rootView;
+    this.acceptRejectButton = acceptRejectButton;
     this.adPreviewDateTime = adPreviewDateTime;
     this.adPreviewPrice = adPreviewPrice;
     this.bookmarkButtonAds = bookmarkButtonAds;
     this.ivAvatar = ivAvatar;
     this.moderatorAcceptButton = moderatorAcceptButton;
+    this.moderatorLayout = moderatorLayout;
     this.moderatorRejectButton = moderatorRejectButton;
+    this.rejectMessageEditText = rejectMessageEditText;
+    this.rejectReasonDropdown = rejectReasonDropdown;
+    this.rejectReasonDropdownText = rejectReasonDropdownText;
+    this.rejectReasonLayout = rejectReasonLayout;
+    this.rejectedAdsLayout = rejectedAdsLayout;
     this.tvLocation = tvLocation;
     this.tvTitle = tvTitle;
+    this.twRejectMessage = twRejectMessage;
+    this.twRejectReason = twRejectReason;
   }
 
   @Override
@@ -88,6 +132,11 @@ public final class ItemAdBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     String missingId;
     missingId: {
+      AppCompatButton acceptRejectButton = rootView.findViewById(R.id.acceptRejectButton);
+      if (acceptRejectButton == null) {
+        missingId = "acceptRejectButton";
+        break missingId;
+      }
       TextView adPreviewDateTime = rootView.findViewById(R.id.ad_preview_date_time);
       if (adPreviewDateTime == null) {
         missingId = "adPreviewDateTime";
@@ -108,14 +157,44 @@ public final class ItemAdBinding implements ViewBinding {
         missingId = "ivAvatar";
         break missingId;
       }
-      Button moderatorAcceptButton = rootView.findViewById(R.id.moderator_accept_button);
+      AppCompatButton moderatorAcceptButton = rootView.findViewById(R.id.moderator_accept_button);
       if (moderatorAcceptButton == null) {
         missingId = "moderatorAcceptButton";
         break missingId;
       }
-      Button moderatorRejectButton = rootView.findViewById(R.id.moderator_reject_button);
+      LinearLayout moderatorLayout = rootView.findViewById(R.id.moderator_layout);
+      if (moderatorLayout == null) {
+        missingId = "moderatorLayout";
+        break missingId;
+      }
+      AppCompatButton moderatorRejectButton = rootView.findViewById(R.id.moderator_reject_button);
       if (moderatorRejectButton == null) {
         missingId = "moderatorRejectButton";
+        break missingId;
+      }
+      TextInputLayout rejectMessageEditText = rootView.findViewById(R.id.rejectMessageEditText);
+      if (rejectMessageEditText == null) {
+        missingId = "rejectMessageEditText";
+        break missingId;
+      }
+      TextInputLayout rejectReasonDropdown = rootView.findViewById(R.id.rejectReasonDropdown);
+      if (rejectReasonDropdown == null) {
+        missingId = "rejectReasonDropdown";
+        break missingId;
+      }
+      AppCompatAutoCompleteTextView rejectReasonDropdownText = rootView.findViewById(R.id.rejectReasonDropdownText);
+      if (rejectReasonDropdownText == null) {
+        missingId = "rejectReasonDropdownText";
+        break missingId;
+      }
+      LinearLayout rejectReasonLayout = rootView.findViewById(R.id.rejectReasonLayout);
+      if (rejectReasonLayout == null) {
+        missingId = "rejectReasonLayout";
+        break missingId;
+      }
+      LinearLayout rejectedAdsLayout = rootView.findViewById(R.id.rejected_ads_layout);
+      if (rejectedAdsLayout == null) {
+        missingId = "rejectedAdsLayout";
         break missingId;
       }
       TextView tvLocation = rootView.findViewById(R.id.tv_location);
@@ -128,9 +207,21 @@ public final class ItemAdBinding implements ViewBinding {
         missingId = "tvTitle";
         break missingId;
       }
-      return new ItemAdBinding((CardView) rootView, adPreviewDateTime, adPreviewPrice,
-          bookmarkButtonAds, ivAvatar, moderatorAcceptButton, moderatorRejectButton, tvLocation,
-          tvTitle);
+      TextView twRejectMessage = rootView.findViewById(R.id.tw_reject_message);
+      if (twRejectMessage == null) {
+        missingId = "twRejectMessage";
+        break missingId;
+      }
+      TextView twRejectReason = rootView.findViewById(R.id.tw_reject_reason);
+      if (twRejectReason == null) {
+        missingId = "twRejectReason";
+        break missingId;
+      }
+      return new ItemAdBinding((CardView) rootView, acceptRejectButton, adPreviewDateTime,
+          adPreviewPrice, bookmarkButtonAds, ivAvatar, moderatorAcceptButton, moderatorLayout,
+          moderatorRejectButton, rejectMessageEditText, rejectReasonDropdown,
+          rejectReasonDropdownText, rejectReasonLayout, rejectedAdsLayout, tvLocation, tvTitle,
+          twRejectMessage, twRejectReason);
     }
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }

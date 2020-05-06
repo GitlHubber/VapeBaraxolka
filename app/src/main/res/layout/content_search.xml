@@ -41,7 +41,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="0.5dp"
+                android:layout_height="@dimen/divider"
                 android:background="@color/colorAdCreatorImage" />
 
             <TextView
@@ -54,28 +54,52 @@
                 android:textSize="18dp"
                 android:text="Выберите категорию"/>
 
-            <Spinner
-                android:id="@+id/categorySearchSpinner"
-                style="@style/Widget.AppCompat.Spinner"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
-                android:background="@drawable/gradient_spinner"
-                android:dropDownWidth="300dp"
-                android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
-                android:paddingRight="14dp"
-                android:popupBackground="@color/colorBackground"
-                android:popupElevation="3dp"
-                android:stateListAnimator="@drawable/spinner_sla"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:hint="Выберите категорию"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                app:endIconMode="dropdown_menu"
+                app:counterTextColor="@color/colorText">
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/categorySearchSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorText"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:textColorHighlight="@color/colorText"
+                    android:textColorLink="@color/colorText"
+                    android:textCursorDrawable="@color/colorText"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+<!--            <Spinner-->
+<!--                android:id="@+id/categorySearchSpinner"-->
+<!--                style="@style/Widget.AppCompat.Spinner"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:layout_marginEnd="10dp"-->
+<!--                android:background="@drawable/gradient_spinner"-->
+<!--                android:dropDownWidth="300dp"-->
+<!--                android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"-->
+<!--                android:paddingRight="14dp"-->
+<!--                android:popupBackground="@color/colorBackground"-->
+<!--                android:popupElevation="3dp"-->
+<!--                android:stateListAnimator="@drawable/spinner_sla"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"/>-->
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="0.5dp"
+                android:layout_height="@dimen/divider"
                 android:background="@color/colorAdCreatorImage" />
 
             <LinearLayout
@@ -94,33 +118,58 @@
                     android:textColor="@color/colorText"
                     android:textSize="18dp" />
 
-                <Spinner
-                    android:id="@+id/subcategorySearchSpinner"
-                    style="@style/Widget.AppCompat.Spinner"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/gradient_spinner"
-                    android:dropDownWidth="300dp"
-                    android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
-                    android:paddingRight="14dp"
-                    android:popupBackground="@color/colorBackground"
-                    android:popupElevation="3dp"
-                    android:stateListAnimator="@drawable/spinner_sla"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="Выберите категорию"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    app:endIconMode="dropdown_menu"
+                    app:counterTextColor="@color/colorText">
+
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/subcategorySearchSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorText"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:textColorHighlight="@color/colorText"
+                        android:textColorLink="@color/colorText"
+                        android:textCursorDrawable="@color/colorText"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+<!--                <Spinner-->
+<!--                    android:id="@+id/subcategorySearchSpinner"-->
+<!--                    style="@style/Widget.AppCompat.Spinner"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:layout_marginBottom="10dp"-->
+<!--                    android:background="@drawable/gradient_spinner"-->
+<!--                    android:dropDownWidth="300dp"-->
+<!--                    android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"-->
+<!--                    android:paddingRight="14dp"-->
+<!--                    android:popupBackground="@color/colorBackground"-->
+<!--                    android:popupElevation="3dp"-->
+<!--                    android:stateListAnimator="@drawable/spinner_sla"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent" />-->
             </LinearLayout>
 
             <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
             <View
                 android:layout_width="match_parent"
-                android:layout_height="0.5dp"
+                android:layout_height="@dimen/divider"
                 android:background="@color/colorAdCreatorImage" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -135,10 +184,9 @@
                 android:textColor="@color/colorText"
                 android:textAllCaps="false"/>
 
-
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
+                    android:layout_height="@dimen/divider"
                     android:background="@color/colorAdCreatorImage" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -155,7 +203,7 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
+                    android:layout_height="@dimen/divider"
                     android:background="@color/colorAdCreatorImage" />
 
             </LinearLayout>

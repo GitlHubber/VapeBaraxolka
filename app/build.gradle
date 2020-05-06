@@ -29,6 +29,8 @@ android {
     viewBinding {
         enabled = true
     }
+// To inline the bytecode built with JVM target 1.8 into
+// bytecode that is being built with JVM target 1.6. (e.g. navArgs)
 }
 
 dependencies {
@@ -39,7 +41,7 @@ dependencies {
     implementation 'com.miguelcatalan:materialsearchview:1.4.0'
     implementation 'com.nightonke:boommenu:2.1.1'
 
-    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'com.google.android.material:material:1.2.0-alpha06'
 
     implementation 'com.github.chrisbanes:PhotoView:2.3.0'
 
@@ -71,6 +73,11 @@ dependencies {
 
     //Circle image view
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.2.1'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.2.1'
+
+    implementation 'com.r0adkll:slidableactivity:2.1.0'
 }
 repositories {
     mavenCentral()

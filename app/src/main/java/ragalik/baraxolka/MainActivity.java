@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity
     public static Boolean isActualFragment = false;
     public static DrawerLayout drawer;
     private boolean doubleBackToExitPressedOnce;
+    public static boolean isEntranceFromDialog = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -160,10 +161,12 @@ public class MainActivity extends AppCompatActivity
                 myDialog.dismiss();
             });
             log.setOnClickListener(v -> {
+                isEntranceFromDialog = true;
                 myDialog.dismiss();
                 newTransaction(logInFragment, "Вход");
             });
             sign.setOnClickListener(v -> {
+                isEntranceFromDialog = true;
                 signInFragment = new SignIn();
                 myDialog.dismiss();
                 newTransaction(signInFragment, "Регистрация");

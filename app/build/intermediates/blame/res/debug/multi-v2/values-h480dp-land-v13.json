@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h480dp-land-v13/values-h480dp-land-v13.xml",
+            "outputFile": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h480dp-land-v13\\values-h480dp-land-v13.xml",
             "map": [
                 {
-                    "source": "/home/kirill/.gradle/caches/transforms-2/files-2.1/97f9388465737975a6d1fbcf74822f8f/material-1.1.0/res/values-h480dp-land-v13/values-h480dp-land-v13.xml",
+                    "source": "C:\\Users\\Ragalik\\.gradle\\caches\\transforms-2\\files-2.1\\9f9cbd6b27e2c08ef437d7c7f125b64b\\material-1.2.0-alpha06\\res\\values-h480dp-land-v13\\values-h480dp-land-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

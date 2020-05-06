@@ -9,29 +9,39 @@ class CategoryResponse {
 
     @SerializedName("success")
     var success = 0
-
 }
 
 class Categories {
     @SerializedName("id")
-    var id = 0
+    var id : Int? = null
 
     @SerializedName("category_name")
     var category_name: String? = null
 
     @SerializedName("subcategories")
     var subcategories: ArrayList<Subcategories>? = null
-
 }
 
 class Subcategories {
     @SerializedName("id")
-    var id = 0
+    var id : Int? = null
 
     @SerializedName("subcategory_name")
     var subcategory_name: String? = null
 
     @SerializedName("category_id")
-    var category_id = 0
+    var category_id : Int? = null
+}
 
+class ReasonsResponse {
+    @SerializedName("reasons")
+    var reasons: ArrayList<Reasons>? = null
+
+    @SerializedName("success")
+    var success = 0
+}
+
+class Reasons {
+    @SerializedName("reason_name")
+    var reason_name: String? = null
 }

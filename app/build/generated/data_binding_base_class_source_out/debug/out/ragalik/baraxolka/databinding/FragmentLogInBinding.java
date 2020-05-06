@@ -11,7 +11,6 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -32,13 +31,7 @@ public final class FragmentLogInBinding implements ViewBinding {
   public final TextView AppName2;
 
   @NonNull
-  public final TextInputEditText LIPassword;
-
-  @NonNull
   public final TextInputLayout LIPasswordLayout;
-
-  @NonNull
-  public final TextInputEditText LIPhOrEmail;
 
   @NonNull
   public final TextInputLayout PhNumberOrEmailLayout;
@@ -51,17 +44,14 @@ public final class FragmentLogInBinding implements ViewBinding {
 
   private FragmentLogInBinding(@NonNull CoordinatorLayout rootView,
       @NonNull AppCompatButton AcceptLogInButton, @NonNull TextView AppName1,
-      @NonNull TextView AppName2, @NonNull TextInputEditText LIPassword,
-      @NonNull TextInputLayout LIPasswordLayout, @NonNull TextInputEditText LIPhOrEmail,
+      @NonNull TextView AppName2, @NonNull TextInputLayout LIPasswordLayout,
       @NonNull TextInputLayout PhNumberOrEmailLayout, @NonNull AppCompatButton SignInLogInButton,
       @NonNull Toolbar toolbarAuthorization) {
     this.rootView = rootView;
     this.AcceptLogInButton = AcceptLogInButton;
     this.AppName1 = AppName1;
     this.AppName2 = AppName2;
-    this.LIPassword = LIPassword;
     this.LIPasswordLayout = LIPasswordLayout;
-    this.LIPhOrEmail = LIPhOrEmail;
     this.PhNumberOrEmailLayout = PhNumberOrEmailLayout;
     this.SignInLogInButton = SignInLogInButton;
     this.toolbarAuthorization = toolbarAuthorization;
@@ -109,19 +99,9 @@ public final class FragmentLogInBinding implements ViewBinding {
         missingId = "AppName2";
         break missingId;
       }
-      TextInputEditText LIPassword = rootView.findViewById(R.id.LIPassword);
-      if (LIPassword == null) {
-        missingId = "LIPassword";
-        break missingId;
-      }
       TextInputLayout LIPasswordLayout = rootView.findViewById(R.id.LIPasswordLayout);
       if (LIPasswordLayout == null) {
         missingId = "LIPasswordLayout";
-        break missingId;
-      }
-      TextInputEditText LIPhOrEmail = rootView.findViewById(R.id.LIPh_or_email);
-      if (LIPhOrEmail == null) {
-        missingId = "LIPhOrEmail";
         break missingId;
       }
       TextInputLayout PhNumberOrEmailLayout = rootView.findViewById(R.id.PhNumberOrEmailLayout);
@@ -140,8 +120,8 @@ public final class FragmentLogInBinding implements ViewBinding {
         break missingId;
       }
       return new FragmentLogInBinding((CoordinatorLayout) rootView, AcceptLogInButton, AppName1,
-          AppName2, LIPassword, LIPasswordLayout, LIPhOrEmail, PhNumberOrEmailLayout,
-          SignInLogInButton, toolbarAuthorization);
+          AppName2, LIPasswordLayout, PhNumberOrEmailLayout, SignInLogInButton,
+          toolbarAuthorization);
     }
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }

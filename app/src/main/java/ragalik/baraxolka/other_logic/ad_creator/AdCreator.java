@@ -14,17 +14,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.widget.AppCompatAutoCompleteTextView;
 import androidx.appcompat.widget.AppCompatButton;
-import androidx.appcompat.widget.AppCompatRadioButton;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.Toolbar;
 
@@ -57,8 +54,8 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
     private static final long MAX_SIZE_PHOTO = 3145728;
 
     private static TextInputLayout titleEditText;
-    private Spinner categorySpinner;
-    private Spinner subcategorySpinner;
+    private AppCompatAutoCompleteTextView categorySpinner;
+    private AppCompatAutoCompleteTextView subcategorySpinner;
     private static TextInputLayout descriptionEditText;
     private static TextInputLayout priceEditText;
     private AppCompatButton addAdButton;
@@ -68,9 +65,7 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
     private int choosedIndex = 0;
     public static int imageUploadCount;
     public static ArrayList<File> files;
-    private ArrayAdapter<String> adapterCategory;
-    private ArrayAdapter<String> adapterSubcategory;
-    private LinearLayout subcategoryLayout;
+    private TextInputLayout subcategoryLayout;
     //private AppCompatRadioButton newState;
     //private AppCompatRadioButton secondaryState;
     //private String goodsState;
@@ -96,7 +91,7 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
         appCompatActivity = this;
 
         Toolbar toolbar = findViewById(R.id.adCreatorToolbar);
-        toolbar.setTitle("Добавить объявление");
+        toolbar.setTitle("Создание объявления");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -104,7 +99,6 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
         categorySpinner = findViewById(R.id.categorySpinner);
         mainLabel = findViewById(R.id.ad_creator_main_label);
         subcategoryLayout = findViewById(R.id.subcategoryLayout);
-        subcategoryLayout.setVisibility(View.GONE);
 
         activity = this;
         uploadAmountTW = findViewById(R.id.uploadPhotoCounterAdCreator);
@@ -194,60 +188,44 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
                     subcategoriesHashMap.put(response.body().getCategories().get(i).getCategory_name(), response.body().getCategories().get(i).getSubcategories());
                 }
 
-                adapterCategory = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item, categories);
-                adapterCategory.setDropDownViewResource(R.layout.dropdown_text_color);
-                categorySpinner.setAdapter(adapterCategory);
-                categorySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                        ArrayList<String> subcategories = new ArrayList<>();
-                        subcategories.add("Не выбрано");
+                categorySpinner.setAdapter(new ArrayAdapter<String>(getApplicationContext(), R.layout.dropdown_text_color, categories));
+                categorySpinner.setOnItemClickListener((parent, view, position, id) -> {
+                    ArrayList<String> subcategories = new ArrayList<>();
+                    subcategories.add("Не выбрано");
 
-                        if (subcategoriesHashMap.get(categorySpinner.getSelectedItem().toString()) != null) {
-                            if (position != 0) {
-                                subcategoryLayout.setVisibility(View.VISIBLE);
+                    if (subcategoriesHashMap.get(parent.getItemAtPosition(position).toString()) != null) {
+                        if (position != 0) {
+                            subcategoryLayout.setVisibility(View.VISIBLE);
 
-                                for (int i = 0; i < subcategoriesHashMap.get(categorySpinner.getSelectedItem().toString()).size(); ++i) {
-                                    subcategories.add(subcategoriesHashMap.get(categorySpinner.getSelectedItem().toString()).get(i).getSubcategory_name());
-                                }
+                            for (int i = 0; i < subcategoriesHashMap.get(parent.getItemAtPosition(position).toString()).size(); ++i) {
+                                subcategories.add(subcategoriesHashMap.get(parent.getItemAtPosition(position).toString()).get(i).getSubcategory_name());
+                            }
 
-                                categoryFromSpinner = categorySpinner.getSelectedItem().toString();
-                                adapterSubcategory = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item, subcategories);
-                                adapterSubcategory.setDropDownViewResource(R.layout.dropdown_text_color);
-                                subcategorySpinner.setAdapter(adapterSubcategory);
-                                if (subcategoriesHashMap.get(categorySpinner.getSelectedItem().toString()).size() == 1) {
-                                    subcategorySpinner.setSelection(1);
-                                }
-                            } else {
-                                subcategoryLayout.setVisibility(View.GONE);
+                            categoryFromSpinner = parent.getItemAtPosition(position).toString();
+                            subcategorySpinner.setAdapter(new ArrayAdapter<String>(getApplicationContext(), R.layout.dropdown_text_color, subcategories));
+                            if (subcategoriesHashMap.get(parent.getItemAtPosition(position).toString()).size() == 1) {
+                                subcategorySpinner.setSelection(1);
                             }
                         } else {
                             subcategoryLayout.setVisibility(View.GONE);
                         }
+                    } else {
+                        subcategoryLayout.setVisibility(View.GONE);
                     }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> parent) {}
                 });
 
-                subcategorySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                        if (parent.getItemAtPosition(position).toString().equals("Не выбрано")) {
-                            subcategoryFromSpinner = "";
-                        } else {
-                            subcategoryFromSpinner = subcategorySpinner.getSelectedItem().toString();
-                        }
+                subcategorySpinner.setOnItemClickListener((parent, view, position, id) -> {
+                    if (parent.getItemAtPosition(position).toString().equals("Не выбрано")) {
+                        subcategoryFromSpinner = "";
+                    } else {
+                        subcategoryFromSpinner = parent.getItemAtPosition(position).toString();
                     }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> parent) {}
                 });
             }
 
             @Override
             public void onFailure(Call<CategoryResponse> call, Throwable t) {
-                Toast.makeText(AdCreator.this, "Не удалось получить список категорий. Проверьте интернет соединение.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AdCreator.this, "Проверьте интернет соединение.", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -380,7 +358,6 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
         String datetime = dateFormat.format(new Date());
         String subcategory = subcategoryFromSpinner;
 
-
         ApiClient.getApi().insertAd(RequestBody.create(MediaType.parse("multipart/form-data"), title),
                 RequestBody.create(MediaType.parse("multipart/form-data"), description),
                 parts.get(0),
@@ -394,7 +371,9 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
                 RequestBody.create(MediaType.parse("multipart/form-data"), subcategory)).enqueue(new Callback<ServerResponse>() {
             @Override
             public void onResponse(Call<ServerResponse> call, Response<ServerResponse> response) {
+                pDialog.dismiss();
                 if (response.body() != null) {
+                    Toast.makeText(getApplicationContext(), "Обьявление создано!", Toast.LENGTH_LONG).show();
                     Intent myIntent = new Intent(appCompatActivity, MainActivity.class);
                     appCompatActivity.startActivity(myIntent);
                 }

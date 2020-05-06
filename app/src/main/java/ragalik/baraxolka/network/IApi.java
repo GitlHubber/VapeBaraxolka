@@ -6,6 +6,7 @@ import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import ragalik.baraxolka.network.entities.AdsCount;
 import ragalik.baraxolka.network.entities.CategoryResponse;
+import ragalik.baraxolka.network.entities.ReasonsResponse;
 import ragalik.baraxolka.network.entities.RegisterResponse;
 import ragalik.baraxolka.network.entities.ServerResponse;
 import ragalik.baraxolka.network.entities.User;
@@ -57,7 +58,9 @@ public interface IApi {
     @GET("/scripts/acceptRejectAd.php")
     Call<ServerResponse> acceptRejectAd(@Query("id") int id,
                                         @Query("status") int status,
-                                        @Query("dateTime") String datetime);
+                                        @Query("dateTime") String datetime,
+                                        @Query("reason_id") int reason_id,
+                                        @Query("reject_message") String reject_message);
 
     @GET("/scripts/getFullAd.php")
     Call<FullAdResponse> getFullAd(@Query("id_ad") int id_ad,
@@ -79,6 +82,9 @@ public interface IApi {
     @GET("/scripts/getCategoriesWithSubcategories.php")
     Call<CategoryResponse> getCategoriesWithSubcategories();
 
+    @GET("/scripts/getRejectReasons.php")
+    Call<ReasonsResponse> getRejectReasons();
+
 
 
     //POST---POST
@@ -94,6 +100,22 @@ public interface IApi {
                                            @Field("user_id") int user_id,
                                            @Field("datetime") String datetime,
                                            @Field("flag") String flag);
+
+    @FormUrlEncoded
+    @POST("/scripts/setRegion.php")
+    Call<ServerResponse> setRegion(@Field("region") String region,
+                                   @Field("town") String town,
+                                   @Field("email") String email);
+
+    @FormUrlEncoded
+    @POST("/scripts/setPhoneNumber.php")
+    Call<ServerResponse> setPhoneNumber(@Field("phoneNumber") String phoneNumber,
+                                        @Field("email") String email);
+
+    @FormUrlEncoded
+    @POST("/scripts/showHidePhone.php")
+    Call<ServerResponse> showHidePhone(@Field("isPhoneHide") int isPhoneHide,
+                                        @Field("email") String email);
 
     @FormUrlEncoded
     @POST("/scripts/registration.php")

@@ -39,6 +39,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/aldrich"
                 android:gravity="center"
+                android:visibility="gone"
                 android:text="Vape"
                 android:textColor="@color/colorText"
                 android:textSize="36sp" />
@@ -50,7 +51,7 @@
                 android:fontFamily="@font/aldrich"
                 android:gravity="center"
                 android:paddingBottom="30dp"
-                android:text="Baraxolka"
+                android:text="Барахолка"
                 android:textColor="@color/colorText"
                 android:textSize="36sp" />
 
@@ -65,7 +66,6 @@
                 android:layout_marginBottom="20dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/LIPh_or_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Номер телефона или Эл. почта"
@@ -91,7 +91,6 @@
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/LIPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Пароль"

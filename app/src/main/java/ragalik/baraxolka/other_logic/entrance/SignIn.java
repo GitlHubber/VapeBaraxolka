@@ -8,6 +8,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatAutoCompleteTextView;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatSpinner;
 import androidx.appcompat.widget.Toolbar;
@@ -21,6 +22,7 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -61,9 +63,9 @@ public class SignIn extends Fragment implements View.OnClickListener {
     private static String regionFromSpinner;
     private static String townFromSpinner;
     private static boolean isRegionSelected;
-    private AppCompatSpinner regionSpinner;
+    private AppCompatAutoCompleteTextView regionSpinner;
+    private AppCompatAutoCompleteTextView townSpinner;
     private Toolbar toolbar;
-    private AppCompatSpinner townSpinner;
     private ArrayAdapter<CharSequence> adapterRegion;
     private ArrayAdapter<CharSequence> adapterTown;
     //private TextView privacyPolicyTW;
@@ -106,59 +108,51 @@ public class SignIn extends Fragment implements View.OnClickListener {
 //        privacyPolicyTW.setOnClickListener(this);
 
         if (getContext() != null) {
-            adapterRegion = ArrayAdapter.createFromResource(getContext(), R.array.Spinner_region_items, R.layout.text_color);
-            adapterRegion.setDropDownViewResource(R.layout.dropdown_text_color);
-            regionSpinner.setAdapter(adapterRegion);
-            regionSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                    String text = adapterView.getItemAtPosition(i).toString();
-                    isRegionSelected = true;
-                    region.setText("Область");
-                    town.setText("Город");
-                    if (getContext() != null) {
-                        switch (text) {
-                            case ("Не указано") : adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.Nothing, R.layout.text_color);
-                                isRegionSelected = false;
-                                break;
-                            case ("Минск") : adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.Minsk, R.layout.text_color);
-                                region.setText("Город");
-                                town.setText("Район");
-                                break;
-                            case ("Брестская обл.") : adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.BrestRegion, R.layout.text_color);
-                                break;
-                            case ("Витебская обл.") : adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.VitebskRegion, R.layout.text_color);
-                                break;
-                            case ("Гомельская обл.") : adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.GomelRegion, R.layout.text_color);
-                                break;
-                            case ("Гродненская обл.") : adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.GrodnoRegion, R.layout.text_color);
-                                break;
-                            case ("Минская обл.") : adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.MinskRegion, R.layout.text_color);
-                                break;
-                            case ("Могилевская обл.") : adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.MogilevRegion, R.layout.text_color);
-                                break;
-                            default : break;
-                        }
-                        regionFromSpinner = text;
-                        adapterTown.setDropDownViewResource(R.layout.dropdown_text_color);
-                        townSpinner.setAdapter(adapterTown);
+            regionSpinner.setAdapter(ArrayAdapter.createFromResource(getContext(), R.array.Spinner_region_items, R.layout.dropdown_text_color));
+            regionSpinner.setOnItemClickListener((parent, view, position, id) -> {
+                String text = parent.getItemAtPosition(position).toString();
+                isRegionSelected = true;
+                region.setText("Область");
+                town.setText("Город");
+                if (getContext() != null) {
+                    switch (text) {
+                        case ("Не указано"):
+                            adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.Nothing, R.layout.dropdown_text_color);
+                            isRegionSelected = false;
+                            break;
+                        case ("Минск"):
+                            adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.Minsk, R.layout.dropdown_text_color);
+                            region.setText("Город");
+                            town.setText("Район");
+                            break;
+                        case ("Брестская обл."):
+                            adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.BrestRegion, R.layout.dropdown_text_color);
+                            break;
+                        case ("Витебская обл."):
+                            adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.VitebskRegion, R.layout.dropdown_text_color);
+                            break;
+                        case ("Гомельская обл."):
+                            adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.GomelRegion, R.layout.dropdown_text_color);
+                            break;
+                        case ("Гродненская обл."):
+                            adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.GrodnoRegion, R.layout.dropdown_text_color);
+                            break;
+                        case ("Минская обл."):
+                            adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.MinskRegion, R.layout.dropdown_text_color);
+                            break;
+                        case ("Могилевская обл."):
+                            adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.MogilevRegion, R.layout.dropdown_text_color);
+                            break;
+                        default:
+                            break;
                     }
+                    regionFromSpinner = text;
+                    townSpinner.setAdapter(adapterTown);
                 }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {}
             });
         }
 
-        townSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                townFromSpinner = adapterView.getItemAtPosition(i).toString();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {}
-        });
+        townSpinner.setOnItemClickListener((parent, view, position, id) -> townFromSpinner = parent.getItemAtPosition(position).toString());
 
         accept.setOnClickListener(this);
         return v;
@@ -232,7 +226,7 @@ public class SignIn extends Fragment implements View.OnClickListener {
         nicknameFromEditText = nickname.getEditText().getText().toString();
         emailFromEditText = email.getEditText().getText().toString();
         phoneNumberFromEditText = phoneNumber.getEditText().getText().toString();
-        if (phoneNumberFromEditText.equals("")) {
+        if (phoneNumberFromEditText.length() == 0) {
             phoneNumberFromEditText = "0";
         }
         if (!isRegionSelected) {
