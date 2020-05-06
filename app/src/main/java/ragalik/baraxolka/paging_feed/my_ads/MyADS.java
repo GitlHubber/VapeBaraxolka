@@ -346,7 +346,7 @@ public class MyADS extends Fragment implements SwipeRefreshLayout.OnRefreshListe
             }
             rejectedRecyclerView = view.findViewById(R.id.RejectedAdsView);
 
-            rejected_adapter = new AdAdapter();
+            rejected_adapter = new AdAdapter("REJECTED");
             rejectedRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
             rejectedViewModel = new ViewModelProvider(this, new ModelFactory(2, MainActivity.sp.getInt("id", 0), false)).get(MyAdsViewModel.class);

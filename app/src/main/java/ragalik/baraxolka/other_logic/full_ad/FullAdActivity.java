@@ -40,7 +40,6 @@ public class FullAdActivity extends AppCompatActivity {
     private static ArrayList<String> urls;
 
     ViewPager viewPager;
-    TextView numberPhotoFullAd;
     TextView title;
     TextView category;
     TextView subcategory;
@@ -85,7 +84,21 @@ public class FullAdActivity extends AppCompatActivity {
         description.setText(ad.getDescription());
         temp = ad.getViews() + "";
         views.setText(temp);
-        town.setText(ad.getRegion() + " | г. " + ad.getTown());
+
+        String regionStr = ad.getRegion();
+        String townStr = ad.getTown();
+
+        String endTownStr;
+        if (regionStr.equals("Минск")) {
+            endTownStr = "г. " + regionStr + " " + townStr + " р-н";
+            town.setText(endTownStr);
+        } else if (regionStr.equals("0")) {
+            town.setText("Регион не указан");
+        } else {
+            endTownStr = regionStr + " г. " + townStr;
+            town.setText(endTownStr);
+        }
+
         userNickname.setText(ad.getUserNickname());
 
         Picasso.get().invalidate(ad.getUserImage());

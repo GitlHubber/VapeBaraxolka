@@ -12,14 +12,19 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatCheckBox;
+import androidx.appcompat.widget.AppCompatSeekBar;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
@@ -34,6 +39,7 @@ import ragalik.baraxolka.R;
 import ragalik.baraxolka.MainActivity;
 import ragalik.baraxolka.network.IApi;
 import ragalik.baraxolka.network.ApiClient;
+import ragalik.baraxolka.network.entities.ServerResponse;
 import ragalik.baraxolka.network.entities.User;
 import ragalik.baraxolka.network.entities.UserResponse;
 import retrofit2.Call;
@@ -44,7 +50,6 @@ import retrofit2.Response;
 public class Account extends AppCompatActivity {
 
     private static final int PICK_FILE_REQUEST = 1000;
-    private final long MAX_PHOTO_SIZE = 12582912;
 
     private IApi apiClient;
     private Uri selectedUri;
@@ -65,7 +70,6 @@ public class Account extends AppCompatActivity {
         activity = this;
 
         getUserInfo();
-
     }
 
     @Override
@@ -90,7 +94,6 @@ public class Account extends AppCompatActivity {
     }
 
     private void uploadFile() {
-        if (AccountImageMenu.fileWithUri.length() < 12582912) {
             String filename = MainActivity.sp.getString("email", "") + ".png"; //user email to set filename
 
             pDialog = new ProgressDialog(this);
@@ -119,9 +122,6 @@ public class Account extends AppCompatActivity {
                     pDialog.dismiss();
                 }
             });
-        } else {
-            Toast.makeText(activity, "Размер фото превышает 12 мб.", Toast.LENGTH_SHORT).show();
-        }
     }
 
     @Override
@@ -138,7 +138,7 @@ public class Account extends AppCompatActivity {
         }
     }
 
-    public static void startAccountView() {
+    private void startAccountView(User user) {
         activity.setContentView(R.layout.activity_account);
         Toolbar toolbar = activity.findViewById(R.id.toolbarAccount);
         final AppCompatActivity appCompatActivity = activity;
@@ -146,48 +146,109 @@ public class Account extends AppCompatActivity {
             appCompatActivity.setSupportActionBar(toolbar);
             appCompatActivity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             appCompatActivity.getSupportActionBar().setDisplayShowTitleEnabled(false);
-            toolbar.setTitle(MainActivity.sp.getString("nickname", ""));
+            toolbar.setTitle(user.getNickname());
         }
 
         navigationPhoto = MainActivity.activity.findViewById(R.id.navigationDrawerPhoto);
 
-        Button signOut = activity.findViewById(R.id.signOutButtonAccount);
-        signOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (this != null) {
-                    MainActivity.removeData(MainActivity.activity);
-                    MainActivity.removeGroupFromNV(0, MainActivity.activity);
-                    MainActivity.removeSignOut(MainActivity.activity);
+        LinearLayout pnLayout = activity.findViewById(R.id.account_pn_layout);
+        LinearLayout regionLayout = activity.findViewById(R.id.account_region_layout);
 
-                    Intent myIntent = new Intent(activity, MainActivity.class);
-                    v.getContext().startActivity(myIntent);
-
-                    MainActivity.hideItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
-
-                    Toast.makeText(appCompatActivity, "Вы вышли из аккаунта", Toast.LENGTH_SHORT).show();
-                }
-
-            }
+        pnLayout.setOnClickListener(v -> {
+            Intent intent = new Intent(this, AccountEditActivity.class);
+            intent.putExtra("edit_flag", "phone");
+            startActivity(intent);
         });
 
-        String emailStr = MainActivity.sp.getString("email", "");
-        String phoneNumberStr = MainActivity.sp.getString("phoneNumber", "");
+        regionLayout.setOnClickListener(v -> {
+            Intent intent = new Intent(this, AccountEditActivity.class);
+            intent.putExtra("edit_flag", "region");
+            startActivity(intent);
+        });
+
+        Button signOut = activity.findViewById(R.id.signOutButtonAccount);
+        signOut.setOnClickListener(v -> {
+            MainActivity.removeData(MainActivity.activity);
+            MainActivity.removeGroupFromNV(0, MainActivity.activity);
+            MainActivity.removeSignOut(MainActivity.activity);
+
+            Intent myIntent = new Intent(activity, MainActivity.class);
+            v.getContext().startActivity(myIntent);
+
+            MainActivity.hideItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
+
+            Toast.makeText(appCompatActivity, "Вы вышли из аккаунта", Toast.LENGTH_SHORT).show();
+        });
+
+        String emailStr = user.getEmail();
+        String phoneNumberStr = user.getPhoneNumber();
         TextView emailTV = activity.findViewById(R.id.account_email);
         TextView phoneNumberTV = activity.findViewById(R.id.account_phone);
         accountPhoto = activity.findViewById(R.id.profilePhoto);
-        emailTV.setText(emailStr);
-        if (phoneNumberStr.equals("0")) {
-            phoneNumberTV.setText("Номер телефона не указан!");
+        emailTV.setText(emailStr.substring(0, 1).toUpperCase() + emailStr.substring(1));
+        if (phoneNumberStr.equals(emailStr)) {
+            phoneNumberTV.setText("Номер телефона не указан");
         } else {
-            phoneNumberTV.setText(phoneNumberStr);
+            String resultPN = phoneNumberStr.substring(0, 4) + " (" + phoneNumberStr.substring(4, 6) + ") " + phoneNumberStr.substring(6, 9) + "-"
+                    + phoneNumberStr.substring(9, 11) + "-" + phoneNumberStr.substring(11, 13);
+            phoneNumberTV.setText(resultPN);
+            TextView accountPNInfo = findViewById(R.id.tw_account_info);
+            TextView tw_hide_phone = activity.findViewById(R.id.tw_hide_phone);
+            AppCompatCheckBox hidePhone = activity.findViewById(R.id.cb_showHidePN);
+
+            if (user.isPhoneHide() == 0) {
+                tw_hide_phone.setText("Показывать номер телефона");
+                hidePhone.setChecked(false);
+            } else {
+                tw_hide_phone.setText("Скрывать номер телефона");
+                hidePhone.setChecked(true);
+            }
+
+            accountPNInfo.setText("Ваш номер телефона изменить нельзя");
+            pnLayout.setClickable(false);
+            LinearLayout hidePhoneLayout = activity.findViewById(R.id.hide_phone_layout);
+            hidePhoneLayout.setVisibility(View.VISIBLE);
+            hidePhoneLayout.setOnClickListener(v -> {
+                int isPhoneHide = 0;
+                if (MainActivity.sp.getInt("isPhoneHide", -1) == 0) {
+                    isPhoneHide = 1;
+                }
+                Call<ServerResponse> call = ApiClient.getApi().showHidePhone(isPhoneHide, user.getEmail());
+                call.enqueue(new Callback<ServerResponse>() {
+                    @Override
+                    public void onResponse(Call<ServerResponse> call, Response<ServerResponse> response) {
+                        SharedPreferences.Editor editor = MainActivity.sp.edit();
+                        if (MainActivity.sp.getInt("isPhoneHide", -1) == 1) {
+                            tw_hide_phone.setText("Показывать номер телефона");
+                            Snackbar.make(v, "Ваш номер виден пользователям", Snackbar.LENGTH_SHORT).show();
+                            hidePhone.setChecked(false);
+                            editor.putInt("isPhoneHide", 0);
+                        } else {
+                            tw_hide_phone.setText("Скрывать номер телефона");
+                            Snackbar.make(v, "Ваш номер скрыт для пользователей", Snackbar.LENGTH_SHORT).show();
+                            hidePhone.setChecked(true);
+                            editor.putInt("isPhoneHide", 1);
+                        }
+                        editor.apply();
+                    }
+
+                    @Override
+                    public void onFailure(Call<ServerResponse> call, Throwable t) {}
+                });
+            });
         }
 
         TextView townTV = activity.findViewById(R.id.account_town);
-        String townStr = MainActivity.sp.getString("region", "") + " | г. " + MainActivity.sp.getString("town", "");
-        if (MainActivity.sp.getString("region", "").equals("0")) {
-            townTV.setText("Город не указан!");
+        String region = user.getRegion();
+        String town = user.getTown();
+        String townStr;
+        if (region.equals("Минск")) {
+            townStr = "г. " + region + " " + town + " р-н";
+            townTV.setText(townStr);
+        } else if (region.equals("0")) {
+            townTV.setText("Город не указан");
         } else {
+            townStr = region + " г. " + town;
             townTV.setText(townStr);
         }
 
@@ -197,7 +258,7 @@ public class Account extends AppCompatActivity {
         });
 
         if (!MainActivity.sp.getString("image", "null").equals("null")) {
-            String temp = MainActivity.sp.getString("image", "");
+            String temp = user.getImage();
             Picasso.get().invalidate(temp);
             Picasso.get().load(temp).networkPolicy(NetworkPolicy.NO_CACHE).memoryPolicy(MemoryPolicy.NO_CACHE).into(accountPhoto);
             Picasso.get().load(temp).networkPolicy(NetworkPolicy.NO_CACHE).memoryPolicy(MemoryPolicy.NO_CACHE).into(navigationPhoto);
@@ -221,11 +282,16 @@ public class Account extends AppCompatActivity {
                     editor.putString("phoneNumber", user.getPhoneNumber());
                     editor.putString("region", user.getRegion());
                     editor.putString("town", user.getTown());
+
+                    if (user.isPhoneHide() != null) {
+                        editor.putInt("isPhoneHide", user.isPhoneHide());
+                    }
+
                     if (user.getImage() != null) {
                         editor.putString("image", user.getImage());
                         editor.apply();
                     }
-                    startAccountView();
+                    startAccountView(user);
                 } else {
                     Toast.makeText(getApplicationContext(), "Ошибка загрузки профиля", Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(Account.this, MainActivity.class);

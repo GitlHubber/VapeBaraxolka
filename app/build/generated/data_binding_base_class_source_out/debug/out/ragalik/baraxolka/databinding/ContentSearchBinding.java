@@ -5,9 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.Spinner;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatAutoCompleteTextView;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.SearchView;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
@@ -28,7 +28,7 @@ public final class ContentSearchBinding implements ViewBinding {
   public final AppCompatButton SearchSortButton;
 
   @NonNull
-  public final Spinner categorySearchSpinner;
+  public final AppCompatAutoCompleteTextView categorySearchSpinner;
 
   @NonNull
   public final SearchView searchview;
@@ -40,13 +40,13 @@ public final class ContentSearchBinding implements ViewBinding {
   public final LinearLayout subcategorySearchLayout;
 
   @NonNull
-  public final Spinner subcategorySearchSpinner;
+  public final AppCompatAutoCompleteTextView subcategorySearchSpinner;
 
   private ContentSearchBinding(@NonNull CoordinatorLayout rootView,
       @NonNull AppCompatButton SearchPriceButton, @NonNull AppCompatButton SearchSortButton,
-      @NonNull Spinner categorySearchSpinner, @NonNull SearchView searchview,
+      @NonNull AppCompatAutoCompleteTextView categorySearchSpinner, @NonNull SearchView searchview,
       @NonNull AppCompatButton showAdsButton, @NonNull LinearLayout subcategorySearchLayout,
-      @NonNull Spinner subcategorySearchSpinner) {
+      @NonNull AppCompatAutoCompleteTextView subcategorySearchSpinner) {
     this.rootView = rootView;
     this.SearchPriceButton = SearchPriceButton;
     this.SearchSortButton = SearchSortButton;
@@ -94,7 +94,7 @@ public final class ContentSearchBinding implements ViewBinding {
         missingId = "SearchSortButton";
         break missingId;
       }
-      Spinner categorySearchSpinner = rootView.findViewById(R.id.categorySearchSpinner);
+      AppCompatAutoCompleteTextView categorySearchSpinner = rootView.findViewById(R.id.categorySearchSpinner);
       if (categorySearchSpinner == null) {
         missingId = "categorySearchSpinner";
         break missingId;
@@ -114,7 +114,7 @@ public final class ContentSearchBinding implements ViewBinding {
         missingId = "subcategorySearchLayout";
         break missingId;
       }
-      Spinner subcategorySearchSpinner = rootView.findViewById(R.id.subcategorySearchSpinner);
+      AppCompatAutoCompleteTextView subcategorySearchSpinner = rootView.findViewById(R.id.subcategorySearchSpinner);
       if (subcategorySearchSpinner == null) {
         missingId = "subcategorySearchSpinner";
         break missingId;

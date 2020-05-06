@@ -19,6 +19,7 @@
             android:id="@+id/logotypeImg"
             android:layout_width="wrap_content"
             android:layout_height="333dp"
+            android:visibility="gone"
             android:layout_marginBottom="30dp"
             app:srcCompat="@drawable/ic_logo" />
 
@@ -29,6 +30,7 @@
             android:fontFamily="@font/aldrich"
             android:paddingBottom="5dp"
             android:text="Vape"
+            android:visibility="gone"
             android:textColor="@color/colorText"
             android:textSize="24sp" />
 

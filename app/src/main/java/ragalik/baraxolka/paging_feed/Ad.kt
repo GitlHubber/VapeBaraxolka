@@ -59,6 +59,12 @@ class Ad {
 
     @field:SerializedName("favourite")
     var isFavourite: Boolean? = null
+
+    @field:SerializedName("reason_name")
+    var reasonName: String? = null
+
+    @field:SerializedName("reject_message")
+    var rejectMessage: String? = null
 }
 
 class AdResponse {

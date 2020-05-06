@@ -22,6 +22,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import java.util.regex.Pattern;
 
@@ -40,15 +41,13 @@ import static ragalik.baraxolka.paging_feed.ads.ADS.adViewModel;
 public class LogIn extends Fragment implements View.OnClickListener {
 
     private static final String EMAIL = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-
-    private static final String PHONE_NUMBER_START = "(^80|^\\+375)";
-    private static final String PHONE_NUMBER = "(^80\\d{9}|^\\+375\\d{9})";
+    private static final String EMAIL_START = "[a-zA-Z0-9._-]";
+    private static final String PHONE_NUMBER_START = "(^\\+375)";
+    private static final String PHONE_NUMBER = "(^\\+375\\d{9})";
     //public static final Pattern PASSWORD = Pattern.compile("[a-zA-Z0-9_]{5,20}");
 
-    private static TextInputLayout numberOrEmailLayout;
-    private static TextInputLayout passwordLayout;
-    private static EditText numberOrEmail;
-    private static EditText password;
+    private TextInputLayout numberOrEmail;
+    private TextInputLayout password;
 
     private SignIn signInFragment;
     private Toolbar toolbar;
@@ -82,42 +81,35 @@ public class LogIn extends Fragment implements View.OnClickListener {
 
         signInFragment = new SignIn();
 
-        numberOrEmailLayout = v.findViewById(R.id.PhNumberOrEmailLayout);
-        numberOrEmail = v.findViewById(R.id.LIPh_or_email);
-        numberOrEmail.addTextChangedListener(new TextWatcher() {
+        numberOrEmail = v.findViewById(R.id.PhNumberOrEmailLayout);
+        numberOrEmail.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {}
-            @Override
-            public void afterTextChanged(Editable s) {
-                if (numberOrEmail.getText().toString().matches(PHONE_NUMBER_START)) {
-                    numberOrEmailLayout.setCounterEnabled(true);
-                    if (numberOrEmail.getText().charAt(0) == '+') {
-                        numberOrEmailLayout.setCounterMaxLength(13);
-                    } else {
-                        numberOrEmailLayout.setCounterMaxLength(11);
-                    }
-
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.toString().matches(PHONE_NUMBER_START)) {
+                    numberOrEmail.setCounterEnabled(true);
+                    numberOrEmail.setCounterMaxLength(13);
                     inputManager = "phoneNumber";
-                } else if (numberOrEmail.getText().toString().matches(EMAIL)) {
-                    numberOrEmailLayout.setCounterEnabled(true);
-                    numberOrEmailLayout.setCounterMaxLength(40);
+                } else if (s.toString().matches(EMAIL_START)) {
+                    numberOrEmail.setCounterEnabled(true);
+                    numberOrEmail.setCounterMaxLength(40);
                     inputManager = "email";
                 }
             }
+            @Override
+            public void afterTextChanged(Editable s) {}
         });
-        password = v.findViewById(R.id.LIPassword);
-        passwordLayout = v.findViewById(R.id.LIPasswordLayout);
-        password.addTextChangedListener(new TextWatcher() {
+        password = v.findViewById(R.id.LIPasswordLayout);
+        password.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {}
             @Override
             public void afterTextChanged(Editable s) {
-                passwordLayout.setCounterEnabled(true);
-                passwordLayout.setCounterMaxLength(18);
+                password.setCounterEnabled(true);
+                password.setCounterMaxLength(18);
             }
         });
 
@@ -158,10 +150,10 @@ public class LogIn extends Fragment implements View.OnClickListener {
 //                }
 //                break;
             case (R.id.SignInLogInButton) :
-                numberOrEmail.setText("");
-                password.setText("");
-                numberOrEmailLayout.setCounterEnabled(false);
-                passwordLayout.setCounterEnabled(false);
+                numberOrEmail.getEditText().setText("");
+                password.getEditText().setText("");
+                numberOrEmail.setCounterEnabled(false);
+                password.setCounterEnabled(false);
                 if (getActivity() != null) {
                     FragmentTransaction fragmentTrans = getActivity().getSupportFragmentManager().beginTransaction();
                     fragmentTrans.setCustomAnimations(R.anim.enter_from_up, R.anim.exit_to_up);
@@ -171,8 +163,8 @@ public class LogIn extends Fragment implements View.OnClickListener {
                 }
                 break;
             case (R.id.AcceptLogInButton) :
-                numberOrEmailStr = numberOrEmail.getText().toString();
-                passwordStr = password.getText().toString();
+                numberOrEmailStr = numberOrEmail.getEditText().getText().toString();
+                passwordStr = password.getEditText().getText().toString();
                 if (nickPassValidate()) {
                     logIn();
                 }
@@ -182,8 +174,14 @@ public class LogIn extends Fragment implements View.OnClickListener {
     }
 
     private boolean nickPassValidate () {
-        String nick = numberOrEmail.getText().toString().trim();
-        String pass = password.getText().toString().trim();
+        String nick = numberOrEmail.getEditText().getText().toString().trim();
+        String pass = password.getEditText().getText().toString().trim();
+
+        if (nick.matches(PHONE_NUMBER)) {
+            inputManager = "phoneNumber";
+        } else if (nick.matches(EMAIL)) {
+            inputManager = "email";
+        }
 
         if (nick.isEmpty() || pass.isEmpty()) {
             return false;
@@ -223,7 +221,10 @@ public class LogIn extends Fragment implements View.OnClickListener {
                     fragmentTransaction.replace(R.id.constrLayout, MainActivity.adsFragment).commit();
                     getActivity().setTitle("Объявления");
 
-                    adViewModel.getLiveDataSource().getValue().invalidate();
+                    if (!MainActivity.isEntranceFromDialog) {
+                        adViewModel.getLiveDataSource().getValue().invalidate();
+                    }
+
                     SharedPreferences.Editor editor = MainActivity.sp.edit();
                     editor.putString("image", user.getImage());
                     editor.apply();
