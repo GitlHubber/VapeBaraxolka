@@ -1,4 +1,4 @@
-#Wed May 06 18:11:19 MSK 2020
+#Wed May 06 18:20:52 MSK 2020
 base.0=/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/dex/debug/mergeExtDexDebug/out/classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex

@@ -345,7 +345,12 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
                 }
                 break;
             case R.id.addAdButton:
-                insertAd();
+                if (files.size() == 0) {
+                    Toast.makeText(activity, "Отсутствуют фотографии. Добавьте хотя бы одну.", Toast.LENGTH_LONG).show();
+                } else {
+                    insertAd();
+                }
+
                 InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
                 inputMethodManager.hideSoftInputFromWindow(v.getWindowToken(), 0);
                 break;
