@@ -231,13 +231,13 @@
 125-->/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/AndroidManifest.xml:118:17-55
 126        </provider>
 127        <provider
-127-->[com.squareup.picasso:picasso:2.71828] /home/kirill/.gradle/caches/transforms-2/files-2.1/4892734e6619250573e808730d771e40/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+127-->[com.squareup.picasso:picasso:2.71828] /home/kirill/.gradle/caches/transforms-2/files-2.1/a098dce530281fd7d718eb6028f15f87/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
 128            android:name="com.squareup.picasso.PicassoProvider"
-128-->[com.squareup.picasso:picasso:2.71828] /home/kirill/.gradle/caches/transforms-2/files-2.1/4892734e6619250573e808730d771e40/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
+128-->[com.squareup.picasso:picasso:2.71828] /home/kirill/.gradle/caches/transforms-2/files-2.1/a098dce530281fd7d718eb6028f15f87/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
 129            android:authorities="ragalik.baraxolka.com.squareup.picasso"
-129-->[com.squareup.picasso:picasso:2.71828] /home/kirill/.gradle/caches/transforms-2/files-2.1/4892734e6619250573e808730d771e40/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+129-->[com.squareup.picasso:picasso:2.71828] /home/kirill/.gradle/caches/transforms-2/files-2.1/a098dce530281fd7d718eb6028f15f87/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
 130            android:exported="false" />
-130-->[com.squareup.picasso:picasso:2.71828] /home/kirill/.gradle/caches/transforms-2/files-2.1/4892734e6619250573e808730d771e40/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+130-->[com.squareup.picasso:picasso:2.71828] /home/kirill/.gradle/caches/transforms-2/files-2.1/a098dce530281fd7d718eb6028f15f87/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
 131        <provider
 131-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/kirill/.gradle/caches/transforms-2/files-2.1/0cb84a9f6b2cae5c973ef025c366f9e5/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
 132            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
