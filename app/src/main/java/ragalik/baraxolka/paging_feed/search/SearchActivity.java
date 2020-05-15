@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatAutoCompleteTextView;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 
@@ -46,8 +47,8 @@ public class SearchActivity extends AppCompatActivity implements  SearchView.OnQ
     private String subcategoryFromSpinner;
     public static AppCompatActivity activity;
     private static AppCompatButton showAdsButton;
-    private static AppCompatButton priceButton;
-    public static AppCompatButton sortButton;
+    private static AppCompatTextView priceButton;
+    public static AppCompatTextView sortButton;
     private static int adsCount;
 
     public static HashMap<String, String> searchRequests;
@@ -129,27 +130,6 @@ public class SearchActivity extends AppCompatActivity implements  SearchView.OnQ
             Sort sort = new Sort(selectedSortId);
             sort.show(activity.getSupportFragmentManager(), "");
         });
-
-//        subcategorySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//                if (parent.getItemAtPosition(position).toString().equals("Не выбрано")) {
-//                    subcategoryFromSpinner = "";
-//                    if (searchRequests.containsKey("subcategory")) {
-//                        searchRequests.remove("subcategory");
-//                        getSearchAdsCount(searchRequests);
-//                    }
-//                } else {
-//                    searchRequests.remove("category");
-//                    subcategoryFromSpinner = "subcategories.subcategory_name = '" + parent.getItemAtPosition(position).toString() + "'";
-//                    searchRequests.put("subcategory", subcategoryFromSpinner);
-//                    getSearchAdsCount(searchRequests);
-//                }
-//            }
-//
-//            @Override
-//            public void onNothingSelected(AdapterView<?> parent) {}
-//        });
 
         showAdsButton = findViewById(R.id.showAdsButton);
         showAdsButton.setOnClickListener(v -> {

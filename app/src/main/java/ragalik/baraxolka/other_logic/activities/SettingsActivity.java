@@ -23,6 +23,7 @@ public class SettingsActivity extends AppCompatActivity {
         toolbar.setTitle("Настройки");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         Slidr.attach(this);
 
         SwitchCompat nightThemeSwitcher = findViewById(R.id.nightThemeSwitcher);

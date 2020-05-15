@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatAutoCompleteTextView;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.SearchView;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
@@ -22,10 +23,10 @@ public final class ContentSearchBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
-  public final AppCompatButton SearchPriceButton;
+  public final AppCompatTextView SearchPriceButton;
 
   @NonNull
-  public final AppCompatButton SearchSortButton;
+  public final AppCompatTextView SearchSortButton;
 
   @NonNull
   public final AppCompatAutoCompleteTextView categorySearchSpinner;
@@ -43,7 +44,7 @@ public final class ContentSearchBinding implements ViewBinding {
   public final AppCompatAutoCompleteTextView subcategorySearchSpinner;
 
   private ContentSearchBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull AppCompatButton SearchPriceButton, @NonNull AppCompatButton SearchSortButton,
+      @NonNull AppCompatTextView SearchPriceButton, @NonNull AppCompatTextView SearchSortButton,
       @NonNull AppCompatAutoCompleteTextView categorySearchSpinner, @NonNull SearchView searchview,
       @NonNull AppCompatButton showAdsButton, @NonNull LinearLayout subcategorySearchLayout,
       @NonNull AppCompatAutoCompleteTextView subcategorySearchSpinner) {
@@ -84,12 +85,12 @@ public final class ContentSearchBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     String missingId;
     missingId: {
-      AppCompatButton SearchPriceButton = rootView.findViewById(R.id.SearchPriceButton);
+      AppCompatTextView SearchPriceButton = rootView.findViewById(R.id.SearchPriceButton);
       if (SearchPriceButton == null) {
         missingId = "SearchPriceButton";
         break missingId;
       }
-      AppCompatButton SearchSortButton = rootView.findViewById(R.id.SearchSortButton);
+      AppCompatTextView SearchSortButton = rootView.findViewById(R.id.SearchSortButton);
       if (SearchSortButton == null) {
         missingId = "SearchSortButton";
         break missingId;

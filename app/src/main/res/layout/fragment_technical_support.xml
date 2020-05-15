@@ -19,33 +19,33 @@
             android:theme="?attr/actionBarTheme" />
 
     </com.google.android.material.appbar.AppBarLayout>
-        <LinearLayout
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="70dp"
+        android:background="@color/colorBackground">
+
+        <TextView
+            android:id="@+id/Header"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:background="@color/colorBackground">
+            android:layout_height="178dp"
+            android:gravity="center"
+            android:textColor="@color/colorText"
+            android:text="По всем вопросам обращайтесь в группу во Вконтакте"
+            android:textSize="36sp"
+            android:textStyle="italic" />
 
-            <TextView
-                android:id="@+id/Header"
-                android:layout_width="match_parent"
-                android:layout_height="178dp"
-                android:gravity="center"
-                android:textColor="@color/colorText"
-                android:text="По всем вопросам обращайтесь в группу во Вконтакте"
-                android:textSize="36sp"
-                android:textStyle="italic" />
-
-            <TextView
-                android:id="@+id/VKGroupLink"
-                android:layout_width="match_parent"
-                android:layout_height="178dp"
-                android:gravity="center"
-                android:text="https://vk.com/v_baraxolka"
-                android:textColor="@color/colorLink"
-                android:textSize="24sp"
-                android:textStyle="italic" />
-
-        </LinearLayout>
-
+        <TextView
+            android:id="@+id/VKGroupLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="https://vk.com/v_baraxolka"
+            android:textColor="@color/colorLink"
+            android:textSize="24sp"
+            android:textStyle="italic" />
+    </LinearLayout>
 
 </FrameLayout>

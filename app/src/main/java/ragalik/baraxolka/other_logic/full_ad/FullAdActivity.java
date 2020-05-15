@@ -1,6 +1,7 @@
 package ragalik.baraxolka.other_logic.full_ad;
 
 import android.content.Intent;
+import android.graphics.drawable.Icon;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -101,12 +102,13 @@ public class FullAdActivity extends AppCompatActivity {
 
         userNickname.setText(ad.getUserNickname());
 
-        Picasso.get().invalidate(ad.getUserImage());
-        Picasso.get().load(ad.getUserImage())
-                .networkPolicy(NetworkPolicy.NO_CACHE)
-                .memoryPolicy(MemoryPolicy.NO_CACHE)
-                .error(R.drawable.gradient_navigation)
-                .into(userImage);
+        if (ad.getUserImage() != null) {
+            Picasso.get().invalidate(ad.getUserImage());
+            Picasso.get().load(ad.getUserImage())
+                    .networkPolicy(NetworkPolicy.NO_CACHE)
+                    .memoryPolicy(MemoryPolicy.NO_CACHE)
+                    .into(userImage);
+        }
 
         temp = ad.getId() + "";
         adNumber.setText(temp);

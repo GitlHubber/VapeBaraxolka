@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.viewbinding.ViewBinding;
 import java.lang.NullPointerException;
@@ -20,27 +19,29 @@ public final class FragmentAdCreatorImageMenuBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final AppCompatButton adCreatorDeleteImage;
+  public final AppCompatTextView adCreatorDeleteImage;
 
   @NonNull
-  public final AppCompatButton adCreatorLoadImage;
+  public final AppCompatTextView adCreatorLoadImage;
 
   @NonNull
   public final LinearLayout adCreatorMenuLinearLayout;
 
   @NonNull
-  public final AppCompatButton adCreatorShowImage;
+  public final AppCompatTextView adCreatorShowImage;
 
   @NonNull
-  public final AppCompatButton adCreatorTakeImage;
+  public final AppCompatTextView adCreatorTakeImage;
 
   @NonNull
   public final AppCompatTextView textView5;
 
   private FragmentAdCreatorImageMenuBinding(@NonNull LinearLayout rootView,
-      @NonNull AppCompatButton adCreatorDeleteImage, @NonNull AppCompatButton adCreatorLoadImage,
-      @NonNull LinearLayout adCreatorMenuLinearLayout, @NonNull AppCompatButton adCreatorShowImage,
-      @NonNull AppCompatButton adCreatorTakeImage, @NonNull AppCompatTextView textView5) {
+      @NonNull AppCompatTextView adCreatorDeleteImage,
+      @NonNull AppCompatTextView adCreatorLoadImage,
+      @NonNull LinearLayout adCreatorMenuLinearLayout,
+      @NonNull AppCompatTextView adCreatorShowImage, @NonNull AppCompatTextView adCreatorTakeImage,
+      @NonNull AppCompatTextView textView5) {
     this.rootView = rootView;
     this.adCreatorDeleteImage = adCreatorDeleteImage;
     this.adCreatorLoadImage = adCreatorLoadImage;
@@ -77,12 +78,12 @@ public final class FragmentAdCreatorImageMenuBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     String missingId;
     missingId: {
-      AppCompatButton adCreatorDeleteImage = rootView.findViewById(R.id.ad_creator_delete_image);
+      AppCompatTextView adCreatorDeleteImage = rootView.findViewById(R.id.ad_creator_delete_image);
       if (adCreatorDeleteImage == null) {
         missingId = "adCreatorDeleteImage";
         break missingId;
       }
-      AppCompatButton adCreatorLoadImage = rootView.findViewById(R.id.ad_creator_load_image);
+      AppCompatTextView adCreatorLoadImage = rootView.findViewById(R.id.ad_creator_load_image);
       if (adCreatorLoadImage == null) {
         missingId = "adCreatorLoadImage";
         break missingId;
@@ -92,12 +93,12 @@ public final class FragmentAdCreatorImageMenuBinding implements ViewBinding {
         missingId = "adCreatorMenuLinearLayout";
         break missingId;
       }
-      AppCompatButton adCreatorShowImage = rootView.findViewById(R.id.ad_creator_show_image);
+      AppCompatTextView adCreatorShowImage = rootView.findViewById(R.id.ad_creator_show_image);
       if (adCreatorShowImage == null) {
         missingId = "adCreatorShowImage";
         break missingId;
       }
-      AppCompatButton adCreatorTakeImage = rootView.findViewById(R.id.ad_creator_take_image);
+      AppCompatTextView adCreatorTakeImage = rootView.findViewById(R.id.ad_creator_take_image);
       if (adCreatorTakeImage == null) {
         missingId = "adCreatorTakeImage";
         break missingId;

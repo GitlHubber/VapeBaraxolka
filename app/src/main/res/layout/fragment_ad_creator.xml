@@ -225,6 +225,7 @@
                     android:layout_marginStart="10dp" />
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/categoryLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
@@ -243,6 +244,8 @@
                         android:inputType="textCapSentences|textMultiLine"
                         android:textColorHighlight="@color/colorText"
                         android:textColorLink="@color/colorText"
+                        android:completionThreshold="0"
+                        android:focusableInTouchMode="false"
                         android:textCursorDrawable="@color/colorText"
                         android:textSize="18sp" />
 
@@ -268,6 +271,8 @@
                         android:textColor="@color/colorText"
                         android:inputType="textCapSentences|textMultiLine"
                         android:textColorHighlight="@color/colorText"
+                        android:completionThreshold="0"
+                        android:focusableInTouchMode="false"
                         android:textColorLink="@color/colorText"
                         android:textCursorDrawable="@color/colorText"
                         android:textSize="18sp" />

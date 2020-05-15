@@ -24,7 +24,9 @@ import androidx.appcompat.widget.AppCompatAutoCompleteTextView;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.DialogFragment;
 
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.io.File;
@@ -53,19 +55,20 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
 
     private static final long MAX_SIZE_PHOTO = 3145728;
 
-    private static TextInputLayout titleEditText;
+    private TextInputLayout titleEditText;
     private AppCompatAutoCompleteTextView categorySpinner;
     private AppCompatAutoCompleteTextView subcategorySpinner;
-    private static TextInputLayout descriptionEditText;
-    private static TextInputLayout priceEditText;
+    private TextInputLayout descriptionEditText;
+    private TextInputLayout priceEditText;
     private AppCompatButton addAdButton;
-    private String categoryFromSpinner;
-    private static String subcategoryFromSpinner;
+    private String categoryFromSpinner = "";
+    private String subcategoryFromSpinner = "";
     public static ArrayList<ImageView> adImages;
     private int choosedIndex = 0;
     public static int imageUploadCount;
     public static ArrayList<File> files;
     private TextInputLayout subcategoryLayout;
+    private TextInputLayout categoryLayout;
     //private AppCompatRadioButton newState;
     //private AppCompatRadioButton secondaryState;
     //private String goodsState;
@@ -99,6 +102,7 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
         categorySpinner = findViewById(R.id.categorySpinner);
         mainLabel = findViewById(R.id.ad_creator_main_label);
         subcategoryLayout = findViewById(R.id.subcategoryLayout);
+        categoryLayout = findViewById(R.id.categoryLayout);
 
         activity = this;
         uploadAmountTW = findViewById(R.id.uploadPhotoCounterAdCreator);
@@ -189,6 +193,7 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
                 }
 
                 categorySpinner.setAdapter(new ArrayAdapter<String>(getApplicationContext(), R.layout.dropdown_text_color, categories));
+                categorySpinner.setOnClickListener(v -> categorySpinner.showDropDown());
                 categorySpinner.setOnItemClickListener((parent, view, position, id) -> {
                     ArrayList<String> subcategories = new ArrayList<>();
                     subcategories.add("Не выбрано");
@@ -202,9 +207,18 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
                             }
 
                             categoryFromSpinner = parent.getItemAtPosition(position).toString();
-                            subcategorySpinner.setAdapter(new ArrayAdapter<String>(getApplicationContext(), R.layout.dropdown_text_color, subcategories));
+                            if (categoryFromSpinner.equals("Не выбрано")) {
+                                categoryFromSpinner = "";
+                            }
+
+                            ArrayAdapter<String> adapterSubcategory = new ArrayAdapter<String>(getApplicationContext(), R.layout.dropdown_text_color, subcategories);
+                            subcategorySpinner.setAdapter(adapterSubcategory);
+                            subcategorySpinner.setOnClickListener(v -> subcategorySpinner.showDropDown());
+                            subcategoryFromSpinner = "";
+                            subcategorySpinner.setText(adapterSubcategory.getItem(0), false);
                             if (subcategoriesHashMap.get(parent.getItemAtPosition(position).toString()).size() == 1) {
-                                subcategorySpinner.setSelection(1);
+                                subcategoryFromSpinner = adapterSubcategory.getItem(1);
+                                subcategorySpinner.setText(subcategoryFromSpinner, false);
                             }
                         } else {
                             subcategoryLayout.setVisibility(View.GONE);
@@ -268,13 +282,10 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
-        switch (requestCode) {
-            case 1:
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-                } else {
-                    Toast.makeText(activity, "Отказано в доступе", Toast.LENGTH_SHORT).show();
-                }
+        if (requestCode == 1) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {} else {
+                Toast.makeText(activity, "Отказано в доступе", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 
@@ -294,38 +305,36 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
 //                newState.setChecked(false);
 //                goodsState = "Б/У";
 //                break;
-            case R.id.adPhoto1 :
+            case R.id.adPhoto1:
                 choosedIndex = 0;
                 flag = true;
                 break;
-            case R.id.adPhoto2 :
+            case R.id.adPhoto2:
                 if (imageUploadCount >= 1) {
                     choosedIndex = 1;
                     flag = true;
                 }
                 break;
-            case R.id.adPhoto3 :
+            case R.id.adPhoto3:
                 if (imageUploadCount >= 2) {
                     choosedIndex = 2;
                     flag = true;
                 }
                 break;
-            case R.id.adPhoto4 :
+            case R.id.adPhoto4:
                 if (imageUploadCount >= 3) {
                     choosedIndex = 3;
                     flag = true;
                 }
                 break;
-            case R.id.adPhoto5 :
+            case R.id.adPhoto5:
                 if (imageUploadCount >= 4) {
                     choosedIndex = 4;
                     flag = true;
                 }
                 break;
             case R.id.addAdButton:
-                if (files.size() == 0) {
-                    Toast.makeText(activity, "Отсутствуют фотографии. Добавьте хотя бы одну.", Toast.LENGTH_LONG).show();
-                } else {
+                if (isAdCorrect()) {
                     insertAd();
                 }
 
@@ -336,9 +345,47 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
 
         if (flag) {
             AdCreatorImageMenu adCreatorImageMenu = new AdCreatorImageMenu(imageUploadCount, choosedIndex, uris);
+            adCreatorImageMenu.setStyle(DialogFragment.STYLE_NORMAL, R.style.BottomSheetDialogTheme);
             adCreatorImageMenu.show(getSupportFragmentManager(), "");
         }
     }
+
+    private boolean isAdCorrect () {
+
+        boolean isAdCorrect = true;
+
+        titleEditText.setErrorEnabled(false);
+        categoryLayout.setErrorEnabled(false);
+        subcategoryLayout.setErrorEnabled(false);
+        descriptionEditText.setErrorEnabled(false);
+        priceEditText.setErrorEnabled(false);
+
+        if (files.size() == 0) {
+            Toast.makeText(activity, "Отсутствуют фотографии. Добавьте хотя бы одну.", Toast.LENGTH_LONG).show();
+            isAdCorrect = false;
+        }
+        if (categoryFromSpinner.equals("")) {
+            categoryLayout.setError("Укажите категорию");
+            isAdCorrect = false;
+        } else if (subcategoryFromSpinner.equals("")) {
+            subcategoryLayout.setError("Укажите подкатегорию");
+            isAdCorrect = false;
+        }
+        if (titleEditText.getEditText().getText().toString().equals("")) {
+            titleEditText.setError("Укажите заголовок");
+            isAdCorrect = false;
+        }
+        if (descriptionEditText.getEditText().getText().toString().equals("")) {
+            descriptionEditText.setError("Укажите описание");
+            isAdCorrect = false;
+        }
+        if (priceEditText.getEditText().getText().toString().equals("")) {
+            priceEditText.setError("Укажите стоимость");
+            isAdCorrect = false;
+        }
+        return isAdCorrect;
+    }
+
 
     private void insertAd () {
         pDialog = new ProgressDialog(activity);

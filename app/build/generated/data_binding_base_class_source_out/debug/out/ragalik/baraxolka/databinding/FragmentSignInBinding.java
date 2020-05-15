@@ -26,16 +26,16 @@ public final class FragmentSignInBinding implements ViewBinding {
   public final AppCompatButton RegistrationButton;
 
   @NonNull
-  public final TextView SIRegion;
-
-  @NonNull
   public final AppCompatAutoCompleteTextView SIRegionSpinner;
 
   @NonNull
-  public final TextView SITown;
+  public final TextInputLayout SIRegionSpinnerLayout;
 
   @NonNull
   public final AppCompatAutoCompleteTextView SITownSpinner;
+
+  @NonNull
+  public final TextInputLayout SITownSpinnerLayout;
 
   @NonNull
   public final TextView appName;
@@ -59,18 +59,20 @@ public final class FragmentSignInBinding implements ViewBinding {
   public final Toolbar toolbarRegistration;
 
   private FragmentSignInBinding(@NonNull FrameLayout rootView,
-      @NonNull AppCompatButton RegistrationButton, @NonNull TextView SIRegion,
-      @NonNull AppCompatAutoCompleteTextView SIRegionSpinner, @NonNull TextView SITown,
-      @NonNull AppCompatAutoCompleteTextView SITownSpinner, @NonNull TextView appName,
+      @NonNull AppCompatButton RegistrationButton,
+      @NonNull AppCompatAutoCompleteTextView SIRegionSpinner,
+      @NonNull TextInputLayout SIRegionSpinnerLayout,
+      @NonNull AppCompatAutoCompleteTextView SITownSpinner,
+      @NonNull TextInputLayout SITownSpinnerLayout, @NonNull TextView appName,
       @NonNull TextView appName2, @NonNull TextInputLayout siEmail,
       @NonNull TextInputLayout siNickname, @NonNull TextInputLayout siPassword,
       @NonNull TextInputLayout siPhoneNumber, @NonNull Toolbar toolbarRegistration) {
     this.rootView = rootView;
     this.RegistrationButton = RegistrationButton;
-    this.SIRegion = SIRegion;
     this.SIRegionSpinner = SIRegionSpinner;
-    this.SITown = SITown;
+    this.SIRegionSpinnerLayout = SIRegionSpinnerLayout;
     this.SITownSpinner = SITownSpinner;
+    this.SITownSpinnerLayout = SITownSpinnerLayout;
     this.appName = appName;
     this.appName2 = appName2;
     this.siEmail = siEmail;
@@ -112,24 +114,24 @@ public final class FragmentSignInBinding implements ViewBinding {
         missingId = "RegistrationButton";
         break missingId;
       }
-      TextView SIRegion = rootView.findViewById(R.id.SIRegion);
-      if (SIRegion == null) {
-        missingId = "SIRegion";
-        break missingId;
-      }
       AppCompatAutoCompleteTextView SIRegionSpinner = rootView.findViewById(R.id.SIRegionSpinner);
       if (SIRegionSpinner == null) {
         missingId = "SIRegionSpinner";
         break missingId;
       }
-      TextView SITown = rootView.findViewById(R.id.SITown);
-      if (SITown == null) {
-        missingId = "SITown";
+      TextInputLayout SIRegionSpinnerLayout = rootView.findViewById(R.id.SIRegionSpinnerLayout);
+      if (SIRegionSpinnerLayout == null) {
+        missingId = "SIRegionSpinnerLayout";
         break missingId;
       }
       AppCompatAutoCompleteTextView SITownSpinner = rootView.findViewById(R.id.SITownSpinner);
       if (SITownSpinner == null) {
         missingId = "SITownSpinner";
+        break missingId;
+      }
+      TextInputLayout SITownSpinnerLayout = rootView.findViewById(R.id.SITownSpinnerLayout);
+      if (SITownSpinnerLayout == null) {
+        missingId = "SITownSpinnerLayout";
         break missingId;
       }
       TextView appName = rootView.findViewById(R.id.appName);
@@ -167,9 +169,9 @@ public final class FragmentSignInBinding implements ViewBinding {
         missingId = "toolbarRegistration";
         break missingId;
       }
-      return new FragmentSignInBinding((FrameLayout) rootView, RegistrationButton, SIRegion,
-          SIRegionSpinner, SITown, SITownSpinner, appName, appName2, siEmail, siNickname,
-          siPassword, siPhoneNumber, toolbarRegistration);
+      return new FragmentSignInBinding((FrameLayout) rootView, RegistrationButton, SIRegionSpinner,
+          SIRegionSpinnerLayout, SITownSpinner, SITownSpinnerLayout, appName, appName2, siEmail,
+          siNickname, siPassword, siPhoneNumber, toolbarRegistration);
     }
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }

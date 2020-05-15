@@ -33,6 +33,9 @@ public final class FragmentAdsBinding implements ViewBinding {
   public final AppBarLayout appBarLayout;
 
   @NonNull
+  public final Chip categoryChip;
+
+  @NonNull
   public final ProgressBar progressAds;
 
   @NonNull
@@ -43,12 +46,14 @@ public final class FragmentAdsBinding implements ViewBinding {
 
   private FragmentAdsBinding(@NonNull CoordinatorLayout rootView,
       @NonNull RecyclerView ADSRecyclerView, @NonNull Toolbar adsToolbar,
-      @NonNull AppBarLayout appBarLayout, @NonNull ProgressBar progressAds,
-      @NonNull SwipeRefreshLayout refresherAds, @NonNull Chip searchChip) {
+      @NonNull AppBarLayout appBarLayout, @NonNull Chip categoryChip,
+      @NonNull ProgressBar progressAds, @NonNull SwipeRefreshLayout refresherAds,
+      @NonNull Chip searchChip) {
     this.rootView = rootView;
     this.ADSRecyclerView = ADSRecyclerView;
     this.adsToolbar = adsToolbar;
     this.appBarLayout = appBarLayout;
+    this.categoryChip = categoryChip;
     this.progressAds = progressAds;
     this.refresherAds = refresherAds;
     this.searchChip = searchChip;
@@ -96,6 +101,11 @@ public final class FragmentAdsBinding implements ViewBinding {
         missingId = "appBarLayout";
         break missingId;
       }
+      Chip categoryChip = rootView.findViewById(R.id.category_chip);
+      if (categoryChip == null) {
+        missingId = "categoryChip";
+        break missingId;
+      }
       ProgressBar progressAds = rootView.findViewById(R.id.progress_ads);
       if (progressAds == null) {
         missingId = "progressAds";
@@ -112,7 +122,7 @@ public final class FragmentAdsBinding implements ViewBinding {
         break missingId;
       }
       return new FragmentAdsBinding((CoordinatorLayout) rootView, ADSRecyclerView, adsToolbar,
-          appBarLayout, progressAds, refresherAds, searchChip);
+          appBarLayout, categoryChip, progressAds, refresherAds, searchChip);
     }
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
