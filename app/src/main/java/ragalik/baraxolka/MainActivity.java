@@ -183,7 +183,6 @@ public class MainActivity extends AppCompatActivity
             newTransaction(adsFragment, "Объявления");
             hideItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
         }
-        checkUserStatus();
     }
 
     private boolean isEntered () {

@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.viewbinding.ViewBinding;
 import java.lang.NullPointerException;
@@ -20,27 +19,27 @@ public final class FragmentAccountImageMenuBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final AppCompatButton accountDeleteImage;
+  public final AppCompatTextView accountDeleteImage;
 
   @NonNull
-  public final AppCompatButton accountLoadImage;
+  public final AppCompatTextView accountLoadImage;
 
   @NonNull
   public final LinearLayout accountMenuLinearLayout;
 
   @NonNull
-  public final AppCompatButton accountShowImage;
+  public final AppCompatTextView accountShowImage;
 
   @NonNull
-  public final AppCompatButton accountTakeImage;
+  public final AppCompatTextView accountTakeImage;
 
   @NonNull
   public final AppCompatTextView textView5;
 
   private FragmentAccountImageMenuBinding(@NonNull LinearLayout rootView,
-      @NonNull AppCompatButton accountDeleteImage, @NonNull AppCompatButton accountLoadImage,
-      @NonNull LinearLayout accountMenuLinearLayout, @NonNull AppCompatButton accountShowImage,
-      @NonNull AppCompatButton accountTakeImage, @NonNull AppCompatTextView textView5) {
+      @NonNull AppCompatTextView accountDeleteImage, @NonNull AppCompatTextView accountLoadImage,
+      @NonNull LinearLayout accountMenuLinearLayout, @NonNull AppCompatTextView accountShowImage,
+      @NonNull AppCompatTextView accountTakeImage, @NonNull AppCompatTextView textView5) {
     this.rootView = rootView;
     this.accountDeleteImage = accountDeleteImage;
     this.accountLoadImage = accountLoadImage;
@@ -77,12 +76,12 @@ public final class FragmentAccountImageMenuBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     String missingId;
     missingId: {
-      AppCompatButton accountDeleteImage = rootView.findViewById(R.id.account_delete_image);
+      AppCompatTextView accountDeleteImage = rootView.findViewById(R.id.account_delete_image);
       if (accountDeleteImage == null) {
         missingId = "accountDeleteImage";
         break missingId;
       }
-      AppCompatButton accountLoadImage = rootView.findViewById(R.id.account_load_image);
+      AppCompatTextView accountLoadImage = rootView.findViewById(R.id.account_load_image);
       if (accountLoadImage == null) {
         missingId = "accountLoadImage";
         break missingId;
@@ -92,12 +91,12 @@ public final class FragmentAccountImageMenuBinding implements ViewBinding {
         missingId = "accountMenuLinearLayout";
         break missingId;
       }
-      AppCompatButton accountShowImage = rootView.findViewById(R.id.account_show_image);
+      AppCompatTextView accountShowImage = rootView.findViewById(R.id.account_show_image);
       if (accountShowImage == null) {
         missingId = "accountShowImage";
         break missingId;
       }
-      AppCompatButton accountTakeImage = rootView.findViewById(R.id.account_take_image);
+      AppCompatTextView accountTakeImage = rootView.findViewById(R.id.account_take_image);
       if (accountTakeImage == null) {
         missingId = "accountTakeImage";
         break missingId;

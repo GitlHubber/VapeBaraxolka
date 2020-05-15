@@ -10,6 +10,8 @@
     <color name="colorNavigationItem">#333</color>
     <color name="textColorPrimary">#BA0000</color>
 
+    <color name="colorBottomSheetLine">#BDBDBD</color>
+
     <color name="colorAdCreatorImage">#EEE</color>
 
     <color name="entranceStartColor">#E14B32</color>

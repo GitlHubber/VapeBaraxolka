@@ -82,13 +82,15 @@ public class SellerProfileActivity extends AppCompatActivity {
 
         if (sellerProfile.getPhoneNumber().equals(sellerProfile.getEmail())) {
             sellerPhoneNumber.setText("Номер телефона не указан");
-        } else if (sellerProfile.isPhoneHide() == 0) {
-            String pn = sellerProfile.getPhoneNumber();
-            String resultPN = pn.substring(0, 4) + " (" + pn.substring(4, 6) + ") " + pn.substring(6, 9) + "-"
-                    + pn.substring(9, 11) + "-" + pn.substring(11, 13);
-            sellerPhoneNumber.setText(resultPN);
-        } else if (sellerProfile.isPhoneHide() == 1) {
-            sellerPhoneNumber.setVisibility(View.GONE);
+        } else if (sellerProfile.isPhoneHide() != null) {
+            if (sellerProfile.isPhoneHide() == 0) {
+                String pn = sellerProfile.getPhoneNumber();
+                String resultPN = pn.substring(0, 4) + " (" + pn.substring(4, 6) + ") " + pn.substring(6, 9) + "-"
+                        + pn.substring(9, 11) + "-" + pn.substring(11, 13);
+                sellerPhoneNumber.setText(resultPN);
+            } else if (sellerProfile.isPhoneHide() == 1) {
+                sellerPhoneNumber.setVisibility(View.GONE);
+            }
         }
 
         String region = sellerProfile.getRegion();

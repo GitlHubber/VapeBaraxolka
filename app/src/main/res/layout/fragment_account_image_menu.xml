@@ -3,75 +3,88 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/accountMenuLinearLayout"
-    android:background="@color/colorBackground"
+    android:background="@drawable/bottom_sheet_background"
     android:orientation="vertical"
     android:layout_gravity="bottom">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bottom_sheet_line"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Выбрать фото"
-        android:layout_margin="10dp"
+        android:text="Фото профиля"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
         android:textColor="@color/colorText"
-        android:textSize="24dp" />
+        android:textSize="22sp" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorAdCreatorImage" />
+
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/account_show_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/ic_see_photo"
+        android:drawableEnd="@drawable/ic_bottom_sheet_arrow"
         android:layout_marginStart="10dp"
-        android:background="@color/colorBackground"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
         android:text="Посмотреть фото"
         android:gravity="start|center"
         android:textAllCaps="false"
         android:textColor="@color/colorText"
         android:textStyle="normal"
-        style="@style/Base.Widget.AppCompat.Button.Borderless"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/account_take_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/ic_add_photo"
-        android:background="@color/colorBackground"
-        android:shadowColor="@color/colorTransparent"
+        android:drawableEnd="@drawable/ic_bottom_sheet_arrow"
         android:layout_marginStart="10dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
         android:text="Сделать снимок"
         android:textAllCaps="false"
         android:textColor="@color/colorText"
-        style="@style/Base.Widget.AppCompat.Button.Borderless"
         android:gravity="start|center"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/account_load_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawableStart="@drawable/ic_get_image"
-        android:background="@color/colorBackground"
+        android:drawableEnd="@drawable/ic_bottom_sheet_arrow"
         android:text="Загрузить из галереи"
         android:layout_marginStart="10dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
         android:textAllCaps="false"
         android:gravity="start|center"
         android:textColor="@color/colorText"
-        style="@style/Base.Widget.AppCompat.Button.Borderless"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/account_delete_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/ic_remove_photo"
-        android:background="@color/colorBackground"
         android:textAllCaps="false"
         android:layout_marginStart="10dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
         android:gravity="start|center"
         android:text="Удалить фото"
-        style="@style/Base.Widget.AppCompat.Button.Borderless"
         android:textColor="#f00"
-        android:textSize="20dp" />
+        android:textSize="18sp"/>
 
 </LinearLayout>

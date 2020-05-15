@@ -124,136 +124,81 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
                 android:layout_marginTop="20dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorText"
-                    android:textSize="18sp"
-                    android:text="Ваш город проживания "/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorSecondaryText"
-                    android:text="(необязательно)"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
+                android:padding="10dp"
+                android:background="@drawable/white_rectangle_for_signin">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="10dp"
-                    android:paddingTop="10dp"
-                    android:background="@drawable/white_rectangle_for_signin"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp">
 
                     <TextView
-                        android:id="@+id/SIRegion"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:layout_marginBottom="10dp"
-                        android:paddingEnd="10dp"
-                        android:text="Область"
                         android:textColor="@color/colorText"
-                        android:textSize="16sp" />
+                        android:textSize="18sp"
+                        android:text="Место проживания "/>
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="5dp"
-                        android:hint="Выберите категорию"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
-                        app:endIconMode="dropdown_menu"
-                        app:counterTextColor="@color/colorText">
-
-                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
-                            android:id="@+id/SIRegionSpinner"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/colorText"
-                            android:inputType="textCapSentences|textMultiLine"
-                            android:textColorHighlight="@color/colorText"
-                            android:textColorLink="@color/colorText"
-                            android:textCursorDrawable="@color/colorText"
-                            android:textSize="18sp" />
-
-                    </com.google.android.material.textfield.TextInputLayout>
-
+                        android:textColor="@color/colorSecondaryText"
+                        android:text="(необязательно)"/>
                 </LinearLayout>
 
-                <LinearLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/SIRegionSpinnerLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/white_rectangle_for_signin"
-                    android:layout_weight="1"
-                    android:paddingTop="10dp"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint="Выберите регион"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    app:endIconMode="dropdown_menu"
+                    app:counterTextColor="@color/colorText">
 
-                    <TextView
-                        android:id="@+id/SITown"
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/SIRegionSpinner"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:layout_marginBottom="10dp"
-                        android:paddingEnd="10dp"
-                        android:text="Город"
                         android:textColor="@color/colorText"
-                        android:textSize="16sp"/>
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:textColorHighlight="@color/colorText"
+                        android:textColorLink="@color/colorText"
+                        android:completionThreshold="0"
+                        android:focusableInTouchMode="false"
+                        android:textCursorDrawable="@color/colorText"
+                        android:textSize="18sp" />
 
-                    <com.google.android.material.textfield.TextInputLayout
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/SITownSpinnerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint="Выберите город"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    app:endIconMode="dropdown_menu"
+                    app:counterTextColor="@color/colorText">
+
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/SITownSpinner"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="5dp"
-                        android:hint="Выберите категорию"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
-                        app:endIconMode="dropdown_menu"
-                        app:counterTextColor="@color/colorText">
+                        android:textColor="@color/colorText"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:textColorHighlight="@color/colorText"
+                        android:textColorLink="@color/colorText"
+                        android:completionThreshold="0"
+                        android:focusableInTouchMode="false"
+                        android:textCursorDrawable="@color/colorText"
+                        android:textSize="18sp" />
 
-                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
-                            android:id="@+id/SITownSpinner"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/colorText"
-                            android:inputType="textCapSentences|textMultiLine"
-                            android:textColorHighlight="@color/colorText"
-                            android:textColorLink="@color/colorText"
-                            android:textCursorDrawable="@color/colorText"
-                            android:textSize="18sp" />
-
-                    </com.google.android.material.textfield.TextInputLayout>
-
-<!--                    <androidx.appcompat.widget.AppCompatSpinner-->
-<!--                        android:id="@+id/SITownSpinner"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="30dp"-->
-<!--                        android:paddingStart="10dp"-->
-<!--                        android:layout_marginBottom="5dp"-->
-<!--                        style="@style/Widget.AppCompat.Spinner"-->
-<!--                        android:background="@drawable/gradient_spinner"-->
-<!--                        android:dropDownWidth="300dp"-->
-<!--                        android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"-->
-<!--                        android:paddingRight="14dp"-->
-<!--                        android:popupBackground="@color/colorBackground"-->
-<!--                        android:popupElevation="3dp"-->
-<!--                        android:stateListAnimator="@drawable/spinner_sla"/>-->
-                </LinearLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 
