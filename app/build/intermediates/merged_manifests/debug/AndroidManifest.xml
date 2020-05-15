@@ -30,6 +30,16 @@
         android:testOnly="true"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="ragalik.baraxolka.paging_feed.ads.FilterActivity"
+            android:label="@string/title_activity_filter"
+            android:parentActivityName="ragalik.baraxolka.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.SlidrActivityTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
             android:name="ragalik.baraxolka.other_logic.account.AccountEditActivity"
             android:label="@string/title_activity_account_edit"
             android:parentActivityName="ragalik.baraxolka.other_logic.account.Account"

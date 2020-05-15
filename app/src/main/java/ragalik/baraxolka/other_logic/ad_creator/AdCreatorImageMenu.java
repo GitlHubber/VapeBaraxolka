@@ -10,6 +10,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
@@ -40,10 +41,10 @@ import static ragalik.baraxolka.other_logic.ad_creator.AdCreator.outputFileUri;
 public class AdCreatorImageMenu extends BottomSheetDialogFragment {
 
     LinearLayout adCreatorMenuLinearLayout;
-    AppCompatButton ad_creator_show_image;
-    AppCompatButton ad_creator_take_image;
-    AppCompatButton ad_creator_load_image;
-    AppCompatButton ad_creator_delete_image;
+    AppCompatTextView ad_creator_show_image;
+    AppCompatTextView ad_creator_take_image;
+    AppCompatTextView ad_creator_load_image;
+    AppCompatTextView ad_creator_delete_image;
 
     Dialog dialog;
 
@@ -57,7 +58,6 @@ public class AdCreatorImageMenu extends BottomSheetDialogFragment {
         this.chooseIndex = chooseIndex;
         this.uris = uris;
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

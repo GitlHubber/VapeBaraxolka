@@ -43,19 +43,33 @@
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/search_chip"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.Chip.Entry"
-            android:layout_marginStart="10dp"
-            android:background="@color/colorBackground"
-            android:checkable="false"
-            android:text="Поиск" />
+            android:orientation="horizontal">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/category_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                android:layout_marginStart="10dp"
+                android:background="@color/colorBackground"
+                android:checkable="false"
+                android:text="Категории" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/search_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:layout_marginStart="10dp"
+                android:background="@color/colorBackground"
+                android:checkable="false"
+                android:text="Поиск" />
+        </LinearLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
-
-
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/refresherAds"

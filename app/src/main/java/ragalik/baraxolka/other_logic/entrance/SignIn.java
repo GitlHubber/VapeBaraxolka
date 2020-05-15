@@ -52,8 +52,7 @@ public class SignIn extends Fragment implements View.OnClickListener {
     private TextInputLayout email = null;
     private TextInputLayout phoneNumber = null;
     private TextInputLayout password = null;
-    private TextView town;
-    private TextView region;
+
 
     private AppCompatButton accept;
     private static String nicknameFromEditText;
@@ -65,6 +64,8 @@ public class SignIn extends Fragment implements View.OnClickListener {
     private static boolean isRegionSelected;
     private AppCompatAutoCompleteTextView regionSpinner;
     private AppCompatAutoCompleteTextView townSpinner;
+    private TextInputLayout regionLayout;
+    private TextInputLayout townLayout;
     private Toolbar toolbar;
     private ArrayAdapter<CharSequence> adapterRegion;
     private ArrayAdapter<CharSequence> adapterTown;
@@ -97,11 +98,11 @@ public class SignIn extends Fragment implements View.OnClickListener {
         phoneNumber = v.findViewById(R.id.si_phone_number);
         password = v.findViewById(R.id.si_password);
         accept = v.findViewById(R.id.Registration_button);
-        town = v.findViewById(R.id.SITown);
-        region = v.findViewById(R.id.SIRegion);
 
         regionSpinner = v.findViewById(R.id.SIRegionSpinner);
         townSpinner = v.findViewById(R.id.SITownSpinner);
+        regionLayout = v.findViewById(R.id.SIRegionSpinnerLayout);
+        townLayout = v.findViewById(R.id.SITownSpinnerLayout);
 
 //        privacyPolicyFragment = new PrivacyPolicy();
 //        privacyPolicyTW = v.findViewById(R.id.SIPrivacyPolicy);
@@ -109,21 +110,24 @@ public class SignIn extends Fragment implements View.OnClickListener {
 
         if (getContext() != null) {
             regionSpinner.setAdapter(ArrayAdapter.createFromResource(getContext(), R.array.Spinner_region_items, R.layout.dropdown_text_color));
+            regionSpinner.setOnClickListener(v1 -> regionSpinner.showDropDown());
             regionSpinner.setOnItemClickListener((parent, view, position, id) -> {
                 String text = parent.getItemAtPosition(position).toString();
                 isRegionSelected = true;
-                region.setText("Область");
-                town.setText("Город");
+                regionLayout.setHint("Регион");
+                townLayout.setHint("Город");
                 if (getContext() != null) {
                     switch (text) {
                         case ("Не указано"):
                             adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.Nothing, R.layout.dropdown_text_color);
                             isRegionSelected = false;
+                            regionLayout.setHint("Выберите регион");
+                            townLayout.setHint("Выберите город");
                             break;
                         case ("Минск"):
                             adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.Minsk, R.layout.dropdown_text_color);
-                            region.setText("Город");
-                            town.setText("Район");
+                            regionLayout.setHint("Город");
+                            townLayout.setHint("Район");
                             break;
                         case ("Брестская обл."):
                             adapterTown = ArrayAdapter.createFromResource(getContext(), R.array.BrestRegion, R.layout.dropdown_text_color);
@@ -148,11 +152,13 @@ public class SignIn extends Fragment implements View.OnClickListener {
                     }
                     regionFromSpinner = text;
                     townSpinner.setAdapter(adapterTown);
+                    townFromSpinner = adapterTown.getItem(0).toString();
+                    townSpinner.setText(townFromSpinner, false);
+                    townSpinner.setOnClickListener(v2 -> townSpinner.showDropDown());
                 }
             });
+            townSpinner.setOnItemClickListener((parent, view, position, id) -> townFromSpinner = parent.getItemAtPosition(position).toString());
         }
-
-        townSpinner.setOnItemClickListener((parent, view, position, id) -> townFromSpinner = parent.getItemAtPosition(position).toString());
 
         accept.setOnClickListener(this);
         return v;
@@ -171,7 +177,7 @@ public class SignIn extends Fragment implements View.OnClickListener {
             str += "Электронная почта  ";
         }
         if (!phoneNumberFromEditText.matches(PHONE_NUMBER) && !phoneNumberFromEditText.isEmpty()) {
-            str += "Номер телефона ";
+            str += "Номер телефона  ";
         }
         if (!passwordFromEditText.matches(PASSWORD) || passwordFromEditText.isEmpty()) {
             str += "Пароль";

@@ -22,12 +22,21 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
+        <activity android:name=".paging_feed.ads.FilterActivity"
+            android:label="@string/title_activity_filter"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.SlidrActivityTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <activity
             android:name=".other_logic.account.AccountEditActivity"
             android:label="@string/title_activity_account_edit"
-            android:theme="@style/AppTheme.SlidrActivityTheme"
             android:parentActivityName=".other_logic.account.Account"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.SlidrActivityTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".other_logic.account.Account" />
@@ -35,9 +44,9 @@
         <activity
             android:name=".paging_feed.search.SearchActivity"
             android:label="@string/title_activity_search"
-            android:theme="@style/AppTheme.SlidrActivityTheme"
             android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.SlidrActivityTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
@@ -98,6 +107,7 @@
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

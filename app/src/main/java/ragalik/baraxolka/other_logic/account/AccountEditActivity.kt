@@ -60,6 +60,9 @@ class AccountEditActivity : AppCompatActivity() {
                 title = "Указание региона"
                 tw_account_edit_title.visibility = View.GONE
                 EditRegionSpinner.setAdapter(ArrayAdapter.createFromResource(this, R.array.Spinner_region_items, R.layout.dropdown_text_color))
+                EditRegionSpinner.setOnClickListener {
+                    EditRegionSpinner.showDropDown()
+                }
                 EditRegionSpinner.setOnItemClickListener { parent: AdapterView<*>, _: View?, position: Int, _: Long ->
                     val text = parent.getItemAtPosition(position).toString()
                     isRegionSelected = true
@@ -92,7 +95,8 @@ class AccountEditActivity : AppCompatActivity() {
                     }
                     regionFromSpinner = text
                     EditTownSpinner.setAdapter(adapterTown)
-                    EditTownSpinner.setText(adapterTown.getItem(0), false)
+                    townFromSpinner = adapterTown.getItem(0).toString()
+                    EditTownSpinner.setText(townFromSpinner, false)
                     EditTownSpinner.setOnClickListener {
                         EditTownSpinner.showDropDown()
                     }

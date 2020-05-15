@@ -264,6 +264,10 @@
         "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\layout\\item_ad.xml"
     },
     {
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_filter.xml.flat",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\layout\\activity_filter.xml"
+    },
+    {
         "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_brightness_3_black_24dp.xml.flat",
         "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_brightness_3_black_24dp.xml"
     },
@@ -364,16 +368,20 @@
         "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\xml\\provider_paths.xml"
     },
     {
-        "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_account_image_menu.xml.flat",
-        "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_account_image_menu.xml"
-    },
-    {
         "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_eye_off.xml.flat",
         "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_eye_off.xml"
     },
     {
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_account_image_menu.xml.flat",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_account_image_menu.xml"
+    },
+    {
         "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_location.xml.flat",
         "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\location.xml"
+    },
+    {
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_bottom_sheet_arrow.xml.flat",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_bottom_sheet_arrow.xml"
     },
     {
         "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ad_creator_secondary_photo.xml.flat",
@@ -446,6 +454,10 @@
     {
         "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_splash_logo.png.flat",
         "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\mipmap-xxxhdpi\\splash_logo.png"
+    },
+    {
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_arrow_bottom_24dp.xml.flat",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_arrow_bottom_24dp.xml"
     },
     {
         "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_add_photo.xml.flat",
@@ -536,6 +548,10 @@
         "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_full_image_layout.xml"
     },
     {
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bottom_sheet_line.xml.flat",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\bottom_sheet_line.xml"
+    },
+    {
         "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_price.xml.flat",
         "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_price.xml"
     },
@@ -568,12 +584,12 @@
         "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_see_photo.xml"
     },
     {
-        "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_settings_black_24dp.xml.flat",
-        "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_settings_black_24dp.xml"
-    },
-    {
         "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_show_phone.xml.flat",
         "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_show_phone.xml"
+    },
+    {
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_settings_black_24dp.xml.flat",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_settings_black_24dp.xml"
     },
     {
         "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_sort.xml.flat",
@@ -596,10 +612,6 @@
         "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\layout\\on_moderate_ads.xml"
     },
     {
-        "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\layout_text_color.xml.flat",
-        "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\layout\\text_color.xml"
-    },
-    {
         "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_image_black_24dp.xml.flat",
         "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_image_black_24dp.xml"
     },
@@ -610,6 +622,10 @@
     {
         "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ad_creator_image_style.xml.flat",
         "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ad_creator_image_style.xml"
+    },
+    {
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bottom_sheet_background.xml.flat",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\bottom_sheet_background.xml"
     },
     {
         "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_email_black_24dp.xml.flat",

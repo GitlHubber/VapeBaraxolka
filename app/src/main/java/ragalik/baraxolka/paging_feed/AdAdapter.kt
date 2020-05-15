@@ -194,6 +194,7 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, AdAdapter
                     }
 
                     view.rejectReasonDropdownText.setAdapter(ArrayAdapter(MainActivity.activity, R.layout.dropdown_text_color, reasonsArr))
+                    view.rejectReasonDropdownText.setOnClickListener { view.rejectReasonDropdownText.showDropDown() }
                     view.rejectReasonDropdownText.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ -> reasonPosition = position + 2 }
                 }
             }

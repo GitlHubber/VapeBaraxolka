@@ -52,6 +52,9 @@ public final class FragmentAdCreatorBinding implements ViewBinding {
   public final AppCompatButton addAdButton;
 
   @NonNull
+  public final TextInputLayout categoryLayout;
+
+  @NonNull
   public final AppCompatAutoCompleteTextView categorySpinner;
 
   @NonNull
@@ -82,7 +85,8 @@ public final class FragmentAdCreatorBinding implements ViewBinding {
       @NonNull FrameLayout adCreatorFrame, @NonNull AppCompatTextView adCreatorMainLabel,
       @NonNull Toolbar adCreatorToolbar, @NonNull ImageView adPhoto1, @NonNull ImageView adPhoto2,
       @NonNull ImageView adPhoto3, @NonNull ImageView adPhoto4, @NonNull ImageView adPhoto5,
-      @NonNull AppCompatButton addAdButton, @NonNull AppCompatAutoCompleteTextView categorySpinner,
+      @NonNull AppCompatButton addAdButton, @NonNull TextInputLayout categoryLayout,
+      @NonNull AppCompatAutoCompleteTextView categorySpinner,
       @NonNull TextInputLayout descriptionEditText, @NonNull TextInputLayout priceEditText,
       @NonNull TextInputLayout subcategoryLayout,
       @NonNull AppCompatAutoCompleteTextView subcategorySpinner, @NonNull TextView textView4,
@@ -98,6 +102,7 @@ public final class FragmentAdCreatorBinding implements ViewBinding {
     this.adPhoto4 = adPhoto4;
     this.adPhoto5 = adPhoto5;
     this.addAdButton = addAdButton;
+    this.categoryLayout = categoryLayout;
     this.categorySpinner = categorySpinner;
     this.descriptionEditText = descriptionEditText;
     this.priceEditText = priceEditText;
@@ -181,6 +186,11 @@ public final class FragmentAdCreatorBinding implements ViewBinding {
         missingId = "addAdButton";
         break missingId;
       }
+      TextInputLayout categoryLayout = rootView.findViewById(R.id.categoryLayout);
+      if (categoryLayout == null) {
+        missingId = "categoryLayout";
+        break missingId;
+      }
       AppCompatAutoCompleteTextView categorySpinner = rootView.findViewById(R.id.categorySpinner);
       if (categorySpinner == null) {
         missingId = "categorySpinner";
@@ -228,8 +238,9 @@ public final class FragmentAdCreatorBinding implements ViewBinding {
       }
       return new FragmentAdCreatorBinding((FrameLayout) rootView, adCreatorFrame,
           adCreatorMainLabel, adCreatorToolbar, adPhoto1, adPhoto2, adPhoto3, adPhoto4, adPhoto5,
-          addAdButton, categorySpinner, descriptionEditText, priceEditText, subcategoryLayout,
-          subcategorySpinner, textView4, titleEditText, tv3, uploadPhotoCounterAdCreator);
+          addAdButton, categoryLayout, categorySpinner, descriptionEditText, priceEditText,
+          subcategoryLayout, subcategorySpinner, textView4, titleEditText, tv3,
+          uploadPhotoCounterAdCreator);
     }
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }

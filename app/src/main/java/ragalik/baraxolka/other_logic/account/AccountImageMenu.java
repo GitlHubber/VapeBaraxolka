@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -48,10 +49,10 @@ public class AccountImageMenu extends BottomSheetDialogFragment {
     private static final int PICK_FILE_REQUEST = 1000;
 
     public static File fileWithUri;
-    private AppCompatButton account_show_image;
-    private AppCompatButton account_take_image;
-    private AppCompatButton account_load_image;
-    private AppCompatButton account_delete_image;
+    private AppCompatTextView account_show_image;
+    private AppCompatTextView account_take_image;
+    private AppCompatTextView account_load_image;
+    private AppCompatTextView account_delete_image;
 
     private LinearLayout accountMenuLinearLayout;
     private ProgressDialog pDialog;
@@ -60,7 +61,6 @@ public class AccountImageMenu extends BottomSheetDialogFragment {
     public AccountImageMenu() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

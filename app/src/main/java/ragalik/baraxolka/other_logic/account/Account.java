@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.appcompat.widget.AppCompatSeekBar;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.view.View;
@@ -254,6 +255,7 @@ public class Account extends AppCompatActivity {
 
         accountPhoto.setOnClickListener(v -> {
             AccountImageMenu accountImageMenu = new AccountImageMenu();
+            accountImageMenu.setStyle(DialogFragment.STYLE_NORMAL, R.style.BottomSheetDialogTheme);
             accountImageMenu.show(activity.getSupportFragmentManager(), "");
         });
 
