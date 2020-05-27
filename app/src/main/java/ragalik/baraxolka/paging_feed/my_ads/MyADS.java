@@ -59,10 +59,10 @@ public class MyADS extends Fragment implements SwipeRefreshLayout.OnRefreshListe
     private static AdAdapter rejected_adapter;
     private static AdAdapter non_active_adapter;
 
-    private static MyAdsViewModel activeViewModel;
-    private static MyAdsViewModel onModerateViewModel;
-    private static MyAdsViewModel rejectedViewModel;
-    private static MyAdsViewModel nonActiveViewModel;
+    public static MyAdsViewModel activeViewModel;
+    public static MyAdsViewModel onModerateViewModel;
+    public static MyAdsViewModel rejectedViewModel;
+    public static MyAdsViewModel nonActiveViewModel;
 
     private static IApi apiClient;
 
@@ -254,7 +254,7 @@ public class MyADS extends Fragment implements SwipeRefreshLayout.OnRefreshListe
             }
             activeRecyclerView = view.findViewById(R.id.ActiveAdsView);
 
-            active_adapter = new AdAdapter();
+            active_adapter = new AdAdapter("ACTIVE");
             activeRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
             activeViewModel = new ViewModelProvider(this, new ModelFactory(1, MainActivity.sp.getInt("id", 0), false)).get(MyAdsViewModel.class);
@@ -392,7 +392,7 @@ public class MyADS extends Fragment implements SwipeRefreshLayout.OnRefreshListe
             }
             nonActiveRecyclerView = view.findViewById(R.id.NonActiveAdsView);
 
-            non_active_adapter = new AdAdapter();
+            non_active_adapter = new AdAdapter("NON_ACTIVE");
             nonActiveRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
             nonActiveViewModel = new ViewModelProvider(this, new ModelFactory(4, MainActivity.sp.getInt("id", 0), false)).get(MyAdsViewModel.class);

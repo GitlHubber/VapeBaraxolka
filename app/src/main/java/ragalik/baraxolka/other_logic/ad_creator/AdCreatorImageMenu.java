@@ -29,8 +29,12 @@ import java.io.File;
 import java.util.ArrayList;
 
 import ragalik.baraxolka.other_logic.account.FullImageLayout;
+import ragalik.baraxolka.other_logic.account.FullImageLayout;
+import ragalik.baraxolka.other_logic.full_ad.FullAdViewPagerAdapter;
 import ragalik.baraxolka.R;
+import ragalik.baraxolka.paging_feed.ads.ADS;
 
+import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static ragalik.baraxolka.other_logic.ad_creator.AdCreatorActivity.adImages;
 import static ragalik.baraxolka.other_logic.ad_creator.AdCreatorActivity.fileWithUri;
@@ -108,6 +112,13 @@ public class AdCreatorImageMenu extends BottomSheetDialogFragment {
 //                viewPager.setAdapter(fullAdViewPagerAdapter);
 //                viewPager.setCurrentItem(chooseIndex);
 
+                FullAdViewPagerAdapter fullAdViewPagerAdapter = new FullAdViewPagerAdapter(getActivity(), uris, "AD");
+                ViewPager viewPager = dialog.findViewById(R.id.fullImagePager);
+                viewPager.setAdapter(fullAdViewPagerAdapter);
+                viewPager.setCurrentItem(chooseIndex);
+
+//                FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+//                fragmentTransaction.replace(R.id.adCreatorFrame, new FullImageLayout(chooseIndex, uris)).addToBackStack("").commit();
                 FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.adCreatorCoordinator, new FullImageLayout(chooseIndex, uris)).commit();
 
@@ -149,13 +160,30 @@ public class AdCreatorImageMenu extends BottomSheetDialogFragment {
         ad_creator_load_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent();
-                intent.setType("image/*");
-                intent.setAction(Intent.ACTION_GET_CONTENT);
-                getActivity().startActivityForResult(Intent.createChooser(intent,
-                        "Select Picture"), 1);
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+                    int permissionStatus = getActivity().checkSelfPermission(READ_EXTERNAL_STORAGE);
 
-                dismiss();
+                    if (permissionStatus == PackageManager.PERMISSION_GRANTED) {
+                        Intent intent = new Intent();
+                        intent.setType("image/*");
+                        intent.setAction(Intent.ACTION_GET_CONTENT);
+                        getActivity().startActivityForResult(Intent.createChooser(intent,
+                                "Select Picture"), 1);
+
+                        dismiss();
+                    } else {
+                        getActivity().requestPermissions(new String[] {READ_EXTERNAL_STORAGE},
+                                1);
+                    }
+                } else {
+                    Intent intent = new Intent();
+                    intent.setType("image/*");
+                    intent.setAction(Intent.ACTION_GET_CONTENT);
+                    getActivity().startActivityForResult(Intent.createChooser(intent,
+                            "Select Picture"), 1);
+
+                    dismiss();
+                }
             }
         });
 

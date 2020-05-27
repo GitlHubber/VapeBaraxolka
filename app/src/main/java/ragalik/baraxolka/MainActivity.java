@@ -40,6 +40,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ragalik.baraxolka.other_logic.account.Account;
+import ragalik.baraxolka.other_logic.account.FullImageLayout;
 import ragalik.baraxolka.other_logic.activities.SettingsActivity;
 import ragalik.baraxolka.other_logic.ad_creator.AdCreator;
 import ragalik.baraxolka.other_logic.ad_creator.AdCreatorActivity;

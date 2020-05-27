@@ -428,6 +428,7 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
                     Toast.makeText(getApplicationContext(), "Обьявление создано!", Toast.LENGTH_LONG).show();
                     Intent myIntent = new Intent(appCompatActivity, MainActivity.class);
                     appCompatActivity.startActivity(myIntent);
+                    finish();
                 }
             }
 
@@ -437,6 +438,15 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
                 Toast.makeText(getApplicationContext(), "Произошла ошибка", Toast.LENGTH_LONG).show();
             }
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        uris.clear();
+        parts.clear();
+        fileWithUri = null;
+        outputFileUri = null;
     }
 }
 

@@ -124,8 +124,21 @@ public class AccountImageMenu extends BottomSheetDialogFragment {
         account_load_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                chooseFile();
-                dismiss();
+
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+                    int permissionStatus = getActivity().checkSelfPermission(READ_EXTERNAL_STORAGE);
+
+                    if (permissionStatus == PackageManager.PERMISSION_GRANTED) {
+                        chooseFile();
+                        dismiss();
+                    } else {
+                        getActivity().requestPermissions(new String[] {READ_EXTERNAL_STORAGE},
+                                1);
+                    }
+                } else {
+                    chooseFile();
+                    dismiss();
+                }
             }
         });
 

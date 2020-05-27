@@ -28,6 +28,15 @@ public final class ItemAdBinding implements ViewBinding {
   public final AppCompatButton acceptRejectButton;
 
   @NonNull
+  public final AppCompatButton adDeactivateBut;
+
+  @NonNull
+  public final AppCompatButton adDeleteBut;
+
+  @NonNull
+  public final AppCompatButton adEditBut;
+
+  @NonNull
   public final TextView adPreviewDateTime;
 
   @NonNull
@@ -76,10 +85,11 @@ public final class ItemAdBinding implements ViewBinding {
   public final TextView twRejectReason;
 
   private ItemAdBinding(@NonNull CardView rootView, @NonNull AppCompatButton acceptRejectButton,
-      @NonNull TextView adPreviewDateTime, @NonNull TextView adPreviewPrice,
-      @NonNull AppCompatCheckBox bookmarkButtonAds, @NonNull ImageView ivAvatar,
-      @NonNull AppCompatButton moderatorAcceptButton, @NonNull LinearLayout moderatorLayout,
-      @NonNull AppCompatButton moderatorRejectButton,
+      @NonNull AppCompatButton adDeactivateBut, @NonNull AppCompatButton adDeleteBut,
+      @NonNull AppCompatButton adEditBut, @NonNull TextView adPreviewDateTime,
+      @NonNull TextView adPreviewPrice, @NonNull AppCompatCheckBox bookmarkButtonAds,
+      @NonNull ImageView ivAvatar, @NonNull AppCompatButton moderatorAcceptButton,
+      @NonNull LinearLayout moderatorLayout, @NonNull AppCompatButton moderatorRejectButton,
       @NonNull TextInputLayout rejectMessageEditText, @NonNull TextInputLayout rejectReasonDropdown,
       @NonNull AppCompatAutoCompleteTextView rejectReasonDropdownText,
       @NonNull LinearLayout rejectReasonLayout, @NonNull LinearLayout rejectedAdsLayout,
@@ -87,6 +97,9 @@ public final class ItemAdBinding implements ViewBinding {
       @NonNull TextView twRejectReason) {
     this.rootView = rootView;
     this.acceptRejectButton = acceptRejectButton;
+    this.adDeactivateBut = adDeactivateBut;
+    this.adDeleteBut = adDeleteBut;
+    this.adEditBut = adEditBut;
     this.adPreviewDateTime = adPreviewDateTime;
     this.adPreviewPrice = adPreviewPrice;
     this.bookmarkButtonAds = bookmarkButtonAds;
@@ -135,6 +148,21 @@ public final class ItemAdBinding implements ViewBinding {
       AppCompatButton acceptRejectButton = rootView.findViewById(R.id.acceptRejectButton);
       if (acceptRejectButton == null) {
         missingId = "acceptRejectButton";
+        break missingId;
+      }
+      AppCompatButton adDeactivateBut = rootView.findViewById(R.id.ad_deactivate_but);
+      if (adDeactivateBut == null) {
+        missingId = "adDeactivateBut";
+        break missingId;
+      }
+      AppCompatButton adDeleteBut = rootView.findViewById(R.id.ad_delete_but);
+      if (adDeleteBut == null) {
+        missingId = "adDeleteBut";
+        break missingId;
+      }
+      AppCompatButton adEditBut = rootView.findViewById(R.id.ad_edit_but);
+      if (adEditBut == null) {
+        missingId = "adEditBut";
         break missingId;
       }
       TextView adPreviewDateTime = rootView.findViewById(R.id.ad_preview_date_time);
@@ -217,11 +245,11 @@ public final class ItemAdBinding implements ViewBinding {
         missingId = "twRejectReason";
         break missingId;
       }
-      return new ItemAdBinding((CardView) rootView, acceptRejectButton, adPreviewDateTime,
-          adPreviewPrice, bookmarkButtonAds, ivAvatar, moderatorAcceptButton, moderatorLayout,
-          moderatorRejectButton, rejectMessageEditText, rejectReasonDropdown,
-          rejectReasonDropdownText, rejectReasonLayout, rejectedAdsLayout, tvLocation, tvTitle,
-          twRejectMessage, twRejectReason);
+      return new ItemAdBinding((CardView) rootView, acceptRejectButton, adDeactivateBut,
+          adDeleteBut, adEditBut, adPreviewDateTime, adPreviewPrice, bookmarkButtonAds, ivAvatar,
+          moderatorAcceptButton, moderatorLayout, moderatorRejectButton, rejectMessageEditText,
+          rejectReasonDropdown, rejectReasonDropdownText, rejectReasonLayout, rejectedAdsLayout,
+          tvLocation, tvTitle, twRejectMessage, twRejectReason);
     }
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }

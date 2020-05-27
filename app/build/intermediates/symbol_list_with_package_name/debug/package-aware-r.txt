@@ -1926,6 +1926,9 @@ id ad_creator_load_image
 id ad_creator_main_label
 id ad_creator_show_image
 id ad_creator_take_image
+id ad_deactivate_but
+id ad_delete_but
+id ad_edit_but
 id ad_preview_category
 id ad_preview_date_time
 id ad_preview_description
@@ -2074,6 +2077,9 @@ id direct
 id disableHome
 id drawer_layout
 id dropdown_menu
+id editCreatorFrame
+id editCreatorToolbar
+id edit_creator_main_label
 id edit_query
 id edit_region_layout
 id end
@@ -2103,6 +2109,7 @@ id fullImagePager
 id general_group
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id group_divider
 id groups
@@ -2484,6 +2491,7 @@ id uniform
 id unlabeled
 id up
 id uploadPhotoCounterAdCreator
+id uploadPhotoCounterEditCreator
 id useLogo
 id userImageFullAd
 id vertical
@@ -2579,6 +2587,7 @@ layout abc_tooltip
 layout active_ads
 layout activity_account
 layout activity_account_edit
+layout activity_edit_creator
 layout activity_filter
 layout activity_full_ad
 layout activity_main
