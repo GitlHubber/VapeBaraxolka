@@ -42,6 +42,7 @@ import java.util.List;
 import ragalik.baraxolka.other_logic.account.Account;
 import ragalik.baraxolka.other_logic.activities.SettingsActivity;
 import ragalik.baraxolka.other_logic.ad_creator.AdCreator;
+import ragalik.baraxolka.other_logic.ad_creator.AdCreatorActivity;
 import ragalik.baraxolka.paging_feed.search.SearchActivity;
 import ragalik.baraxolka.other_logic.entrance.LogIn;
 import ragalik.baraxolka.other_logic.entrance.SignIn;
@@ -117,7 +118,7 @@ public class MainActivity extends AppCompatActivity
 
         fab = findViewById(R.id.fab1);
         fab.setOnClickListener(view -> {
-            Intent myIntent = new Intent(MainActivity.this, AdCreator.class);
+            Intent myIntent = new Intent(MainActivity.this, AdCreatorActivity.class);
             startActivity(myIntent);
         });
 
@@ -155,9 +156,9 @@ public class MainActivity extends AppCompatActivity
             myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             AppCompatButton log = myDialog.findViewById(R.id.logButton);
             AppCompatButton sign = myDialog.findViewById(R.id.signButton);
-            this.setTitle("Объявления");
+            this.setTitle("Все объявления");
             myDialog.setOnCancelListener(dialog -> {
-                newTransaction(adsFragment, "Объявления");
+                newTransaction(adsFragment, "Все объявления");
                 myDialog.dismiss();
             });
             log.setOnClickListener(v -> {
@@ -173,14 +174,14 @@ public class MainActivity extends AppCompatActivity
             });
             hideItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
         } else if (isEntered()) {
-            newTransaction(adsFragment, "Объявления");
+            newTransaction(adsFragment, "Все объявления");
             showItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
         } else if (entrance_count > 1) {
             if (entrance_count == 10) {
                 editor.putInt("entrance_counter", 0);
                 editor.apply();
             }
-            newTransaction(adsFragment, "Объявления");
+            newTransaction(adsFragment, "Все объявления");
             hideItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
         }
     }
@@ -365,9 +366,10 @@ public class MainActivity extends AppCompatActivity
             startActivity(myIntent);
         } else if (id == R.id.MODERATOR) {
             fragmentTransaction.replace(R.id.constrLayout, new AdModerator()).commit();
-        } else if (id == R.id.ADMIN) {
-            fragmentTransaction.replace(R.id.constrLayout, new Administrator()).commit();
         }
+//        } else if (id == R.id.ADMIN) {
+//            fragmentTransaction.replace(R.id.constrLayout, new Administrator()).commit();
+//        }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -376,7 +378,8 @@ public class MainActivity extends AppCompatActivity
 
     public static void checkUserStatus() {
         if (sp.getString("status_name", "").equals("АДМИНИСТРАТОР")) {
-            createAdminField();
+            //createAdminField();
+            createEditorField();
         } else if (sp.getString("status_name", "").equals("РЕДАКТОР")) {
             createEditorField();
         }
@@ -389,11 +392,11 @@ public class MainActivity extends AppCompatActivity
     }
 
     private static void createAdminField() {
-        NavigationView navigationView = MainActivity.activity.findViewById(R.id.nav_view);
-        Menu menu = navigationView.getMenu();
-        MenuItem administrator = menu.findItem(R.id.ADMIN);
-        administrator.setVisible(true);
-        createEditorField();
+//        NavigationView navigationView = MainActivity.activity.findViewById(R.id.nav_view);
+//        Menu menu = navigationView.getMenu();
+//        MenuItem administrator = menu.findItem(R.id.ADMIN);
+//        administrator.setVisible(true);
+//        createEditorField();
     }
 
     private static void createEditorField() {

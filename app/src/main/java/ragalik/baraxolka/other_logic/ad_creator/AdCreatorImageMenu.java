@@ -13,6 +13,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Environment;
@@ -27,13 +28,14 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import java.io.File;
 import java.util.ArrayList;
 
-import ragalik.baraxolka.other_logic.full_ad.FullAdViewPagerAdapter;
+import ragalik.baraxolka.other_logic.account.FullImageLayout;
 import ragalik.baraxolka.R;
 
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
-import static ragalik.baraxolka.other_logic.ad_creator.AdCreator.adImages;
-import static ragalik.baraxolka.other_logic.ad_creator.AdCreator.fileWithUri;
-import static ragalik.baraxolka.other_logic.ad_creator.AdCreator.outputFileUri;
+import static ragalik.baraxolka.other_logic.ad_creator.AdCreatorActivity.adImages;
+import static ragalik.baraxolka.other_logic.ad_creator.AdCreatorActivity.fileWithUri;
+import static ragalik.baraxolka.other_logic.ad_creator.AdCreatorActivity.outputFileUri;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -90,16 +92,25 @@ public class AdCreatorImageMenu extends BottomSheetDialogFragment {
         ad_creator_show_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 dismiss();
 
-                dialog.setContentView(R.layout.fragment_full_image_layout);
-                dialog.show();
+//                AdCreator.activity.setContentView(R.layout.fragment_full_image_layout);
+//                FullAdViewPagerAdapter fullAdViewPagerAdapter = new FullAdViewPagerAdapter(getActivity(), uris, "Image");
+//                ViewPager viewPager = AdCreator.activity.findViewById(R.id.fullImagePager);
+//                viewPager.setAdapter(fullAdViewPagerAdapter);
+//                viewPager.setCurrentItem(chooseIndex);
 
-                FullAdViewPagerAdapter fullAdViewPagerAdapter = new FullAdViewPagerAdapter(getActivity(), uris, "Image");
-                ViewPager viewPager = dialog.findViewById(R.id.fullImagePager);
-                viewPager.setAdapter(fullAdViewPagerAdapter);
-                viewPager.setCurrentItem(chooseIndex);
+//                dialog.setContentView(R.layout.fragment_full_image_layout);
+//                dialog.show();
+//
+//                FullAdViewPagerAdapter fullAdViewPagerAdapter = new FullAdViewPagerAdapter(getActivity(), uris, "Ad");
+//                ViewPager viewPager = dialog.findViewById(R.id.fullImagePager);
+//                viewPager.setAdapter(fullAdViewPagerAdapter);
+//                viewPager.setCurrentItem(chooseIndex);
+
+                FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.adCreatorCoordinator, new FullImageLayout(chooseIndex, uris)).commit();
+
             }
         });
 

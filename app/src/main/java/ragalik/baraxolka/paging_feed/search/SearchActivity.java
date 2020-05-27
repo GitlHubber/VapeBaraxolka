@@ -134,6 +134,7 @@ public class SearchActivity extends AppCompatActivity implements  SearchView.OnQ
         showAdsButton = findViewById(R.id.showAdsButton);
         showAdsButton.setOnClickListener(v -> {
             ADS.isFilteredAds = true;
+            ADS.isFilteredByCategories = false;
             Intent myIntent = new Intent(activity, MainActivity.class);
             v.getContext().startActivity(myIntent);
         });

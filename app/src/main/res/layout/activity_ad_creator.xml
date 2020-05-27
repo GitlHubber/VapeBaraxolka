@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/adCreatorCoordinator"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".other_logic.ad_creator.AdCreator">
+    tools:context=".other_logic.ad_creator.AdCreatorActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -18,11 +18,6 @@
             android:background="@color/colorPrimary"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme" />
-
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/pizda"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
 
         <ScrollView
             android:layout_width="match_parent"
@@ -57,16 +52,16 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
-                        <ImageView
-                            android:id="@+id/adPhoto1"
-                            android:layout_width="140dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginEnd="10dp"
-                            android:background="@drawable/ad_creator_main_photo_dark_theme"
-                            android:cropToPadding="true"
-                            android:padding="5dp"
-                            android:scaleType="centerCrop" />
+                            <ImageView
+                                android:id="@+id/adPhoto1"
+                                android:layout_width="140dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="@drawable/ad_creator_main_photo_dark_theme"
+                                android:cropToPadding="true"
+                                android:padding="5dp"
+                                android:scaleType="centerCrop" />
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -291,35 +286,35 @@
                     android:layout_marginTop="10dp"
                     android:background="@color/colorAdCreatorImage" />
 
-<!--                <TextView-->
-<!--                    android:id="@+id/tv2"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="10dp"-->
-<!--                    android:layout_marginTop="10dp"-->
-<!--                    android:text="Состояние товара:"-->
-<!--                    android:textColor="@color/colorText"-->
-<!--                    android:textSize="20dp" />-->
+                <!--                <TextView-->
+                <!--                    android:id="@+id/tv2"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="10dp"-->
+                <!--                    android:layout_marginTop="10dp"-->
+                <!--                    android:text="Состояние товара:"-->
+                <!--                    android:textColor="@color/colorText"-->
+                <!--                    android:textSize="20dp" />-->
 
-<!--                <androidx.appcompat.widget.AppCompatRadioButton-->
-<!--                    android:id="@+id/newState"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="10dp"-->
-<!--                    android:buttonTint="@color/colorText"-->
-<!--                    android:text="Новое"-->
-<!--                    android:textColor="@color/colorText"-->
-<!--                    android:textColorLink="@color/colorText" />-->
+                <!--                <androidx.appcompat.widget.AppCompatRadioButton-->
+                <!--                    android:id="@+id/newState"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="10dp"-->
+                <!--                    android:buttonTint="@color/colorText"-->
+                <!--                    android:text="Новое"-->
+                <!--                    android:textColor="@color/colorText"-->
+                <!--                    android:textColorLink="@color/colorText" />-->
 
-<!--                <androidx.appcompat.widget.AppCompatRadioButton-->
-<!--                    android:id="@+id/secondaryState"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="10dp"-->
-<!--                    android:buttonTint="@color/colorText"-->
-<!--                    android:text="Б/У"-->
-<!--                    android:textColor="@color/colorText"-->
-<!--                    android:textColorLink="@color/colorText" />-->
+                <!--                <androidx.appcompat.widget.AppCompatRadioButton-->
+                <!--                    android:id="@+id/secondaryState"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="10dp"-->
+                <!--                    android:buttonTint="@color/colorText"-->
+                <!--                    android:text="Б/У"-->
+                <!--                    android:textColor="@color/colorText"-->
+                <!--                    android:textColorLink="@color/colorText" />-->
 
                 <TextView
                     android:layout_width="match_parent"
@@ -448,4 +443,4 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>
