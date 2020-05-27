@@ -1,7 +1,6 @@
 package ragalik.baraxolka.other_logic.full_ad;
 
 import android.content.Intent;
-import android.graphics.drawable.Icon;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -40,7 +39,7 @@ public class FullAdActivity extends AppCompatActivity {
     private static int adId;
     private static ArrayList<String> urls;
 
-    ViewPager viewPager;
+    public static ViewPager viewPagerFullAd;
     TextView title;
     TextView category;
     TextView subcategory;
@@ -154,10 +153,11 @@ public class FullAdActivity extends AppCompatActivity {
                     }
                     indicator = (CircleIndicator) findViewById(R.id.circleIndicatorFullAd);
 
-                    viewPager = findViewById(R.id.ivFullScreenAd);
+                    viewPagerFullAd = findViewById(R.id.ivFullScreenAd);
                     FullAdViewPagerAdapter fullAdViewPagerAdapter = new FullAdViewPagerAdapter(getApplicationContext(), urls, "AD");
-                    viewPager.setAdapter(fullAdViewPagerAdapter);
-                    indicator.setViewPager(viewPager);
+                    viewPagerFullAd.setAdapter(fullAdViewPagerAdapter);
+                    indicator.setViewPager(viewPagerFullAd);
+
 
                     title = findViewById(R.id.titleTextFullAd);
                     //numberPhotoFullAd = findViewById(R.id.numberPhotoFullAd);

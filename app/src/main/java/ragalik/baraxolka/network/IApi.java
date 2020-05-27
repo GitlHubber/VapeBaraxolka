@@ -85,6 +85,10 @@ public interface IApi {
     @GET("/scripts/getRejectReasons.php")
     Call<ReasonsResponse> getRejectReasons();
 
+    @GET("/scripts/deleteDeactivateAd.php")
+    Call<ServerResponse> deleteDeactivateAds(@Query("ad_id") int ad_id,
+                                             @Query("user_id") int user_id);
+
 
 
     //POST---POST
@@ -148,4 +152,18 @@ public interface IApi {
                                   @Part("nickname") RequestBody nickname,
                                   @Part("dateTime") RequestBody datetime,
                                   @Part("subcategory") RequestBody subcategory);
+
+    @Multipart
+    @POST("/scripts/editCreator.php")
+    Call<ServerResponse> editCreator(@Part("ad_id") RequestBody ad_id,
+                                     @Part("title") RequestBody title,
+                                     @Part("description") RequestBody description,
+                                     @Part MultipartBody.Part image1,
+                                     @Part MultipartBody.Part image2,
+                                     @Part MultipartBody.Part image3,
+                                     @Part MultipartBody.Part image4,
+                                     @Part MultipartBody.Part image5,
+                                     @Part("price") RequestBody price,
+                                     @Part("dateTime") RequestBody datetime,
+                                     @Part("subcategory") RequestBody subcategory);
 }

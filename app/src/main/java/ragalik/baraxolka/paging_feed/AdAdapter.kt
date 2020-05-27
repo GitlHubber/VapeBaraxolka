@@ -16,14 +16,16 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_ad.view.*
-import ragalik.baraxolka.R
-import ragalik.baraxolka.other_logic.full_ad.FullAdActivity
 import ragalik.baraxolka.MainActivity
+import ragalik.baraxolka.R
 import ragalik.baraxolka.network.ApiClient
 import ragalik.baraxolka.network.entities.ReasonsResponse
 import ragalik.baraxolka.network.entities.ServerResponse
+import ragalik.baraxolka.other_logic.edit_creator.EditCreator
+import ragalik.baraxolka.other_logic.full_ad.FullAdActivity
 import ragalik.baraxolka.paging_feed.favourites.SetDeleteBookmark
 import ragalik.baraxolka.paging_feed.moderator.AdModerator
+import ragalik.baraxolka.paging_feed.my_ads.MyADS
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -78,6 +80,7 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, AdAdapter
             var rejectFlag = true
 
             view.moderator_layout.visibility = View.VISIBLE
+            view.bookmark_button_ads.visibility = View.GONE
 
             view.moderator_accept_button.setOnClickListener {
                 acceptRejectAd(id!!, true)
@@ -106,6 +109,17 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, AdAdapter
             }
         } else if (flag == "REJECTED") {
             view.rejected_ads_layout.visibility = View.VISIBLE
+            view.ad_edit_but.visibility = View.VISIBLE
+            view.ad_delete_but.visibility = View.VISIBLE
+            view.bookmark_button_ads.visibility = View.GONE
+
+            view.ad_edit_but.setOnClickListener {
+
+            }
+
+            view.ad_delete_but.setOnClickListener {
+                deleteDeactivateAd(id, it)
+            }
 
             val customRejectReason = SpannableStringBuilder()
                     .bold { append("Причина отклонения: ") }
@@ -119,6 +133,27 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, AdAdapter
                         .bold { append("Комментарий к отклонению: ") }
                         .append("${ad?.rejectMessage}")
                 view.tw_reject_message.text = customRejectMes
+            }
+        } else if (flag == "ACTIVE") {
+            view.ad_edit_but.visibility = View.VISIBLE
+            view.ad_deactivate_but.visibility = View.VISIBLE
+
+            view.ad_edit_but.setOnClickListener{
+                val myIntent = Intent(it.context, EditCreator::class.java)
+                myIntent.putExtra("adId", ad?.id)
+
+                it.context.startActivity(myIntent)
+            }
+
+            view.ad_deactivate_but.setOnClickListener {
+                deleteDeactivateAd(id, it)
+            }
+        } else if (flag == "NON_ACTIVE") {
+            view.ad_delete_but.visibility = View.VISIBLE
+            view.bookmark_button_ads.visibility = View.GONE
+
+            view.ad_delete_but.setOnClickListener {
+                deleteDeactivateAd(id, it)
             }
         }
 
@@ -151,17 +186,44 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, AdAdapter
             isFavouritesButton.isChecked = ad.isFavourite!!
             price.text = "${ad.price.toString()} Руб."
 
-//            Glide.with(imageView.context)
-//                    .load(ad.image1url)
-//                    .placeholder(R.drawable.jiga_olegovicha)
-//                    .into(imageView)
-
+            Picasso.get().invalidate(ad.image1url)
             Picasso.get()
                     .load(ad.image1url)
                     .fit()
                     .centerCrop()
                     .into(imageView)
         }
+    }
+
+    private fun deleteDeactivateAd(ad_id: Int?, view: View) {
+        val call = ApiClient.getApi().deleteDeactivateAds(ad_id!!, MainActivity.sp.getInt("id", 0))
+        call.enqueue(object : Callback<ServerResponse> {
+            override fun onResponse(call: Call<ServerResponse>, response: Response<ServerResponse>) {
+                if (response.isSuccessful) {
+                    when (flag) {
+                        "ACTIVE" -> {
+                            MyADS.getAdCount(1, MainActivity.sp.getInt("id", 0))
+                            MyADS.activeViewModel.liveDataSource.value!!.invalidate()
+                            Toast.makeText(view.context, "Объявление деактивировано", Toast.LENGTH_LONG).show()
+                        }
+                        "NON_ACTIVE" -> {
+                            MyADS.getAdCount(4, MainActivity.sp.getInt("id", 0))
+                            MyADS.nonActiveViewModel.liveDataSource.value!!.invalidate()
+                            Toast.makeText(view.context, "Объявление удалено", Toast.LENGTH_LONG).show()
+                        }
+                        "REJECTED" -> {
+                            MyADS.getAdCount(2, MainActivity.sp.getInt("id", 0))
+                            MyADS.rejectedViewModel.liveDataSource.value!!.invalidate()
+                            Toast.makeText(view.context, "Объявление удалено", Toast.LENGTH_LONG).show()
+                        }
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<ServerResponse>, t: Throwable) {
+
+            }
+        })
     }
 
     private fun acceptRejectAd (id: Int, accepted: Boolean, rejectMessage: String = "") {

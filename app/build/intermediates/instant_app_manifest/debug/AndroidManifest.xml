@@ -32,6 +32,12 @@
         android:testOnly="true"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="ragalik.baraxolka.other_logic.edit_creator.EditCreator"
+            android:label="Изменение объявления"
+            android:parentActivityName="ragalik.baraxolka.MainActivity"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
             android:name="ragalik.baraxolka.paging_feed.ads.FilterActivity"
             android:label="@string/title_activity_filter"
             android:parentActivityName="ragalik.baraxolka.MainActivity"

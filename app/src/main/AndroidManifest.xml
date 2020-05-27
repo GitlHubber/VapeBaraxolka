@@ -23,7 +23,15 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".paging_feed.ads.FilterActivity"
+        <activity
+            android:name=".other_logic.edit_creator.EditCreator"
+            android:label="Изменение объявления"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+
+        </activity>
+        <activity
+            android:name=".paging_feed.ads.FilterActivity"
             android:label="@string/title_activity_filter"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait"

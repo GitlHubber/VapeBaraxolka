@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
+import ragalik.baraxolka.other_logic.full_ad.FullAdActivity;
 import ragalik.baraxolka.other_logic.full_ad.FullAdViewPagerAdapter;
 import ragalik.baraxolka.R;
 
@@ -47,6 +48,26 @@ public class FullImageLayout extends Fragment {
         viewPager = view.findViewById(R.id.fullImagePager);
         viewPager.setAdapter(fullAdViewPagerAdapter);
         viewPager.setCurrentItem(position);
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                if (FullAdActivity.viewPagerFullAd != null) {
+                    FullAdActivity.viewPagerFullAd.setCurrentItem(position);
+                }
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
 
     }
+
+
 }

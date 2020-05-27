@@ -13,6 +13,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Environment;
@@ -27,8 +28,10 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import java.io.File;
 import java.util.ArrayList;
 
+import ragalik.baraxolka.other_logic.account.FullImageLayout;
 import ragalik.baraxolka.other_logic.full_ad.FullAdViewPagerAdapter;
 import ragalik.baraxolka.R;
+import ragalik.baraxolka.paging_feed.ads.ADS;
 
 import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
@@ -97,10 +100,13 @@ public class AdCreatorImageMenu extends BottomSheetDialogFragment {
                 dialog.setContentView(R.layout.fragment_full_image_layout);
                 dialog.show();
 
-                FullAdViewPagerAdapter fullAdViewPagerAdapter = new FullAdViewPagerAdapter(getActivity(), uris, "Image");
+                FullAdViewPagerAdapter fullAdViewPagerAdapter = new FullAdViewPagerAdapter(getActivity(), uris, "AD");
                 ViewPager viewPager = dialog.findViewById(R.id.fullImagePager);
                 viewPager.setAdapter(fullAdViewPagerAdapter);
                 viewPager.setCurrentItem(chooseIndex);
+
+//                FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+//                fragmentTransaction.replace(R.id.adCreatorFrame, new FullImageLayout(chooseIndex, uris)).addToBackStack("").commit();
             }
         });
 
