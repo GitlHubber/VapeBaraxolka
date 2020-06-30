@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/technicalSupportFrame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".other_logic.main_fragments.TechnicalSUPPORT"
-    android:background="@color/colorBackground">
+    android:background="@color/colorBackground"
+    tools:context=".other_logic.main_fragments.TechnicalSUPPORT">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -23,17 +24,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:layout_marginTop="70dp"
-        android:background="@color/colorBackground">
+        android:background="@color/colorBackground"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/Header"
             android:layout_width="match_parent"
             android:layout_height="178dp"
             android:gravity="center"
-            android:textColor="@color/colorText"
             android:text="По всем вопросам обращайтесь в группу во Вконтакте"
+            android:textColor="@color/colorText"
             android:textSize="36sp"
             android:textStyle="italic" />
 

@@ -1,190 +1,202 @@
 [
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_my_ads.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/fragment_my_ads.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_splash_screen.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\activity_splash_screen.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_account_edit.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/activity_account_edit.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_search.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\content_search.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_ad_creator.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/fragment_ad_creator.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_ad_moderator.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_ad_moderator.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/nav_header_main.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/nav_header_main.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_sort.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_sort.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_price.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/fragment_price.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_full_ad.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\content_full_ad.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_seller_profile.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/activity_seller_profile.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_account.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\activity_account.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_ads.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/fragment_ads.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_main.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\content_main.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_technical_support.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/fragment_technical_support.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_price.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_price.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_settings.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/activity_settings.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_settings.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\content_settings.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/active_ads.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/active_ads.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_my_ads.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_my_ads.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/ad_loading.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/ad_loading.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_administrator.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_administrator.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_account_image_menu.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/fragment_account_image_menu.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_ad_creator.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\content_ad_creator.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/content_full_ad.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/content_full_ad.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\active_ads.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\active_ads.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/no_favourites.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/no_favourites.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_rules.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_rules.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/content_search.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/content_search.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_ad.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\item_ad.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/content_main.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/content_main.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\menu_counter.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\menu_counter.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/content_account_edit.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/content_account_edit.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\app_bar_main.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\app_bar_main.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/start_login_window.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/start_login_window.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_account_edit.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\content_account_edit.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_full_image_layout.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/fragment_full_image_layout.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\start_login_window.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\start_login_window.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_full_ad.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/activity_full_ad.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_technical_support.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_technical_support.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_edit_creator.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/activity_edit_creator.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_view_items.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\list_view_items.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_ad_creator_image_menu.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/fragment_ad_creator_image_menu.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\full_ad_loader.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\full_ad_loader.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/non_active_ads.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/non_active_ads.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\new_ad_window.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\new_ad_window.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/full_ad_loader.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/full_ad_loader.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_ads.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_ads.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/on_moderate_ads.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/on_moderate_ads.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_full_image_layout.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_full_image_layout.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/list_view_items.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/list_view_items.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dropdown_text_color.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\dropdown_text_color.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/rejected_ads.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/rejected_ads.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\on_moderate_ads.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\on_moderate_ads.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_administrator.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/fragment_administrator.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_log_in.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_log_in.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_log_in.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/fragment_log_in.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_ad_creator.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\activity_ad_creator.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/content_seller_profile.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/content_seller_profile.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_search.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\activity_search.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_favourites.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/fragment_favourites.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_account_image_menu.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_account_image_menu.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_no_internet_connection.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/fragment_no_internet_connection.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_favourites.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_favourites.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/menu_counter.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/menu_counter.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\non_active_ads.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\non_active_ads.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dropdown_text_color.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/dropdown_text_color.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_seller_profile.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\content_seller_profile.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_search.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/activity_search.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_filter.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\activity_filter.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_sign_in.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/fragment_sign_in.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_ad_creator.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_ad_creator.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/content_settings.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/content_settings.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_sign_in.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_sign_in.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_splash_screen.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/activity_splash_screen.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_account_edit.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\activity_account_edit.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/activity_main.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_edit_creator.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\activity_edit_creator.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_ad.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/item_ad.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_ad_creator_image_menu.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_ad_creator_image_menu.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_account.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/activity_account.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\nav_header_main.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\nav_header_main.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_rules.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/fragment_rules.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_no_internet_connection.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_no_internet_connection.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_filter.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/activity_filter.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\rejected_ads.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\rejected_ads.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_sort.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/fragment_sort.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_settings.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\activity_settings.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_ad_moderator.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/fragment_ad_moderator.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/new_ad_window.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/new_ad_window.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\ad_loading.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\ad_loading.xml"
     },
     {
-        "merged": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/app_bar_main.xml",
-        "source": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/src/main/res/layout/app_bar_main.xml"
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_seller_profile.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\activity_seller_profile.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\no_favourites.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\no_favourites.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_full_ad.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\activity_full_ad.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_ad_creator1.xml",
+        "source": "D:\\AndroidProjects\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_ad_creator1.xml"
     }
 ]

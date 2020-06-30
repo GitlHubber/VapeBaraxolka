@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/home/kirill/.gradle/caches/transforms-2/files-2.1/07d91a6f02149585995d851c56f12844/appcompat-1.1.0/res/values-watch-v20/values-watch-v20.xml",
+                    "source": "C:\\Users\\kirill\\.gradle\\caches\\transforms-2\\files-2.1\\1e08678c58c10bf5d611c10876ca7c1b\\appcompat-1.1.0\\res\\values-watch-v20\\values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",

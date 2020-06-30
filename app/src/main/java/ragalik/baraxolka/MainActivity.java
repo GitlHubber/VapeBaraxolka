@@ -40,7 +40,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ragalik.baraxolka.other_logic.account.Account;
-import ragalik.baraxolka.other_logic.account.FullImageLayout;
 import ragalik.baraxolka.other_logic.activities.SettingsActivity;
 import ragalik.baraxolka.other_logic.ad_creator.AdCreator;
 import ragalik.baraxolka.paging_feed.search.SearchActivity;
@@ -53,7 +52,6 @@ import ragalik.baraxolka.paging_feed.moderator.AdModerator;
 import ragalik.baraxolka.other_logic.main_fragments.Administrator;
 import ragalik.baraxolka.paging_feed.favourites.FAVOURITES;
 
-import ragalik.baraxolka.other_logic.main_fragments.RULES;
 import ragalik.baraxolka.other_logic.main_fragments.TechnicalSUPPORT;
 import ragalik.baraxolka.paging_feed.my_ads.MyADS;
 import retrofit2.Call;

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+            "outputFile": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w360dp-port-v13\\values-w360dp-port-v13.xml",
             "map": [
                 {
-                    "source": "/home/kirill/.gradle/caches/transforms-2/files-2.1/97a2fc79f7944019234dc2124c966744/material-1.2.0-alpha06/res/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+                    "source": "C:\\Users\\kirill\\.gradle\\caches\\transforms-2\\files-2.1\\311837eba5d206869360a60ce4f2b9c9\\material-1.2.0-alpha06\\res\\values-w360dp-port-v13\\values-w360dp-port-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

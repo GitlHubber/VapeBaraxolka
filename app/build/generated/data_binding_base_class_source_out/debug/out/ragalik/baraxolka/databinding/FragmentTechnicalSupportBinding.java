@@ -28,12 +28,17 @@ public final class FragmentTechnicalSupportBinding implements ViewBinding {
   @NonNull
   public final Toolbar supportToolbar;
 
+  @NonNull
+  public final FrameLayout technicalSupportFrame;
+
   private FragmentTechnicalSupportBinding(@NonNull FrameLayout rootView, @NonNull TextView Header,
-      @NonNull TextView VKGroupLink, @NonNull Toolbar supportToolbar) {
+      @NonNull TextView VKGroupLink, @NonNull Toolbar supportToolbar,
+      @NonNull FrameLayout technicalSupportFrame) {
     this.rootView = rootView;
     this.Header = Header;
     this.VKGroupLink = VKGroupLink;
     this.supportToolbar = supportToolbar;
+    this.technicalSupportFrame = technicalSupportFrame;
   }
 
   @Override
@@ -78,8 +83,13 @@ public final class FragmentTechnicalSupportBinding implements ViewBinding {
         missingId = "supportToolbar";
         break missingId;
       }
+      FrameLayout technicalSupportFrame = rootView.findViewById(R.id.technicalSupportFrame);
+      if (technicalSupportFrame == null) {
+        missingId = "technicalSupportFrame";
+        break missingId;
+      }
       return new FragmentTechnicalSupportBinding((FrameLayout) rootView, Header, VKGroupLink,
-          supportToolbar);
+          supportToolbar, technicalSupportFrame);
     }
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }

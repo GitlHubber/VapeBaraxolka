@@ -1,10 +1,29 @@
 {
     "logs": [
         {
-            "outputFile": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
+            "outputFile": "D:\\AndroidProjects\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "/home/kirill/.gradle/caches/transforms-2/files-2.1/705a9df676c04cd76c27fb3e4867b71a/cardview-1.0.0/res/values-v23/values-v23.xml",
+                    "source": "C:\\Users\\kirill\\.gradle\\caches\\transforms-2\\files-2.1\\311837eba5d206869360a60ce4f2b9c9\\material-1.2.0-alpha06\\res\\values-v23\\values-v23.xml",
+                    "from": {
+                        "startLines": "2,6",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,320",
+                        "endLines": "5,9",
+                        "endColumns": "10,10",
+                        "endOffsets": "315,588"
+                    },
+                    "to": {
+                        "startLines": "51,55",
+                        "startColumns": "4,4",
+                        "startOffsets": "3557,3822",
+                        "endLines": "54,58",
+                        "endColumns": "10,10",
+                        "endOffsets": "3817,4090"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\kirill\\.gradle\\caches\\transforms-2\\files-2.1\\79aed5cd06a995ef3a33c33b43b98c36\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +42,7 @@
                     }
                 },
                 {
-                    "source": "/home/kirill/.gradle/caches/transforms-2/files-2.1/07d91a6f02149585995d851c56f12844/appcompat-1.1.0/res/values-v23/values-v23.xml",
+                    "source": "C:\\Users\\kirill\\.gradle\\caches\\transforms-2\\files-2.1\\1e08678c58c10bf5d611c10876ca7c1b\\appcompat-1.1.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,37,41,42,43,44",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -31,25 +50,6 @@
                         "endLines": "2,3,4,5,19,33,34,35,36,40,41,42,43,47",
                         "endColumns": "134,134,74,86,12,12,118,126,104,12,114,106,112,12",
                         "endOffsets": "185,320,395,482,1366,2262,2381,2508,2613,2837,2952,3059,3172,3402"
-                    }
-                },
-                {
-                    "source": "/home/kirill/.gradle/caches/transforms-2/files-2.1/97a2fc79f7944019234dc2124c966744/material-1.2.0-alpha06/res/values-v23/values-v23.xml",
-                    "from": {
-                        "startLines": "2,6",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,320",
-                        "endLines": "5,9",
-                        "endColumns": "10,10",
-                        "endOffsets": "315,588"
-                    },
-                    "to": {
-                        "startLines": "51,55",
-                        "startColumns": "4,4",
-                        "startOffsets": "3557,3822",
-                        "endLines": "54,58",
-                        "endColumns": "10,10",
-                        "endOffsets": "3817,4090"
                     }
                 }
             ]

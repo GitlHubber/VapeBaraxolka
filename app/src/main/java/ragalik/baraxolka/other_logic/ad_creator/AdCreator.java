@@ -90,7 +90,7 @@ public class AdCreator extends AppCompatActivity implements View.OnClickListener
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_ad_creator);
+        setContentView(R.layout.activity_ad_creator);
         appCompatActivity = this;
 
         Toolbar toolbar = findViewById(R.id.adCreatorToolbar);

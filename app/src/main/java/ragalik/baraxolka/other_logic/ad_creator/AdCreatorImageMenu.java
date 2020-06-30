@@ -97,16 +97,8 @@ public class AdCreatorImageMenu extends BottomSheetDialogFragment {
 
                 dismiss();
 
-                dialog.setContentView(R.layout.fragment_full_image_layout);
-                dialog.show();
-
-                FullAdViewPagerAdapter fullAdViewPagerAdapter = new FullAdViewPagerAdapter(getActivity(), uris, "AD");
-                ViewPager viewPager = dialog.findViewById(R.id.fullImagePager);
-                viewPager.setAdapter(fullAdViewPagerAdapter);
-                viewPager.setCurrentItem(chooseIndex);
-
-//                FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-//                fragmentTransaction.replace(R.id.adCreatorFrame, new FullImageLayout(chooseIndex, uris)).addToBackStack("").commit();
+                FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.adCreatorCoordinator, new FullImageLayout(chooseIndex, uris)).addToBackStack("").commit();
             }
         });
 
