@@ -2415,7 +2415,7 @@ id tag_screen_reader_focusable
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
-id testFrame
+id technicalSupportFrame
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id text
@@ -2611,6 +2611,7 @@ layout bmb_simple_circle_button
 layout bmb_text_inside_circle_button
 layout bmb_text_outside_circle_button
 layout content_account_edit
+layout content_ad_creator
 layout content_full_ad
 layout content_main
 layout content_search

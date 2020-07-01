@@ -102,10 +102,7 @@ public class AdCreatorActivity extends AppCompatActivity implements View.OnClick
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        ArrayList<String> arr = new ArrayList<>();
-        arr.add("https://duckduckgo.com/?q=ima&atb=v218-5&iax=images&ia=images&iai=https%3A%2F%2Fi.ytimg.com%2Fvi%2FuBQW2310F-A%2Fmaxresdefault.jpg");
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.adCreatorCoordinator, new FullImageLayout(0, arr)).addToBackStack("").commit();
+
 
         subcategorySpinner = findViewById(R.id.subcategorySpinner);
         categorySpinner = findViewById(R.id.categorySpinner);
