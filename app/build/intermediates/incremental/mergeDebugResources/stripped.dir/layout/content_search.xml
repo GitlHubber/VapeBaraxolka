@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".paging_feed.search.SearchActivity"
+    tools:showIn="@layout/activity_search"
+    android:background="@color/colorBackground">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorText"
+                android:layout_margin="10dp"
+                android:textSize="18dp"
+                android:text="Введите название объявления"/>
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:inputType="textCapSentences"
+                app:queryHint="Найти объявление"
+                app:searchHintIcon="@color/colorText"
+                app:iconifiedByDefault="false">
+
+                <requestFocus />
+            </androidx.appcompat.widget.SearchView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider"
+                android:background="@color/colorAdCreatorImage" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorText"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="10dp"
+                android:textSize="18dp"
+                android:text="Выберите категорию"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:hint="Выберите категорию"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                app:endIconMode="dropdown_menu"
+                app:counterTextColor="@color/colorText">
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/categorySearchSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorText"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:textColorHighlight="@color/colorText"
+                    android:completionThreshold="0"
+                    android:focusableInTouchMode="false"
+                    android:textColorLink="@color/colorText"
+                    android:textCursorDrawable="@color/colorText"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAdCreatorImage" />
+
+            <LinearLayout
+                android:id="@+id/subcategorySearchLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Выберите подкатегорию"
+                    android:textColor="@color/colorText"
+                    android:textSize="18dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="Выберите подкатегорию"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    app:endIconMode="dropdown_menu"
+                    app:counterTextColor="@color/colorText">
+
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/subcategorySearchSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorText"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:textColorHighlight="@color/colorText"
+                        android:textColorLink="@color/colorText"
+                        android:completionThreshold="0"
+                        android:focusableInTouchMode="false"
+                        android:textCursorDrawable="@color/colorText"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAdCreatorImage" />
+
+            <LinearLayout
+                android:id="@+id/regionSearchLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Выберите регион"
+                    android:textColor="@color/colorText"
+                    android:textSize="18dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="Выберите регион"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    app:endIconMode="dropdown_menu"
+                    app:counterTextColor="@color/colorText">
+
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/regionSearchSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorText"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:textColorHighlight="@color/colorText"
+                        android:textColorLink="@color/colorText"
+                        android:completionThreshold="0"
+                        android:focusableInTouchMode="false"
+                        android:textCursorDrawable="@color/colorText"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAdCreatorImage" />
+
+            <LinearLayout
+                android:id="@+id/townSearchLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Выберите город"
+                    android:textColor="@color/colorText"
+                    android:textSize="18dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="Выберите город"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    app:endIconMode="dropdown_menu"
+                    app:counterTextColor="@color/colorText">
+
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/townSearchSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorText"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:textColorHighlight="@color/colorText"
+                        android:textColorLink="@color/colorText"
+                        android:completionThreshold="0"
+                        android:focusableInTouchMode="false"
+                        android:textCursorDrawable="@color/colorText"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAdCreatorImage" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/SearchPriceButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBackground"
+                android:text="Цена"
+                android:drawableEnd="@drawable/ic_arrow_dark_theme"
+                android:gravity="start|center"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/colorText"
+                android:textAllCaps="false"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider"
+                    android:background="@color/colorAdCreatorImage" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/SearchSortButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBackground"
+                    android:drawableEnd="@drawable/ic_see_photo"
+                    android:text="Сортировка"
+                    android:gravity="start|center"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/colorText"
+                    android:textAllCaps="false" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider"
+                    android:background="@color/colorAdCreatorImage" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/showAdsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Показать "
+                android:layout_marginTop="30dp"
+                android:textAllCaps="false"
+                android:background="@color/colorPrimary"
+                android:textColorHint="@color/colorAdsDate"
+                android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
