@@ -2,9 +2,9 @@ package ragalik.baraxolka.paging_feed
 
 import com.google.gson.annotations.SerializedName
 
-class Ad {
+class Ad (user_id : Int? = null) {
     @field:SerializedName("id")
-    var id: Int? = null
+    var id: Int? = user_id
 
     @field:SerializedName("title")
     var title: String? = null
@@ -37,7 +37,7 @@ class Ad {
     var image5url: String? = null
 
     @field:SerializedName("price")
-    var price: Int? = null
+    var price: String? = null
 
     @field:SerializedName("views")
     var views: Int? = null

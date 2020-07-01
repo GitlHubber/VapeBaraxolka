@@ -17,6 +17,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 import ragalik.baraxolka.R;
@@ -30,7 +31,7 @@ import ragalik.baraxolka.paging_feed.AdAdapter;
 public class FAVOURITES extends Fragment {
 
     private RecyclerView favouritesRecyclerView;
-    private static SwipeRefreshLayout swipeRefreshLayout;
+    private SwipeRefreshLayout swipeRefreshLayout;
     private FavouritesViewModel itemViewModel;
     public static ProgressBar progressBar;
     private boolean isReloaded;
@@ -91,7 +92,7 @@ public class FAVOURITES extends Fragment {
     }
 
     private void getFavourites () {
-        AdAdapter favouritesAdapter = new AdAdapter();
+        AdAdapter favouritesAdapter = new AdAdapter("FAVOURITES");
         favouritesRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         itemViewModel = new ViewModelProvider(this).get(FavouritesViewModel.class);

@@ -10,7 +10,6 @@ import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import java.lang.NullPointerException;
 import java.lang.Override;
-import java.lang.String;
 import ragalik.baraxolka.R;
 
 public final class DropdownTextColorBinding implements ViewBinding {
@@ -48,17 +47,12 @@ public final class DropdownTextColorBinding implements ViewBinding {
 
   @NonNull
   public static DropdownTextColorBinding bind(@NonNull View rootView) {
-    // The body of this method is generated in a way you would not otherwise write.
-    // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
-    missingId: {
-      TextView text1 = rootView.findViewById(android.R.id.text1);
-      if (text1 == null) {
-        missingId = "text1";
-        break missingId;
-      }
-      return new DropdownTextColorBinding((TextView) rootView, text1);
+    if (rootView == null) {
+      throw new NullPointerException("rootView");
     }
-    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
+
+    TextView text1 = (TextView) rootView;
+
+    return new DropdownTextColorBinding((TextView) rootView, text1);
   }
 }

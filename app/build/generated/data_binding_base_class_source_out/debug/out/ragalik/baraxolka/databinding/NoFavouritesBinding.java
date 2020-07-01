@@ -51,15 +51,17 @@ public final class NoFavouritesBinding implements ViewBinding {
   public static NoFavouritesBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      TextView textView7 = rootView.findViewById(R.id.textView7);
+      id = R.id.textView7;
+      TextView textView7 = rootView.findViewById(id);
       if (textView7 == null) {
-        missingId = "textView7";
         break missingId;
       }
+
       return new NoFavouritesBinding((LinearLayout) rootView, textView7);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

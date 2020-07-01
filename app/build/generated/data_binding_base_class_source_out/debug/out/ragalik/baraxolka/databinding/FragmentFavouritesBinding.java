@@ -68,31 +68,36 @@ public final class FragmentFavouritesBinding implements ViewBinding {
   public static FragmentFavouritesBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      RecyclerView favouritesRecyclerView = rootView.findViewById(R.id.favouritesRecyclerView);
+      id = R.id.favouritesRecyclerView;
+      RecyclerView favouritesRecyclerView = rootView.findViewById(id);
       if (favouritesRecyclerView == null) {
-        missingId = "favouritesRecyclerView";
         break missingId;
       }
-      ProgressBar progressFavourites = rootView.findViewById(R.id.progress_favourites);
+
+      id = R.id.progress_favourites;
+      ProgressBar progressFavourites = rootView.findViewById(id);
       if (progressFavourites == null) {
-        missingId = "progressFavourites";
         break missingId;
       }
-      SwipeRefreshLayout refresherFavourites = rootView.findViewById(R.id.refresherFavourites);
+
+      id = R.id.refresherFavourites;
+      SwipeRefreshLayout refresherFavourites = rootView.findViewById(id);
       if (refresherFavourites == null) {
-        missingId = "refresherFavourites";
         break missingId;
       }
-      Toolbar toolbarFavourites = rootView.findViewById(R.id.toolbar_favourites);
+
+      id = R.id.toolbar_favourites;
+      Toolbar toolbarFavourites = rootView.findViewById(id);
       if (toolbarFavourites == null) {
-        missingId = "toolbarFavourites";
         break missingId;
       }
+
       return new FragmentFavouritesBinding((CoordinatorLayout) rootView, favouritesRecyclerView,
           progressFavourites, refresherFavourites, toolbarFavourites);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

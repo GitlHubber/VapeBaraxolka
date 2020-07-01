@@ -68,31 +68,36 @@ public final class FragmentAdModeratorBinding implements ViewBinding {
   public static FragmentAdModeratorBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      RecyclerView ModeratorAdsView = rootView.findViewById(R.id.ModeratorAdsView);
+      id = R.id.ModeratorAdsView;
+      RecyclerView ModeratorAdsView = rootView.findViewById(id);
       if (ModeratorAdsView == null) {
-        missingId = "ModeratorAdsView";
         break missingId;
       }
-      Toolbar adModeratorToolbar = rootView.findViewById(R.id.adModeratorToolbar);
+
+      id = R.id.adModeratorToolbar;
+      Toolbar adModeratorToolbar = rootView.findViewById(id);
       if (adModeratorToolbar == null) {
-        missingId = "adModeratorToolbar";
         break missingId;
       }
-      ProgressBar progressModerator = rootView.findViewById(R.id.progress_moderator);
+
+      id = R.id.progress_moderator;
+      ProgressBar progressModerator = rootView.findViewById(id);
       if (progressModerator == null) {
-        missingId = "progressModerator";
         break missingId;
       }
-      SwipeRefreshLayout refresherModerator = rootView.findViewById(R.id.refresherModerator);
+
+      id = R.id.refresherModerator;
+      SwipeRefreshLayout refresherModerator = rootView.findViewById(id);
       if (refresherModerator == null) {
-        missingId = "refresherModerator";
         break missingId;
       }
+
       return new FragmentAdModeratorBinding((CoordinatorLayout) rootView, ModeratorAdsView,
           adModeratorToolbar, progressModerator, refresherModerator);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

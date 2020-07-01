@@ -82,47 +82,55 @@ public final class FragmentLogInBinding implements ViewBinding {
   public static FragmentLogInBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      AppCompatButton AcceptLogInButton = rootView.findViewById(R.id.AcceptLogInButton);
+      id = R.id.AcceptLogInButton;
+      AppCompatButton AcceptLogInButton = rootView.findViewById(id);
       if (AcceptLogInButton == null) {
-        missingId = "AcceptLogInButton";
         break missingId;
       }
-      TextView AppName1 = rootView.findViewById(R.id.AppName1);
+
+      id = R.id.AppName1;
+      TextView AppName1 = rootView.findViewById(id);
       if (AppName1 == null) {
-        missingId = "AppName1";
         break missingId;
       }
-      TextView AppName2 = rootView.findViewById(R.id.AppName2);
+
+      id = R.id.AppName2;
+      TextView AppName2 = rootView.findViewById(id);
       if (AppName2 == null) {
-        missingId = "AppName2";
         break missingId;
       }
-      TextInputLayout LIPasswordLayout = rootView.findViewById(R.id.LIPasswordLayout);
+
+      id = R.id.LIPasswordLayout;
+      TextInputLayout LIPasswordLayout = rootView.findViewById(id);
       if (LIPasswordLayout == null) {
-        missingId = "LIPasswordLayout";
         break missingId;
       }
-      TextInputLayout PhNumberOrEmailLayout = rootView.findViewById(R.id.PhNumberOrEmailLayout);
+
+      id = R.id.PhNumberOrEmailLayout;
+      TextInputLayout PhNumberOrEmailLayout = rootView.findViewById(id);
       if (PhNumberOrEmailLayout == null) {
-        missingId = "PhNumberOrEmailLayout";
         break missingId;
       }
-      AppCompatButton SignInLogInButton = rootView.findViewById(R.id.SignInLogInButton);
+
+      id = R.id.SignInLogInButton;
+      AppCompatButton SignInLogInButton = rootView.findViewById(id);
       if (SignInLogInButton == null) {
-        missingId = "SignInLogInButton";
         break missingId;
       }
-      Toolbar toolbarAuthorization = rootView.findViewById(R.id.toolbar_authorization);
+
+      id = R.id.toolbar_authorization;
+      Toolbar toolbarAuthorization = rootView.findViewById(id);
       if (toolbarAuthorization == null) {
-        missingId = "toolbarAuthorization";
         break missingId;
       }
+
       return new FragmentLogInBinding((CoordinatorLayout) rootView, AcceptLogInButton, AppName1,
           AppName2, LIPasswordLayout, PhNumberOrEmailLayout, SignInLogInButton,
           toolbarAuthorization);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

@@ -79,41 +79,48 @@ public final class ActivityFilterBinding implements ViewBinding {
   public static ActivityFilterBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      TextInputLayout SFCategoryLayout = rootView.findViewById(R.id.SF_categoryLayout);
+      id = R.id.SF_categoryLayout;
+      TextInputLayout SFCategoryLayout = rootView.findViewById(id);
       if (SFCategoryLayout == null) {
-        missingId = "SFCategoryLayout";
         break missingId;
       }
-      AppCompatAutoCompleteTextView SFCategorySpinner = rootView.findViewById(R.id.SF_categorySpinner);
+
+      id = R.id.SF_categorySpinner;
+      AppCompatAutoCompleteTextView SFCategorySpinner = rootView.findViewById(id);
       if (SFCategorySpinner == null) {
-        missingId = "SFCategorySpinner";
         break missingId;
       }
-      TextInputLayout SFSubcategoryLayout = rootView.findViewById(R.id.SF_subcategoryLayout);
+
+      id = R.id.SF_subcategoryLayout;
+      TextInputLayout SFSubcategoryLayout = rootView.findViewById(id);
       if (SFSubcategoryLayout == null) {
-        missingId = "SFSubcategoryLayout";
         break missingId;
       }
-      AppCompatAutoCompleteTextView SFSubcategorySpinner = rootView.findViewById(R.id.SF_subcategorySpinner);
+
+      id = R.id.SF_subcategorySpinner;
+      AppCompatAutoCompleteTextView SFSubcategorySpinner = rootView.findViewById(id);
       if (SFSubcategorySpinner == null) {
-        missingId = "SFSubcategorySpinner";
         break missingId;
       }
-      AppCompatButton filterCategoryButton = rootView.findViewById(R.id.filterCategoryButton);
+
+      id = R.id.filterCategoryButton;
+      AppCompatButton filterCategoryButton = rootView.findViewById(id);
       if (filterCategoryButton == null) {
-        missingId = "filterCategoryButton";
         break missingId;
       }
-      Toolbar toolbarFilterActivity = rootView.findViewById(R.id.toolbar_filter_activity);
+
+      id = R.id.toolbar_filter_activity;
+      Toolbar toolbarFilterActivity = rootView.findViewById(id);
       if (toolbarFilterActivity == null) {
-        missingId = "toolbarFilterActivity";
         break missingId;
       }
+
       return new ActivityFilterBinding((LinearLayout) rootView, SFCategoryLayout, SFCategorySpinner,
           SFSubcategoryLayout, SFSubcategorySpinner, filterCategoryButton, toolbarFilterActivity);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

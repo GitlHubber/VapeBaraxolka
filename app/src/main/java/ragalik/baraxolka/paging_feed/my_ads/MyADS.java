@@ -300,7 +300,7 @@ public class MyADS extends Fragment implements SwipeRefreshLayout.OnRefreshListe
             }
             onModerateRecyclerView = view.findViewById(R.id.OnModerateAdsView);
 
-            on_moderate_adapter = new AdAdapter();
+            on_moderate_adapter = new AdAdapter("ON_MODERATE");
             onModerateRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
             onModerateViewModel = new ViewModelProvider(this, new ModelFactory(3, MainActivity.sp.getInt("id", 0), false)).get(MyAdsViewModel.class);

@@ -40,9 +40,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ragalik.baraxolka.other_logic.account.Account;
-import ragalik.baraxolka.other_logic.account.FullImageLayout;
 import ragalik.baraxolka.other_logic.activities.SettingsActivity;
-import ragalik.baraxolka.other_logic.ad_creator.AdCreator;
 import ragalik.baraxolka.other_logic.ad_creator.AdCreatorActivity;
 import ragalik.baraxolka.paging_feed.search.SearchActivity;
 import ragalik.baraxolka.other_logic.entrance.LogIn;
@@ -51,10 +49,8 @@ import ragalik.baraxolka.network.ApiClient;
 import ragalik.baraxolka.network.entities.AdsCount;
 import ragalik.baraxolka.paging_feed.ads.ADS;
 import ragalik.baraxolka.paging_feed.moderator.AdModerator;
-import ragalik.baraxolka.other_logic.main_fragments.Administrator;
 import ragalik.baraxolka.paging_feed.favourites.FAVOURITES;
 
-import ragalik.baraxolka.other_logic.main_fragments.RULES;
 import ragalik.baraxolka.other_logic.main_fragments.TechnicalSUPPORT;
 import ragalik.baraxolka.paging_feed.my_ads.MyADS;
 import retrofit2.Call;
@@ -188,6 +184,9 @@ public class MainActivity extends AppCompatActivity
     }
 
     private boolean isEntered () {
+//        if (!sp.getString("nickname", "").equals("") && ) {
+//
+//        }
         return (!sp.getString("nickname", "").equals(""));
     }
 
@@ -350,7 +349,7 @@ public class MainActivity extends AppCompatActivity
          //   toolbar.setTitle("Объявления");
         } else if (id == R.id.MY_ADS) {
             fragmentTransaction.replace(R.id.constrLayout, new MyADS()).commit();   //Нужно раскомментить при готовых май адс!
-            //toolbar.setTitle("Мои объявления");
+            //toolbar.stTitle("Мои объявления");
         } else if (id == R.id.FAVOURITES) {
             fragmentTransaction.replace(R.id.constrLayout, new FAVOURITES()).commit();
            // toolbar.setTitle("Закладки");

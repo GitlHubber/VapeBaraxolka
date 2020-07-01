@@ -70,36 +70,38 @@ public final class FragmentNoInternetConnectionBinding implements ViewBinding {
   public static FragmentNoInternetConnectionBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      ImageView imageView4 = rootView.findViewById(R.id.imageView4);
+      id = R.id.imageView4;
+      ImageView imageView4 = rootView.findViewById(id);
       if (imageView4 == null) {
-        missingId = "imageView4";
         break missingId;
       }
-      ImageView imageView5 = rootView.findViewById(R.id.imageView5);
+
+      id = R.id.imageView5;
+      ImageView imageView5 = rootView.findViewById(id);
       if (imageView5 == null) {
-        missingId = "imageView5";
         break missingId;
       }
-      SwipeRefreshLayout refresher = rootView.findViewById(R.id.refresher);
-      if (refresher == null) {
-        missingId = "refresher";
-        break missingId;
-      }
-      TextView retry = rootView.findViewById(R.id.retry);
+
+      SwipeRefreshLayout refresher = (SwipeRefreshLayout) rootView;
+
+      id = R.id.retry;
+      TextView retry = rootView.findViewById(id);
       if (retry == null) {
-        missingId = "retry";
         break missingId;
       }
-      TextView textView5 = rootView.findViewById(R.id.textView5);
+
+      id = R.id.textView5;
+      TextView textView5 = rootView.findViewById(id);
       if (textView5 == null) {
-        missingId = "textView5";
         break missingId;
       }
+
       return new FragmentNoInternetConnectionBinding((SwipeRefreshLayout) rootView, imageView4,
           imageView5, refresher, retry, textView5);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

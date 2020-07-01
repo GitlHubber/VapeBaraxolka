@@ -30,6 +30,10 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:usesCleartextTraffic="true" >
+
+        <!-- <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" -->
+        <!-- android:value="ca-app-pub-3940256099942544~3347511713"/> -->
+
         <activity
             android:name="ragalik.baraxolka.other_logic.edit_creator.EditCreator"
             android:label="Изменение объявления"
@@ -67,7 +71,7 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:name="ragalik.baraxolka.other_logic.ad_creator.AdCreator"
+            android:name="ragalik.baraxolka.other_logic.ad_creator.AdCreatorActivity"
             android:label="@string/title_activity_settings"
             android:parentActivityName="ragalik.baraxolka.MainActivity"
             android:screenOrientation="portrait"

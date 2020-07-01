@@ -168,138 +168,160 @@ public final class ContentFullAdBinding implements ViewBinding {
   public static ContentFullAdBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      AppCompatCheckBox bookmarkButtonFullAd = rootView.findViewById(R.id.bookmark_button_full_ad);
+      id = R.id.bookmark_button_full_ad;
+      AppCompatCheckBox bookmarkButtonFullAd = rootView.findViewById(id);
       if (bookmarkButtonFullAd == null) {
-        missingId = "bookmarkButtonFullAd";
         break missingId;
       }
-      TextView categoryTextFullAd = rootView.findViewById(R.id.categoryTextFullAd);
+
+      id = R.id.categoryTextFullAd;
+      TextView categoryTextFullAd = rootView.findViewById(id);
       if (categoryTextFullAd == null) {
-        missingId = "categoryTextFullAd";
         break missingId;
       }
-      CircleIndicator circleIndicatorFullAd = rootView.findViewById(R.id.circleIndicatorFullAd);
+
+      id = R.id.circleIndicatorFullAd;
+      CircleIndicator circleIndicatorFullAd = rootView.findViewById(id);
       if (circleIndicatorFullAd == null) {
-        missingId = "circleIndicatorFullAd";
         break missingId;
       }
-      TextView dTextFullAd = rootView.findViewById(R.id.dTextFullAd);
+
+      id = R.id.dTextFullAd;
+      TextView dTextFullAd = rootView.findViewById(id);
       if (dTextFullAd == null) {
-        missingId = "dTextFullAd";
         break missingId;
       }
-      TextView dateTextFullAd = rootView.findViewById(R.id.dateTextFullAd);
+
+      id = R.id.dateTextFullAd;
+      TextView dateTextFullAd = rootView.findViewById(id);
       if (dateTextFullAd == null) {
-        missingId = "dateTextFullAd";
         break missingId;
       }
-      TextView descriptionTextFullAd = rootView.findViewById(R.id.descriptionTextFullAd);
+
+      id = R.id.descriptionTextFullAd;
+      TextView descriptionTextFullAd = rootView.findViewById(id);
       if (descriptionTextFullAd == null) {
-        missingId = "descriptionTextFullAd";
         break missingId;
       }
-      CoordinatorLayout fullAdCoordinator = rootView.findViewById(R.id.fullAdCoordinator);
-      if (fullAdCoordinator == null) {
-        missingId = "fullAdCoordinator";
-        break missingId;
-      }
-      LinearLayout fullAdLinearLayout = rootView.findViewById(R.id.fullAdLinearLayout);
+
+      CoordinatorLayout fullAdCoordinator = (CoordinatorLayout) rootView;
+
+      id = R.id.fullAdLinearLayout;
+      LinearLayout fullAdLinearLayout = rootView.findViewById(id);
       if (fullAdLinearLayout == null) {
-        missingId = "fullAdLinearLayout";
         break missingId;
       }
-      ViewPager ivFullScreenAd = rootView.findViewById(R.id.ivFullScreenAd);
+
+      id = R.id.ivFullScreenAd;
+      ViewPager ivFullScreenAd = rootView.findViewById(id);
       if (ivFullScreenAd == null) {
-        missingId = "ivFullScreenAd";
         break missingId;
       }
-      TextView nTextFullAd = rootView.findViewById(R.id.nTextFullAd);
+
+      id = R.id.nTextFullAd;
+      TextView nTextFullAd = rootView.findViewById(id);
       if (nTextFullAd == null) {
-        missingId = "nTextFullAd";
         break missingId;
       }
-      TextView numberAdTextFullAd = rootView.findViewById(R.id.numberAdTextFullAd);
+
+      id = R.id.numberAdTextFullAd;
+      TextView numberAdTextFullAd = rootView.findViewById(id);
       if (numberAdTextFullAd == null) {
-        missingId = "numberAdTextFullAd";
         break missingId;
       }
-      TextView priceTextFullAd = rootView.findViewById(R.id.priceTextFullAd);
+
+      id = R.id.priceTextFullAd;
+      TextView priceTextFullAd = rootView.findViewById(id);
       if (priceTextFullAd == null) {
-        missingId = "priceTextFullAd";
         break missingId;
       }
-      TextView sellerName = rootView.findViewById(R.id.sellerName);
+
+      id = R.id.sellerName;
+      TextView sellerName = rootView.findViewById(id);
       if (sellerName == null) {
-        missingId = "sellerName";
         break missingId;
       }
-      LinearLayout sellerProfileLayout = rootView.findViewById(R.id.seller_profile_layout);
+
+      id = R.id.seller_profile_layout;
+      LinearLayout sellerProfileLayout = rootView.findViewById(id);
       if (sellerProfileLayout == null) {
-        missingId = "sellerProfileLayout";
         break missingId;
       }
-      TextView stateTextFullAd = rootView.findViewById(R.id.stateTextFullAd);
+
+      id = R.id.stateTextFullAd;
+      TextView stateTextFullAd = rootView.findViewById(id);
       if (stateTextFullAd == null) {
-        missingId = "stateTextFullAd";
         break missingId;
       }
-      TextView textView12 = rootView.findViewById(R.id.textView12);
+
+      id = R.id.textView12;
+      TextView textView12 = rootView.findViewById(id);
       if (textView12 == null) {
-        missingId = "textView12";
         break missingId;
       }
-      TextView textView17 = rootView.findViewById(R.id.textView17);
+
+      id = R.id.textView17;
+      TextView textView17 = rootView.findViewById(id);
       if (textView17 == null) {
-        missingId = "textView17";
         break missingId;
       }
-      TextView textView18 = rootView.findViewById(R.id.textView18);
+
+      id = R.id.textView18;
+      TextView textView18 = rootView.findViewById(id);
       if (textView18 == null) {
-        missingId = "textView18";
         break missingId;
       }
-      TextView textView20 = rootView.findViewById(R.id.textView20);
+
+      id = R.id.textView20;
+      TextView textView20 = rootView.findViewById(id);
       if (textView20 == null) {
-        missingId = "textView20";
         break missingId;
       }
-      TextView textView26 = rootView.findViewById(R.id.textView26);
+
+      id = R.id.textView26;
+      TextView textView26 = rootView.findViewById(id);
       if (textView26 == null) {
-        missingId = "textView26";
         break missingId;
       }
-      TextView textView28 = rootView.findViewById(R.id.textView28);
+
+      id = R.id.textView28;
+      TextView textView28 = rootView.findViewById(id);
       if (textView28 == null) {
-        missingId = "textView28";
         break missingId;
       }
-      TextView titleTextFullAd = rootView.findViewById(R.id.titleTextFullAd);
+
+      id = R.id.titleTextFullAd;
+      TextView titleTextFullAd = rootView.findViewById(id);
       if (titleTextFullAd == null) {
-        missingId = "titleTextFullAd";
         break missingId;
       }
-      TextView townTextFullAd = rootView.findViewById(R.id.townTextFullAd);
+
+      id = R.id.townTextFullAd;
+      TextView townTextFullAd = rootView.findViewById(id);
       if (townTextFullAd == null) {
-        missingId = "townTextFullAd";
         break missingId;
       }
-      TextView typeTextFullAd = rootView.findViewById(R.id.typeTextFullAd);
+
+      id = R.id.typeTextFullAd;
+      TextView typeTextFullAd = rootView.findViewById(id);
       if (typeTextFullAd == null) {
-        missingId = "typeTextFullAd";
         break missingId;
       }
-      CircleImageView userImageFullAd = rootView.findViewById(R.id.userImageFullAd);
+
+      id = R.id.userImageFullAd;
+      CircleImageView userImageFullAd = rootView.findViewById(id);
       if (userImageFullAd == null) {
-        missingId = "userImageFullAd";
         break missingId;
       }
-      TextView viewsTextFullAd = rootView.findViewById(R.id.viewsTextFullAd);
+
+      id = R.id.viewsTextFullAd;
+      TextView viewsTextFullAd = rootView.findViewById(id);
       if (viewsTextFullAd == null) {
-        missingId = "viewsTextFullAd";
         break missingId;
       }
+
       return new ContentFullAdBinding((CoordinatorLayout) rootView, bookmarkButtonFullAd,
           categoryTextFullAd, circleIndicatorFullAd, dTextFullAd, dateTextFullAd,
           descriptionTextFullAd, fullAdCoordinator, fullAdLinearLayout, ivFullScreenAd, nTextFullAd,
@@ -307,6 +329,7 @@ public final class ContentFullAdBinding implements ViewBinding {
           textView12, textView17, textView18, textView20, textView26, textView28, titleTextFullAd,
           townTextFullAd, typeTextFullAd, userImageFullAd, viewsTextFullAd);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

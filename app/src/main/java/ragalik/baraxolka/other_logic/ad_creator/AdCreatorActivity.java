@@ -13,8 +13,14 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.InputFilter;
+import android.text.InputType;
+import android.text.Spanned;
+import android.text.TextWatcher;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
@@ -31,6 +37,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.TimeZone;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
@@ -151,6 +159,7 @@ public class AdCreatorActivity extends AppCompatActivity implements View.OnClick
 
         descriptionEditText = findViewById(R.id.descriptionEditText);
         priceEditText = findViewById(R.id.priceEditText);
+        priceEditText.getEditText().setFilters(new InputFilter[] {new DecimalDigitsInputFilter(5, 2)});
 
         addAdButton = findViewById(R.id.addAdButton);
         addAdButton.setOnClickListener(this);
@@ -406,7 +415,7 @@ public class AdCreatorActivity extends AppCompatActivity implements View.OnClick
             parts.set(i, MultipartBody.Part.createFormData("image" + (i + 1), "-" + (i + 1) + ".png", RequestBody.create(MediaType.parse("image/*"), files.get(i))));
         }
 
-        int price = Integer.parseInt(priceEditText.getEditText().getText().toString());
+        double price = Double.parseDouble(priceEditText.getEditText().getText().toString());
         String nickname = MainActivity.sp.getString("nickname", "");
         String datetime = dateFormat.format(new Date());
         String subcategory = subcategoryFromSpinner;
@@ -425,11 +434,11 @@ public class AdCreatorActivity extends AppCompatActivity implements View.OnClick
             @Override
             public void onResponse(Call<ServerResponse> call, Response<ServerResponse> response) {
                 pDialog.dismiss();
-                if (response.body() != null) {
-                    Toast.makeText(getApplicationContext(), "Обьявление создано!", Toast.LENGTH_LONG).show();
-                    Intent myIntent = new Intent(appCompatActivity, MainActivity.class);
-                    appCompatActivity.startActivity(myIntent);
-                }
+
+                Toast.makeText(getApplicationContext(), "Обьявление создано!", Toast.LENGTH_LONG).show();
+                Intent myIntent = new Intent(appCompatActivity, MainActivity.class);
+                appCompatActivity.startActivity(myIntent);
+
             }
 
             @Override
@@ -439,4 +448,23 @@ public class AdCreatorActivity extends AppCompatActivity implements View.OnClick
             }
         });
     }
+}
+
+class DecimalDigitsInputFilter implements InputFilter {
+
+    Pattern mPattern;
+
+    public DecimalDigitsInputFilter(int digitsBeforeZero,int digitsAfterZero) {
+        mPattern= Pattern.compile("[0-9]{0," + (digitsBeforeZero-1) + "}+((\\.[0-9]{0," + (digitsAfterZero-1) + "})?)||(\\.)?");
+    }
+
+    @Override
+    public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
+
+        Matcher matcher=mPattern.matcher(dest);
+        if(!matcher.matches())
+            return "";
+        return null;
+    }
+
 }

@@ -54,9 +54,21 @@
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.Chip.Action"
                 android:layout_marginStart="10dp"
+                android:visibility="visible"
                 android:background="@color/colorBackground"
                 android:checkable="false"
                 android:text="Категории" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/filter_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:layout_marginStart="10dp"
+                android:visibility="gone"
+                android:background="@color/colorBackground"
+                android:checkable="false"
+                android:text="Фильтр" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/search_chip"
@@ -64,6 +76,7 @@
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.Chip.Entry"
                 android:layout_marginStart="10dp"
+                android:visibility="gone"
                 android:background="@color/colorBackground"
                 android:checkable="false"
                 android:text="Поиск" />

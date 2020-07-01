@@ -66,31 +66,32 @@ public final class ActivitySplashScreenBinding implements ViewBinding {
   public static ActivitySplashScreenBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      ImageView logotypeImg = rootView.findViewById(R.id.logotypeImg);
+      id = R.id.logotypeImg;
+      ImageView logotypeImg = rootView.findViewById(id);
       if (logotypeImg == null) {
-        missingId = "logotypeImg";
         break missingId;
       }
-      TextView splashBaraxolka = rootView.findViewById(R.id.splashBaraxolka);
+
+      id = R.id.splashBaraxolka;
+      TextView splashBaraxolka = rootView.findViewById(id);
       if (splashBaraxolka == null) {
-        missingId = "splashBaraxolka";
         break missingId;
       }
-      LinearLayout splashLayout = rootView.findViewById(R.id.splashLayout);
-      if (splashLayout == null) {
-        missingId = "splashLayout";
-        break missingId;
-      }
-      TextView splashVape = rootView.findViewById(R.id.splashVape);
+
+      LinearLayout splashLayout = (LinearLayout) rootView;
+
+      id = R.id.splashVape;
+      TextView splashVape = rootView.findViewById(id);
       if (splashVape == null) {
-        missingId = "splashVape";
         break missingId;
       }
+
       return new ActivitySplashScreenBinding((LinearLayout) rootView, logotypeImg, splashBaraxolka,
           splashLayout, splashVape);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

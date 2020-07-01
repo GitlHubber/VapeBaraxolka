@@ -83,52 +83,61 @@ public final class NewAdWindowBinding implements ViewBinding {
   public static NewAdWindowBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      TextView adPreviewCategory = rootView.findViewById(R.id.ad_preview_category);
+      id = R.id.ad_preview_category;
+      TextView adPreviewCategory = rootView.findViewById(id);
       if (adPreviewCategory == null) {
-        missingId = "adPreviewCategory";
         break missingId;
       }
-      TextView adPreviewDescription = rootView.findViewById(R.id.ad_preview_description);
+
+      id = R.id.ad_preview_description;
+      TextView adPreviewDescription = rootView.findViewById(id);
       if (adPreviewDescription == null) {
-        missingId = "adPreviewDescription";
         break missingId;
       }
-      ImageView adPreviewPhoto = rootView.findViewById(R.id.ad_preview_photo);
+
+      id = R.id.ad_preview_photo;
+      ImageView adPreviewPhoto = rootView.findViewById(id);
       if (adPreviewPhoto == null) {
-        missingId = "adPreviewPhoto";
         break missingId;
       }
-      TextView adPreviewRegionTown = rootView.findViewById(R.id.ad_preview_region_town);
+
+      id = R.id.ad_preview_region_town;
+      TextView adPreviewRegionTown = rootView.findViewById(id);
       if (adPreviewRegionTown == null) {
-        missingId = "adPreviewRegionTown";
         break missingId;
       }
-      TextView adPreviewTitle = rootView.findViewById(R.id.ad_preview_title);
+
+      id = R.id.ad_preview_title;
+      TextView adPreviewTitle = rootView.findViewById(id);
       if (adPreviewTitle == null) {
-        missingId = "adPreviewTitle";
         break missingId;
       }
-      TextView textView13 = rootView.findViewById(R.id.textView13);
+
+      id = R.id.textView13;
+      TextView textView13 = rootView.findViewById(id);
       if (textView13 == null) {
-        missingId = "textView13";
         break missingId;
       }
-      TextView textView6 = rootView.findViewById(R.id.textView6);
+
+      id = R.id.textView6;
+      TextView textView6 = rootView.findViewById(id);
       if (textView6 == null) {
-        missingId = "textView6";
         break missingId;
       }
-      TextView views = rootView.findViewById(R.id.views);
+
+      id = R.id.views;
+      TextView views = rootView.findViewById(id);
       if (views == null) {
-        missingId = "views";
         break missingId;
       }
+
       return new NewAdWindowBinding((LinearLayout) rootView, adPreviewCategory,
           adPreviewDescription, adPreviewPhoto, adPreviewRegionTown, adPreviewTitle, textView13,
           textView6, views);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

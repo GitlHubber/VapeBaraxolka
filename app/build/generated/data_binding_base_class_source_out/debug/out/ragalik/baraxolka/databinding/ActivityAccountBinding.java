@@ -116,83 +116,94 @@ public final class ActivityAccountBinding implements ViewBinding {
   public static ActivityAccountBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      CoordinatorLayout accountCoordinator = rootView.findViewById(R.id.accountCoordinator);
-      if (accountCoordinator == null) {
-        missingId = "accountCoordinator";
-        break missingId;
-      }
-      TextView accountEmail = rootView.findViewById(R.id.account_email);
+      CoordinatorLayout accountCoordinator = (CoordinatorLayout) rootView;
+
+      id = R.id.account_email;
+      TextView accountEmail = rootView.findViewById(id);
       if (accountEmail == null) {
-        missingId = "accountEmail";
         break missingId;
       }
-      TextView accountPhone = rootView.findViewById(R.id.account_phone);
+
+      id = R.id.account_phone;
+      TextView accountPhone = rootView.findViewById(id);
       if (accountPhone == null) {
-        missingId = "accountPhone";
         break missingId;
       }
-      LinearLayout accountPnLayout = rootView.findViewById(R.id.account_pn_layout);
+
+      id = R.id.account_pn_layout;
+      LinearLayout accountPnLayout = rootView.findViewById(id);
       if (accountPnLayout == null) {
-        missingId = "accountPnLayout";
         break missingId;
       }
-      LinearLayout accountRegionLayout = rootView.findViewById(R.id.account_region_layout);
+
+      id = R.id.account_region_layout;
+      LinearLayout accountRegionLayout = rootView.findViewById(id);
       if (accountRegionLayout == null) {
-        missingId = "accountRegionLayout";
         break missingId;
       }
-      TextView accountTown = rootView.findViewById(R.id.account_town);
+
+      id = R.id.account_town;
+      TextView accountTown = rootView.findViewById(id);
       if (accountTown == null) {
-        missingId = "accountTown";
         break missingId;
       }
-      AppBarLayout appBarLayoutAccount = rootView.findViewById(R.id.appBarLayoutAccount);
+
+      id = R.id.appBarLayoutAccount;
+      AppBarLayout appBarLayoutAccount = rootView.findViewById(id);
       if (appBarLayoutAccount == null) {
-        missingId = "appBarLayoutAccount";
         break missingId;
       }
-      AppCompatCheckBox cbShowHidePN = rootView.findViewById(R.id.cb_showHidePN);
+
+      id = R.id.cb_showHidePN;
+      AppCompatCheckBox cbShowHidePN = rootView.findViewById(id);
       if (cbShowHidePN == null) {
-        missingId = "cbShowHidePN";
         break missingId;
       }
-      LinearLayout hidePhoneLayout = rootView.findViewById(R.id.hide_phone_layout);
+
+      id = R.id.hide_phone_layout;
+      LinearLayout hidePhoneLayout = rootView.findViewById(id);
       if (hidePhoneLayout == null) {
-        missingId = "hidePhoneLayout";
         break missingId;
       }
-      ImageView profilePhoto = rootView.findViewById(R.id.profilePhoto);
+
+      id = R.id.profilePhoto;
+      ImageView profilePhoto = rootView.findViewById(id);
       if (profilePhoto == null) {
-        missingId = "profilePhoto";
         break missingId;
       }
-      Button signOutButtonAccount = rootView.findViewById(R.id.signOutButtonAccount);
+
+      id = R.id.signOutButtonAccount;
+      Button signOutButtonAccount = rootView.findViewById(id);
       if (signOutButtonAccount == null) {
-        missingId = "signOutButtonAccount";
         break missingId;
       }
-      Toolbar toolbarAccount = rootView.findViewById(R.id.toolbarAccount);
+
+      id = R.id.toolbarAccount;
+      Toolbar toolbarAccount = rootView.findViewById(id);
       if (toolbarAccount == null) {
-        missingId = "toolbarAccount";
         break missingId;
       }
-      TextView twAccountInfo = rootView.findViewById(R.id.tw_account_info);
+
+      id = R.id.tw_account_info;
+      TextView twAccountInfo = rootView.findViewById(id);
       if (twAccountInfo == null) {
-        missingId = "twAccountInfo";
         break missingId;
       }
-      TextView twHidePhone = rootView.findViewById(R.id.tw_hide_phone);
+
+      id = R.id.tw_hide_phone;
+      TextView twHidePhone = rootView.findViewById(id);
       if (twHidePhone == null) {
-        missingId = "twHidePhone";
         break missingId;
       }
+
       return new ActivityAccountBinding((CoordinatorLayout) rootView, accountCoordinator,
           accountEmail, accountPhone, accountPnLayout, accountRegionLayout, accountTown,
           appBarLayoutAccount, cbShowHidePN, hidePhoneLayout, profilePhoto, signOutButtonAccount,
           toolbarAccount, twAccountInfo, twHidePhone);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

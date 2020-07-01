@@ -56,20 +56,19 @@ public final class ActivityMainBinding implements ViewBinding {
   public static ActivityMainBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      DrawerLayout drawerLayout = rootView.findViewById(R.id.drawer_layout);
-      if (drawerLayout == null) {
-        missingId = "drawerLayout";
-        break missingId;
-      }
-      NavigationView navView = rootView.findViewById(R.id.nav_view);
+      DrawerLayout drawerLayout = (DrawerLayout) rootView;
+
+      id = R.id.nav_view;
+      NavigationView navView = rootView.findViewById(id);
       if (navView == null) {
-        missingId = "navView";
         break missingId;
       }
+
       return new ActivityMainBinding((DrawerLayout) rootView, drawerLayout, navView);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

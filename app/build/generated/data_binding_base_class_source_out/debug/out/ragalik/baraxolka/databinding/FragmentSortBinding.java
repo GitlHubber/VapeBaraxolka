@@ -74,41 +74,48 @@ public final class FragmentSortBinding implements ViewBinding {
   public static FragmentSortBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      TextView AcceptSortButton = rootView.findViewById(R.id.AcceptSortButton);
+      id = R.id.AcceptSortButton;
+      TextView AcceptSortButton = rootView.findViewById(id);
       if (AcceptSortButton == null) {
-        missingId = "AcceptSortButton";
         break missingId;
       }
-      RadioButton byDate = rootView.findViewById(R.id.byDate);
+
+      id = R.id.byDate;
+      RadioButton byDate = rootView.findViewById(id);
       if (byDate == null) {
-        missingId = "byDate";
         break missingId;
       }
-      RadioButton byPriceDown = rootView.findViewById(R.id.byPriceDown);
+
+      id = R.id.byPriceDown;
+      RadioButton byPriceDown = rootView.findViewById(id);
       if (byPriceDown == null) {
-        missingId = "byPriceDown";
         break missingId;
       }
-      RadioButton byPriceUp = rootView.findViewById(R.id.byPriceUp);
+
+      id = R.id.byPriceUp;
+      RadioButton byPriceUp = rootView.findViewById(id);
       if (byPriceUp == null) {
-        missingId = "byPriceUp";
         break missingId;
       }
-      RadioButton byViews = rootView.findViewById(R.id.byViews);
+
+      id = R.id.byViews;
+      RadioButton byViews = rootView.findViewById(id);
       if (byViews == null) {
-        missingId = "byViews";
         break missingId;
       }
-      TextView clearSort = rootView.findViewById(R.id.clearSort);
+
+      id = R.id.clearSort;
+      TextView clearSort = rootView.findViewById(id);
       if (clearSort == null) {
-        missingId = "clearSort";
         break missingId;
       }
+
       return new FragmentSortBinding((LinearLayout) rootView, AcceptSortButton, byDate, byPriceDown,
           byPriceUp, byViews, clearSort);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

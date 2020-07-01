@@ -45,7 +45,7 @@ public class SignIn extends Fragment implements View.OnClickListener {
 
     private static final String NICKNAME = "[а-яА-Яa-zA-Z0-9#&_.+@]{1,18}";
     private static final String EMAIL = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-    private static final String PHONE_NUMBER = "[0-9+]{1,20}";
+    private static final String PHONE_NUMBER = "(^\29|33|44\\d{9})";
     private static final String PASSWORD = "^(?=.*[0-9])(?=.*[a-z])(?=.*[a-zA-Z])(?=\\S+$).{8,18}$";
 
     private TextInputLayout nickname = null;

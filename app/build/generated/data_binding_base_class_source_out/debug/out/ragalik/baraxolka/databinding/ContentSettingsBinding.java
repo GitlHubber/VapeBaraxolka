@@ -52,15 +52,17 @@ public final class ContentSettingsBinding implements ViewBinding {
   public static ContentSettingsBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      SwitchCompat nightThemeSwitcher = rootView.findViewById(R.id.nightThemeSwitcher);
+      id = R.id.nightThemeSwitcher;
+      SwitchCompat nightThemeSwitcher = rootView.findViewById(id);
       if (nightThemeSwitcher == null) {
-        missingId = "nightThemeSwitcher";
         break missingId;
       }
+
       return new ContentSettingsBinding((LinearLayout) rootView, nightThemeSwitcher);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

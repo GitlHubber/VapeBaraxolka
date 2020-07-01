@@ -70,36 +70,42 @@ public final class FragmentRulesBinding implements ViewBinding {
   public static FragmentRulesBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      TextView Header = rootView.findViewById(R.id.Header);
+      id = R.id.Header;
+      TextView Header = rootView.findViewById(id);
       if (Header == null) {
-        missingId = "Header";
         break missingId;
       }
-      Toolbar rulesToolbar = rootView.findViewById(R.id.rulesToolbar);
+
+      id = R.id.rulesToolbar;
+      Toolbar rulesToolbar = rootView.findViewById(id);
       if (rulesToolbar == null) {
-        missingId = "rulesToolbar";
         break missingId;
       }
-      TextView title1R = rootView.findViewById(R.id.title1R);
+
+      id = R.id.title1R;
+      TextView title1R = rootView.findViewById(id);
       if (title1R == null) {
-        missingId = "title1R";
         break missingId;
       }
-      TextView title2R = rootView.findViewById(R.id.title2R);
+
+      id = R.id.title2R;
+      TextView title2R = rootView.findViewById(id);
       if (title2R == null) {
-        missingId = "title2R";
         break missingId;
       }
-      TextView title3R = rootView.findViewById(R.id.title3R);
+
+      id = R.id.title3R;
+      TextView title3R = rootView.findViewById(id);
       if (title3R == null) {
-        missingId = "title3R";
         break missingId;
       }
+
       return new FragmentRulesBinding((FrameLayout) rootView, Header, rulesToolbar, title1R,
           title2R, title3R);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

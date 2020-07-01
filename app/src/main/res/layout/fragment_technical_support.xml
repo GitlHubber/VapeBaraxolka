@@ -33,7 +33,7 @@
             android:layout_height="178dp"
             android:gravity="center"
             android:textColor="@color/colorText"
-            android:text="По всем вопросам обращайтесь в группу во Вконтакте"
+            android:text="По всем вопросам обращайтесь в группу в Вконтакте"
             android:textSize="36sp"
             android:textStyle="italic" />
 

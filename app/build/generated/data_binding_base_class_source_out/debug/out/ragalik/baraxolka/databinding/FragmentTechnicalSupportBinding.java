@@ -61,26 +61,30 @@ public final class FragmentTechnicalSupportBinding implements ViewBinding {
   public static FragmentTechnicalSupportBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      TextView Header = rootView.findViewById(R.id.Header);
+      id = R.id.Header;
+      TextView Header = rootView.findViewById(id);
       if (Header == null) {
-        missingId = "Header";
         break missingId;
       }
-      TextView VKGroupLink = rootView.findViewById(R.id.VKGroupLink);
+
+      id = R.id.VKGroupLink;
+      TextView VKGroupLink = rootView.findViewById(id);
       if (VKGroupLink == null) {
-        missingId = "VKGroupLink";
         break missingId;
       }
-      Toolbar supportToolbar = rootView.findViewById(R.id.supportToolbar);
+
+      id = R.id.supportToolbar;
+      Toolbar supportToolbar = rootView.findViewById(id);
       if (supportToolbar == null) {
-        missingId = "supportToolbar";
         break missingId;
       }
+
       return new FragmentTechnicalSupportBinding((FrameLayout) rootView, Header, VKGroupLink,
           supportToolbar);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

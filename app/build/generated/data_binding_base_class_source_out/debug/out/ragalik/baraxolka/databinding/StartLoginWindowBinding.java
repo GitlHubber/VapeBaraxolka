@@ -66,31 +66,36 @@ public final class StartLoginWindowBinding implements ViewBinding {
   public static StartLoginWindowBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      AppCompatButton logButton = rootView.findViewById(R.id.logButton);
+      id = R.id.logButton;
+      AppCompatButton logButton = rootView.findViewById(id);
       if (logButton == null) {
-        missingId = "logButton";
         break missingId;
       }
-      AppCompatButton signButton = rootView.findViewById(R.id.signButton);
+
+      id = R.id.signButton;
+      AppCompatButton signButton = rootView.findViewById(id);
       if (signButton == null) {
-        missingId = "signButton";
         break missingId;
       }
-      TextView textView2 = rootView.findViewById(R.id.textView2);
+
+      id = R.id.textView2;
+      TextView textView2 = rootView.findViewById(id);
       if (textView2 == null) {
-        missingId = "textView2";
         break missingId;
       }
-      TextView textView3 = rootView.findViewById(R.id.textView3);
+
+      id = R.id.textView3;
+      TextView textView3 = rootView.findViewById(id);
       if (textView3 == null) {
-        missingId = "textView3";
         break missingId;
       }
+
       return new StartLoginWindowBinding((RelativeLayout) rootView, logButton, signButton,
           textView2, textView3);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

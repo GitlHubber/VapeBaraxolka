@@ -36,6 +36,9 @@ public final class FragmentAdsBinding implements ViewBinding {
   public final Chip categoryChip;
 
   @NonNull
+  public final Chip filterChip;
+
+  @NonNull
   public final ProgressBar progressAds;
 
   @NonNull
@@ -46,7 +49,7 @@ public final class FragmentAdsBinding implements ViewBinding {
 
   private FragmentAdsBinding(@NonNull CoordinatorLayout rootView,
       @NonNull RecyclerView ADSRecyclerView, @NonNull Toolbar adsToolbar,
-      @NonNull AppBarLayout appBarLayout, @NonNull Chip categoryChip,
+      @NonNull AppBarLayout appBarLayout, @NonNull Chip categoryChip, @NonNull Chip filterChip,
       @NonNull ProgressBar progressAds, @NonNull SwipeRefreshLayout refresherAds,
       @NonNull Chip searchChip) {
     this.rootView = rootView;
@@ -54,6 +57,7 @@ public final class FragmentAdsBinding implements ViewBinding {
     this.adsToolbar = adsToolbar;
     this.appBarLayout = appBarLayout;
     this.categoryChip = categoryChip;
+    this.filterChip = filterChip;
     this.progressAds = progressAds;
     this.refresherAds = refresherAds;
     this.searchChip = searchChip;
@@ -84,46 +88,60 @@ public final class FragmentAdsBinding implements ViewBinding {
   public static FragmentAdsBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      RecyclerView ADSRecyclerView = rootView.findViewById(R.id.ADSRecyclerView);
+      id = R.id.ADSRecyclerView;
+      RecyclerView ADSRecyclerView = rootView.findViewById(id);
       if (ADSRecyclerView == null) {
-        missingId = "ADSRecyclerView";
         break missingId;
       }
-      Toolbar adsToolbar = rootView.findViewById(R.id.ads_toolbar);
+
+      id = R.id.ads_toolbar;
+      Toolbar adsToolbar = rootView.findViewById(id);
       if (adsToolbar == null) {
-        missingId = "adsToolbar";
         break missingId;
       }
-      AppBarLayout appBarLayout = rootView.findViewById(R.id.appBarLayout);
+
+      id = R.id.appBarLayout;
+      AppBarLayout appBarLayout = rootView.findViewById(id);
       if (appBarLayout == null) {
-        missingId = "appBarLayout";
         break missingId;
       }
-      Chip categoryChip = rootView.findViewById(R.id.category_chip);
+
+      id = R.id.category_chip;
+      Chip categoryChip = rootView.findViewById(id);
       if (categoryChip == null) {
-        missingId = "categoryChip";
         break missingId;
       }
-      ProgressBar progressAds = rootView.findViewById(R.id.progress_ads);
+
+      id = R.id.filter_chip;
+      Chip filterChip = rootView.findViewById(id);
+      if (filterChip == null) {
+        break missingId;
+      }
+
+      id = R.id.progress_ads;
+      ProgressBar progressAds = rootView.findViewById(id);
       if (progressAds == null) {
-        missingId = "progressAds";
         break missingId;
       }
-      SwipeRefreshLayout refresherAds = rootView.findViewById(R.id.refresherAds);
+
+      id = R.id.refresherAds;
+      SwipeRefreshLayout refresherAds = rootView.findViewById(id);
       if (refresherAds == null) {
-        missingId = "refresherAds";
         break missingId;
       }
-      Chip searchChip = rootView.findViewById(R.id.search_chip);
+
+      id = R.id.search_chip;
+      Chip searchChip = rootView.findViewById(id);
       if (searchChip == null) {
-        missingId = "searchChip";
         break missingId;
       }
+
       return new FragmentAdsBinding((CoordinatorLayout) rootView, ADSRecyclerView, adsToolbar,
-          appBarLayout, categoryChip, progressAds, refresherAds, searchChip);
+          appBarLayout, categoryChip, filterChip, progressAds, refresherAds, searchChip);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

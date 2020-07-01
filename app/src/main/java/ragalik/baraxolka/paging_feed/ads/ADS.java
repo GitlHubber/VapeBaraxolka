@@ -50,6 +50,7 @@ public class ADS extends Fragment {
     public static AdViewModel adViewModel;
     public static ProgressBar progressBar;
     private Chip searchChip;
+    private Chip filterChip;
     private Chip categoryChip;
 
     private RecyclerView adsRecyclerView;
@@ -74,7 +75,7 @@ public class ADS extends Fragment {
         AppCompatActivity appCompatActivity = (AppCompatActivity) getActivity();
         if (appCompatActivity != null) {
             appCompatActivity.setSupportActionBar(toolbar);
-            toolbar.setTitle("Объявления");
+            toolbar.setTitle("Все объявления");
         }
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 getActivity(), MainActivity.drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -88,6 +89,7 @@ public class ADS extends Fragment {
         }
 
         searchChip = v.findViewById(R.id.search_chip);
+        filterChip = v.findViewById(R.id.filter_chip);
         categoryChip = v.findViewById(R.id.category_chip);
 
         searchChip.setOnClickListener(v -> {
@@ -99,6 +101,12 @@ public class ADS extends Fragment {
             searchChip.setVisibility(View.GONE);
             isFilteredAds = false;
             isChipCanceled = true;
+            getActivity().recreate();
+        });
+
+        filterChip.setOnCloseIconClickListener(v -> {
+            filterChip.setVisibility(View.GONE);
+            isFilteredByCategories = false;
             getActivity().recreate();
         });
 
@@ -139,6 +147,7 @@ public class ADS extends Fragment {
     private void showAds () {
         if (isFilteredAds) {
             searchChip.setVisibility(View.VISIBLE);
+            filterChip.setVisibility(View.GONE);
 
             String where = "";
             for (String str : SearchActivity.searchRequests.values()) {
@@ -166,6 +175,8 @@ public class ADS extends Fragment {
             adsRecyclerView.setAdapter(searchAdapter);
         } else if (isFilteredByCategories) {
             searchChip.setVisibility(View.GONE);
+            filterChip.setVisibility(View.VISIBLE);
+
             String where = "";
             if (!FilterActivity.Companion.getCategoryFromSpinner().equals("")) {
                 where = "categories.category_name = '" + FilterActivity.Companion.getCategoryFromSpinner() + "'";

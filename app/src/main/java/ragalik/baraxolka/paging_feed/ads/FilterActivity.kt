@@ -45,6 +45,7 @@ class FilterActivity : AppCompatActivity() {
 
         filterCategoryButton.setOnClickListener {
             ADS.isFilteredByCategories = true
+            ADS.isFilteredAds = false
             val myIntent = Intent(this, MainActivity::class.java)
             startActivity(myIntent)
         }

@@ -54,6 +54,7 @@
     </string-array>
 
     <string-array name="Minsk">
+        <item>"Не выбрано"</item>
         <item>"Центральный"</item>
         <item>"Советский"</item>
         <item>"Первомайский"</item>
@@ -66,6 +67,7 @@
     </string-array>
 
     <string-array name="BrestRegion">
+        <item>"Не выбрано"</item>
         <item>"Брест"</item>
         <item>"Барановичи"</item>
         <item>"Береза"</item>
@@ -87,6 +89,7 @@
     </string-array>
 
     <string-array name="VitebskRegion">
+        <item>"Не выбрано"</item>
         <item>"Витебск"</item>
         <item>"Бешенковичи"</item>
         <item>"Барань"</item>
@@ -115,6 +118,7 @@
     </string-array>
 
     <string-array name="GomelRegion">
+        <item>"Не выбрано"</item>
         <item>"Гомель"</item>
         <item>"Брагин"</item>
         <item>"Буда-Кошелево"</item>
@@ -140,6 +144,7 @@
     </string-array>
 
     <string-array name="GrodnoRegion">
+        <item>"Не выбрано"</item>
         <item>"Гродно"</item>
         <item>"Березовка"</item>
         <item>"Берестовица"</item>
@@ -163,6 +168,7 @@
     </string-array>
 
     <string-array name="MinskRegion">
+        <item>"Не выбрано"</item>
         <item>"Минский район"</item>
         <item>"Березино"</item>
         <item>"Борисов"</item>
@@ -193,6 +199,7 @@
     </string-array>
 
     <string-array name="MogilevRegion">
+        <item>"Не выбрано"</item>
         <item>"Могилев"</item>
         <item>"Белыничи"</item>
         <item>"Бобруйск"</item>

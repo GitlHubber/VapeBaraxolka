@@ -101,68 +101,80 @@ public final class ContentAccountEditBinding implements ViewBinding {
   public static ContentAccountEditBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      AppCompatAutoCompleteTextView EditRegionSpinner = rootView.findViewById(R.id.EditRegionSpinner);
+      id = R.id.EditRegionSpinner;
+      AppCompatAutoCompleteTextView EditRegionSpinner = rootView.findViewById(id);
       if (EditRegionSpinner == null) {
-        missingId = "EditRegionSpinner";
         break missingId;
       }
-      TextInputLayout EditRegionTextEdit = rootView.findViewById(R.id.EditRegionTextEdit);
+
+      id = R.id.EditRegionTextEdit;
+      TextInputLayout EditRegionTextEdit = rootView.findViewById(id);
       if (EditRegionTextEdit == null) {
-        missingId = "EditRegionTextEdit";
         break missingId;
       }
-      AppCompatAutoCompleteTextView EditTownSpinner = rootView.findViewById(R.id.EditTownSpinner);
+
+      id = R.id.EditTownSpinner;
+      AppCompatAutoCompleteTextView EditTownSpinner = rootView.findViewById(id);
       if (EditTownSpinner == null) {
-        missingId = "EditTownSpinner";
         break missingId;
       }
-      TextInputLayout EditTownTextEdit = rootView.findViewById(R.id.EditTownTextEdit);
+
+      id = R.id.EditTownTextEdit;
+      TextInputLayout EditTownTextEdit = rootView.findViewById(id);
       if (EditTownTextEdit == null) {
-        missingId = "EditTownTextEdit";
         break missingId;
       }
-      TextInputLayout accountEditLayout = rootView.findViewById(R.id.account_edit_layout);
+
+      id = R.id.account_edit_layout;
+      TextInputLayout accountEditLayout = rootView.findViewById(id);
       if (accountEditLayout == null) {
-        missingId = "accountEditLayout";
         break missingId;
       }
-      LinearLayout editRegionLayout = rootView.findViewById(R.id.edit_region_layout);
+
+      id = R.id.edit_region_layout;
+      LinearLayout editRegionLayout = rootView.findViewById(id);
       if (editRegionLayout == null) {
-        missingId = "editRegionLayout";
         break missingId;
       }
-      AppCompatButton saveEditInfoButton = rootView.findViewById(R.id.saveEditInfoButton);
+
+      id = R.id.saveEditInfoButton;
+      AppCompatButton saveEditInfoButton = rootView.findViewById(id);
       if (saveEditInfoButton == null) {
-        missingId = "saveEditInfoButton";
         break missingId;
       }
-      TextView twAccountEdit = rootView.findViewById(R.id.tw_account_edit);
+
+      id = R.id.tw_account_edit;
+      TextView twAccountEdit = rootView.findViewById(id);
       if (twAccountEdit == null) {
-        missingId = "twAccountEdit";
         break missingId;
       }
-      TextView twAccountEditTitle = rootView.findViewById(R.id.tw_account_edit_title);
+
+      id = R.id.tw_account_edit_title;
+      TextView twAccountEditTitle = rootView.findViewById(id);
       if (twAccountEditTitle == null) {
-        missingId = "twAccountEditTitle";
         break missingId;
       }
-      TextView twSelectRegion = rootView.findViewById(R.id.tw_select_region);
+
+      id = R.id.tw_select_region;
+      TextView twSelectRegion = rootView.findViewById(id);
       if (twSelectRegion == null) {
-        missingId = "twSelectRegion";
         break missingId;
       }
-      TextView twSelectTown = rootView.findViewById(R.id.tw_select_town);
+
+      id = R.id.tw_select_town;
+      TextView twSelectTown = rootView.findViewById(id);
       if (twSelectTown == null) {
-        missingId = "twSelectTown";
         break missingId;
       }
+
       return new ContentAccountEditBinding((LinearLayout) rootView, EditRegionSpinner,
           EditRegionTextEdit, EditTownSpinner, EditTownTextEdit, accountEditLayout,
           editRegionLayout, saveEditInfoButton, twAccountEdit, twAccountEditTitle, twSelectRegion,
           twSelectTown);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

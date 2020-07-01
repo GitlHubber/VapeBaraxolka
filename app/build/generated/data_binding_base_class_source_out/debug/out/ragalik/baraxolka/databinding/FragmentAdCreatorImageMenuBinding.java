@@ -76,42 +76,45 @@ public final class FragmentAdCreatorImageMenuBinding implements ViewBinding {
   public static FragmentAdCreatorImageMenuBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      AppCompatTextView adCreatorDeleteImage = rootView.findViewById(R.id.ad_creator_delete_image);
+      id = R.id.ad_creator_delete_image;
+      AppCompatTextView adCreatorDeleteImage = rootView.findViewById(id);
       if (adCreatorDeleteImage == null) {
-        missingId = "adCreatorDeleteImage";
         break missingId;
       }
-      AppCompatTextView adCreatorLoadImage = rootView.findViewById(R.id.ad_creator_load_image);
+
+      id = R.id.ad_creator_load_image;
+      AppCompatTextView adCreatorLoadImage = rootView.findViewById(id);
       if (adCreatorLoadImage == null) {
-        missingId = "adCreatorLoadImage";
         break missingId;
       }
-      LinearLayout adCreatorMenuLinearLayout = rootView.findViewById(R.id.adCreatorMenuLinearLayout);
-      if (adCreatorMenuLinearLayout == null) {
-        missingId = "adCreatorMenuLinearLayout";
-        break missingId;
-      }
-      AppCompatTextView adCreatorShowImage = rootView.findViewById(R.id.ad_creator_show_image);
+
+      LinearLayout adCreatorMenuLinearLayout = (LinearLayout) rootView;
+
+      id = R.id.ad_creator_show_image;
+      AppCompatTextView adCreatorShowImage = rootView.findViewById(id);
       if (adCreatorShowImage == null) {
-        missingId = "adCreatorShowImage";
         break missingId;
       }
-      AppCompatTextView adCreatorTakeImage = rootView.findViewById(R.id.ad_creator_take_image);
+
+      id = R.id.ad_creator_take_image;
+      AppCompatTextView adCreatorTakeImage = rootView.findViewById(id);
       if (adCreatorTakeImage == null) {
-        missingId = "adCreatorTakeImage";
         break missingId;
       }
-      AppCompatTextView textView5 = rootView.findViewById(R.id.textView5);
+
+      id = R.id.textView5;
+      AppCompatTextView textView5 = rootView.findViewById(id);
       if (textView5 == null) {
-        missingId = "textView5";
         break missingId;
       }
+
       return new FragmentAdCreatorImageMenuBinding((LinearLayout) rootView, adCreatorDeleteImage,
           adCreatorLoadImage, adCreatorMenuLinearLayout, adCreatorShowImage, adCreatorTakeImage,
           textView5);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

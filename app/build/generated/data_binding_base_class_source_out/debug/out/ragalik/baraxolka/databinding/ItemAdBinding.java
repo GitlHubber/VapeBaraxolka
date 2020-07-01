@@ -143,114 +143,135 @@ public final class ItemAdBinding implements ViewBinding {
   public static ItemAdBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      AppCompatButton acceptRejectButton = rootView.findViewById(R.id.acceptRejectButton);
+      id = R.id.acceptRejectButton;
+      AppCompatButton acceptRejectButton = rootView.findViewById(id);
       if (acceptRejectButton == null) {
-        missingId = "acceptRejectButton";
         break missingId;
       }
-      AppCompatButton adDeactivateBut = rootView.findViewById(R.id.ad_deactivate_but);
+
+      id = R.id.ad_deactivate_but;
+      AppCompatButton adDeactivateBut = rootView.findViewById(id);
       if (adDeactivateBut == null) {
-        missingId = "adDeactivateBut";
         break missingId;
       }
-      AppCompatButton adDeleteBut = rootView.findViewById(R.id.ad_delete_but);
+
+      id = R.id.ad_delete_but;
+      AppCompatButton adDeleteBut = rootView.findViewById(id);
       if (adDeleteBut == null) {
-        missingId = "adDeleteBut";
         break missingId;
       }
-      AppCompatButton adEditBut = rootView.findViewById(R.id.ad_edit_but);
+
+      id = R.id.ad_edit_but;
+      AppCompatButton adEditBut = rootView.findViewById(id);
       if (adEditBut == null) {
-        missingId = "adEditBut";
         break missingId;
       }
-      TextView adPreviewDateTime = rootView.findViewById(R.id.ad_preview_date_time);
+
+      id = R.id.ad_preview_date_time;
+      TextView adPreviewDateTime = rootView.findViewById(id);
       if (adPreviewDateTime == null) {
-        missingId = "adPreviewDateTime";
         break missingId;
       }
-      TextView adPreviewPrice = rootView.findViewById(R.id.ad_preview_price);
+
+      id = R.id.ad_preview_price;
+      TextView adPreviewPrice = rootView.findViewById(id);
       if (adPreviewPrice == null) {
-        missingId = "adPreviewPrice";
         break missingId;
       }
-      AppCompatCheckBox bookmarkButtonAds = rootView.findViewById(R.id.bookmark_button_ads);
+
+      id = R.id.bookmark_button_ads;
+      AppCompatCheckBox bookmarkButtonAds = rootView.findViewById(id);
       if (bookmarkButtonAds == null) {
-        missingId = "bookmarkButtonAds";
         break missingId;
       }
-      ImageView ivAvatar = rootView.findViewById(R.id.iv_avatar);
+
+      id = R.id.iv_avatar;
+      ImageView ivAvatar = rootView.findViewById(id);
       if (ivAvatar == null) {
-        missingId = "ivAvatar";
         break missingId;
       }
-      AppCompatButton moderatorAcceptButton = rootView.findViewById(R.id.moderator_accept_button);
+
+      id = R.id.moderator_accept_button;
+      AppCompatButton moderatorAcceptButton = rootView.findViewById(id);
       if (moderatorAcceptButton == null) {
-        missingId = "moderatorAcceptButton";
         break missingId;
       }
-      LinearLayout moderatorLayout = rootView.findViewById(R.id.moderator_layout);
+
+      id = R.id.moderator_layout;
+      LinearLayout moderatorLayout = rootView.findViewById(id);
       if (moderatorLayout == null) {
-        missingId = "moderatorLayout";
         break missingId;
       }
-      AppCompatButton moderatorRejectButton = rootView.findViewById(R.id.moderator_reject_button);
+
+      id = R.id.moderator_reject_button;
+      AppCompatButton moderatorRejectButton = rootView.findViewById(id);
       if (moderatorRejectButton == null) {
-        missingId = "moderatorRejectButton";
         break missingId;
       }
-      TextInputLayout rejectMessageEditText = rootView.findViewById(R.id.rejectMessageEditText);
+
+      id = R.id.rejectMessageEditText;
+      TextInputLayout rejectMessageEditText = rootView.findViewById(id);
       if (rejectMessageEditText == null) {
-        missingId = "rejectMessageEditText";
         break missingId;
       }
-      TextInputLayout rejectReasonDropdown = rootView.findViewById(R.id.rejectReasonDropdown);
+
+      id = R.id.rejectReasonDropdown;
+      TextInputLayout rejectReasonDropdown = rootView.findViewById(id);
       if (rejectReasonDropdown == null) {
-        missingId = "rejectReasonDropdown";
         break missingId;
       }
-      AppCompatAutoCompleteTextView rejectReasonDropdownText = rootView.findViewById(R.id.rejectReasonDropdownText);
+
+      id = R.id.rejectReasonDropdownText;
+      AppCompatAutoCompleteTextView rejectReasonDropdownText = rootView.findViewById(id);
       if (rejectReasonDropdownText == null) {
-        missingId = "rejectReasonDropdownText";
         break missingId;
       }
-      LinearLayout rejectReasonLayout = rootView.findViewById(R.id.rejectReasonLayout);
+
+      id = R.id.rejectReasonLayout;
+      LinearLayout rejectReasonLayout = rootView.findViewById(id);
       if (rejectReasonLayout == null) {
-        missingId = "rejectReasonLayout";
         break missingId;
       }
-      LinearLayout rejectedAdsLayout = rootView.findViewById(R.id.rejected_ads_layout);
+
+      id = R.id.rejected_ads_layout;
+      LinearLayout rejectedAdsLayout = rootView.findViewById(id);
       if (rejectedAdsLayout == null) {
-        missingId = "rejectedAdsLayout";
         break missingId;
       }
-      TextView tvLocation = rootView.findViewById(R.id.tv_location);
+
+      id = R.id.tv_location;
+      TextView tvLocation = rootView.findViewById(id);
       if (tvLocation == null) {
-        missingId = "tvLocation";
         break missingId;
       }
-      TextView tvTitle = rootView.findViewById(R.id.tv_title);
+
+      id = R.id.tv_title;
+      TextView tvTitle = rootView.findViewById(id);
       if (tvTitle == null) {
-        missingId = "tvTitle";
         break missingId;
       }
-      TextView twRejectMessage = rootView.findViewById(R.id.tw_reject_message);
+
+      id = R.id.tw_reject_message;
+      TextView twRejectMessage = rootView.findViewById(id);
       if (twRejectMessage == null) {
-        missingId = "twRejectMessage";
         break missingId;
       }
-      TextView twRejectReason = rootView.findViewById(R.id.tw_reject_reason);
+
+      id = R.id.tw_reject_reason;
+      TextView twRejectReason = rootView.findViewById(id);
       if (twRejectReason == null) {
-        missingId = "twRejectReason";
         break missingId;
       }
+
       return new ItemAdBinding((CardView) rootView, acceptRejectButton, adDeactivateBut,
           adDeleteBut, adEditBut, adPreviewDateTime, adPreviewPrice, bookmarkButtonAds, ivAvatar,
           moderatorAcceptButton, moderatorLayout, moderatorRejectButton, rejectMessageEditText,
           rejectReasonDropdown, rejectReasonDropdownText, rejectReasonLayout, rejectedAdsLayout,
           tvLocation, tvTitle, twRejectMessage, twRejectReason);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

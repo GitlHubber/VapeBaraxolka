@@ -1785,7 +1785,6 @@ drawable white_rectangle_for_signin
 font aldrich
 font alfa_slab_one
 font bangers
-id ADMIN
 id ADMIN_group
 id ADS
 id ADSRecyclerView
@@ -1912,7 +1911,7 @@ id action_up_btn
 id action_voice_btn
 id actions
 id activity_chooser_view_content
-id adCreatorFrame
+id adCreatorCoordinator
 id adCreatorMenuLinearLayout
 id adCreatorToolbar
 id adModeratorToolbar
@@ -2097,6 +2096,7 @@ id fill_horizontal
 id fill_vertical
 id filled
 id filterCategoryButton
+id filter_chip
 id findUserET
 id fitToContents
 id fixed
@@ -2211,6 +2211,8 @@ id never
 id nickname
 id nightThemeSwitcher
 id noScroll
+id no_ads_button
+id no_ads_message
 id none
 id normal
 id notification_background
@@ -2307,6 +2309,8 @@ id refresher
 id refresherAds
 id refresherFavourites
 id refresherModerator
+id regionSearchLayout
+id regionSearchSpinner
 id rejectMessageEditText
 id rejectReasonDropdown
 id rejectReasonDropdownText
@@ -2411,6 +2415,7 @@ id tag_screen_reader_focusable
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
+id testFrame
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id text
@@ -2467,6 +2472,8 @@ id toolbar_settings
 id top
 id topPanel
 id touch_outside
+id townSearchLayout
+id townSearchSpinner
 id townTextFullAd
 id transition_current_scene
 id transition_layout_save
@@ -2587,6 +2594,7 @@ layout abc_tooltip
 layout active_ads
 layout activity_account
 layout activity_account_edit
+layout activity_ad_creator
 layout activity_edit_creator
 layout activity_filter
 layout activity_full_ad
@@ -2626,7 +2634,6 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dropdown_text_color
 layout fragment_account_image_menu
-layout fragment_ad_creator
 layout fragment_ad_creator_image_menu
 layout fragment_ad_moderator
 layout fragment_administrator
@@ -2675,6 +2682,7 @@ layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
 layout nav_header_main
 layout new_ad_window
+layout no_ads_view_type
 layout no_favourites
 layout non_active_ads
 layout notification_action

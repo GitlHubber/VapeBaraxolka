@@ -46,6 +46,7 @@ public final class MenuCounterBinding implements ViewBinding {
     if (rootView == null) {
       throw new NullPointerException("rootView");
     }
+
     return new MenuCounterBinding((TextView) rootView);
   }
 }

@@ -63,26 +63,30 @@ public final class FragmentAdministratorBinding implements ViewBinding {
   public static FragmentAdministratorBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      Button SETEDITOR = rootView.findViewById(R.id.SET_EDITOR);
+      id = R.id.SET_EDITOR;
+      Button SETEDITOR = rootView.findViewById(id);
       if (SETEDITOR == null) {
-        missingId = "SETEDITOR";
         break missingId;
       }
-      Toolbar administratorToolbar = rootView.findViewById(R.id.administratorToolbar);
+
+      id = R.id.administratorToolbar;
+      Toolbar administratorToolbar = rootView.findViewById(id);
       if (administratorToolbar == null) {
-        missingId = "administratorToolbar";
         break missingId;
       }
-      TextInputEditText findUserET = rootView.findViewById(R.id.findUserET);
+
+      id = R.id.findUserET;
+      TextInputEditText findUserET = rootView.findViewById(id);
       if (findUserET == null) {
-        missingId = "findUserET";
         break missingId;
       }
+
       return new FragmentAdministratorBinding((CoordinatorLayout) rootView, SETEDITOR,
           administratorToolbar, findUserET);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

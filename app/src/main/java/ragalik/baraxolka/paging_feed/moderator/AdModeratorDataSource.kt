@@ -23,11 +23,15 @@ class AdModeratorDataSource : PageKeyedDataSource<Int, Ad>() {
             override fun onResponse(call: Call<AdResponse>, response: Response<AdResponse>) {
                 if (response.isSuccessful) {
                     val apiResponse = response.body()!!
-                    val responseItems = apiResponse.ads
+                    val responseItems = apiResponse.ads?.toMutableList()
+
+                    if (responseItems?.isEmpty()!!) {
+                        responseItems.add(Ad(-1))
+                    }
 
                     AdModerator.progressBar.isVisible = false
 
-                    responseItems?.let {
+                    responseItems.let {
                         callback.onResult(responseItems, null, FIRST_PAGE + 4)
                     }
                 }

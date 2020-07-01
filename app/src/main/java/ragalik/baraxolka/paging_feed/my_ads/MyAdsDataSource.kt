@@ -34,7 +34,12 @@ class MyAdsDataSource(private val adStatus : Int = 0, private val sellerId : Int
             override fun onResponse(call: Call<AdResponse>, response: Response<AdResponse>) {
                 if (response.isSuccessful) {
                     val apiResponse = response.body()!!
-                    val responseItems = apiResponse.ads
+                    val responseItems = apiResponse.ads?.toMutableList()
+
+                    if (responseItems?.isEmpty()!!) {
+                        responseItems.add(Ad(-1))
+                    }
+
                     if (!isSeller) {
                         when (adStatus) {
                             1 -> MyADS.pb_active.isVisible = false
@@ -47,7 +52,7 @@ class MyAdsDataSource(private val adStatus : Int = 0, private val sellerId : Int
                         SellerProfileActivity.progressBar.isVisible = false
                     }
 
-                    responseItems?.let {
+                    responseItems.let {
                         callback.onResult(responseItems, null, FIRST_PAGE + 4)
                     }
                 }

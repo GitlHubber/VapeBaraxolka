@@ -29,10 +29,8 @@ import java.io.File;
 import java.util.ArrayList;
 
 import ragalik.baraxolka.other_logic.account.FullImageLayout;
-import ragalik.baraxolka.other_logic.account.FullImageLayout;
 import ragalik.baraxolka.other_logic.full_ad.FullAdViewPagerAdapter;
 import ragalik.baraxolka.R;
-import ragalik.baraxolka.paging_feed.ads.ADS;
 
 import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
@@ -98,30 +96,13 @@ public class AdCreatorImageMenu extends BottomSheetDialogFragment {
             public void onClick(View view) {
                 dismiss();
 
-//                AdCreator.activity.setContentView(R.layout.fragment_full_image_layout);
-//                FullAdViewPagerAdapter fullAdViewPagerAdapter = new FullAdViewPagerAdapter(getActivity(), uris, "Image");
-//                ViewPager viewPager = AdCreator.activity.findViewById(R.id.fullImagePager);
-//                viewPager.setAdapter(fullAdViewPagerAdapter);
-//                viewPager.setCurrentItem(chooseIndex);
-
-//                dialog.setContentView(R.layout.fragment_full_image_layout);
-//                dialog.show();
-//
-//                FullAdViewPagerAdapter fullAdViewPagerAdapter = new FullAdViewPagerAdapter(getActivity(), uris, "Ad");
-//                ViewPager viewPager = dialog.findViewById(R.id.fullImagePager);
-//                viewPager.setAdapter(fullAdViewPagerAdapter);
-//                viewPager.setCurrentItem(chooseIndex);
-
                 FullAdViewPagerAdapter fullAdViewPagerAdapter = new FullAdViewPagerAdapter(getActivity(), uris, "AD");
-                ViewPager viewPager = dialog.findViewById(R.id.fullImagePager);
+                ViewPager viewPager = AdCreatorActivity.activity.findViewById(R.id.fullImagePager);
                 viewPager.setAdapter(fullAdViewPagerAdapter);
                 viewPager.setCurrentItem(chooseIndex);
 
-//                FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-//                fragmentTransaction.replace(R.id.adCreatorFrame, new FullImageLayout(chooseIndex, uris)).addToBackStack("").commit();
                 FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.adCreatorCoordinator, new FullImageLayout(chooseIndex, uris)).commit();
-
+                fragmentTransaction.replace(R.id.testFrame, new FullImageLayout(chooseIndex, uris)).addToBackStack("adCreator").commit();
             }
         });
 
@@ -193,36 +174,36 @@ public class AdCreatorImageMenu extends BottomSheetDialogFragment {
 
                 if (chooseIndex <= imageUploadCount) {
                     for (int i = chooseIndex; i < imageUploadCount - 1; ++i) {
-                        AdCreator.adImages.get(i).setImageDrawable(AdCreator.adImages.get(i + 1).getDrawable());
-                        AdCreator.uris.set(i, AdCreator.uris.get(i + 1));
-                        AdCreator.files.set(i, AdCreator.files.get(i + 1));
+                        adImages.get(i).setImageDrawable(AdCreatorActivity.adImages.get(i + 1).getDrawable());
+                        AdCreatorActivity.uris.set(i, AdCreatorActivity.uris.get(i + 1));
+                        AdCreatorActivity.files.set(i, AdCreatorActivity.files.get(i + 1));
                     }
 
-                    AdCreator.uris.remove(imageUploadCount - 1);
-                    AdCreator.files.remove(imageUploadCount - 1);
+                    AdCreatorActivity.uris.remove(imageUploadCount - 1);
+                    AdCreatorActivity.files.remove(imageUploadCount - 1);
 
                     //Fix algoritm 06.05.20
                     if (imageUploadCount != adImages.size()) {
-                        AdCreator.adImages.get(imageUploadCount).setImageDrawable(null);
-                        AdCreator.adImages.get(imageUploadCount).setBackground(getResources().getDrawable(R.color.colorAdCreatorImage));
+                        AdCreatorActivity.adImages.get(imageUploadCount).setImageDrawable(null);
+                        AdCreatorActivity.adImages.get(imageUploadCount).setBackground(getResources().getDrawable(R.color.colorAdCreatorImage));
                     } else {
-                        AdCreator.adImages.get(imageUploadCount - 1).setImageDrawable(null);
-                        AdCreator.adImages.get(imageUploadCount - 1).setBackground(getResources().getDrawable(R.color.colorAdCreatorImage));
+                        AdCreatorActivity.adImages.get(imageUploadCount - 1).setImageDrawable(null);
+                        AdCreatorActivity.adImages.get(imageUploadCount - 1).setBackground(getResources().getDrawable(R.color.colorAdCreatorImage));
                     }
 
                     imageUploadCount--;
-                    AdCreator.imageUploadCount--;
+                    AdCreatorActivity.imageUploadCount--;
 
                     if (imageUploadCount != 0) {
-                        AdCreator.adImages.get(imageUploadCount).setBackground(getResources().getDrawable(R.drawable.ad_creator_image_style));
-                        AdCreator.adImages.get(imageUploadCount).setImageDrawable(getResources().getDrawable(R.drawable.ic_circle_add));
+                        AdCreatorActivity.adImages.get(imageUploadCount).setBackground(getResources().getDrawable(R.drawable.ad_creator_image_style));
+                        AdCreatorActivity.adImages.get(imageUploadCount).setImageDrawable(getResources().getDrawable(R.drawable.ic_circle_add));
                     } else {
-                        AdCreator.adImages.get(imageUploadCount).setImageDrawable(getResources().getDrawable(R.drawable.ic_circle_add));
-                        AdCreator.mainLabel.setVisibility(View.GONE);
+                        AdCreatorActivity.adImages.get(imageUploadCount).setImageDrawable(getResources().getDrawable(R.drawable.ic_circle_add));
+                        AdCreatorActivity.mainLabel.setVisibility(View.GONE);
                     }
 
-                    AdCreator.uploadedCounterStr = AdCreator.uploadedCounterStr.substring(0, 10) + imageUploadCount + AdCreator.uploadedCounterStr.substring(11, 16);
-                    AdCreator.uploadAmountTW.setText(AdCreator.uploadedCounterStr);
+                    AdCreatorActivity.uploadedCounterStr = AdCreatorActivity.uploadedCounterStr.substring(0, 10) + imageUploadCount + AdCreatorActivity.uploadedCounterStr.substring(11, 16);
+                    AdCreatorActivity.uploadAmountTW.setText(AdCreatorActivity.uploadedCounterStr);
 
                     dismiss();
                 }

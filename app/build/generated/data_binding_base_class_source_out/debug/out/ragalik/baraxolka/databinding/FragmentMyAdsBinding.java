@@ -68,31 +68,36 @@ public final class FragmentMyAdsBinding implements ViewBinding {
   public static FragmentMyAdsBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      TabLayout MYADSTabLayout = rootView.findViewById(R.id.MY_ADS_Tab_Layout);
+      id = R.id.MY_ADS_Tab_Layout;
+      TabLayout MYADSTabLayout = rootView.findViewById(id);
       if (MYADSTabLayout == null) {
-        missingId = "MYADSTabLayout";
         break missingId;
       }
-      ViewPager MYADSViewPager = rootView.findViewById(R.id.MY_ADS_View_Pager);
+
+      id = R.id.MY_ADS_View_Pager;
+      ViewPager MYADSViewPager = rootView.findViewById(id);
       if (MYADSViewPager == null) {
-        missingId = "MYADSViewPager";
         break missingId;
       }
-      SwipeRefreshLayout myAdsRefresher = rootView.findViewById(R.id.myAdsRefresher);
+
+      id = R.id.myAdsRefresher;
+      SwipeRefreshLayout myAdsRefresher = rootView.findViewById(id);
       if (myAdsRefresher == null) {
-        missingId = "myAdsRefresher";
         break missingId;
       }
-      Toolbar toolbarMyAds = rootView.findViewById(R.id.toolbar_myAds);
+
+      id = R.id.toolbar_myAds;
+      Toolbar toolbarMyAds = rootView.findViewById(id);
       if (toolbarMyAds == null) {
-        missingId = "toolbarMyAds";
         break missingId;
       }
+
       return new FragmentMyAdsBinding((LinearLayout) rootView, MYADSTabLayout, MYADSViewPager,
           myAdsRefresher, toolbarMyAds);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

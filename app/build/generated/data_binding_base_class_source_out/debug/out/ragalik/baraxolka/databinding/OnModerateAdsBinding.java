@@ -57,21 +57,24 @@ public final class OnModerateAdsBinding implements ViewBinding {
   public static OnModerateAdsBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      RecyclerView OnModerateAdsView = rootView.findViewById(R.id.OnModerateAdsView);
+      id = R.id.OnModerateAdsView;
+      RecyclerView OnModerateAdsView = rootView.findViewById(id);
       if (OnModerateAdsView == null) {
-        missingId = "OnModerateAdsView";
         break missingId;
       }
-      ProgressBar progressOnModerate = rootView.findViewById(R.id.progress_on_moderate);
+
+      id = R.id.progress_on_moderate;
+      ProgressBar progressOnModerate = rootView.findViewById(id);
       if (progressOnModerate == null) {
-        missingId = "progressOnModerate";
         break missingId;
       }
+
       return new OnModerateAdsBinding((CoordinatorLayout) rootView, OnModerateAdsView,
           progressOnModerate);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

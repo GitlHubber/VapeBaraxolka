@@ -43,7 +43,7 @@ public class LogIn extends Fragment implements View.OnClickListener {
     private static final String EMAIL = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     private static final String EMAIL_START = "[a-zA-Z0-9._-]";
     private static final String PHONE_NUMBER_START = "(^\\+375)";
-    private static final String PHONE_NUMBER = "(^\\+375\\d{9})";
+    private static final String PHONE_NUMBER = "(^(\\+37529|\\+37533|\\+37544)\\d{7})";
     //public static final Pattern PASSWORD = Pattern.compile("[a-zA-Z0-9_]{5,20}");
 
     private TextInputLayout numberOrEmail;

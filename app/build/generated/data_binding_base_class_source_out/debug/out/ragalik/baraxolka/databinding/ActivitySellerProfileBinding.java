@@ -68,31 +68,36 @@ public final class ActivitySellerProfileBinding implements ViewBinding {
   public static ActivitySellerProfileBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      AppBarLayout appBar = rootView.findViewById(R.id.app_bar);
+      id = R.id.app_bar;
+      AppBarLayout appBar = rootView.findViewById(id);
       if (appBar == null) {
-        missingId = "appBar";
         break missingId;
       }
-      ImageView sellerProfilePhoto = rootView.findViewById(R.id.sellerProfilePhoto);
+
+      id = R.id.sellerProfilePhoto;
+      ImageView sellerProfilePhoto = rootView.findViewById(id);
       if (sellerProfilePhoto == null) {
-        missingId = "sellerProfilePhoto";
         break missingId;
       }
-      CollapsingToolbarLayout toolbarLayout = rootView.findViewById(R.id.toolbar_layout);
+
+      id = R.id.toolbar_layout;
+      CollapsingToolbarLayout toolbarLayout = rootView.findViewById(id);
       if (toolbarLayout == null) {
-        missingId = "toolbarLayout";
         break missingId;
       }
-      Toolbar toolbarSeller = rootView.findViewById(R.id.toolbarSeller);
+
+      id = R.id.toolbarSeller;
+      Toolbar toolbarSeller = rootView.findViewById(id);
       if (toolbarSeller == null) {
-        missingId = "toolbarSeller";
         break missingId;
       }
+
       return new ActivitySellerProfileBinding((CoordinatorLayout) rootView, appBar,
           sellerProfilePhoto, toolbarLayout, toolbarSeller);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

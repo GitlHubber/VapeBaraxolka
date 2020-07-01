@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
@@ -25,6 +26,7 @@ import me.relex.circleindicator.CircleIndicator;
 
 import ragalik.baraxolka.R;
 import ragalik.baraxolka.MainActivity;
+import ragalik.baraxolka.paging_feed.DateTimeUtils;
 import ragalik.baraxolka.paging_feed.favourites.SetDeleteBookmark;
 import ragalik.baraxolka.paging_feed.seller.SellerProfileActivity;
 import ragalik.baraxolka.network.ApiClient;
@@ -55,6 +57,7 @@ public class FullAdActivity extends AppCompatActivity {
     CircleIndicator indicator;
     AppCompatCheckBox bookmark;
     private int user_id;
+    //private AdView mAdView;
 
     public static AppCompatActivity appCompatActivity;
 
@@ -77,10 +80,14 @@ public class FullAdActivity extends AppCompatActivity {
         title.setText(ad.getTitle());
         category.setText(ad.getCategoryName());
         subcategory.setText(ad.getSubcategoryName());
-        String temp = ad.getPrice() + " Руб.";
-        price.setText(temp);
-        temp = ad.getDateTime();
-        date_time.setText(temp);
+        String intPrice = ad.getPrice().substring(ad.getPrice().length() - 3);
+        if (intPrice.equals(".00")) {
+            price.setText(ad.getPrice().substring(0, ad.getPrice().length() - 3) + " Руб.");
+        } else {
+            price.setText(ad.getPrice() + " Руб.");
+        }
+        String temp;
+        date_time.setText(DateTimeUtils.Companion.getInstance().getNormalizedDatetime(ad.getDateTime()));
         description.setText(ad.getDescription());
         temp = ad.getViews() + "";
         views.setText(temp);
@@ -111,6 +118,9 @@ public class FullAdActivity extends AppCompatActivity {
 
         temp = ad.getId() + "";
         adNumber.setText(temp);
+
+
+
     }
 
     private void getFullAdInfo (int adId) {
@@ -128,6 +138,11 @@ public class FullAdActivity extends AppCompatActivity {
                 if (user_id == 0) {
                     bookmark.setVisibility(View.GONE);
                 }
+
+//                mAdView = findViewById(R.id.FullAdAdView);
+//                AdRequest adRequest = new AdRequest.Builder().build();
+//                mAdView.loadAd(adRequest);
+
 
                 if (getSupportActionBar() != null) {
                     getSupportActionBar().setDisplayHomeAsUpEnabled(true);

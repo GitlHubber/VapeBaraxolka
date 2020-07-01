@@ -70,36 +70,42 @@ public final class FragmentPriceBinding implements ViewBinding {
   public static FragmentPriceBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      TextView AcceptPriceButton = rootView.findViewById(R.id.AcceptPriceButton);
+      id = R.id.AcceptPriceButton;
+      TextView AcceptPriceButton = rootView.findViewById(id);
       if (AcceptPriceButton == null) {
-        missingId = "AcceptPriceButton";
         break missingId;
       }
-      TextView clearPrice = rootView.findViewById(R.id.clearPrice);
+
+      id = R.id.clearPrice;
+      TextView clearPrice = rootView.findViewById(id);
       if (clearPrice == null) {
-        missingId = "clearPrice";
         break missingId;
       }
-      EditText priceFrom = rootView.findViewById(R.id.priceFrom);
+
+      id = R.id.priceFrom;
+      EditText priceFrom = rootView.findViewById(id);
       if (priceFrom == null) {
-        missingId = "priceFrom";
         break missingId;
       }
-      EditText priceTo = rootView.findViewById(R.id.priceTo);
+
+      id = R.id.priceTo;
+      EditText priceTo = rootView.findViewById(id);
       if (priceTo == null) {
-        missingId = "priceTo";
         break missingId;
       }
-      TextView textView8 = rootView.findViewById(R.id.textView8);
+
+      id = R.id.textView8;
+      TextView textView8 = rootView.findViewById(id);
       if (textView8 == null) {
-        missingId = "textView8";
         break missingId;
       }
+
       return new FragmentPriceBinding((LinearLayout) rootView, AcceptPriceButton, clearPrice,
           priceFrom, priceTo, textView8);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

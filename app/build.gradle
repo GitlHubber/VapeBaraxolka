@@ -82,6 +82,9 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.2.1'
 
     implementation 'com.r0adkll:slidableactivity:2.1.0'
+
+    //AdMob
+   // implementation 'com.google.android.gms:play-services-ads:19.2.0'
 }
 repositories {
     mavenCentral()

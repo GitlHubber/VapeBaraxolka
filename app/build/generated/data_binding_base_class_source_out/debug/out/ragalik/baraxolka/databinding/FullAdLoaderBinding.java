@@ -51,15 +51,17 @@ public final class FullAdLoaderBinding implements ViewBinding {
   public static FullAdLoaderBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      ProgressBar progressBar = rootView.findViewById(R.id.progressBar);
+      id = R.id.progressBar;
+      ProgressBar progressBar = rootView.findViewById(id);
       if (progressBar == null) {
-        missingId = "progressBar";
         break missingId;
       }
+
       return new FullAdLoaderBinding((LinearLayout) rootView, progressBar);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

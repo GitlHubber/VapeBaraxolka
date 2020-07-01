@@ -57,21 +57,24 @@ public final class RejectedAdsBinding implements ViewBinding {
   public static RejectedAdsBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      RecyclerView RejectedAdsView = rootView.findViewById(R.id.RejectedAdsView);
+      id = R.id.RejectedAdsView;
+      RecyclerView RejectedAdsView = rootView.findViewById(id);
       if (RejectedAdsView == null) {
-        missingId = "RejectedAdsView";
         break missingId;
       }
-      ProgressBar progressRejected = rootView.findViewById(R.id.progress_rejected);
+
+      id = R.id.progress_rejected;
+      ProgressBar progressRejected = rootView.findViewById(id);
       if (progressRejected == null) {
-        missingId = "progressRejected";
         break missingId;
       }
+
       return new RejectedAdsBinding((CoordinatorLayout) rootView, RejectedAdsView,
           progressRejected);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

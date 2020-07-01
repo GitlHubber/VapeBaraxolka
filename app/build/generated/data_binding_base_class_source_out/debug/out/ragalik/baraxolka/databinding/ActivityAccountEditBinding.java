@@ -52,15 +52,17 @@ public final class ActivityAccountEditBinding implements ViewBinding {
   public static ActivityAccountEditBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      Toolbar toolbarEditActivity = rootView.findViewById(R.id.toolbar_edit_activity);
+      id = R.id.toolbar_edit_activity;
+      Toolbar toolbarEditActivity = rootView.findViewById(id);
       if (toolbarEditActivity == null) {
-        missingId = "toolbarEditActivity";
         break missingId;
       }
+
       return new ActivityAccountEditBinding((CoordinatorLayout) rootView, toolbarEditActivity);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

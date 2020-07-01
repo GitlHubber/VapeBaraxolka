@@ -76,42 +76,49 @@ public final class ContentSellerProfileBinding implements ViewBinding {
   public static ContentSellerProfileBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      ProgressBar progressSeller = rootView.findViewById(R.id.progress_seller);
+      id = R.id.progress_seller;
+      ProgressBar progressSeller = rootView.findViewById(id);
       if (progressSeller == null) {
-        missingId = "progressSeller";
         break missingId;
       }
-      RecyclerView sellerAdsProfile = rootView.findViewById(R.id.sellerAdsProfile);
+
+      id = R.id.sellerAdsProfile;
+      RecyclerView sellerAdsProfile = rootView.findViewById(id);
       if (sellerAdsProfile == null) {
-        missingId = "sellerAdsProfile";
         break missingId;
       }
-      TextView sellerEmailProfile = rootView.findViewById(R.id.sellerEmailProfile);
+
+      id = R.id.sellerEmailProfile;
+      TextView sellerEmailProfile = rootView.findViewById(id);
       if (sellerEmailProfile == null) {
-        missingId = "sellerEmailProfile";
         break missingId;
       }
-      TextView sellerPhoneNumberProfile = rootView.findViewById(R.id.sellerPhoneNumberProfile);
+
+      id = R.id.sellerPhoneNumberProfile;
+      TextView sellerPhoneNumberProfile = rootView.findViewById(id);
       if (sellerPhoneNumberProfile == null) {
-        missingId = "sellerPhoneNumberProfile";
         break missingId;
       }
-      TextView sellerRegionTownProfile = rootView.findViewById(R.id.sellerRegionTownProfile);
+
+      id = R.id.sellerRegionTownProfile;
+      TextView sellerRegionTownProfile = rootView.findViewById(id);
       if (sellerRegionTownProfile == null) {
-        missingId = "sellerRegionTownProfile";
         break missingId;
       }
-      TextView sellerTextAdsProfile = rootView.findViewById(R.id.sellerTextAdsProfile);
+
+      id = R.id.sellerTextAdsProfile;
+      TextView sellerTextAdsProfile = rootView.findViewById(id);
       if (sellerTextAdsProfile == null) {
-        missingId = "sellerTextAdsProfile";
         break missingId;
       }
+
       return new ContentSellerProfileBinding((NestedScrollView) rootView, progressSeller,
           sellerAdsProfile, sellerEmailProfile, sellerPhoneNumberProfile, sellerRegionTownProfile,
           sellerTextAdsProfile);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

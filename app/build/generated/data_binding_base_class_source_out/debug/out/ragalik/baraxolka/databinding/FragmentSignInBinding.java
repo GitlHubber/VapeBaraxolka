@@ -107,72 +107,85 @@ public final class FragmentSignInBinding implements ViewBinding {
   public static FragmentSignInBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      AppCompatButton RegistrationButton = rootView.findViewById(R.id.Registration_button);
+      id = R.id.Registration_button;
+      AppCompatButton RegistrationButton = rootView.findViewById(id);
       if (RegistrationButton == null) {
-        missingId = "RegistrationButton";
         break missingId;
       }
-      AppCompatAutoCompleteTextView SIRegionSpinner = rootView.findViewById(R.id.SIRegionSpinner);
+
+      id = R.id.SIRegionSpinner;
+      AppCompatAutoCompleteTextView SIRegionSpinner = rootView.findViewById(id);
       if (SIRegionSpinner == null) {
-        missingId = "SIRegionSpinner";
         break missingId;
       }
-      TextInputLayout SIRegionSpinnerLayout = rootView.findViewById(R.id.SIRegionSpinnerLayout);
+
+      id = R.id.SIRegionSpinnerLayout;
+      TextInputLayout SIRegionSpinnerLayout = rootView.findViewById(id);
       if (SIRegionSpinnerLayout == null) {
-        missingId = "SIRegionSpinnerLayout";
         break missingId;
       }
-      AppCompatAutoCompleteTextView SITownSpinner = rootView.findViewById(R.id.SITownSpinner);
+
+      id = R.id.SITownSpinner;
+      AppCompatAutoCompleteTextView SITownSpinner = rootView.findViewById(id);
       if (SITownSpinner == null) {
-        missingId = "SITownSpinner";
         break missingId;
       }
-      TextInputLayout SITownSpinnerLayout = rootView.findViewById(R.id.SITownSpinnerLayout);
+
+      id = R.id.SITownSpinnerLayout;
+      TextInputLayout SITownSpinnerLayout = rootView.findViewById(id);
       if (SITownSpinnerLayout == null) {
-        missingId = "SITownSpinnerLayout";
         break missingId;
       }
-      TextView appName = rootView.findViewById(R.id.appName);
+
+      id = R.id.appName;
+      TextView appName = rootView.findViewById(id);
       if (appName == null) {
-        missingId = "appName";
         break missingId;
       }
-      TextView appName2 = rootView.findViewById(R.id.appName2);
+
+      id = R.id.appName2;
+      TextView appName2 = rootView.findViewById(id);
       if (appName2 == null) {
-        missingId = "appName2";
         break missingId;
       }
-      TextInputLayout siEmail = rootView.findViewById(R.id.si_email);
+
+      id = R.id.si_email;
+      TextInputLayout siEmail = rootView.findViewById(id);
       if (siEmail == null) {
-        missingId = "siEmail";
         break missingId;
       }
-      TextInputLayout siNickname = rootView.findViewById(R.id.si_nickname);
+
+      id = R.id.si_nickname;
+      TextInputLayout siNickname = rootView.findViewById(id);
       if (siNickname == null) {
-        missingId = "siNickname";
         break missingId;
       }
-      TextInputLayout siPassword = rootView.findViewById(R.id.si_password);
+
+      id = R.id.si_password;
+      TextInputLayout siPassword = rootView.findViewById(id);
       if (siPassword == null) {
-        missingId = "siPassword";
         break missingId;
       }
-      TextInputLayout siPhoneNumber = rootView.findViewById(R.id.si_phone_number);
+
+      id = R.id.si_phone_number;
+      TextInputLayout siPhoneNumber = rootView.findViewById(id);
       if (siPhoneNumber == null) {
-        missingId = "siPhoneNumber";
         break missingId;
       }
-      Toolbar toolbarRegistration = rootView.findViewById(R.id.toolbar_registration);
+
+      id = R.id.toolbar_registration;
+      Toolbar toolbarRegistration = rootView.findViewById(id);
       if (toolbarRegistration == null) {
-        missingId = "toolbarRegistration";
         break missingId;
       }
+
       return new FragmentSignInBinding((FrameLayout) rootView, RegistrationButton, SIRegionSpinner,
           SIRegionSpinnerLayout, SITownSpinner, SITownSpinnerLayout, appName, appName2, siEmail,
           siNickname, siPassword, siPhoneNumber, toolbarRegistration);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

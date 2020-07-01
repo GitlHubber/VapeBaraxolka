@@ -32,6 +32,12 @@ public final class ContentSearchBinding implements ViewBinding {
   public final AppCompatAutoCompleteTextView categorySearchSpinner;
 
   @NonNull
+  public final LinearLayout regionSearchLayout;
+
+  @NonNull
+  public final AppCompatAutoCompleteTextView regionSearchSpinner;
+
+  @NonNull
   public final SearchView searchview;
 
   @NonNull
@@ -43,19 +49,33 @@ public final class ContentSearchBinding implements ViewBinding {
   @NonNull
   public final AppCompatAutoCompleteTextView subcategorySearchSpinner;
 
+  @NonNull
+  public final LinearLayout townSearchLayout;
+
+  @NonNull
+  public final AppCompatAutoCompleteTextView townSearchSpinner;
+
   private ContentSearchBinding(@NonNull CoordinatorLayout rootView,
       @NonNull AppCompatTextView SearchPriceButton, @NonNull AppCompatTextView SearchSortButton,
-      @NonNull AppCompatAutoCompleteTextView categorySearchSpinner, @NonNull SearchView searchview,
+      @NonNull AppCompatAutoCompleteTextView categorySearchSpinner,
+      @NonNull LinearLayout regionSearchLayout,
+      @NonNull AppCompatAutoCompleteTextView regionSearchSpinner, @NonNull SearchView searchview,
       @NonNull AppCompatButton showAdsButton, @NonNull LinearLayout subcategorySearchLayout,
-      @NonNull AppCompatAutoCompleteTextView subcategorySearchSpinner) {
+      @NonNull AppCompatAutoCompleteTextView subcategorySearchSpinner,
+      @NonNull LinearLayout townSearchLayout,
+      @NonNull AppCompatAutoCompleteTextView townSearchSpinner) {
     this.rootView = rootView;
     this.SearchPriceButton = SearchPriceButton;
     this.SearchSortButton = SearchSortButton;
     this.categorySearchSpinner = categorySearchSpinner;
+    this.regionSearchLayout = regionSearchLayout;
+    this.regionSearchSpinner = regionSearchSpinner;
     this.searchview = searchview;
     this.showAdsButton = showAdsButton;
     this.subcategorySearchLayout = subcategorySearchLayout;
     this.subcategorySearchSpinner = subcategorySearchSpinner;
+    this.townSearchLayout = townSearchLayout;
+    this.townSearchSpinner = townSearchSpinner;
   }
 
   @Override
@@ -83,47 +103,80 @@ public final class ContentSearchBinding implements ViewBinding {
   public static ContentSearchBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      AppCompatTextView SearchPriceButton = rootView.findViewById(R.id.SearchPriceButton);
+      id = R.id.SearchPriceButton;
+      AppCompatTextView SearchPriceButton = rootView.findViewById(id);
       if (SearchPriceButton == null) {
-        missingId = "SearchPriceButton";
         break missingId;
       }
-      AppCompatTextView SearchSortButton = rootView.findViewById(R.id.SearchSortButton);
+
+      id = R.id.SearchSortButton;
+      AppCompatTextView SearchSortButton = rootView.findViewById(id);
       if (SearchSortButton == null) {
-        missingId = "SearchSortButton";
         break missingId;
       }
-      AppCompatAutoCompleteTextView categorySearchSpinner = rootView.findViewById(R.id.categorySearchSpinner);
+
+      id = R.id.categorySearchSpinner;
+      AppCompatAutoCompleteTextView categorySearchSpinner = rootView.findViewById(id);
       if (categorySearchSpinner == null) {
-        missingId = "categorySearchSpinner";
         break missingId;
       }
-      SearchView searchview = rootView.findViewById(R.id.searchview);
+
+      id = R.id.regionSearchLayout;
+      LinearLayout regionSearchLayout = rootView.findViewById(id);
+      if (regionSearchLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.regionSearchSpinner;
+      AppCompatAutoCompleteTextView regionSearchSpinner = rootView.findViewById(id);
+      if (regionSearchSpinner == null) {
+        break missingId;
+      }
+
+      id = R.id.searchview;
+      SearchView searchview = rootView.findViewById(id);
       if (searchview == null) {
-        missingId = "searchview";
         break missingId;
       }
-      AppCompatButton showAdsButton = rootView.findViewById(R.id.showAdsButton);
+
+      id = R.id.showAdsButton;
+      AppCompatButton showAdsButton = rootView.findViewById(id);
       if (showAdsButton == null) {
-        missingId = "showAdsButton";
         break missingId;
       }
-      LinearLayout subcategorySearchLayout = rootView.findViewById(R.id.subcategorySearchLayout);
+
+      id = R.id.subcategorySearchLayout;
+      LinearLayout subcategorySearchLayout = rootView.findViewById(id);
       if (subcategorySearchLayout == null) {
-        missingId = "subcategorySearchLayout";
         break missingId;
       }
-      AppCompatAutoCompleteTextView subcategorySearchSpinner = rootView.findViewById(R.id.subcategorySearchSpinner);
+
+      id = R.id.subcategorySearchSpinner;
+      AppCompatAutoCompleteTextView subcategorySearchSpinner = rootView.findViewById(id);
       if (subcategorySearchSpinner == null) {
-        missingId = "subcategorySearchSpinner";
         break missingId;
       }
+
+      id = R.id.townSearchLayout;
+      LinearLayout townSearchLayout = rootView.findViewById(id);
+      if (townSearchLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.townSearchSpinner;
+      AppCompatAutoCompleteTextView townSearchSpinner = rootView.findViewById(id);
+      if (townSearchSpinner == null) {
+        break missingId;
+      }
+
       return new ContentSearchBinding((CoordinatorLayout) rootView, SearchPriceButton,
-          SearchSortButton, categorySearchSpinner, searchview, showAdsButton,
-          subcategorySearchLayout, subcategorySearchSpinner);
+          SearchSortButton, categorySearchSpinner, regionSearchLayout, regionSearchSpinner,
+          searchview, showAdsButton, subcategorySearchLayout, subcategorySearchSpinner,
+          townSearchLayout, townSearchSpinner);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

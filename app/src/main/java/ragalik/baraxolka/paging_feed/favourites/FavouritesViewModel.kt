@@ -1,5 +1,6 @@
 package ragalik.baraxolka.paging_feed.favourites
 
+import android.util.Log
 import android.widget.Toast
 import androidx.annotation.MainThread
 import androidx.lifecycle.LiveData
@@ -8,6 +9,7 @@ import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
 import ragalik.baraxolka.MainActivity
 import ragalik.baraxolka.paging_feed.Ad
+import ragalik.baraxolka.paging_feed.AdResponse
 
 class FavouritesViewModel : ViewModel() {
 

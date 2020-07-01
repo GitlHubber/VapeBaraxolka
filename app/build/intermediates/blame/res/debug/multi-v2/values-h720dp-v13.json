@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/kirill/AndroidStudioProjects/VapeBaraxolka/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml",
+            "outputFile": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h720dp-v13\\values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "/home/kirill/.gradle/caches/transforms-2/files-2.1/07d91a6f02149585995d851c56f12844/appcompat-1.1.0/res/values-h720dp-v13/values-h720dp-v13.xml",
+                    "source": "C:\\Users\\Ragalik\\.gradle\\caches\\transforms-2\\files-2.1\\a85c36796b93d2c1dbec61a982cb6251\\appcompat-1.1.0\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

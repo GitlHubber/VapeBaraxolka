@@ -7,6 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".other_logic.ad_creator.AdCreatorActivity">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="100dp"
+        android:id="@+id/testFrame"/>
+
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

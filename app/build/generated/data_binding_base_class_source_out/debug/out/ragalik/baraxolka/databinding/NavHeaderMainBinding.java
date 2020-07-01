@@ -57,20 +57,23 @@ public final class NavHeaderMainBinding implements ViewBinding {
   public static NavHeaderMainBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
-    String missingId;
+    int id;
     missingId: {
-      ImageView navigationDrawerPhoto = rootView.findViewById(R.id.navigationDrawerPhoto);
+      id = R.id.navigationDrawerPhoto;
+      ImageView navigationDrawerPhoto = rootView.findViewById(id);
       if (navigationDrawerPhoto == null) {
-        missingId = "navigationDrawerPhoto";
         break missingId;
       }
-      TextView nickname = rootView.findViewById(R.id.nickname);
+
+      id = R.id.nickname;
+      TextView nickname = rootView.findViewById(id);
       if (nickname == null) {
-        missingId = "nickname";
         break missingId;
       }
+
       return new NavHeaderMainBinding((RelativeLayout) rootView, navigationDrawerPhoto, nickname);
     }
+    String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

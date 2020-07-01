@@ -18,9 +18,11 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+
 import com.r0adkll.slidr.Slidr;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 
 import ragalik.baraxolka.network.ApiClient;
@@ -43,8 +45,15 @@ public class SearchActivity extends AppCompatActivity implements  SearchView.OnQ
     private LinearLayout subcategorySearchLayout;
     private AppCompatAutoCompleteTextView categorySpinner;
     private AppCompatAutoCompleteTextView subcategorySpinner;
+    private AppCompatAutoCompleteTextView regionSpinner;
+    private AppCompatAutoCompleteTextView townSpinner;
     private String categoryFromSpinner;
     private String subcategoryFromSpinner;
+
+    private ArrayAdapter<CharSequence> adapterTown;
+    private static boolean isRegionSelected;
+    private static String regionFromSpinner;
+    private static String townFromSpinner;
     public static AppCompatActivity activity;
     private static AppCompatButton showAdsButton;
     private static AppCompatTextView priceButton;
@@ -89,12 +98,15 @@ public class SearchActivity extends AppCompatActivity implements  SearchView.OnQ
 
         subcategorySpinner = findViewById(R.id.subcategorySearchSpinner);
         categorySpinner = findViewById(R.id.categorySearchSpinner);
+        regionSpinner = findViewById(R.id.regionSearchSpinner);
+        townSpinner = findViewById(R.id.townSearchSpinner);
         subcategorySearchLayout = findViewById(R.id.subcategorySearchLayout);
         subcategorySearchLayout.setVisibility(View.GONE);
 
         getSearchAdsCount(searchRequests);
 
         createCategorySpinner();
+        createRegionSpinner();
 
         priceButton = findViewById(R.id.SearchPriceButton);
         priceButton.setOnClickListener(v -> {
@@ -234,6 +246,80 @@ public class SearchActivity extends AppCompatActivity implements  SearchView.OnQ
                 Toast.makeText(SearchActivity.activity, "Не удалось получить список категорий. Проверьте интернет соединение.", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void createRegionSpinner() {
+
+            regionSpinner.setAdapter(ArrayAdapter.createFromResource(this, R.array.Spinner_region_items, R.layout.dropdown_text_color));
+            regionSpinner.setOnClickListener(v1 -> regionSpinner.showDropDown());
+            regionSpinner.setOnItemClickListener((parent, view, position, id) -> {
+                String text = parent.getItemAtPosition(position).toString();
+                isRegionSelected = true;
+
+                switch (text) {
+                    case ("Не указано"):
+                        adapterTown = ArrayAdapter.createFromResource(this, R.array.Nothing, R.layout.dropdown_text_color);
+                        isRegionSelected = false;
+                        break;
+                    case ("Минск"):
+                        adapterTown = ArrayAdapter.createFromResource(this, R.array.Minsk, R.layout.dropdown_text_color);
+                        break;
+                    case ("Брестская обл."):
+                        adapterTown = ArrayAdapter.createFromResource(this, R.array.BrestRegion, R.layout.dropdown_text_color);
+                        break;
+                    case ("Витебская обл."):
+                        adapterTown = ArrayAdapter.createFromResource(this, R.array.VitebskRegion, R.layout.dropdown_text_color);
+                        break;
+                    case ("Гомельская обл."):
+                        adapterTown = ArrayAdapter.createFromResource(this, R.array.GomelRegion, R.layout.dropdown_text_color);
+                        break;
+                    case ("Гродненская обл."):
+                        adapterTown = ArrayAdapter.createFromResource(this, R.array.GrodnoRegion, R.layout.dropdown_text_color);
+                        break;
+                    case ("Минская обл."):
+                        adapterTown = ArrayAdapter.createFromResource(this, R.array.MinskRegion, R.layout.dropdown_text_color);
+                        break;
+                    case ("Могилевская обл."):
+                        adapterTown = ArrayAdapter.createFromResource(this, R.array.MogilevRegion, R.layout.dropdown_text_color);
+                        break;
+                    default:
+                        break;
+                }
+
+                if (isRegionSelected) {
+                    regionFromSpinner = "user.region = '" + text + "'";
+                    searchRequests.put("region", regionFromSpinner);
+                } else {
+                    regionFromSpinner = "";
+                    if (searchRequests.containsKey("region")) {
+                        searchRequests.remove("region");
+                    }
+                }
+                getSearchAdsCount(searchRequests);
+
+                regionFromSpinner = text;
+                townSpinner.setAdapter(adapterTown);
+                townFromSpinner = adapterTown.getItem(0).toString();
+                townSpinner.setText(townFromSpinner, false);
+                townSpinner.setOnClickListener(v2 -> townSpinner.showDropDown());
+            });
+
+            townSpinner.setOnItemClickListener((parent, view, position, id) -> {
+                if (parent.getItemAtPosition(position).toString().equals("Не выбрано")) {
+                    if (!searchRequests.containsKey("region")) {
+                        searchRequests.put("region", "user.region = '" + regionFromSpinner + "'");
+                    }
+                    townFromSpinner = "";
+                    if (searchRequests.containsKey("town")) {
+                        searchRequests.remove("town");
+                    }
+                } else {
+                    searchRequests.remove("region");
+                    townFromSpinner = "user.town = '" + parent.getItemAtPosition(position).toString() + "'";
+                    searchRequests.put("town", townFromSpinner);
+                }
+                getSearchAdsCount(searchRequests);
+            });
     }
 
     public static void getSearchAdsCount (HashMap<String, String> requests) {
