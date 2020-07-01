@@ -221,7 +221,7 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, RecyclerV
                         MainActivity.activity.startActivity(intent)
                     }
                 }
-                "REJECTED" -> {8
+                "REJECTED" -> {
                     message.text = "У вас нет отклоненных объявлений"
                     noAdsButton.text = "Создать объявление"
                     noAdsButton.setOnClickListener {
