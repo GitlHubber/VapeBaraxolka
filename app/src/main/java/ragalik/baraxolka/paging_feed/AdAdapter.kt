@@ -207,6 +207,7 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, RecyclerV
             when (flag) {
                 "FAVOURITES" -> {
                     message.text = "У вас нет закладок"
+                    noAdsButton.visibility = View.VISIBLE
                     noAdsButton.text = "Перейти к объявлениям"
                     noAdsButton.setOnClickListener {
                         val activity = it.context as AppCompatActivity
@@ -215,6 +216,7 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, RecyclerV
                 }
                 "ACTIVE" -> {
                     message.text = "У вас нет активных объявлений"
+                    noAdsButton.visibility = View.VISIBLE
                     noAdsButton.text = "Создать объявление"
                     noAdsButton.setOnClickListener {
                         val intent = Intent(MainActivity.activity, AdCreatorActivity::class.java)
@@ -223,6 +225,7 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, RecyclerV
                 }
                 "REJECTED" -> {8
                     message.text = "У вас нет отклоненных объявлений"
+                    noAdsButton.visibility = View.VISIBLE
                     noAdsButton.text = "Создать объявление"
                     noAdsButton.setOnClickListener {
                         val intent = Intent(MainActivity.activity, AdCreatorActivity::class.java)
@@ -231,15 +234,12 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, RecyclerV
                 }
                 "ON_MODERATE" -> {
                     message.text = "У вас нет объявлений на модерации"
-                    noAdsButton.visibility = View.GONE
                 }
                 "NON_ACTIVE" -> {
                     message.text = "У вас нет неактивных объявлений"
-                    noAdsButton.visibility = View.GONE
                 }
                 "MODERATOR" -> {
                     message.text = "Нет объявлений на модерации"
-                    noAdsButton.visibility = View.GONE
                 }
             }
         }
@@ -293,17 +293,17 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, RecyclerV
                     when (flag) {
                         "ACTIVE" -> {
                             MyADS.getAdCount(1, MainActivity.sp.getInt("id", 0))
-                            MyADS.activeViewModel.liveDataSource.value!!.invalidate()
+                            MyADS.activeViewModel.liveDataSource.value?.invalidate()
                             Toast.makeText(view.context, "Объявление деактивировано", Toast.LENGTH_LONG).show()
                         }
                         "NON_ACTIVE" -> {
                             MyADS.getAdCount(4, MainActivity.sp.getInt("id", 0))
-                            MyADS.nonActiveViewModel.liveDataSource.value!!.invalidate()
+                            MyADS.nonActiveViewModel.liveDataSource.value?.invalidate()
                             Toast.makeText(view.context, "Объявление удалено", Toast.LENGTH_LONG).show()
                         }
                         "REJECTED" -> {
                             MyADS.getAdCount(2, MainActivity.sp.getInt("id", 0))
-                            MyADS.rejectedViewModel.liveDataSource.value!!.invalidate()
+                            MyADS.rejectedViewModel.liveDataSource.value?.invalidate()
                             Toast.makeText(view.context, "Объявление удалено", Toast.LENGTH_LONG).show()
                         }
                     }

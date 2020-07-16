@@ -10,6 +10,7 @@ import ragalik.baraxolka.network.entities.ReasonsResponse;
 import ragalik.baraxolka.network.entities.RegisterResponse;
 import ragalik.baraxolka.network.entities.ServerResponse;
 import ragalik.baraxolka.network.entities.User;
+import ragalik.baraxolka.network.entities.UserPreviewResponse;
 import ragalik.baraxolka.network.entities.UserResponse;
 import ragalik.baraxolka.paging_feed.AdResponse;
 import ragalik.baraxolka.paging_feed.FullAdResponse;
@@ -61,6 +62,16 @@ public interface IApi {
                                         @Query("dateTime") String datetime,
                                         @Query("reason_id") int reason_id,
                                         @Query("reject_message") String reject_message);
+
+    @GET("/scripts/setEditor.php")
+    Call<ServerResponse> setEditor(@Query("email") String email);
+
+    @GET("/scripts/getUsersPreview.php")
+    Call<UserPreviewResponse> getUsersPreview(@Query("page") int page,
+                                              @Query("user_status") int user_status);
+
+    @GET("/scripts/removeEditor.php")
+    Call<ServerResponse> removeEditor(@Query("email") String email);
 
     @GET("/scripts/getFullAd.php")
     Call<FullAdResponse> getFullAd(@Query("id_ad") int id_ad,

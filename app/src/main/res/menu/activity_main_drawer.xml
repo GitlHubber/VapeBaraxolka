@@ -51,10 +51,10 @@
             android:visible="false"
             android:title="Рассмотрение"
             app:actionLayout="@layout/menu_counter"/>
-<!--        <item-->
-<!--            android:id="@+id/ADMIN"-->
-<!--            android:visible="false"-->
-<!--            android:title="Назначить редактора" />-->
+        <item
+            android:id="@+id/ADMIN"
+            android:visible="false"
+            android:title="Администрирование" />
     </group>
 
 </menu>

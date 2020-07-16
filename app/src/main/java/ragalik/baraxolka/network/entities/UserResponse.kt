@@ -43,6 +43,11 @@ class UserResponse {
     val user: List<User>? = null
 }
 
+class UserPreviewResponse {
+    @field:SerializedName("user")
+    val users: List<User>? = null
+}
+
 class RegisterResponse {
     @field:SerializedName("success")
     val success: Boolean? = null
