@@ -25,7 +25,7 @@
         tools:targetApi="m">
 
 <!--        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID"-->
-<!--            android:value="ca-app-pub-3940256099942544~3347511713"/>-->
+<!--            android:value="ca-app-pub-7944468475286818~3650093179"/>-->
 
         <activity
             android:name=".other_logic.edit_creator.EditCreator"

@@ -61,6 +61,7 @@ public class Account extends AppCompatActivity {
     public static AppCompatActivity activity;
 
     public static Uri outputFileUri;
+   // private AdView mAdView;
 
 
     @Override
@@ -149,6 +150,10 @@ public class Account extends AppCompatActivity {
             appCompatActivity.getSupportActionBar().setDisplayShowTitleEnabled(false);
             toolbar.setTitle(user.getNickname());
         }
+
+//        mAdView = findViewById(R.id.AccountAdView);
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//        mAdView.loadAd(adRequest);
 
         navigationPhoto = MainActivity.activity.findViewById(R.id.navigationDrawerPhoto);
 

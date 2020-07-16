@@ -39,7 +39,6 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/aldrich"
                 android:gravity="center"
-                android:visibility="gone"
                 android:text="Vape"
                 android:textColor="@color/colorText"
                 android:textSize="36sp" />

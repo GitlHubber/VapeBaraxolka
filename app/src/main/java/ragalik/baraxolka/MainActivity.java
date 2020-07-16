@@ -60,7 +60,7 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    public static final String SERVER_URL = "https://imvaper.000webhostapp.com/scripts/";
+    public static final String SERVER_URL = "http://ketrovsky.iam.by/scripts/";
 
     private LogIn logInFragment;
     public static ADS adsFragment;
