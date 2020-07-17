@@ -1687,7 +1687,9 @@ drawable ic_ads
 drawable ic_arrow
 drawable ic_arrow_bottom_24dp
 drawable ic_arrow_dark_theme
+drawable ic_baseline_person_24
 drawable ic_baseline_remove_24
+drawable ic_baseline_report_24
 drawable ic_bookmark
 drawable ic_bottom_sheet_arrow
 drawable ic_brightness_3_black_24dp
@@ -1965,6 +1967,7 @@ id boomParabola_3
 id boomParabola_4
 id boomRandom
 id bottom
+id bottomNavigationView
 id button
 id buttonPanel
 id buttonPlaceAlignment_bl
@@ -2086,6 +2089,7 @@ id edit_region_layout
 id editor_email
 id editor_image
 id editor_nickname
+id editors_item
 id end
 id end_padder
 id enterAlways
@@ -2107,6 +2111,7 @@ id fitToContents
 id fixed
 id floating
 id forever
+id fragment_container
 id fragment_container_view_tag
 id fullAdCoordinator
 id fullAdLinearLayout
@@ -2325,6 +2330,7 @@ id rejectReasonDropdownText
 id rejectReasonLayout
 id rejected_ads_layout
 id removeEditorButton
+id report_item
 id retry
 id right
 id right_icon
@@ -2649,12 +2655,14 @@ layout fragment_ad_creator_image_menu
 layout fragment_ad_moderator
 layout fragment_administrator
 layout fragment_ads
+layout fragment_editors
 layout fragment_favourites
 layout fragment_full_image_layout
 layout fragment_log_in
 layout fragment_my_ads
 layout fragment_no_internet_connection
 layout fragment_price
+layout fragment_report
 layout fragment_rules
 layout fragment_sign_in
 layout fragment_sort
@@ -2735,6 +2743,7 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu activity_main_drawer
+menu admin_bottom_nav
 menu main
 menu menu_seller_profile
 mipmap ic_launcher

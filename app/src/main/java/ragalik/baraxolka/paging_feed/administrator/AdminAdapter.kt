@@ -2,8 +2,6 @@ package ragalik.baraxolka.paging_feed.administrator
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
-import android.app.Dialog
-import android.content.DialogInterface
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
@@ -13,14 +11,13 @@ import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.item_ad.view.*
 import kotlinx.android.synthetic.main.item_editor.view.*
 import ragalik.baraxolka.MainActivity
 import ragalik.baraxolka.R
 import ragalik.baraxolka.network.ApiClient
 import ragalik.baraxolka.network.entities.ServerResponse
 import ragalik.baraxolka.network.entities.User
-import ragalik.baraxolka.paging_feed.AdAdapter
+import ragalik.baraxolka.paging_feed.administrator.EditorsFragment.Companion.itemViewModel
 import ragalik.baraxolka.paging_feed.seller.SellerProfileActivity
 import retrofit2.Call
 import retrofit2.Callback
@@ -79,7 +76,7 @@ class AdminAdapter : PagedListAdapter<User, RecyclerView.ViewHolder>(AD_COMPARAT
         call.enqueue(object : Callback<ServerResponse> {
 
             override fun onResponse(call: Call<ServerResponse>, response: Response<ServerResponse>) {
-                Administrator.itemViewModel.liveDataSource.value?.invalidate()
+                itemViewModel?.liveDataSource?.value?.invalidate()
                 Toast.makeText(view.context, "$email больше не редактор", Toast.LENGTH_LONG).show()
             }
 

@@ -4,16 +4,12 @@ package ragalik.baraxolka.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.Toolbar;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.fragment.app.FragmentContainerView;
 import androidx.viewbinding.ViewBinding;
-import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -21,42 +17,25 @@ import ragalik.baraxolka.R;
 
 public final class FragmentAdministratorBinding implements ViewBinding {
   @NonNull
-  private final CoordinatorLayout rootView;
+  private final RelativeLayout rootView;
 
   @NonNull
-  public final RecyclerView EditorsRecyclerView;
+  public final BottomNavigationView bottomNavigationView;
 
   @NonNull
-  public final Toolbar administratorToolbar;
+  public final FragmentContainerView fragmentContainer;
 
-  @NonNull
-  public final TextInputEditText findUserET;
-
-  @NonNull
-  public final ProgressBar progressEditors;
-
-  @NonNull
-  public final SwipeRefreshLayout refresherEditors;
-
-  @NonNull
-  public final Button setEditorButton;
-
-  private FragmentAdministratorBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull RecyclerView EditorsRecyclerView, @NonNull Toolbar administratorToolbar,
-      @NonNull TextInputEditText findUserET, @NonNull ProgressBar progressEditors,
-      @NonNull SwipeRefreshLayout refresherEditors, @NonNull Button setEditorButton) {
+  private FragmentAdministratorBinding(@NonNull RelativeLayout rootView,
+      @NonNull BottomNavigationView bottomNavigationView,
+      @NonNull FragmentContainerView fragmentContainer) {
     this.rootView = rootView;
-    this.EditorsRecyclerView = EditorsRecyclerView;
-    this.administratorToolbar = administratorToolbar;
-    this.findUserET = findUserET;
-    this.progressEditors = progressEditors;
-    this.refresherEditors = refresherEditors;
-    this.setEditorButton = setEditorButton;
+    this.bottomNavigationView = bottomNavigationView;
+    this.fragmentContainer = fragmentContainer;
   }
 
   @Override
   @NonNull
-  public CoordinatorLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -81,44 +60,20 @@ public final class FragmentAdministratorBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.EditorsRecyclerView;
-      RecyclerView EditorsRecyclerView = rootView.findViewById(id);
-      if (EditorsRecyclerView == null) {
+      id = R.id.bottomNavigationView;
+      BottomNavigationView bottomNavigationView = rootView.findViewById(id);
+      if (bottomNavigationView == null) {
         break missingId;
       }
 
-      id = R.id.administratorToolbar;
-      Toolbar administratorToolbar = rootView.findViewById(id);
-      if (administratorToolbar == null) {
+      id = R.id.fragment_container;
+      FragmentContainerView fragmentContainer = rootView.findViewById(id);
+      if (fragmentContainer == null) {
         break missingId;
       }
 
-      id = R.id.findUserET;
-      TextInputEditText findUserET = rootView.findViewById(id);
-      if (findUserET == null) {
-        break missingId;
-      }
-
-      id = R.id.progress_editors;
-      ProgressBar progressEditors = rootView.findViewById(id);
-      if (progressEditors == null) {
-        break missingId;
-      }
-
-      id = R.id.refresherEditors;
-      SwipeRefreshLayout refresherEditors = rootView.findViewById(id);
-      if (refresherEditors == null) {
-        break missingId;
-      }
-
-      id = R.id.setEditorButton;
-      Button setEditorButton = rootView.findViewById(id);
-      if (setEditorButton == null) {
-        break missingId;
-      }
-
-      return new FragmentAdministratorBinding((CoordinatorLayout) rootView, EditorsRecyclerView,
-          administratorToolbar, findUserET, progressEditors, refresherEditors, setEditorButton);
+      return new FragmentAdministratorBinding((RelativeLayout) rootView, bottomNavigationView,
+          fragmentContainer);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -70,9 +70,9 @@
 
         <Button
             android:id="@+id/removeEditorButton"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:background="@drawable/ic_baseline_remove_24"/>
+            android:layout_width="32dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_baseline_remove_24" />
 
     </LinearLayout>
 

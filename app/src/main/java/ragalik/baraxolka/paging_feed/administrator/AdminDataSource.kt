@@ -23,7 +23,7 @@ class AdminDataSource : PageKeyedDataSource<Int, User>() {
                 if (response.isSuccessful) {
                     val apiResponse = response.body()!!
                     val responseItems = apiResponse.users
-                    Administrator.progressBar.isVisible = false
+                    EditorsFragment.progressBar.isVisible = false
 
                     responseItems?.let {
                         callback.onResult(responseItems, null, FIRST_PAGE + 4)
