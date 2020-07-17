@@ -116,7 +116,6 @@ public class Administrator extends Fragment {
         setEditorButton.setOnClickListener(view1 -> {
             emailFromEditText = email.getText().toString().trim();
             setEditor(emailFromEditText);
-            itemViewModel.getLiveDataSource().getValue().invalidate();
         });
 
     }
@@ -136,6 +135,7 @@ public class Administrator extends Fragment {
         call.enqueue(new Callback<ServerResponse>() {
             @Override
             public void onResponse(Call<ServerResponse> call, Response<ServerResponse> response) {
+                itemViewModel.getLiveDataSource().getValue().invalidate();
                 Toast.makeText(getContext(), email + " теперь редактор", Toast.LENGTH_LONG).show();
             }
 
@@ -144,5 +144,11 @@ public class Administrator extends Fragment {
                 Toast.makeText(getContext(), "Произошла ошибка", Toast.LENGTH_LONG).show();
             }
         });
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        isReloaded = true;
     }
 }

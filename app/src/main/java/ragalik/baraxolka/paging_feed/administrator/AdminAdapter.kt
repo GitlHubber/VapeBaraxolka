@@ -1,6 +1,9 @@
 package ragalik.baraxolka.paging_feed.administrator
 
 import android.annotation.SuppressLint
+import android.app.AlertDialog
+import android.app.Dialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
@@ -23,7 +26,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class AdminAdapter : PagedListAdapter<User, RecyclerView.ViewHolder>(AdminAdapter.AD_COMPARATOR) {
+class AdminAdapter : PagedListAdapter<User, RecyclerView.ViewHolder>(AD_COMPARATOR) {
 
     companion object {
         var activity = MainActivity()
@@ -54,8 +57,18 @@ class AdminAdapter : PagedListAdapter<User, RecyclerView.ViewHolder>(AdminAdapte
         }
 
         view.removeEditorButton.setOnClickListener {
-            removeEditor(user?.email.toString(), it)
-            Administrator.itemViewModel.liveDataSource.value?.invalidate()
+            val builder = AlertDialog.Builder(it.context)
+            builder.setTitle("Удаление редактора")
+            builder.setMessage("Вы действительно хотите лишить прав редактора данного пользователя?")
+            builder.setPositiveButton("Да") { dialog, _ ->
+                run {
+                    dialog.dismiss()
+                    removeEditor(user?.email.toString(), it)
+                }
+            }
+            builder.setNegativeButton("Нет") { dialog, _ -> dialog.dismiss() }
+            val alertDialog = builder.create()
+            alertDialog.show()
         }
 
         user?.let { (holder as AdminViewHolder).bind(user) }
@@ -66,6 +79,7 @@ class AdminAdapter : PagedListAdapter<User, RecyclerView.ViewHolder>(AdminAdapte
         call.enqueue(object : Callback<ServerResponse> {
 
             override fun onResponse(call: Call<ServerResponse>, response: Response<ServerResponse>) {
+                Administrator.itemViewModel.liveDataSource.value?.invalidate()
                 Toast.makeText(view.context, "$email больше не редактор", Toast.LENGTH_LONG).show()
             }
 
