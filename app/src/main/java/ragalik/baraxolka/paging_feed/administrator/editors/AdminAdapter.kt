@@ -1,4 +1,4 @@
-package ragalik.baraxolka.paging_feed.administrator
+package ragalik.baraxolka.paging_feed.administrator.editors
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
@@ -12,12 +12,12 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_editor.view.*
-import ragalik.baraxolka.MainActivity
 import ragalik.baraxolka.R
 import ragalik.baraxolka.network.ApiClient
 import ragalik.baraxolka.network.entities.ServerResponse
 import ragalik.baraxolka.network.entities.User
-import ragalik.baraxolka.paging_feed.administrator.EditorsFragment.Companion.itemViewModel
+import ragalik.baraxolka.paging_feed.administrator.AdministratorActivity
+import ragalik.baraxolka.paging_feed.administrator.editors.EditorsFragment.Companion.itemViewModel
 import ragalik.baraxolka.paging_feed.seller.SellerProfileActivity
 import retrofit2.Call
 import retrofit2.Callback
@@ -26,8 +26,8 @@ import retrofit2.Response
 class AdminAdapter : PagedListAdapter<User, RecyclerView.ViewHolder>(AD_COMPARATOR) {
 
     companion object {
-        var activity = MainActivity()
-        var reasonPosition = 1
+        var activity = AdministratorActivity.activity
+
         private val AD_COMPARATOR = object : DiffUtil.ItemCallback<User>() {
             override fun areItemsTheSame(oldItem: User, newItem: User): Boolean =
                     oldItem.email == newItem.email
@@ -48,13 +48,13 @@ class AdminAdapter : PagedListAdapter<User, RecyclerView.ViewHolder>(AD_COMPARAT
         val view = holder.itemView
 
         view.setOnClickListener {
-            val myIntent = Intent(MainActivity.activity, SellerProfileActivity::class.java)
+            val myIntent = Intent(activity, SellerProfileActivity::class.java)
             myIntent.putExtra("sellerId", user?.id)
-            MainActivity.activity.startActivity(myIntent)
+            activity.startActivity(myIntent)
         }
 
         view.removeEditorButton.setOnClickListener {
-            val builder = AlertDialog.Builder(it.context)
+            val builder = AlertDialog.Builder(activity)
             builder.setTitle("Удаление редактора")
             builder.setMessage("Вы действительно хотите лишить прав редактора данного пользователя?")
             builder.setPositiveButton("Да") { dialog, _ ->

@@ -1,4 +1,4 @@
-package ragalik.baraxolka.paging_feed.administrator
+package ragalik.baraxolka.paging_feed.administrator.editors
 
 import androidx.core.view.isVisible
 import androidx.paging.PageKeyedDataSource
@@ -23,7 +23,7 @@ class AdminDataSource : PageKeyedDataSource<Int, User>() {
                 if (response.isSuccessful) {
                     val apiResponse = response.body()!!
                     val responseItems = apiResponse.users
-                    EditorsFragment.progressBar.isVisible = false
+                    EditorsFragment.editorsProgressBar.isVisible = false
 
                     responseItems?.let {
                         callback.onResult(responseItems, null, FIRST_PAGE + 4)

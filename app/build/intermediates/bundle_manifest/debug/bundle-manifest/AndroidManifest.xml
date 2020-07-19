@@ -28,16 +28,24 @@
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:usesCleartextTraffic="true" >
-
+        <activity
+            android:name="ragalik.baraxolka.paging_feed.administrator.AdministratorActivity"
+            android:label="@string/admin_activity"
+            android:parentActivityName="ragalik.baraxolka.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.SlidrActivityTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <!-- <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" -->
         <!-- android:value="ca-app-pub-7944468475286818~3650093179"/> -->
-
         <activity
             android:name="ragalik.baraxolka.other_logic.edit_creator.EditCreator"
             android:label="Изменение объявления"
             android:parentActivityName="ragalik.baraxolka.MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" >
         </activity>
         <activity

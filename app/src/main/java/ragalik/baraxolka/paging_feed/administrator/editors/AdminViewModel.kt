@@ -1,4 +1,4 @@
-package ragalik.baraxolka.paging_feed.administrator
+package ragalik.baraxolka.paging_feed.administrator.editors
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
@@ -6,7 +6,8 @@ import androidx.lifecycle.ViewModel
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
 import ragalik.baraxolka.network.entities.User
-import ragalik.baraxolka.paging_feed.Ad
+import ragalik.baraxolka.paging_feed.administrator.editors.AdminDataSource
+import ragalik.baraxolka.paging_feed.administrator.editors.AdminDataSourceFactory
 
 class AdminViewModel : ViewModel() {
 

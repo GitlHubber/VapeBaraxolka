@@ -1,9 +1,9 @@
-package ragalik.baraxolka.paging_feed.administrator
+package ragalik.baraxolka.paging_feed.administrator.editors
 
 import androidx.lifecycle.MutableLiveData
 import androidx.paging.DataSource
 import ragalik.baraxolka.network.entities.User
-import ragalik.baraxolka.paging_feed.Ad
+import ragalik.baraxolka.paging_feed.administrator.editors.AdminDataSource
 
 
 class AdminDataSourceFactory : DataSource.Factory<Int, User>() {

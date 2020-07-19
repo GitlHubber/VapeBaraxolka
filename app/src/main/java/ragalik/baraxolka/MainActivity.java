@@ -42,7 +42,7 @@ import java.util.List;
 import ragalik.baraxolka.other_logic.account.Account;
 import ragalik.baraxolka.other_logic.activities.SettingsActivity;
 import ragalik.baraxolka.other_logic.ad_creator.AdCreatorActivity;
-import ragalik.baraxolka.paging_feed.administrator.Administrator;
+import ragalik.baraxolka.paging_feed.administrator.AdministratorActivity;
 import ragalik.baraxolka.paging_feed.search.SearchActivity;
 import ragalik.baraxolka.other_logic.entrance.LogIn;
 import ragalik.baraxolka.other_logic.entrance.SignIn;
@@ -368,7 +368,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.MODERATOR) {
             fragmentTransaction.replace(R.id.constrLayout, new AdModerator()).commit();
         } else if (id == R.id.ADMIN) {
-            fragmentTransaction.replace(R.id.constrLayout, new Administrator()).commit();
+            //fragmentTransaction.replace(R.id.constrLayout, new Administrator()).commit();
+            Intent myIntent = new Intent(MainActivity.this, AdministratorActivity.class);
+            startActivity(myIntent);
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

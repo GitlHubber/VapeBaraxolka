@@ -8,6 +8,7 @@ import ragalik.baraxolka.network.entities.AdsCount;
 import ragalik.baraxolka.network.entities.CategoryResponse;
 import ragalik.baraxolka.network.entities.ReasonsResponse;
 import ragalik.baraxolka.network.entities.RegisterResponse;
+import ragalik.baraxolka.network.entities.ReportResponse;
 import ragalik.baraxolka.network.entities.ServerResponse;
 import ragalik.baraxolka.network.entities.User;
 import ragalik.baraxolka.network.entities.UserPreviewResponse;
@@ -77,6 +78,13 @@ public interface IApi {
     Call<FullAdResponse> getFullAd(@Query("id_ad") int id_ad,
                                    @Query("user_id") int user_id);
 
+    @GET("/scripts/getMyReports.php")
+    Call<ReportResponse> getMyReports(@Query("page") int page,
+                                   @Query("user_id") int user_id);
+
+    @GET("/scripts/getReports.php")
+    Call<ReportResponse> getReports(@Query("page") int page);
+
     @GET("/scripts/authorization.php")
     Call<UserResponse> auth(@Query("email_or_number") String email_or_number,
                             @Query("flag") String flag,
@@ -115,6 +123,15 @@ public interface IApi {
                                            @Field("user_id") int user_id,
                                            @Field("datetime") String datetime,
                                            @Field("flag") String flag);
+
+    @FormUrlEncoded
+    @POST("/scripts/insertAdReport.php")
+    Call<ServerResponse> insertAdReport(@Field("report_reason_id") int report_reason_id,
+                                           @Field("report_message") String report_message,
+                                           @Field("datetime") String datetime,
+                                           @Field("ad_id") int ad_id,
+                                           @Field("isReportExists") int isReportExists,
+                                           @Field("user_id") int user_id);
 
     @FormUrlEncoded
     @POST("/scripts/setRegion.php")

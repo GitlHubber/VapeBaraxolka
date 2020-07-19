@@ -1,4 +1,4 @@
-package ragalik.baraxolka.paging_feed.administrator
+package ragalik.baraxolka.paging_feed.my_reports
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import ragalik.baraxolka.R
 
-class ReportFragment : Fragment() {
+
+class MyReportsFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,10 +18,12 @@ class ReportFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_report, container, false)
+        return inflater.inflate(R.layout.fragment_my_reports, container, false)
     }
 
     companion object {
 
     }
+
+
 }

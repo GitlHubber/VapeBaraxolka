@@ -1,20 +1,20 @@
 -- Merging decision tree log ---
 provider#androidx.core.content.FileProvider
-INJECTED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:142:9-150:20
+INJECTED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:150:9-158:20
 	android:grantUriPermissions
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:146:13-47
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:154:13-47
 	android:authorities
 		INJECTED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:144:13-60
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:152:13-60
 	android:exported
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:145:13-37
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:153:13-37
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:143:13-62
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:151:13-62
 manifest
-ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-153:12
-INJECTED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-153:12
-INJECTED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-153:12
-INJECTED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-153:12
+ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-161:12
+INJECTED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-161:12
+INJECTED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-161:12
+INJECTED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-161:12
 MERGED from [androidx.databinding:viewbinding:4.0.1] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\563e29a984f5edaee594a8b1788f2cdc\jetified-viewbinding-4.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\cda546f5dc6c9e844d2922f461cd9b6b\jetified-materialsearchview-1.4.0\AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.navigation:navigation-ui-ktx:2.2.1] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\5c4074b6e40abdef11773640fdc09173\navigation-ui-ktx-2.2.1\AndroidManifest.xml:17:1-24:12
@@ -83,22 +83,22 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\Ragalik\.gradle\caches\transfo
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\ade1242c4c06b62a9dde96b213f83f5c\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\51d3f20ceda47a6c6ca92ece58bd1d81\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\9e37aa2d19b7f1100451bb5e68c330d3\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-153:12
-INJECTED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-153:12
-INJECTED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-153:12
+INJECTED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-161:12
+INJECTED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-161:12
+INJECTED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-161:12
 	package
 		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:4:5-32
 		INJECTED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml
 		INJECTED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-153:12
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-161:12
 		INJECTED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-153:12
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-161:12
 		INJECTED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:11-69
@@ -129,7 +129,7 @@ ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\Androi
 	android:xlargeScreens
 		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:15:9-37
 application
-ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:17:5-151:19
+ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:17:5-159:19
 MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\cda546f5dc6c9e844d2922f461cd9b6b\jetified-materialsearchview-1.4.0\AndroidManifest.xml:11:5-20
 MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\cda546f5dc6c9e844d2922f461cd9b6b\jetified-materialsearchview-1.4.0\AndroidManifest.xml:11:5-20
 MERGED from [com.google.android.material:material:1.2.0-alpha06] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\685bec1ff67148cf40279d5effa69724\material-1.2.0-alpha06\AndroidManifest.xml:22:5-20
@@ -174,160 +174,174 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ra
 		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:18:9-35
 	android:usesCleartextTraffic
 		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:24:9-44
-activity#ragalik.baraxolka.other_logic.edit_creator.EditCreator
-ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:30:9-36:20
-	android:parentActivityName
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:33:13-55
-	android:label
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:32:13-49
-	android:theme
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:34:13-44
-	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:31:13-65
-activity#ragalik.baraxolka.paging_feed.ads.FilterActivity
-ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:37:9-46:20
+activity#ragalik.baraxolka.paging_feed.administrator.AdministratorActivity
+ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:26:9-34:20
 	android:screenOrientation
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:41:13-49
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:27:13-49
 	android:parentActivityName
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:40:13-55
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:28:13-55
 	android:label
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:39:13-58
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:29:13-51
 	android:theme
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:42:13-63
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:30:13-63
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:38:13-59
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:26:19-82
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:43:13-45:49
+ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:31:13-33:49
 	android:value
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:45:17-46
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:33:17-46
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:44:17-63
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:32:17-63
+activity#ragalik.baraxolka.other_logic.edit_creator.EditCreator
+ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:37:9-44:20
+	android:screenOrientation
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:40:13-49
+	android:parentActivityName
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:41:13-55
+	android:label
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:39:13-49
+	android:theme
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:42:13-44
+	android:name
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:38:13-65
+activity#ragalik.baraxolka.paging_feed.ads.FilterActivity
+ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:45:9-54:20
+	android:screenOrientation
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:49:13-49
+	android:parentActivityName
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:48:13-55
+	android:label
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:47:13-58
+	android:theme
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:50:13-63
+	android:name
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:46:13-59
 activity#ragalik.baraxolka.other_logic.account.AccountEditActivity
-ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:47:9-56:20
+ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:55:9-64:20
 	android:screenOrientation
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:51:13-49
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:59:13-49
 	android:parentActivityName
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:50:13-70
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:58:13-70
 	android:label
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:49:13-64
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:57:13-64
 	android:theme
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:52:13-63
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:60:13-63
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:48:13-68
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:56:13-68
 activity#ragalik.baraxolka.paging_feed.search.SearchActivity
-ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:57:9-66:20
+ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:65:9-74:20
 	android:screenOrientation
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:61:13-49
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:69:13-49
 	android:parentActivityName
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:60:13-55
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:68:13-55
 	android:label
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:59:13-58
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:67:13-58
 	android:theme
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:62:13-63
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:70:13-63
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:58:13-62
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:66:13-62
 activity#ragalik.baraxolka.other_logic.ad_creator.AdCreatorActivity
-ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:67:9-76:20
+ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:75:9-84:20
 	android:screenOrientation
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:71:13-49
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:79:13-49
 	android:parentActivityName
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:70:13-55
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:78:13-55
 	android:label
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:69:13-60
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:77:13-60
 	android:theme
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:72:13-44
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:80:13-44
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:68:13-69
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:76:13-69
 activity#ragalik.baraxolka.other_logic.activities.SettingsActivity
-ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:77:9-86:20
+ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:85:9-94:20
 	android:screenOrientation
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:81:13-49
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:89:13-49
 	android:parentActivityName
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:80:13-55
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:88:13-55
 	android:label
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:79:13-60
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:87:13-60
 	android:theme
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:82:13-63
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:90:13-63
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:78:13-68
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:86:13-68
 activity#ragalik.baraxolka.paging_feed.seller.SellerProfileActivity
-ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:87:9-96:20
+ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:95:9-104:20
 	android:screenOrientation
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:91:13-49
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:99:13-49
 	android:parentActivityName
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:90:13-77
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:98:13-77
 	android:label
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:89:13-66
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:97:13-66
 	android:theme
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:92:13-44
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:100:13-44
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:88:13-69
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:96:13-69
 activity#ragalik.baraxolka.other_logic.full_ad.FullAdActivity
-ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:97:9-107:20
+ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:105:9-115:20
 	android:screenOrientation
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:102:13-49
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:110:13-49
 	android:parentActivityName
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:101:13-55
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:109:13-55
 	android:label
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:99:13-59
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:107:13-59
 	android:launchMode
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:100:13-43
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:108:13-43
 	android:theme
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:103:13-44
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:111:13-44
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:98:13-63
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:106:13-63
 activity#ragalik.baraxolka.other_logic.account.Account
-ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:108:9-116:20
-	android:screenOrientation
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:111:13-49
-	android:parentActivityName
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:110:13-55
-	android:theme
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:112:13-44
-	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:109:13-56
-activity#ragalik.baraxolka.other_logic.activities.SplashScreenActivity
-ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:117:9-126:20
+ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:116:9-124:20
 	android:screenOrientation
 		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:119:13-49
+	android:parentActivityName
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:118:13-55
 	android:theme
 		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:120:13-44
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:118:13-72
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:121:13-125:29
-action#android.intent.action.MAIN
-ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:122:17-69
-	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:122:25-66
-category#android.intent.category.LAUNCHER
-ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:124:17-77
-	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:124:27-74
-activity#ragalik.baraxolka.MainActivity
-ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:127:9-132:47
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:117:13-56
+activity#ragalik.baraxolka.other_logic.activities.SplashScreenActivity
+ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:125:9-134:20
 	android:screenOrientation
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:131:13-49
-	android:label
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:129:13-45
-	android:launchMode
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:130:13-43
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:127:13-49
 	android:theme
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:132:13-44
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:128:13-44
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:128:13-41
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:126:13-72
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:129:13-133:29
+action#android.intent.action.MAIN
+ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:130:17-69
+	android:name
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:130:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:132:17-77
+	android:name
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:132:27-74
+activity#ragalik.baraxolka.MainActivity
+ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:135:9-140:47
+	android:screenOrientation
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:139:13-49
+	android:label
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:137:13-45
+	android:launchMode
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:138:13-43
+	android:theme
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:140:13-44
+	android:name
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:136:13-41
 meta-data#preloaded_fonts
-ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:134:9-136:57
+ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:142:9-144:57
 	android:resource
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:136:13-54
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:144:13-54
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:135:13-43
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:143:13-43
 uses-library#org.apache.http.legacy
-ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:138:9-140:40
+ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:146:9-148:40
 	android:required
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:140:13-37
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:148:13-37
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:139:13-50
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:147:13-50
 uses-sdk
 INJECTED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml
@@ -479,11 +493,11 @@ INJECTED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\And
 		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml
 		INJECTED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:147:13-149:58
+ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:155:13-157:58
 	android:resource
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:149:17-55
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:157:17-55
 	android:name
-		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:148:17-67
+		ADDED from D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:156:17-67
 provider#com.squareup.picasso.PicassoProvider
 ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\ed884ad4746cff215344bcf066883100\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
 	android:authorities

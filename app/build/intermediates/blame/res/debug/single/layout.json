@@ -36,6 +36,10 @@
         "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\layout\\activity_edit_creator.xml"
     },
     {
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_my_reports.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_my_reports.xml"
+    },
+    {
         "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_my_ads.xml",
         "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_my_ads.xml"
     },
@@ -70,6 +74,10 @@
     {
         "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_settings.xml",
         "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\layout\\content_settings.xml"
+    },
+    {
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_reports.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_reports.xml"
     },
     {
         "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_main.xml",
@@ -154,6 +162,10 @@
     {
         "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_ad_creator.xml",
         "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\layout\\activity_ad_creator.xml"
+    },
+    {
+        "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_administrator.xml",
+        "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\layout\\activity_administrator.xml"
     },
     {
         "merged": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\full_ad_loader.xml",

@@ -1886,6 +1886,7 @@ id account_load_image
 id account_phone
 id account_pn_layout
 id account_region_layout
+id account_reports_layout
 id account_show_image
 id account_take_image
 id account_town
@@ -2209,6 +2210,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
 id myAdsRefresher
+id myReportsRecyclerView
 id nTextFullAd
 id name
 id nameLabel
@@ -2611,6 +2613,7 @@ layout active_ads
 layout activity_account
 layout activity_account_edit
 layout activity_ad_creator
+layout activity_administrator
 layout activity_edit_creator
 layout activity_filter
 layout activity_full_ad
@@ -2653,16 +2656,16 @@ layout dropdown_text_color
 layout fragment_account_image_menu
 layout fragment_ad_creator_image_menu
 layout fragment_ad_moderator
-layout fragment_administrator
 layout fragment_ads
 layout fragment_editors
 layout fragment_favourites
 layout fragment_full_image_layout
 layout fragment_log_in
 layout fragment_my_ads
+layout fragment_my_reports
 layout fragment_no_internet_connection
 layout fragment_price
-layout fragment_report
+layout fragment_reports
 layout fragment_rules
 layout fragment_sign_in
 layout fragment_sort
@@ -2783,6 +2786,7 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string account
 string action_settings
+string admin_activity
 string ads
 string app_name
 string appbar_scrolling_view_behavior

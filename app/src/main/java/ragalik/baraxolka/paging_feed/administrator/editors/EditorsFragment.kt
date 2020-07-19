@@ -1,4 +1,4 @@
-package ragalik.baraxolka.paging_feed.administrator
+package ragalik.baraxolka.paging_feed.administrator.editors
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -39,33 +39,21 @@ class EditorsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        progressBar = view.findViewById(R.id.progress_editors)
+        editorsProgressBar = view.findViewById(R.id.progress_editors)
         if (isReloaded) {
-            progressBar.visibility = View.GONE
+            editorsProgressBar.visibility = View.GONE
         } else {
-            progressBar.visibility = View.VISIBLE
+            editorsProgressBar.visibility = View.VISIBLE
         }
 
         MainActivity.isActualFragment = false
         MainActivity.invalidateSearchMenu()
         MainActivity.fab.hide()
 
-        val toolbar: Toolbar = view.findViewById(R.id.administratorToolbar)
-        val appCompatActivity = activity as AppCompatActivity?
-        if (appCompatActivity != null) {
-            appCompatActivity.setSupportActionBar(toolbar)
-            toolbar.title = "Назначение редактора"
-        }
-
-        val toggle = ActionBarDrawerToggle(
-                activity, MainActivity.drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
-        MainActivity.drawer.addDrawerListener(toggle)
-        toggle.syncState()
-
         refresherEditors!!.setOnRefreshListener {
             itemViewModel?.liveDataSource?.value?.invalidate()
             refresherEditors!!.isRefreshing = false
-            progressBar.visibility = View.VISIBLE
+            editorsProgressBar.visibility = View.VISIBLE
         }
 
         getEditors()
@@ -80,7 +68,7 @@ class EditorsFragment : Fragment() {
         private var emailFromEditText: String? = null
         var itemViewModel: AdminViewModel? = null
         private var isReloaded = false
-        lateinit var progressBar : ProgressBar
+        lateinit var editorsProgressBar : ProgressBar
     }
 
     private fun getEditors() {

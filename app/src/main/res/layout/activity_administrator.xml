@@ -4,8 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".paging_feed.administrator.Administrator">
+    tools:context=".paging_feed.administrator.AdministratorActivity"
+    android:background="@color/colorBackground">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/administratorToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:title="@string/admin_activity"
+                app:elevation="0dp"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container"
@@ -20,6 +36,5 @@
         android:background="@color/colorBackground"
         android:layout_alignParentBottom="true"
         app:menu="@menu/admin_bottom_nav"/>
-
 
 </RelativeLayout>
