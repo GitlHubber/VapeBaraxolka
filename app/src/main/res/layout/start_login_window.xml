@@ -19,7 +19,6 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/aldrich"
             android:paddingTop="15dp"
-            android:visibility="gone"
             android:text="Vape"
             android:textAlignment="center"
             android:textColor="@color/colorAdsDate"
@@ -31,7 +30,6 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/aldrich"
             android:text="Барахолка"
-            android:paddingTop="10dp"
             android:textAlignment="center"
             android:textColor="@color/colorAdsDate"
             android:textSize="18sp" />

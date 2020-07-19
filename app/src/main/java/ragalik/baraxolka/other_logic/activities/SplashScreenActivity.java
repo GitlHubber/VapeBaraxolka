@@ -87,13 +87,13 @@ public class SplashScreenActivity extends AppCompatActivity {
     }
 
     public static void startAnimations (Activity activity) {
-        ImageView logoImg = activity.findViewById(R.id.logotypeImg);
+     //   ImageView logoImg = activity.findViewById(R.id.logotypeImg);
         TextView vapeText = activity.findViewById(R.id.splashVape);
         TextView baraxolkaText = activity.findViewById(R.id.splashBaraxolka);
-        Animation imgAnim = AnimationUtils.loadAnimation(activity, R.anim.fade);
-        Animation vapeAnim = AnimationUtils.loadAnimation(activity, R.anim.for_splash_text);
-        Animation baraxolkaAnim = AnimationUtils.loadAnimation(activity, R.anim.for_splash_text);
-        logoImg.startAnimation(imgAnim);
+        //Animation imgAnim = AnimationUtils.loadAnimation(activity, R.anim.fade);
+        Animation vapeAnim = AnimationUtils.loadAnimation(activity, R.anim.fade);
+        Animation baraxolkaAnim = AnimationUtils.loadAnimation(activity, R.anim.fade);
+       // logoImg.startAnimation(imgAnim);
         vapeText.startAnimation(vapeAnim);
         baraxolkaText.startAnimation(baraxolkaAnim);
     }

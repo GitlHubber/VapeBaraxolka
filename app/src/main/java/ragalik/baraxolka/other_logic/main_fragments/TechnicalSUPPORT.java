@@ -29,6 +29,7 @@ import ragalik.baraxolka.MainActivity;
 public class TechnicalSUPPORT extends Fragment {
 
     private TextView link;
+    //private AdView mAdView;
 
     public TechnicalSUPPORT() {
         // Required empty public constructor
@@ -56,6 +57,11 @@ public class TechnicalSUPPORT extends Fragment {
             appCompatActivity.setSupportActionBar(toolbar);
             toolbar.setTitle("Техническая поддержка");
         }
+
+//        mAdView = getActivity().findViewById(R.id.SupportAdView);
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//        mAdView.loadAd(adRequest);
+
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 getActivity(), MainActivity.drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         MainActivity.drawer.addDrawerListener(toggle);

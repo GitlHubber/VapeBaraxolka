@@ -14,7 +14,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
 
-    private static final String BASE_URL = "https://imvaper.000webhostapp.com";
+    private static final String BASE_URL = "http://ketrovsky.iam.by/";
     private static Retrofit retrofit;
     private static IApi iApi;
 

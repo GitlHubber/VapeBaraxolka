@@ -166,6 +166,27 @@
                     android:layout_height="@dimen/divider"
                     android:background="@color/colorAdCreatorImage" />
 
+                <LinearLayout
+                    android:id="@+id/account_reports_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Жалобы"
+                        android:textColor="@color/colorText"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider"
+                    android:background="@color/colorAdCreatorImage" />
+
                 <Button
                     android:id="@+id/signOutButtonAccount"
                     android:layout_width="match_parent"
@@ -178,7 +199,22 @@
                     android:textColor="@color/colorAdsDate" />
                 </LinearLayout>
         </ScrollView>
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="100dp"-->
+<!--            android:layout_marginBottom="10dp">-->
 
+<!--            <com.google.android.gms.ads.AdView-->
+<!--                xmlns:ads="http://schemas.android.com/apk/res-auto"-->
+<!--                android:id="@+id/AccountAdView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                ads:adSize="BANNER"-->
+<!--                ads:adUnitId="ca-app-pub-7944468475286818/5860736811">-->
+<!--            </com.google.android.gms.ads.AdView>-->
+
+<!--        </LinearLayout>-->
     </com.google.android.material.appbar.AppBarLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

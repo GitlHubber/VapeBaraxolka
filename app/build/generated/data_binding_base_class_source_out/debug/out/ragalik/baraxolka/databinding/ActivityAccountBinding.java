@@ -40,6 +40,9 @@ public final class ActivityAccountBinding implements ViewBinding {
   public final LinearLayout accountRegionLayout;
 
   @NonNull
+  public final LinearLayout accountReportsLayout;
+
+  @NonNull
   public final TextView accountTown;
 
   @NonNull
@@ -69,17 +72,19 @@ public final class ActivityAccountBinding implements ViewBinding {
   private ActivityAccountBinding(@NonNull CoordinatorLayout rootView,
       @NonNull CoordinatorLayout accountCoordinator, @NonNull TextView accountEmail,
       @NonNull TextView accountPhone, @NonNull LinearLayout accountPnLayout,
-      @NonNull LinearLayout accountRegionLayout, @NonNull TextView accountTown,
-      @NonNull AppBarLayout appBarLayoutAccount, @NonNull AppCompatCheckBox cbShowHidePN,
-      @NonNull LinearLayout hidePhoneLayout, @NonNull ImageView profilePhoto,
-      @NonNull Button signOutButtonAccount, @NonNull Toolbar toolbarAccount,
-      @NonNull TextView twAccountInfo, @NonNull TextView twHidePhone) {
+      @NonNull LinearLayout accountRegionLayout, @NonNull LinearLayout accountReportsLayout,
+      @NonNull TextView accountTown, @NonNull AppBarLayout appBarLayoutAccount,
+      @NonNull AppCompatCheckBox cbShowHidePN, @NonNull LinearLayout hidePhoneLayout,
+      @NonNull ImageView profilePhoto, @NonNull Button signOutButtonAccount,
+      @NonNull Toolbar toolbarAccount, @NonNull TextView twAccountInfo,
+      @NonNull TextView twHidePhone) {
     this.rootView = rootView;
     this.accountCoordinator = accountCoordinator;
     this.accountEmail = accountEmail;
     this.accountPhone = accountPhone;
     this.accountPnLayout = accountPnLayout;
     this.accountRegionLayout = accountRegionLayout;
+    this.accountReportsLayout = accountReportsLayout;
     this.accountTown = accountTown;
     this.appBarLayoutAccount = appBarLayoutAccount;
     this.cbShowHidePN = cbShowHidePN;
@@ -144,6 +149,12 @@ public final class ActivityAccountBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.account_reports_layout;
+      LinearLayout accountReportsLayout = rootView.findViewById(id);
+      if (accountReportsLayout == null) {
+        break missingId;
+      }
+
       id = R.id.account_town;
       TextView accountTown = rootView.findViewById(id);
       if (accountTown == null) {
@@ -199,9 +210,9 @@ public final class ActivityAccountBinding implements ViewBinding {
       }
 
       return new ActivityAccountBinding((CoordinatorLayout) rootView, accountCoordinator,
-          accountEmail, accountPhone, accountPnLayout, accountRegionLayout, accountTown,
-          appBarLayoutAccount, cbShowHidePN, hidePhoneLayout, profilePhoto, signOutButtonAccount,
-          toolbarAccount, twAccountInfo, twHidePhone);
+          accountEmail, accountPhone, accountPnLayout, accountRegionLayout, accountReportsLayout,
+          accountTown, appBarLayoutAccount, cbShowHidePN, hidePhoneLayout, profilePhoto,
+          signOutButtonAccount, toolbarAccount, twAccountInfo, twHidePhone);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

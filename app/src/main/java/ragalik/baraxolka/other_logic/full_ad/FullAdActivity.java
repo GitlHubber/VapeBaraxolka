@@ -118,9 +118,6 @@ public class FullAdActivity extends AppCompatActivity {
 
         temp = ad.getId() + "";
         adNumber.setText(temp);
-
-
-
     }
 
     private void getFullAdInfo (int adId) {

@@ -23,13 +23,21 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-
-<!--        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID"-->
-<!--            android:value="ca-app-pub-3940256099942544~3347511713"/>-->
-
+        <activity android:name=".paging_feed.administrator.AdministratorActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/admin_activity"
+            android:theme="@style/AppTheme.SlidrActivityTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <!-- <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" -->
+        <!-- android:value="ca-app-pub-7944468475286818~3650093179"/> -->
         <activity
             android:name=".other_logic.edit_creator.EditCreator"
             android:label="Изменение объявления"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme">
 

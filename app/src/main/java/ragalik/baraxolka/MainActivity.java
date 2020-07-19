@@ -42,6 +42,7 @@ import java.util.List;
 import ragalik.baraxolka.other_logic.account.Account;
 import ragalik.baraxolka.other_logic.activities.SettingsActivity;
 import ragalik.baraxolka.other_logic.ad_creator.AdCreatorActivity;
+import ragalik.baraxolka.paging_feed.administrator.AdministratorActivity;
 import ragalik.baraxolka.paging_feed.search.SearchActivity;
 import ragalik.baraxolka.other_logic.entrance.LogIn;
 import ragalik.baraxolka.other_logic.entrance.SignIn;
@@ -60,7 +61,7 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    public static final String SERVER_URL = "https://imvaper.000webhostapp.com/scripts/";
+    public static final String SERVER_URL = "http://ketrovsky.iam.by/scripts/";
 
     private LogIn logInFragment;
     public static ADS adsFragment;
@@ -366,10 +367,11 @@ public class MainActivity extends AppCompatActivity
             startActivity(myIntent);
         } else if (id == R.id.MODERATOR) {
             fragmentTransaction.replace(R.id.constrLayout, new AdModerator()).commit();
+        } else if (id == R.id.ADMIN) {
+            //fragmentTransaction.replace(R.id.constrLayout, new Administrator()).commit();
+            Intent myIntent = new Intent(MainActivity.this, AdministratorActivity.class);
+            startActivity(myIntent);
         }
-//        } else if (id == R.id.ADMIN) {
-//            fragmentTransaction.replace(R.id.constrLayout, new Administrator()).commit();
-//        }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -378,7 +380,7 @@ public class MainActivity extends AppCompatActivity
 
     public static void checkUserStatus() {
         if (sp.getString("status_name", "").equals("АДМИНИСТРАТОР")) {
-            //createAdminField();
+            createAdminField();
             createEditorField();
         } else if (sp.getString("status_name", "").equals("РЕДАКТОР")) {
             createEditorField();
@@ -392,11 +394,11 @@ public class MainActivity extends AppCompatActivity
     }
 
     private static void createAdminField() {
-//        NavigationView navigationView = MainActivity.activity.findViewById(R.id.nav_view);
-//        Menu menu = navigationView.getMenu();
-//        MenuItem administrator = menu.findItem(R.id.ADMIN);
-//        administrator.setVisible(true);
-//        createEditorField();
+        NavigationView navigationView = MainActivity.activity.findViewById(R.id.nav_view);
+        Menu menu = navigationView.getMenu();
+        MenuItem administrator = menu.findItem(R.id.ADMIN);
+        administrator.setVisible(true);
+        createEditorField();
     }
 
     private static void createEditorField() {
