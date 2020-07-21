@@ -12,7 +12,7 @@ import java.util.TimeZone;
 import ragalik.baraxolka.MainActivity;
 import ragalik.baraxolka.network.ApiClient;
 import ragalik.baraxolka.network.entities.ServerResponse;
-import ragalik.baraxolka.paging_feed.Ad;
+import ragalik.baraxolka.network.entities.Ad;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

@@ -43,10 +43,6 @@ class EditorsFragment : Fragment() {
             editorsProgressBar.visibility = View.VISIBLE
         }
 
-        MainActivity.isActualFragment = false
-        MainActivity.invalidateSearchMenu()
-        MainActivity.fab.hide()
-
         refresherEditors!!.setOnRefreshListener {
             itemViewModel?.liveDataSource?.value?.invalidate()
             refresherEditors!!.isRefreshing = false

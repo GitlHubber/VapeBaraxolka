@@ -15,6 +15,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
@@ -44,8 +45,8 @@ import ragalik.baraxolka.network.entities.CategoryResponse;
 import ragalik.baraxolka.network.entities.ServerResponse;
 import ragalik.baraxolka.network.entities.Subcategories;
 import ragalik.baraxolka.other_logic.account.PathUtils;
-import ragalik.baraxolka.paging_feed.Ad;
-import ragalik.baraxolka.paging_feed.FullAdResponse;
+import ragalik.baraxolka.network.entities.Ad;
+import ragalik.baraxolka.network.entities.FullAdResponse;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -167,7 +168,10 @@ public class EditCreator extends AppCompatActivity implements View.OnClickListen
     private void getFullAdInfo (int adId) {
         int user_id = MainActivity.sp.getInt("id", 0);
 
-        Call<FullAdResponse> call = ApiClient.getApi().getFullAd(adId, user_id);
+        String phoneIdentificator = Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
+
+
+        Call<FullAdResponse> call = ApiClient.getApi().getFullAd(adId, user_id, phoneIdentificator);
         call.enqueue(new Callback<FullAdResponse>() {
             @Override
             public void onResponse(Call<FullAdResponse> call, Response<FullAdResponse> response) {

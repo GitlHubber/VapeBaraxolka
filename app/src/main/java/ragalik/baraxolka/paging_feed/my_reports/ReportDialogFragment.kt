@@ -13,8 +13,10 @@ import ragalik.baraxolka.R
 import ragalik.baraxolka.network.entities.Report
 import ragalik.baraxolka.other_logic.full_ad.FullAdActivity
 import ragalik.baraxolka.paging_feed.DateTimeUtils
+import ragalik.baraxolka.paging_feed.administrator.AdministratorActivity
+import java.lang.Exception
 
-class ReportDialogFragment(private val report : Report?) : DialogFragment() {
+class ReportDialogFragment(private val report : Report?, private val flag : String) : DialogFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         super.onCreateView(inflater, container, savedInstanceState)
@@ -46,7 +48,11 @@ class ReportDialogFragment(private val report : Report?) : DialogFragment() {
 
         goto_ad_button.setOnClickListener {
             dialog?.dismiss()
-            val intent = Intent(MyReportsActivity.activity, FullAdActivity::class.java)
+            val intent = when (flag) {
+                "MY_REPORTS" -> Intent(MyReportsActivity.activity, FullAdActivity::class.java)
+                "REPORTS" -> Intent(AdministratorActivity.activity, FullAdActivity::class.java)
+                else -> throw Exception()
+            }
             intent.putExtra("adId", report?.adId)
             startActivity(intent)
         }

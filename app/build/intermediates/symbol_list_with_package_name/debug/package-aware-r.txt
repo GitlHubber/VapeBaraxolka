@@ -1827,6 +1827,7 @@ id OnModerateAdsView
 id PhNumberOrEmailLayout
 id Registration_button
 id RejectedAdsView
+id ReportsRecyclerView
 id SETTINGS
 id SETTINGS_group
 id SF_categoryLayout
@@ -2323,6 +2324,7 @@ id progress_my_reports
 id progress_non_active
 id progress_on_moderate
 id progress_rejected
+id progress_reports
 id progress_seller
 id radio
 id refresher
@@ -2331,6 +2333,7 @@ id refresherEditors
 id refresherFavourites
 id refresherModerator
 id refresherMyReports
+id refresherReports
 id regionSearchLayout
 id regionSearchSpinner
 id rejectMessageEditText

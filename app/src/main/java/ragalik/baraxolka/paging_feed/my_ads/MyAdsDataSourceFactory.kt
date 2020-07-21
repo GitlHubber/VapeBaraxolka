@@ -2,7 +2,7 @@ package ragalik.baraxolka.paging_feed.my_ads
 
 import androidx.lifecycle.MutableLiveData
 import androidx.paging.DataSource
-import ragalik.baraxolka.paging_feed.Ad
+import ragalik.baraxolka.network.entities.Ad
 
 class MyAdsDataSourceFactory(private val adStatus : Int = 0, private val sellerId : Int = 0, private val isSeller : Boolean = false) : DataSource.Factory<Int, Ad>() {
 

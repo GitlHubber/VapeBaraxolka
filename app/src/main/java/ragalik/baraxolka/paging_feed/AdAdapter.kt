@@ -21,6 +21,7 @@ import kotlinx.android.synthetic.main.no_ads_view_type.view.*
 import ragalik.baraxolka.MainActivity
 import ragalik.baraxolka.R
 import ragalik.baraxolka.network.ApiClient
+import ragalik.baraxolka.network.entities.Ad
 import ragalik.baraxolka.network.entities.ReasonsResponse
 import ragalik.baraxolka.network.entities.ServerResponse
 import ragalik.baraxolka.other_logic.ad_creator.AdCreatorActivity

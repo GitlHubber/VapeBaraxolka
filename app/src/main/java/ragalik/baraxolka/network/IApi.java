@@ -13,8 +13,8 @@ import ragalik.baraxolka.network.entities.ServerResponse;
 import ragalik.baraxolka.network.entities.User;
 import ragalik.baraxolka.network.entities.UserPreviewResponse;
 import ragalik.baraxolka.network.entities.UserResponse;
-import ragalik.baraxolka.paging_feed.AdResponse;
-import ragalik.baraxolka.paging_feed.FullAdResponse;
+import ragalik.baraxolka.network.entities.AdResponse;
+import ragalik.baraxolka.network.entities.FullAdResponse;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -76,7 +76,8 @@ public interface IApi {
 
     @GET("/scripts/getFullAd.php")
     Call<FullAdResponse> getFullAd(@Query("id_ad") int id_ad,
-                                   @Query("user_id") int user_id);
+                                   @Query("user_id") int user_id,
+                                   @Query("phone_identificator") String phone_identificator);
 
     @GET("/scripts/getMyReports.php")
     Call<ReportResponse> getMyReports(@Query("page") int page,

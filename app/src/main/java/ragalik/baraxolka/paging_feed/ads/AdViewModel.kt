@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
-import ragalik.baraxolka.paging_feed.Ad
+import ragalik.baraxolka.network.entities.Ad
 
 class AdViewModel : ViewModel() {
 

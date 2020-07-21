@@ -8,7 +8,7 @@ import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
 import androidx.paging.PagedList.BoundaryCallback
 import ragalik.baraxolka.MainActivity
-import ragalik.baraxolka.paging_feed.Ad
+import ragalik.baraxolka.network.entities.Ad
 
 class AdModeratorViewModel : ViewModel() {
 

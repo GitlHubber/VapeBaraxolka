@@ -5,8 +5,8 @@ import androidx.core.view.isVisible
 import androidx.paging.PageKeyedDataSource
 import ragalik.baraxolka.MainActivity
 import ragalik.baraxolka.network.ApiClient
-import ragalik.baraxolka.paging_feed.Ad
-import ragalik.baraxolka.paging_feed.AdResponse
+import ragalik.baraxolka.network.entities.Ad
+import ragalik.baraxolka.network.entities.AdResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

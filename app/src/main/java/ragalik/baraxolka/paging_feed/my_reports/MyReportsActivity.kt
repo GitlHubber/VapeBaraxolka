@@ -48,7 +48,7 @@ class MyReportsActivity : AppCompatActivity() {
     }
 
     private fun getMyReports () {
-        val myReportsAdapter = MyReportsAdapter()
+        val myReportsAdapter = ReportsAdapter("MY_REPORTS")
         MyReportsRecyclerView?.layoutManager = LinearLayoutManager(this)
         itemViewModel = ViewModelProvider(this).get(MyReportsViewModel::class.java)
         itemViewModel!!.myReportsPagedList.observe(this, Observer { myReportsAdapter.submitList(it) })

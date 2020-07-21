@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
-import ragalik.baraxolka.paging_feed.Ad
+import ragalik.baraxolka.network.entities.Ad
 
 class SearchViewModel(where: String, sort_field: String, sort_type: String) : ViewModel() {
 

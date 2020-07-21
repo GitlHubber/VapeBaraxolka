@@ -2,7 +2,7 @@ package ragalik.baraxolka.paging_feed.favourites
 
 import androidx.lifecycle.MutableLiveData
 import androidx.paging.DataSource
-import ragalik.baraxolka.paging_feed.Ad
+import ragalik.baraxolka.network.entities.Ad
 
 class FavouritesDataSourceFactory : DataSource.Factory<Int, Ad>() {
 

@@ -8,6 +8,7 @@ import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
+import android.provider.Settings;
 import android.view.View;
 
 import android.widget.LinearLayout;
@@ -30,8 +31,8 @@ import ragalik.baraxolka.paging_feed.DateTimeUtils;
 import ragalik.baraxolka.paging_feed.favourites.SetDeleteBookmark;
 import ragalik.baraxolka.paging_feed.seller.SellerProfileActivity;
 import ragalik.baraxolka.network.ApiClient;
-import ragalik.baraxolka.paging_feed.Ad;
-import ragalik.baraxolka.paging_feed.FullAdResponse;
+import ragalik.baraxolka.network.entities.Ad;
+import ragalik.baraxolka.network.entities.FullAdResponse;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -123,7 +124,9 @@ public class FullAdActivity extends AppCompatActivity {
     private void getFullAdInfo (int adId) {
         user_id = MainActivity.sp.getInt("id", 0);
 
-        Call<FullAdResponse> call = ApiClient.getApi().getFullAd(adId, user_id);
+        String phoneIdentificator = Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
+
+        Call<FullAdResponse> call = ApiClient.getApi().getFullAd(adId, user_id, phoneIdentificator);
         call.enqueue(new Callback<FullAdResponse>() {
             @Override
             public void onResponse(Call<FullAdResponse> call, Response<FullAdResponse> response) {
