@@ -1691,6 +1691,7 @@ drawable ic_arrow_dark_theme
 drawable ic_baseline_delete_outline_24
 drawable ic_baseline_person_24
 drawable ic_baseline_report_24
+drawable ic_baseline_sentiment_very_dissatisfied_24
 drawable ic_bookmark
 drawable ic_bottom_sheet_arrow
 drawable ic_brightness_3_black_24dp

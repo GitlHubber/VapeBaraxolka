@@ -54,7 +54,7 @@ class EditorsAdapter : PagedListAdapter<User, RecyclerView.ViewHolder>(AD_COMPAR
         }
 
         view.removeEditorButton.setOnClickListener {
-            val builder = AlertDialog.Builder(activity)
+            val builder = AlertDialog.Builder(it.context)
             builder.setTitle("Удаление редактора")
             builder.setMessage("Вы действительно хотите лишить прав редактора данного пользователя?")
             builder.setPositiveButton("Да") { dialog, _ ->

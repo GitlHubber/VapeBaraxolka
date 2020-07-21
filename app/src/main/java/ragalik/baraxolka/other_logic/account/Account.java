@@ -2,7 +2,9 @@ package ragalik.baraxolka.other_logic.account;
 
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -182,16 +184,25 @@ public class Account extends AppCompatActivity {
 
         AppCompatButton signOut = activity.findViewById(R.id.signOutButtonAccount);
         signOut.setOnClickListener(v -> {
-            MainActivity.removeData(MainActivity.activity);
-            MainActivity.removeGroupFromNV(0, MainActivity.activity);
-            MainActivity.removeSignOut(MainActivity.activity);
+            AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+            builder.setTitle("Выход из аккаунта");
+            builder.setMessage("Вы действительно хотите выйти из аккаунта?");
+            builder.setPositiveButton("Да", (dialog, which) -> {
+                dialog.dismiss();
+                MainActivity.removeData(MainActivity.activity);
+                MainActivity.removeGroupFromNV(0, MainActivity.activity);
+                MainActivity.removeSignOut(MainActivity.activity);
 
-            Intent myIntent = new Intent(activity, MainActivity.class);
-            v.getContext().startActivity(myIntent);
+                Intent myIntent = new Intent(activity, MainActivity.class);
+                v.getContext().startActivity(myIntent);
 
-            MainActivity.hideItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
+                MainActivity.hideItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
 
-            Toast.makeText(appCompatActivity, "Вы вышли из аккаунта", Toast.LENGTH_SHORT).show();
+                Toast.makeText(appCompatActivity, "Вы вышли из аккаунта", Toast.LENGTH_SHORT).show();
+            });
+            builder.setNegativeButton("Нет", ( dialog, which) -> dialog.dismiss());
+            AlertDialog alertDialog = builder.create();
+            alertDialog.show();
         });
 
         String emailStr = user.getEmail();
