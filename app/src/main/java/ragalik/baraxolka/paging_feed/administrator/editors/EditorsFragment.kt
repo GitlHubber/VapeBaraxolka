@@ -6,9 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
 import android.widget.Toast
-import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -66,16 +63,16 @@ class EditorsFragment : Fragment() {
 
     companion object {
         private var emailFromEditText: String? = null
-        var itemViewModel: AdminViewModel? = null
+        var itemViewModel: EditorsViewModel? = null
         private var isReloaded = false
         lateinit var editorsProgressBar : ProgressBar
     }
 
     private fun getEditors() {
-        val adminAdapter = AdminAdapter()
+        val adminAdapter = EditorsAdapter()
         EditorsRecyclerView?.layoutManager = LinearLayoutManager(activity)
-        itemViewModel = ViewModelProvider(this).get(AdminViewModel::class.java)
-        itemViewModel!!.adminPagedList.observe(viewLifecycleOwner, Observer { adminAdapter.submitList(it) })
+        itemViewModel = ViewModelProvider(this).get(EditorsViewModel::class.java)
+        itemViewModel!!.editorsPagedList.observe(viewLifecycleOwner, Observer { adminAdapter.submitList(it) })
         EditorsRecyclerView?.adapter = adminAdapter
     }
 

@@ -36,7 +36,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-
         android:layout_marginStart="10dp">
 
         <TextView
@@ -53,9 +52,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Привет, опа4ки!"
-            android:textSize="20dp"
+            android:textSize="18dp"
             android:textColor="@color/colorText"
             android:textStyle="normal"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorAdCreatorImage" />
 
     </LinearLayout>
 
@@ -70,10 +75,10 @@
 
         <Button
             android:id="@+id/removeEditorButton"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:paddingEnd="40dp"
-            android:background="@drawable/ic_baseline_remove_24" />
+            android:background="@drawable/ic_baseline_delete_outline_24" />
 
     </LinearLayout>
 

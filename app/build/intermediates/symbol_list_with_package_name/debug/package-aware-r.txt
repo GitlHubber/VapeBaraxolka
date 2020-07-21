@@ -1652,6 +1652,7 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable button
+drawable button_background
 drawable circleindicator_round
 drawable color_cursor_white
 drawable design_bottom_navigation_item_background
@@ -1687,8 +1688,8 @@ drawable ic_ads
 drawable ic_arrow
 drawable ic_arrow_bottom_24dp
 drawable ic_arrow_dark_theme
+drawable ic_baseline_delete_outline_24
 drawable ic_baseline_person_24
-drawable ic_baseline_remove_24
 drawable ic_baseline_report_24
 drawable ic_bookmark
 drawable ic_bottom_sheet_arrow
@@ -1772,6 +1773,7 @@ drawable piece
 drawable piece_dot
 drawable reject_button_active
 drawable reject_button_selection
+drawable report_dialog_background
 drawable shape_oval_normal
 drawable shape_rectangle_normal
 drawable spinner_sla
@@ -1818,6 +1820,7 @@ id MY_ADS
 id MY_ADS_Tab_Layout
 id MY_ADS_View_Pager
 id ModeratorAdsView
+id MyReportsRecyclerView
 id NonActiveAdsView
 id OnModerateAdsView
 id PhNumberOrEmailLayout
@@ -2122,6 +2125,7 @@ id ghost_view
 id ghost_view_holder
 id glide_custom_view_target_tag
 id gone
+id goto_ad_button
 id group_divider
 id groups
 id ham
@@ -2210,7 +2214,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
 id myAdsRefresher
-id myReportsRecyclerView
+id myReportsToolbar
 id nTextFullAd
 id name
 id nameLabel
@@ -2314,6 +2318,7 @@ id progress_editors
 id progress_favourites
 id progress_horizontal
 id progress_moderator
+id progress_my_reports
 id progress_non_active
 id progress_on_moderate
 id progress_rejected
@@ -2324,6 +2329,7 @@ id refresherAds
 id refresherEditors
 id refresherFavourites
 id refresherModerator
+id refresherMyReports
 id regionSearchLayout
 id regionSearchSpinner
 id rejectMessageEditText
@@ -2333,6 +2339,11 @@ id rejectReasonLayout
 id rejected_ads_layout
 id removeEditorButton
 id report_item
+id reporter_image
+id reporter_letter
+id reporter_message_preview
+id reporter_nickname
+id reporter_reason_preview
 id retry
 id right
 id right_icon
@@ -2456,7 +2467,6 @@ id textView3
 id textView4
 id textView5
 id textView6
-id textView7
 id textView8
 id text_input_end_icon
 id text_input_start_icon
@@ -2508,6 +2518,10 @@ id tw_account_info
 id tw_hide_phone
 id tw_reject_message
 id tw_reject_reason
+id tw_report_datetime
+id tw_report_id
+id tw_report_message
+id tw_report_reason
 id tw_select_region
 id tw_select_town
 id typeTextFullAd
@@ -2618,6 +2632,7 @@ layout activity_edit_creator
 layout activity_filter
 layout activity_full_ad
 layout activity_main
+layout activity_my_reports
 layout activity_search
 layout activity_seller_profile
 layout activity_settings
@@ -2662,9 +2677,9 @@ layout fragment_favourites
 layout fragment_full_image_layout
 layout fragment_log_in
 layout fragment_my_ads
-layout fragment_my_reports
 layout fragment_no_internet_connection
 layout fragment_price
+layout fragment_report_dialog
 layout fragment_reports
 layout fragment_rules
 layout fragment_sign_in
@@ -2673,6 +2688,7 @@ layout fragment_technical_support
 layout full_ad_loader
 layout item_ad
 layout item_editor
+layout item_report
 layout list_view_items
 layout menu_counter
 layout mtrl_alert_dialog
@@ -2706,7 +2722,6 @@ layout mtrl_picker_text_input_date_range
 layout nav_header_main
 layout new_ad_window
 layout no_ads_view_type
-layout no_favourites
 layout non_active_ads
 layout notification_action
 layout notification_action_tombstone
@@ -2786,6 +2801,7 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string account
 string action_settings
+string action_sign_out
 string admin_activity
 string ads
 string app_name
@@ -2844,6 +2860,7 @@ string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string mtrl_slider_range_content_description
 string my_ads
+string my_reports_activity
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
 string navigation_drawer_close

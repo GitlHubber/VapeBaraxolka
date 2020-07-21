@@ -28,6 +28,7 @@
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:usesCleartextTraffic="true" >
         <activity
             android:name="ragalik.baraxolka.paging_feed.administrator.AdministratorActivity"
@@ -57,6 +58,16 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name="ragalik.baraxolka.paging_feed.my_reports.MyReportsActivity"
+            android:label="@string/my_reports_activity"
+            android:parentActivityName="ragalik.baraxolka.other_logic.account.Account"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.SlidrActivityTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".other_logic.account.Account" />
         </activity>
         <activity
             android:name="ragalik.baraxolka.other_logic.account.AccountEditActivity"

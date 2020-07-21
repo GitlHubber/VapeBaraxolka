@@ -126,7 +126,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Показывать номер телефона"
-                            android:textColor="@color/colorLink"
+                            android:textColor="@color/colorAccent"
                             android:textSize="15sp" />
                     </LinearLayout>
 
@@ -187,16 +187,17 @@
                     android:layout_height="@dimen/divider"
                     android:background="@color/colorAdCreatorImage" />
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/signOutButtonAccount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:layout_marginTop="50dp"
                     android:layout_marginEnd="5dp"
-                    android:background="@color/colorPrimary"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button_background"
                     android:text="Выйти из аккаунта"
-                    android:textColor="@color/colorAdsDate" />
+                    android:textColor="@color/colorAccent" />
                 </LinearLayout>
         </ScrollView>
 <!--        <LinearLayout-->

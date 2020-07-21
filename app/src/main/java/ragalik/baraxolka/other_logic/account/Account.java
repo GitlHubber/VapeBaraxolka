@@ -12,12 +12,13 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatCheckBox;
-import androidx.appcompat.widget.AppCompatSeekBar;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.FragmentTransaction;
 
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -42,7 +43,8 @@ import ragalik.baraxolka.network.IApi;
 import ragalik.baraxolka.network.ApiClient;
 import ragalik.baraxolka.network.entities.ServerResponse;
 import ragalik.baraxolka.network.entities.User;
-import ragalik.baraxolka.network.entities.UserResponse;
+import ragalik.baraxolka.paging_feed.my_reports.MyReportsActivity;
+import ragalik.baraxolka.paging_feed.search.SearchActivity;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -159,6 +161,7 @@ public class Account extends AppCompatActivity {
 
         LinearLayout pnLayout = activity.findViewById(R.id.account_pn_layout);
         LinearLayout regionLayout = activity.findViewById(R.id.account_region_layout);
+        LinearLayout reportsLayout = activity.findViewById(R.id.account_reports_layout);
 
         pnLayout.setOnClickListener(v -> {
             Intent intent = new Intent(this, AccountEditActivity.class);
@@ -172,7 +175,12 @@ public class Account extends AppCompatActivity {
             startActivity(intent);
         });
 
-        Button signOut = activity.findViewById(R.id.signOutButtonAccount);
+        reportsLayout.setOnClickListener(v -> {
+            Intent intent = new Intent(this, MyReportsActivity.class);
+            startActivity(intent);
+        });
+
+        AppCompatButton signOut = activity.findViewById(R.id.signOutButtonAccount);
         signOut.setOnClickListener(v -> {
             MainActivity.removeData(MainActivity.activity);
             MainActivity.removeGroupFromNV(0, MainActivity.activity);

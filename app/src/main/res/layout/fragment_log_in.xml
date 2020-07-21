@@ -113,50 +113,38 @@
 <!--                android:text="Забыли пароль?"-->
 <!--                android:textColor="@color/colorText" />-->
 
-            <LinearLayout
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/AcceptLogInButton"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/button_background"
+                android:drawableEnd="@drawable/ic_arrow"
                 android:layout_marginBottom="20dp"
-                android:orientation="vertical"
-                android:paddingLeft="35dp"
-                android:paddingRight="35dp">
+                android:text="Войти"
+                android:paddingStart="35dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginStart="35dp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:textStyle="italic" />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/AcceptLogInButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@color/colorPrimary"
-                    android:drawableEnd="@drawable/ic_arrow"
-                    android:paddingLeft="22dp"
-                    android:text="Войти"
-                    android:textAllCaps="false"
-                    android:textColor="@color/colorAdsDate"
-                    android:textStyle="italic" />
-
-            </LinearLayout>
-
-            <LinearLayout
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/SignInLogInButton"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/button_background"
+                android:text="Создать аккаунт"
+                android:layout_marginEnd="35dp"
+                android:layout_marginStart="35dp"
+                android:textAllCaps="false"
                 android:layout_marginBottom="30dp"
-                android:orientation="vertical"
-                android:paddingLeft="35dp"
-                android:paddingRight="35dp">
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/SignInLogInButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@color/colorPrimary"
-                    android:text="Создать аккаунт"
-                    android:textAllCaps="false"
-                    android:textColor="@color/colorAdsDate"
-                    android:textStyle="italic" />
-            </LinearLayout>
+                android:textColor="@color/colorAccent"
+                android:textStyle="italic" />
 
         </LinearLayout>
+
     </ScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

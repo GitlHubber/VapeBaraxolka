@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/report_dialog_background">
+
+    <TextView
+        android:id="@+id/tw_report_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Жалоба #10"
+        android:textColor="@color/colorText"
+        android:textSize="20sp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:paddingBottom="10dp"
+        android:gravity="center"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:background="@color/colorAdCreatorImage" />
+
+    <TextView
+        android:id="@+id/tw_report_reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Причина отклонения: аоаооаоаоаооаоыдцлуаоцзпшмрузпружщущпцтизцузмицудли уцзпуцзш"
+        android:textColor="@color/colorText"
+        android:textSize="15sp"
+        android:paddingTop="5dp"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:paddingBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/tw_report_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Комментарий к жалобе: аоаооаоаоаооаоыдцлуаоцзпшмрузпружщущпцтизцузмицудли уцзпуцзш"
+        android:textColor="@color/colorText"
+        android:textSize="15sp"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:paddingBottom="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorAdCreatorImage" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/goto_ad_button"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="Перейти к объявлению"
+        android:background="@drawable/button_background"
+        android:textColor="@color/colorAccent"
+        android:textAllCaps="false"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/tw_report_datetime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Дата создания жалобы: 19 мая 08:24"
+        android:textColor="@color/colorText"
+        android:textSize="12sp"
+        android:gravity="end"
+        android:paddingBottom="5dp"
+        android:paddingEnd="10dp"/>
+
+
+
+</LinearLayout>

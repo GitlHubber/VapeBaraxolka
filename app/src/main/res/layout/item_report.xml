@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackground"
+    android:layout_margin="10dp"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/reporter_image"
+            android:layout_width="55dp"
+            android:layout_height="55dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/reporter_letter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:textColor="@color/colorText"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp">
+
+        <TextView
+            android:id="@+id/reporter_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Павел"
+            android:textColor="@color/colorText"
+            android:textSize="20dp"
+            android:textStyle="normal"/>
+
+        <TextView
+            android:id="@+id/reporter_reason_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Привет, опа4ки!"
+            android:textSize="16dp"
+            android:textColor="@color/colorText"
+            android:textStyle="normal"/>
+
+        <TextView
+            android:id="@+id/reporter_message_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Привет, опа4ки!"
+            android:textSize="16dp"
+            android:textColor="@color/colorText"
+            android:textStyle="normal"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorAdCreatorImage" />
+
+    </LinearLayout>
+
+</LinearLayout>

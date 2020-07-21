@@ -244,4 +244,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_filter">Сортировка объявлений</string>
     <string name="admin_activity">Администрирование</string>
+    <string name="my_reports_activity">Мои жалобы</string>
+    <string name="action_sign_out">Выйти из аккаунта</string>
 </resources>

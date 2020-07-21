@@ -15,14 +15,14 @@
         android:textColor="@color/colorText"
         android:gravity="center"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/no_ads_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:visibility="gone"
-        android:textColor="@color/colorAdsDate"
-        android:background="@color/entranceStartColor"
+        android:textColor="@color/colorAccent"
+        android:background="@drawable/button_background"
         android:layout_marginBottom="30dp"/>
 
 </LinearLayout>

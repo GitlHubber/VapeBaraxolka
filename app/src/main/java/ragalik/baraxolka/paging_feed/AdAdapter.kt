@@ -2,7 +2,6 @@ package ragalik.baraxolka.paging_feed
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.os.Build
 import android.text.SpannableStringBuilder
 import android.view.LayoutInflater
 import android.view.View
@@ -10,11 +9,9 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.text.bold
 import androidx.core.view.isVisible
-import androidx.fragment.app.FragmentManager
 import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -30,7 +27,6 @@ import ragalik.baraxolka.other_logic.ad_creator.AdCreatorActivity
 import ragalik.baraxolka.other_logic.edit_creator.EditCreator
 import ragalik.baraxolka.other_logic.full_ad.FullAdActivity
 import ragalik.baraxolka.paging_feed.ads.ADS
-import ragalik.baraxolka.paging_feed.favourites.FavouritesViewModel
 import ragalik.baraxolka.paging_feed.favourites.SetDeleteBookmark
 import ragalik.baraxolka.paging_feed.moderator.AdModerator
 import ragalik.baraxolka.paging_feed.my_ads.MyADS
@@ -39,8 +35,6 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.lang.Exception
 import java.text.SimpleDateFormat
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -223,7 +217,7 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, RecyclerV
                         MainActivity.activity.startActivity(intent)
                     }
                 }
-                "REJECTED" -> {8
+                "REJECTED" -> {
                     message.text = "У вас нет отклоненных объявлений"
                     noAdsButton.visibility = View.VISIBLE
                     noAdsButton.text = "Создать объявление"
