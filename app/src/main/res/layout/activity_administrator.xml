@@ -11,15 +11,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/administratorToolbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
-                android:minHeight="?attr/actionBarSize"
-                android:theme="?attr/actionBarTheme"
-                app:title="@string/admin_activity"
-                app:elevation="0dp"/>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/administratorToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="@string/admin_activity"
+            app:elevation="0dp"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 

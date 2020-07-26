@@ -131,7 +131,6 @@ public interface IApi {
                                            @Field("report_message") String report_message,
                                            @Field("datetime") String datetime,
                                            @Field("ad_id") int ad_id,
-                                           @Field("isReportExists") int isReportExists,
                                            @Field("user_id") int user_id);
 
     @FormUrlEncoded

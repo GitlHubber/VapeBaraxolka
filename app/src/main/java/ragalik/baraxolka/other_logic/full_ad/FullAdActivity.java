@@ -1,16 +1,21 @@
 package ragalik.baraxolka.other_logic.full_ad;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.DialogFragment;
 import androidx.viewpager.widget.ViewPager;
 
 import android.provider.Settings;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,6 +34,7 @@ import ragalik.baraxolka.R;
 import ragalik.baraxolka.MainActivity;
 import ragalik.baraxolka.paging_feed.DateTimeUtils;
 import ragalik.baraxolka.paging_feed.favourites.SetDeleteBookmark;
+import ragalik.baraxolka.paging_feed.search.SearchActivity;
 import ragalik.baraxolka.paging_feed.seller.SellerProfileActivity;
 import ragalik.baraxolka.network.ApiClient;
 import ragalik.baraxolka.network.entities.Ad;
@@ -119,6 +125,37 @@ public class FullAdActivity extends AppCompatActivity {
 
         temp = ad.getId() + "";
         adNumber.setText(temp);
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        MenuItem item = menu.findItem(R.id.action_to_report);
+        if (MainActivity.sp.getInt("id", 0) != 0) {
+            item.setVisible(true);
+        } else {
+            item.setVisible(false);
+        }
+        return super.onPrepareOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.full_ad_menu, menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_to_report:
+                SendReportDialogFragment dialogFragment = new SendReportDialogFragment(adId);
+                dialogFragment.setStyle(DialogFragment.STYLE_NORMAL, R.style.BottomSheetDialogTheme);
+                dialogFragment.show(getSupportFragmentManager(), "SendReportDialog");
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     private void getFullAdInfo (int adId) {

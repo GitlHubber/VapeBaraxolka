@@ -9,11 +9,13 @@ import android.view.ViewGroup
 import androidx.core.text.bold
 import androidx.fragment.app.DialogFragment
 import kotlinx.android.synthetic.main.fragment_report_dialog.*
+import kotlinx.android.synthetic.main.fragment_report_dialog.view.*
 import ragalik.baraxolka.R
 import ragalik.baraxolka.network.entities.Report
 import ragalik.baraxolka.other_logic.full_ad.FullAdActivity
 import ragalik.baraxolka.paging_feed.DateTimeUtils
 import ragalik.baraxolka.paging_feed.administrator.AdministratorActivity
+import ragalik.baraxolka.paging_feed.seller.SellerProfileActivity
 import java.lang.Exception
 
 class ReportDialogFragment(private val report : Report?, private val flag : String) : DialogFragment() {
@@ -55,6 +57,16 @@ class ReportDialogFragment(private val report : Report?, private val flag : Stri
             }
             intent.putExtra("adId", report?.adId)
             startActivity(intent)
+        }
+
+        if (flag == "REPORTS") {
+            goto_user_button.visibility = View.VISIBLE
+            goto_user_button.setOnClickListener {
+                dialog?.dismiss()
+                val intent = Intent(AdministratorActivity.activity, SellerProfileActivity::class.java)
+                intent.putExtra("sellerId", report?.userId)
+                startActivity(intent)
+            }
         }
     }
 }

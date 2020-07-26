@@ -39,7 +39,7 @@
 23        android:allowBackup="true"
 23-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:18:9-35
 24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-24-->[androidx.core:core:1.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\99bb9bdebdb5b7fbe151e64f9193679a\core-1.2.0\AndroidManifest.xml:24:18-86
+24-->[androidx.core:core:1.3.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\e270a6e88d0fcab34dc57babf6858d5a\core-1.3.0\AndroidManifest.xml:24:18-86
 25        android:debuggable="true"
 26        android:icon="@mipmap/ic_launcher"
 26-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:19:9-43
@@ -322,23 +322,23 @@
 174-->D:\ADROID_STUDIO_PROJECTS\GIT_CLONE\VapeBaraxolka\app\src\main\AndroidManifest.xml:167:17-55
 175        </provider>
 176        <provider
-176-->[com.squareup.picasso:picasso:2.71828] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\ed884ad4746cff215344bcf066883100\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+176-->[com.squareup.picasso:picasso:2.71828] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\d4a142edd8bd9e60daff142309601d00\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
 177            android:name="com.squareup.picasso.PicassoProvider"
-177-->[com.squareup.picasso:picasso:2.71828] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\ed884ad4746cff215344bcf066883100\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+177-->[com.squareup.picasso:picasso:2.71828] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\d4a142edd8bd9e60daff142309601d00\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
 178            android:authorities="ragalik.baraxolka.com.squareup.picasso"
-178-->[com.squareup.picasso:picasso:2.71828] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\ed884ad4746cff215344bcf066883100\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+178-->[com.squareup.picasso:picasso:2.71828] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\d4a142edd8bd9e60daff142309601d00\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
 179            android:exported="false" />
-179-->[com.squareup.picasso:picasso:2.71828] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\ed884ad4746cff215344bcf066883100\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+179-->[com.squareup.picasso:picasso:2.71828] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\d4a142edd8bd9e60daff142309601d00\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
 180        <provider
-180-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\77b680cf4e5eae982d73ba5af8ab8fb7\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+180-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\66682bac27f64bb463b438dc006b709f\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
 181            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-181-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\77b680cf4e5eae982d73ba5af8ab8fb7\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+181-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\66682bac27f64bb463b438dc006b709f\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
 182            android:authorities="ragalik.baraxolka.lifecycle-process"
-182-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\77b680cf4e5eae982d73ba5af8ab8fb7\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+182-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\66682bac27f64bb463b438dc006b709f\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
 183            android:exported="false"
-183-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\77b680cf4e5eae982d73ba5af8ab8fb7\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+183-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\66682bac27f64bb463b438dc006b709f\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
 184            android:multiprocess="true" />
-184-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\77b680cf4e5eae982d73ba5af8ab8fb7\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+184-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Ragalik\.gradle\caches\transforms-2\files-2.1\66682bac27f64bb463b438dc006b709f\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
 185    </application>
 186
 187</manifest>

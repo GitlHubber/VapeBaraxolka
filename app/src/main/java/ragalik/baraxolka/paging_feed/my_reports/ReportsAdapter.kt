@@ -13,6 +13,7 @@ import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.fragment_report_dialog.view.*
 import kotlinx.android.synthetic.main.item_report.view.*
 import ragalik.baraxolka.R
 import ragalik.baraxolka.network.ApiClient
@@ -63,23 +64,6 @@ class ReportsAdapter(private val flag : String) : PagedListAdapter<Report, Recyc
             reportDialogFragment.show(supportFragment, "report_dialog_fragment")
         }
 
-
-
-//        view.removeEditorButton.setOnClickListener {
-////            val builder = AlertDialog.Builder(activity)
-////            builder.setTitle("Удаление редактора")
-////            builder.setMessage("Вы действительно хотите лишить прав редактора данного пользователя?")
-////            builder.setPositiveButton("Да") { dialog, _ ->
-////                run {
-////                    dialog.dismiss()
-////                    removeEditor(user?.email.toString(), it)
-////                }
-////            }
-////            builder.setNegativeButton("Нет") { dialog, _ -> dialog.dismiss() }
-////            val alertDialog = builder.create()
-////            alertDialog.show()
-//        }
-
         report?.let { (holder as ReportsViewHolder).bind(report) }
     }
 
@@ -91,10 +75,16 @@ class ReportsAdapter(private val flag : String) : PagedListAdapter<Report, Recyc
 
         fun bind (report: Report) {
             nickname.text = report.reporterNickname
-            val customReportMessage = if (report.reportMessage.isNullOrEmpty()) {
-                "Комментарий: отсутствует."
-            } else {
-                "Комментарий: ${report.reportMessage.substring(0, 7)}..."
+            val customReportMessage = when {
+                report.reportMessage.isNullOrEmpty() -> {
+                    "Комментарий: отсутствует."
+                }
+                report.reportMessage.length > 7 -> {
+                    "Комментарий: ${report.reportMessage.substring(0, 7)}..."
+                }
+                else -> {
+                    "Комментарий: ${report.reportMessage}"
+                }
             }
             messagePreview.text = customReportMessage
 

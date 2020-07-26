@@ -18,7 +18,7 @@
         android:tint="@color/colorAdsDate"
         android:visibility="visible"
         style="@style/Widget.MaterialComponents.FloatingActionButton"
-        app:backgroundTint="@color/entranceStartColor"
+        app:backgroundTint="@color/colorAccent"
         app:fabSize="mini" />
 
 

@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:text="Причина отклонения: аоаооаоаоаооаоыдцлуаоцзпшмрузпружщущпцтизцузмицудли уцзпуцзш"
         android:textColor="@color/colorText"
-        android:textSize="15sp"
+        android:textSize="16sp"
         android:paddingTop="5dp"
         android:paddingEnd="20dp"
         android:paddingStart="20dp"
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:text="Комментарий к жалобе: аоаооаоаоаооаоыдцлуаоцзпшмрузпружщущпцтизцузмицудли уцзпуцзш"
         android:textColor="@color/colorText"
-        android:textSize="15sp"
+        android:textSize="16sp"
         android:paddingEnd="20dp"
         android:paddingStart="20dp"
         android:paddingBottom="10dp"/>
@@ -53,17 +53,47 @@
         android:layout_marginBottom="10dp"
         android:background="@color/colorAdCreatorImage" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/goto_ad_button"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:text="Перейти к объявлению"
-        android:background="@drawable/button_background"
-        android:textColor="@color/colorAccent"
-        android:textAllCaps="false"
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/goto_ad_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Перейти к объявлению"
+            android:background="@drawable/button_background"
+            android:textColor="@color/colorAccent"
+            android:textAllCaps="false"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/goto_user_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Профиль пользователя"
+            android:background="@drawable/button_background"
+            android:textColor="@color/colorAccent"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:layout_marginBottom="5dp"
+        android:background="@color/colorAdCreatorImage" />
 
     <TextView
         android:id="@+id/tw_report_datetime"

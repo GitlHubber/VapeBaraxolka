@@ -24,6 +24,9 @@ class Report {
 
     @field:SerializedName("image")
     val reporterImage: String? = null
+
+    @field:SerializedName("user_id")
+    val userId: Int? = null
 }
 
 class ReportResponse {

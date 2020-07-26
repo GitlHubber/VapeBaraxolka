@@ -177,10 +177,13 @@ public class Account extends AppCompatActivity {
             startActivity(intent);
         });
 
-        reportsLayout.setOnClickListener(v -> {
-            Intent intent = new Intent(this, MyReportsActivity.class);
-            startActivity(intent);
-        });
+        if (user.isReportExists() == 1) {
+            reportsLayout.setVisibility(View.VISIBLE);
+            reportsLayout.setOnClickListener(v -> {
+                Intent intent = new Intent(this, MyReportsActivity.class);
+                startActivity(intent);
+            });
+        }
 
         AppCompatButton signOut = activity.findViewById(R.id.signOutButtonAccount);
         signOut.setOnClickListener(v -> {

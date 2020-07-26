@@ -281,16 +281,19 @@
 
             </LinearLayout>
 
+
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/showAdsButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:hint="Показать "
-                android:layout_marginTop="30dp"
                 android:textAllCaps="false"
-                android:background="@color/colorPrimary"
-                android:textColorHint="@color/colorAdsDate"
-                android:layout_marginBottom="10dp"/>
+                android:background="@drawable/button_background"
+                android:textColor="@color/colorAccent"
+                android:layout_marginTop="30dp"
+                android:layout_margin="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"/>
 
         </LinearLayout>
 

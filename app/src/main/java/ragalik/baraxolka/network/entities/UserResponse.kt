@@ -30,6 +30,9 @@ class User {
 
     @field:SerializedName("isPhoneHide")
     val isPhoneHide: Int? = null
+
+    @field:SerializedName("isReportExists")
+    val isReportExists: Int? = null
 }
 
 class UserResponse {

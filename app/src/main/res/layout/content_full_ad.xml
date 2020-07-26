@@ -351,7 +351,7 @@
                             android:layout_height="60dp"
                             android:layout_marginStart="10dp"
                             android:src="@drawable/splash_logo"
-                            app:civ_border_color="@color/entranceEndColor"
+                            app:civ_border_color="@color/colorAccent"
                             app:civ_border_width="2dp" />
 
                         <TextView

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bottom_sheet_background"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bottom_sheet_line"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ваша жалоба"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/colorText"
+        android:textSize="22sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorAdCreatorImage" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Выберите причину"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/colorText"
+        android:textSize="18sp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Укажите комментарий"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            android:layout_marginEnd="5dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="(необязательно)"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/send_report_message_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:counterTextColor="@color/colorText"
+        android:layout_marginBottom="20dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Комментарий к жалобе"
+            android:textColor="@color/colorText"
+            android:textColorHighlight="@color/colorText"
+            android:textColorLink="@color/colorText"
+            android:textCursorDrawable="@color/colorText"
+            android:paddingLeft="5dp"
+            android:inputType="textEmailAddress"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/send_report_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:textColor="@color/colorAccent"
+        android:textAllCaps="false"
+        android:text="Отправить жалобу"
+        android:layout_margin="10dp" />
+
+</LinearLayout>
