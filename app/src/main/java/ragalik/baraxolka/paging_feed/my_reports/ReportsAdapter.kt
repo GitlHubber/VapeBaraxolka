@@ -1,30 +1,18 @@
 package ragalik.baraxolka.paging_feed.my_reports
 
 import android.annotation.SuppressLint
-import android.text.SpannableStringBuilder
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.text.bold
 import androidx.fragment.app.DialogFragment
 import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.fragment_report_dialog.view.*
 import kotlinx.android.synthetic.main.item_report.view.*
 import ragalik.baraxolka.R
-import ragalik.baraxolka.network.ApiClient
 import ragalik.baraxolka.network.entities.Report
-import ragalik.baraxolka.network.entities.ServerResponse
-import ragalik.baraxolka.other_logic.account.Account
-import ragalik.baraxolka.paging_feed.administrator.editors.EditorsFragment.Companion.itemViewModel
 import ragalik.baraxolka.paging_feed.administrator.reports.ReportsFragment
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 import java.lang.Exception
 
 class ReportsAdapter(private val flag : String) : PagedListAdapter<Report, RecyclerView.ViewHolder>(AD_COMPARATOR) {

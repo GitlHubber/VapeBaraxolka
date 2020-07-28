@@ -47,8 +47,8 @@ public class FullAdViewPagerAdapter extends PagerAdapter {
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    FragmentTransaction fragmentTransaction = FullAdActivity.appCompatActivity.getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.fullAdCoordinator, new FullImageLayout(position, urls)).addToBackStack("").commit();
+                   // FragmentTransaction fragmentTransaction = FullAdActivity.appCompatActivity.getSupportFragmentManager().beginTransaction();
+                    //fragmentTransaction.replace(R.id.fullAdCoordinator, new FullImageLayout(position, urls)).addToBackStack("").commit();
                 }
             });
 

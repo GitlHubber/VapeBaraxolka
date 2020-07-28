@@ -11,12 +11,13 @@ import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.os.Handler;
 import android.view.View;
 import androidx.core.view.GravityCompat;
 
@@ -29,17 +30,20 @@ import com.squareup.picasso.Picasso;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 
 import android.view.Menu;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import ragalik.baraxolka.other_logic.account.Account;
+import ragalik.baraxolka.other_logic.account.AccountFragment;
 import ragalik.baraxolka.other_logic.activities.SettingsActivity;
 import ragalik.baraxolka.other_logic.ad_creator.AdCreatorActivity;
 import ragalik.baraxolka.paging_feed.administrator.AdministratorActivity;
@@ -58,8 +62,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity {
 
     public static final String SERVER_URL = "http://ketrovsky.iam.by/scripts/";
 
@@ -77,8 +80,10 @@ public class MainActivity extends AppCompatActivity
     private int entrance_count = 0;
     public static Boolean isActualFragment = false;
     public static DrawerLayout drawer;
-    private boolean doubleBackToExitPressedOnce;
     public static boolean isEntranceFromDialog = false;
+    private NavController navController;
+    private AppBarConfiguration appBarConfiguration;
+    public static ImageView navigationPhoto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,6 +92,11 @@ public class MainActivity extends AppCompatActivity
         sp = getPreferences(MODE_PRIVATE);
 //        toolbar = findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
+        if (sp.getString("theme", "").equals("Night")) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
 
         activity = this;
 
@@ -100,26 +110,13 @@ public class MainActivity extends AppCompatActivity
         editor.putInt("entrance_counter", sp.getInt("entrance_counter", 0) + 1);
         editor.apply();
 
-        SharedPreferences sharedPreferences = getSharedPreferences("MenuItems", MODE_PRIVATE);
-        String resultString = sharedPreferences.getString("Menu", "[]");
-        resultString = resultString.substring(1, resultString.length() - 1);
-        if (!resultString.isEmpty()) {
-            if (resultString.contains(",")) {
-                String[] items = resultString.split(",");
-                for (String item : items) {
-                    listItem.add(item.trim());
-                }
-            } else {
-                listItem.add(resultString);
-            }
-        }
-
         fab = findViewById(R.id.fab1);
         fab.setOnClickListener(view -> {
             Intent myIntent = new Intent(MainActivity.this, AdCreatorActivity.class);
             startActivity(myIntent);
         });
 
+        navController = Navigation.findNavController(this, R.id.fragment);
         drawer = findViewById(R.id.drawer_layout);
         drawer.addDrawerListener(new DrawerLayout.DrawerListener() {
             @Override
@@ -142,11 +139,25 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onDrawerStateChanged(int newState) {}
         });
-
+        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph())
+                .setDrawerLayout(drawer)
+                .build();
         navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-        navigationView.setCheckedItem(R.id.ADS);
+//        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        NavigationUI.setupWithNavController(navigationView, navController);
+        navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
 
+        });
+
+
+        //navigationView.setNavigationItemSelectedListener(this);
+        //navigationView.setCheckedItem(R.id.ADS);
+
+        openStartFragment();
+    }
+
+    private void openStartFragment () {
+        SharedPreferences.Editor editor = sp.edit();
         entrance_count = sp.getInt("entrance_counter", 0);
         if (entrance_count == 1 && !isEntered()) {
             myDialog.setContentView(R.layout.start_login_window);
@@ -172,7 +183,7 @@ public class MainActivity extends AppCompatActivity
             });
             hideItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
         } else if (isEntered()) {
-            newTransaction(adsFragment, "Все объявления");
+            // newTransaction(adsFragment, "Все объявления");
             showItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
         } else if (entrance_count > 1) {
             if (entrance_count == 10) {
@@ -185,21 +196,23 @@ public class MainActivity extends AppCompatActivity
     }
 
     private boolean isEntered () {
-//        if (!sp.getString("nickname", "").equals("") && ) {
-//
-//        }
         return (!sp.getString("nickname", "").equals(""));
     }
 
     public void onClickImage(View v){
         if (!isEntered()) {
-            newTransaction(logInFragment, "Вход");
+            Navigation.findNavController(this, R.id.fragment).navigate(R.id.logIn);
         } else {
-            Intent intent = new Intent(this, Account.class);
-            startActivity(intent);
+            Navigation.findNavController(this, R.id.fragment).navigate(R.id.accountFragment);
         }
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        NavController navController = Navigation.findNavController(this, R.id.fragment);
+        return NavigationUI.navigateUp(navController, appBarConfiguration)
+                || super.onSupportNavigateUp();
     }
 
     public static void createUserData(int id, String nickname, String email, String phoneNumber, String region, String town, String statusName) {
@@ -230,7 +243,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     public static void setNavHeaderText (Activity activity) {
-        TextView data = activity.findViewById(R.id.nickname);
+        TextView data = activity.findViewById(R.id.drawer_nickname);
         data.setText(sp.getString("nickname", ""));
     }
 
@@ -242,7 +255,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void readData () {
-        TextView nickname = findViewById(R.id.nickname);
+        TextView nickname = findViewById(R.id.drawer_nickname);
         if (isEntered()) {
             nickname.setText(sp.getString("nickname", ""));
         }
@@ -258,53 +271,18 @@ public class MainActivity extends AppCompatActivity
         editor.putString("image", "");
         editor.putString("status_name", "");
 
-        TextView nickname = activity.findViewById(R.id.nickname);
+        TextView nickname = activity.findViewById(R.id.drawer_nickname);
         nickname.setText("Войти/Регистрация");
         editor.apply();
     }
 
-    public static void removeSignOut (Activity activity) {
-        applyChanges(activity);
-    }
-
-    private static void applyChanges (Activity activity) {
-        SharedPreferences sharedPreferences = activity.getSharedPreferences("MenuItems", MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("Menu", listItem.toString());
-        editor.apply();
-        activity.invalidateOptionsMenu();
-    }
-
     @Override
     public void onBackPressed() {
-
-//        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-//        if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
-//            getSupportFragmentManager().popBackStack();
-//        } else {
-//            super.onBackPressed();
-//        }
-
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        if (doubleBackToExitPressedOnce) {
-            super.onBackPressed();
-            return;
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
         } else {
-            if (drawer.isDrawerOpen(GravityCompat.START)) {
-                drawer.closeDrawer(GravityCompat.START);
-            }
+            super.onBackPressed();
         }
-
-        this.doubleBackToExitPressedOnce = true;
-        Toast.makeText(this, "Нажмите 'назад' еще раз чтобы выйти", Toast.LENGTH_SHORT).show();
-
-        new Handler().postDelayed(new Runnable() {
-
-            @Override
-            public void run() {
-                doubleBackToExitPressedOnce = false;
-            }
-        }, 2000);
     }
 
     @Override
@@ -312,7 +290,7 @@ public class MainActivity extends AppCompatActivity
         getMenuInflater().inflate(R.menu.main, menu);
         readData();
 
-        ImageView navigationPhoto = this.findViewById(R.id.navigationDrawerPhoto);
+        navigationPhoto = findViewById(R.id.navigationDrawerPhoto);
 
         if (!MainActivity.sp.getString("image", "").equals("null") && !MainActivity.sp.getString("image", "").equals("")) {
             String temp = MainActivity.sp.getString("image", "");
@@ -335,47 +313,6 @@ public class MainActivity extends AppCompatActivity
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
-
-
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        FragmentTransaction fragmentTransaction = this.getSupportFragmentManager().beginTransaction();
-       // Toolbar toolbar = findViewById(R.id.toolbar);
-
-        int id = item.getItemId();
-
-        if (id == R.id.ADS) {
-            fragmentTransaction.replace(R.id.constrLayout, new ADS()).commit();
-         //   toolbar.setTitle("Объявления");
-        } else if (id == R.id.MY_ADS) {
-            fragmentTransaction.replace(R.id.constrLayout, new MyADS()).commit();   //Нужно раскомментить при готовых май адс!
-            //toolbar.stTitle("Мои объявления");
-        } else if (id == R.id.FAVOURITES) {
-            fragmentTransaction.replace(R.id.constrLayout, new FAVOURITES()).commit();
-           // toolbar.setTitle("Закладки");
-        }
-//        else if (id == R.id.RULES) {
-//            fragmentTransaction.replace(R.id.constrLayout, new RULES()).commit();
-//           // toolbar.setTitle("Правила");
-//        }
-        else if (id == R.id.Technical_SUPPORT) {
-            fragmentTransaction.replace(R.id.constrLayout, new TechnicalSUPPORT()).commit();
-           // toolbar.setTitle("Техническая поддержка");
-        } else if (id == R.id.SETTINGS) {
-            Intent myIntent = new Intent(MainActivity.this, SettingsActivity.class);
-            startActivity(myIntent);
-        } else if (id == R.id.MODERATOR) {
-            fragmentTransaction.replace(R.id.constrLayout, new AdModerator()).commit();
-        } else if (id == R.id.ADMIN) {
-            //fragmentTransaction.replace(R.id.constrLayout, new Administrator()).commit();
-            Intent myIntent = new Intent(MainActivity.this, AdministratorActivity.class);
-            startActivity(myIntent);
-        }
-
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
     }
 
     public static void checkUserStatus() {
@@ -414,6 +351,14 @@ public class MainActivity extends AppCompatActivity
 
         for (int item : items) {
             menu.findItem(item).setVisible(false);
+        }
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        for (Fragment fragment : getSupportFragmentManager().getPrimaryNavigationFragment().getChildFragmentManager().getFragments()) {
+            fragment.onActivityResult(requestCode, resultCode, data);
         }
     }
 

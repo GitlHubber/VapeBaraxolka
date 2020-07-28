@@ -2,6 +2,7 @@ package ragalik.baraxolka.paging_feed.my_reports
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.SpannableString
 import android.text.SpannableStringBuilder
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +18,7 @@ import ragalik.baraxolka.paging_feed.DateTimeUtils
 import ragalik.baraxolka.paging_feed.administrator.AdministratorActivity
 import ragalik.baraxolka.paging_feed.seller.SellerProfileActivity
 import java.lang.Exception
+import java.util.*
 
 class ReportDialogFragment(private val report : Report?, private val flag : String) : DialogFragment() {
 
@@ -42,7 +44,8 @@ class ReportDialogFragment(private val report : Report?, private val flag : Stri
         } else {
             SpannableStringBuilder()
                     .bold { append("Комментарий к жалобе: ") }
-                    .append("${report?.reportMessage}")
+                    .append("${report?.reportMessage?.substring(0, 1)?.toUpperCase(Locale.ROOT)}")
+                    .append("${report?.reportMessage?.substring(1, report.reportMessage.length)}")
         }
         tw_report_message.text = customReportMessage
 

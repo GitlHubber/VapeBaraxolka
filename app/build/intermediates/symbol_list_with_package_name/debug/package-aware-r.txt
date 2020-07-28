@@ -41,6 +41,8 @@ anim fragment_fade_exit
 anim fragment_fast_out_extra_slow_in
 anim fragment_open_enter
 anim fragment_open_exit
+anim from_left
+anim from_right
 anim mtrl_bottom_sheet_slide_in
 anim mtrl_bottom_sheet_slide_out
 anim mtrl_card_lowers_interpolator
@@ -48,6 +50,8 @@ anim nav_default_enter_anim
 anim nav_default_exit_anim
 anim nav_default_pop_enter_anim
 anim nav_default_pop_exit_anim
+anim to_left
+anim to_right
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -1716,6 +1720,7 @@ drawable ic_arrow_dark_theme
 drawable ic_baseline_block_24
 drawable ic_baseline_delete_outline_24
 drawable ic_baseline_person_24
+drawable ic_baseline_photo_camera_24
 drawable ic_baseline_report_24
 drawable ic_baseline_sentiment_very_dissatisfied_24
 drawable ic_bookmark
@@ -1838,7 +1843,6 @@ id EditTownTextEdit
 id EditorsRecyclerView
 id FAVOURITES
 id FUNCTION
-id FirstFragment
 id Header
 id LIPasswordLayout
 id META
@@ -1868,7 +1872,6 @@ id SITownSpinnerLayout
 id SYM
 id SearchPriceButton
 id SearchSortButton
-id SecondFragment
 id SignInLogInButton
 id TOP_END
 id TOP_START
@@ -1909,21 +1912,23 @@ id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
 id accountCoordinator
+id accountFragment
 id accountMenuLinearLayout
 id account_delete_image
 id account_edit_layout
 id account_email
+id account_fab
 id account_load_image
 id account_phone
 id account_pn_layout
 id account_region_layout
 id account_reports_layout
-id account_show_image
 id account_take_image
 id account_town
+id account_view_stub
 id action0
-id action_FirstFragment_to_SecondFragment
-id action_SecondFragment_to_FirstFragment
+id action_accountFragment_to_editAccountFragment
+id action_accountFragment_to_fullImageLayout
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -1934,6 +1939,7 @@ id action_bar_title
 id action_container
 id action_context_bar
 id action_divider
+id action_editAccountFragment_to_accountFragment
 id action_empty_btn
 id action_image
 id action_menu_divider
@@ -1942,12 +1948,14 @@ id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
 id action_settings
+id action_splashScreenFragment_to_adsFragment
 id action_text
 id action_to_report
 id action_up_btn
 id action_voice_btn
 id actions
 id activity_chooser_view_content
+id adCreatorActivity
 id adCreatorCoordinator
 id adCreatorMenuLinearLayout
 id adCreatorToolbar
@@ -2115,7 +2123,9 @@ id dimensions
 id direct
 id disableHome
 id drawer_layout
+id drawer_nickname
 id dropdown_menu
+id editAccountFragment
 id editCreatorFrame
 id editCreatorToolbar
 id edit_creator_main_label
@@ -2146,10 +2156,12 @@ id fitToContents
 id fixed
 id floating
 id forever
+id fragment
 id fragment_container
 id fragment_container_view_tag
 id fullAdCoordinator
 id fullAdLinearLayout
+id fullImageLayout
 id fullImagePager
 id general_group
 id ghost_view
@@ -2210,6 +2222,7 @@ id linear
 id listMode
 id list_item
 id logButton
+id logIn
 id logotypeImg
 id masked
 id media_actions
@@ -2259,7 +2272,6 @@ id nav_view
 id navigationDrawerPhoto
 id navigation_header_container
 id never
-id nickname
 id nightThemeSwitcher
 id noScroll
 id no_ads_button
@@ -2438,6 +2450,7 @@ id si_nickname
 id si_password
 id si_phone_number
 id signButton
+id signIn
 id signOutButtonAccount
 id simpleCircle
 id skipCollapsed
@@ -2452,6 +2465,7 @@ id snapMargins
 id spacer
 id splashBaraxolka
 id splashLayout
+id splashScreenFragment
 id splashVape
 id split_action_bar
 id spread
@@ -2665,8 +2679,6 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout active_ads
-layout activity_account
-layout activity_account_edit
 layout activity_ad_creator
 layout activity_administrator
 layout activity_edit_creator
@@ -2677,7 +2689,6 @@ layout activity_my_reports
 layout activity_search
 layout activity_seller_profile
 layout activity_settings
-layout activity_splash_screen
 layout ad_loading
 layout app_bar_main
 layout bmb
@@ -2685,7 +2696,6 @@ layout bmb_ham_button
 layout bmb_simple_circle_button
 layout bmb_text_inside_circle_button
 layout bmb_text_outside_circle_button
-layout content_account_edit
 layout content_ad_creator
 layout content_full_ad
 layout content_main
@@ -2709,10 +2719,12 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dropdown_text_color
+layout fragment_account
 layout fragment_account_image_menu
 layout fragment_ad_creator_image_menu
 layout fragment_ad_moderator
 layout fragment_ads
+layout fragment_edit_account
 layout fragment_editors
 layout fragment_favourites
 layout fragment_full_image_layout
@@ -2726,6 +2738,7 @@ layout fragment_rules
 layout fragment_send_report_dialog
 layout fragment_sign_in
 layout fragment_sort
+layout fragment_splash_screen
 layout fragment_technical_support
 layout full_ad_loader
 layout item_ad

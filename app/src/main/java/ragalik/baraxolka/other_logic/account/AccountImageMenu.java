@@ -11,7 +11,6 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
@@ -39,7 +38,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 import static android.Manifest.permission.*;
-import static ragalik.baraxolka.other_logic.account.Account.outputFileUri;
+import static ragalik.baraxolka.other_logic.account.AccountFragment.outputFileUri;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -49,7 +48,6 @@ public class AccountImageMenu extends BottomSheetDialogFragment {
     private static final int PICK_FILE_REQUEST = 1000;
 
     public static File fileWithUri;
-    private AppCompatTextView account_show_image;
     private AppCompatTextView account_take_image;
     private AppCompatTextView account_load_image;
     private AppCompatTextView account_delete_image;
@@ -75,29 +73,15 @@ public class AccountImageMenu extends BottomSheetDialogFragment {
 
         accountMenuLinearLayout = view.findViewById(R.id.accountMenuLinearLayout);
 
-        account_show_image = view.findViewById(R.id.account_show_image);
         account_take_image = view.findViewById(R.id.account_take_image);
         account_load_image = view.findViewById(R.id.account_load_image);
         account_delete_image = view.findViewById(R.id.account_delete_image);
 
         if (MainActivity.sp.getString("image", "").equals("null")) {
-            account_show_image.setVisibility(View.GONE);
             account_delete_image.setVisibility(View.GONE);
 
             accountMenuLinearLayout.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         }
-
-        account_show_image.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ArrayList<String> arrayList = new ArrayList<>();
-                arrayList.add(MainActivity.sp.getString("image", ""));
-                dismiss();
-
-                FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.accountCoordinator, new FullImageLayout(0, arrayList)).addToBackStack("").commit();
-            }
-        });
 
         account_take_image.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,14 +91,14 @@ public class AccountImageMenu extends BottomSheetDialogFragment {
                     int permissionStatus = getActivity().checkSelfPermission(WRITE_EXTERNAL_STORAGE);
 
                     if (permissionStatus == PackageManager.PERMISSION_GRANTED) {
-                        takePicture(Account.activity);
+                        takePicture((AppCompatActivity) MainActivity.activity);
                         dismiss();
                     } else {
                         getActivity().requestPermissions(new String[] {WRITE_EXTERNAL_STORAGE},
                                 1);
                     }
                 } else {
-                    takePicture(Account.activity);
+                    takePicture((AppCompatActivity) MainActivity.activity);
                     dismiss();
                 }
 
@@ -178,9 +162,8 @@ public class AccountImageMenu extends BottomSheetDialogFragment {
         super.onCancel(dialog);
     }
 
-
     private void deleteUserImage () {
-        pDialog = new ProgressDialog(Account.activity);
+        pDialog = new ProgressDialog(MainActivity.activity);
         pDialog.setMessage("Удаление фотографии профиля");
         pDialog.setIndeterminate(false);
         pDialog.setCancelable(true);
@@ -194,9 +177,9 @@ public class AccountImageMenu extends BottomSheetDialogFragment {
             public void onResponse(Call<ServerResponse> call, Response<ServerResponse> response) {
                 pDialog.dismiss();
                 if (response.body() != null) {
-                    Toast.makeText(Account.activity, "Изображение успешно удалено!", Toast.LENGTH_LONG).show();
-                    Account.accountPhoto.setImageResource(R.drawable.gradient_navigation);
-                    Account.navigationPhoto.setImageResource(R.drawable.gradient_navigation);
+                    Toast.makeText(MainActivity.activity, "Изображение успешно удалено!", Toast.LENGTH_LONG).show();
+                    AccountFragment.accountPhoto.setImageResource(R.drawable.gradient_navigation);
+                    MainActivity.navigationPhoto.setImageResource(R.drawable.gradient_navigation);
 
                     SharedPreferences.Editor editor = MainActivity.sp.edit();
                     editor.putString("image", "null");
@@ -206,7 +189,7 @@ public class AccountImageMenu extends BottomSheetDialogFragment {
 
             @Override
             public void onFailure(Call<ServerResponse> call, Throwable t) {
-                Toast.makeText(Account.activity, "Произошла ошибка", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.activity, "Произошла ошибка", Toast.LENGTH_LONG).show();
             }
         });
     }

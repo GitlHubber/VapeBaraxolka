@@ -26,7 +26,7 @@
         android:paddingBottom="13dp">
 
         <TextView
-            android:id="@+id/nickname"
+            android:id="@+id/drawer_nickname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Регистрация/Войти"

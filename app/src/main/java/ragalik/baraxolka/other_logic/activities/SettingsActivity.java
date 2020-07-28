@@ -28,14 +28,14 @@ public class SettingsActivity extends AppCompatActivity {
 
         SwitchCompat nightThemeSwitcher = findViewById(R.id.nightThemeSwitcher);
 
-        if (SplashScreenActivity.preferences.getString("theme", "").equals("Night")) {
+        if (MainActivity.sp.getString("theme", "").equals("Night")) {
             nightThemeSwitcher.setChecked(true);
         } else {
             nightThemeSwitcher.setChecked(false);
         }
 
         nightThemeSwitcher.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            SharedPreferences.Editor editor = SplashScreenActivity.preferences.edit();
+            SharedPreferences.Editor editor = MainActivity.sp.edit();
             if (isChecked) {
                 editor.putString("theme", "Night");
             } else {

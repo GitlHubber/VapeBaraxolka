@@ -6,6 +6,7 @@ import android.app.ProgressDialog;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatAutoCompleteTextView;
@@ -14,6 +15,7 @@ import androidx.appcompat.widget.AppCompatSpinner;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.Navigation;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -83,11 +85,8 @@ public class SignIn extends Fragment implements View.OnClickListener {
         if (appCompatActivity != null) {
             appCompatActivity.setSupportActionBar(toolbar);
             toolbar.setTitle("Регистрация");
+            appCompatActivity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                getActivity(), MainActivity.drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        MainActivity.drawer.addDrawerListener(toggle);
-        toggle.syncState();
 
         MainActivity.isActualFragment = false;
         MainActivity.invalidateSearchMenu();
@@ -199,7 +198,7 @@ public class SignIn extends Fragment implements View.OnClickListener {
                 } else {
                     Toast.makeText(getContext(), "Проверьте поля: " + str, Toast.LENGTH_LONG).show();
                 }
-                if(getActivity() != null) {
+                if (getActivity() != null) {
                     InputMethodManager inputMethodManager = (InputMethodManager) getActivity().getSystemService(Activity.INPUT_METHOD_SERVICE);
                     if (inputMethodManager != null) {
                         inputMethodManager.hideSoftInputFromWindow(v.getWindowToken(), 0);

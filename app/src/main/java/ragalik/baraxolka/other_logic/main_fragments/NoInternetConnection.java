@@ -13,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import ragalik.baraxolka.other_logic.activities.SplashScreenActivity;
 import ragalik.baraxolka.R;
 
 /**
@@ -42,9 +41,9 @@ public class NoInternetConnection extends Fragment implements SwipeRefreshLayout
             @Override
             public void onClick(View view) {
                 if (checkInternetConnection()) {
-                    getActivity().setContentView(R.layout.activity_splash_screen);
-                    SplashScreenActivity.startAnimations(getActivity());
-                    SplashScreenActivity.logoLauncher.start();
+                    getActivity().setContentView(R.layout.fragment_splash_screen);
+                    //SplashScreenFragment.startAnimations(getActivity());
+                    //SplashScreenFragment.logoLauncher.start();
                 }
             }
         });
@@ -57,9 +56,9 @@ public class NoInternetConnection extends Fragment implements SwipeRefreshLayout
             @Override
             public void run() {
                 if (checkInternetConnection()) {
-                    getActivity().setContentView(R.layout.activity_splash_screen);
-                    SplashScreenActivity.startAnimations(getActivity());
-                    SplashScreenActivity.logoLauncher.start();
+                    getActivity().setContentView(R.layout.fragment_splash_screen);
+                   // SplashScreenFragment.startAnimations(getActivity());
+                    //SplashScreenFragment.logoLauncher.start();
                 }
 
                 if (swipeRefreshLayout.isRefreshing()) {

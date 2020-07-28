@@ -32,21 +32,6 @@
         android:background="@color/colorAdCreatorImage" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/account_show_image"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableEnd="@drawable/ic_bottom_sheet_arrow"
-        android:layout_marginStart="10dp"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp"
-        android:text="Посмотреть фото"
-        android:gravity="start|center"
-        android:textAllCaps="false"
-        android:textColor="@color/colorText"
-        android:textStyle="normal"
-        android:textSize="20sp" />
-
-    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/account_take_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

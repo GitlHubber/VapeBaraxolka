@@ -10,8 +10,8 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.appcompat.widget.Toolbar;
+import androidx.navigation.Navigation;
 
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -19,12 +19,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
-import java.util.regex.Pattern;
 
 import ragalik.baraxolka.network.ApiClient;
 import ragalik.baraxolka.network.entities.User;
@@ -155,10 +152,11 @@ public class LogIn extends Fragment implements View.OnClickListener {
                 numberOrEmail.setCounterEnabled(false);
                 password.setCounterEnabled(false);
                 if (getActivity() != null) {
-                    FragmentTransaction fragmentTrans = getActivity().getSupportFragmentManager().beginTransaction();
-                    fragmentTrans.setCustomAnimations(R.anim.enter_from_up, R.anim.exit_to_up);
-                    fragmentTrans.replace(R.id.constrLayout, signInFragment).addToBackStack(null).commit();
-                    getActivity().setTitle("Регистрация");
+//                    FragmentTransaction fragmentTrans = getActivity().getSupportFragmentManager().beginTransaction();
+//                    fragmentTrans.setCustomAnimations(R.anim.enter_from_up, R.anim.exit_to_up);
+//                    fragmentTrans.replace(R.id.constrLayout, signInFragment).addToBackStack(null).commit();
+//                    getActivity().setTitle("Регистрация");
+                    Navigation.findNavController(getActivity(), R.id.fragment).navigate(R.id.signIn);
                     hideKeyboard(v);
                 }
                 break;
@@ -216,10 +214,11 @@ public class LogIn extends Fragment implements View.OnClickListener {
                         MainActivity.setNavHeaderText(getActivity());
                     }
 
-                    FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right);
-                    fragmentTransaction.replace(R.id.constrLayout, MainActivity.adsFragment).commit();
-                    getActivity().setTitle("Объявления");
+//                    FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+//                    fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right);
+//                    fragmentTransaction.replace(R.id.constrLayout, MainActivity.adsFragment).commit();
+//                    getActivity().setTitle("Объявления");
+                    Navigation.findNavController(MainActivity.activity, R.id.fragment).navigate(R.id.ADS);
 
                     if (!MainActivity.isEntranceFromDialog) {
                         adViewModel.getLiveDataSource().getValue().invalidate();

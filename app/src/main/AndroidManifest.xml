@@ -55,22 +55,12 @@
         <activity
             android:name=".paging_feed.my_reports.MyReportsActivity"
             android:label="@string/my_reports_activity"
-            android:parentActivityName=".other_logic.account.Account"
+            android:parentActivityName=".other_logic.account.AccountFragment"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.SlidrActivityTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".other_logic.account.Account" />
-        </activity>
-        <activity
-            android:name=".other_logic.account.AccountEditActivity"
-            android:label="@string/title_activity_account_edit"
-            android:parentActivityName=".other_logic.account.Account"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.SlidrActivityTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".other_logic.account.Account" />
+                android:value=".other_logic.account.AccountFragment" />
         </activity>
         <activity
             android:name=".paging_feed.search.SearchActivity"
@@ -124,30 +114,18 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:name=".other_logic.account.Account"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-        </activity>
-        <activity
-            android:name=".other_logic.activities.SplashScreenActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"
