@@ -28,9 +28,10 @@
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:usesCleartextTraffic="true" >
         <activity
-            android:name="ragalik.baraxolka.paging_feed.administrator.AdministratorActivity"
+            android:name="ragalik.baraxolka.view.ui.activity.AdministratorActivity"
             android:label="@string/admin_activity"
             android:parentActivityName="ragalik.baraxolka.MainActivity"
             android:screenOrientation="portrait"
@@ -42,14 +43,14 @@
         <!-- <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" -->
         <!-- android:value="ca-app-pub-7944468475286818~3650093179"/> -->
         <activity
-            android:name="ragalik.baraxolka.other_logic.edit_creator.EditCreator"
+            android:name="ragalik.baraxolka.view.ui.activity.EditCreatorActivity"
             android:label="Изменение объявления"
             android:parentActivityName="ragalik.baraxolka.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" >
         </activity>
         <activity
-            android:name="ragalik.baraxolka.paging_feed.ads.FilterActivity"
+            android:name="ragalik.baraxolka.view.ui.activity.FilterActivity"
             android:label="@string/title_activity_filter"
             android:parentActivityName="ragalik.baraxolka.MainActivity"
             android:screenOrientation="portrait"
@@ -59,7 +60,7 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:name="ragalik.baraxolka.paging_feed.search.SearchActivity"
+            android:name="ragalik.baraxolka.view.ui.activity.SearchActivity"
             android:label="@string/title_activity_search"
             android:parentActivityName="ragalik.baraxolka.MainActivity"
             android:screenOrientation="portrait"
@@ -69,7 +70,7 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:name="ragalik.baraxolka.other_logic.ad_creator.AdCreatorActivity"
+            android:name="ragalik.baraxolka.view.ui.activity.AdCreatorActivity"
             android:label="@string/title_activity_settings"
             android:parentActivityName="ragalik.baraxolka.MainActivity"
             android:screenOrientation="portrait"
@@ -79,7 +80,7 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:name="ragalik.baraxolka.other_logic.full_ad.FullAdActivity"
+            android:name="ragalik.baraxolka.view.ui.activity.FullAdActivity"
             android:label="@string/title_activity_full_ad"
             android:parentActivityName="ragalik.baraxolka.MainActivity"
             android:screenOrientation="portrait"
@@ -89,7 +90,7 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:name="ragalik.baraxolka.other_logic.activities.SettingsActivity"
+            android:name="ragalik.baraxolka.view.ui.activity.SettingsActivity"
             android:label="@string/title_activity_settings"
             android:parentActivityName="ragalik.baraxolka.MainActivity"
             android:screenOrientation="portrait"
@@ -99,14 +100,14 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:name="ragalik.baraxolka.paging_feed.seller.SellerProfileActivity"
+            android:name="ragalik.baraxolka.view.ui.activity.SellerProfileActivity"
             android:label="@string/title_activity_seller_profile"
-            android:parentActivityName="ragalik.baraxolka.other_logic.full_ad.FullAdActivity"
+            android:parentActivityName="ragalik.baraxolka.view.ui.activity.FullAdActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".other_logic.full_ad.FullAdActivity" />
+                android:value=".view.ui.activity.FullAdActivity" />
         </activity>
         <activity
             android:name="ragalik.baraxolka.MainActivity"

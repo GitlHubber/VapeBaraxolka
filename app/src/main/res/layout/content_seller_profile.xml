@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".paging_feed.seller.SellerProfileActivity"
+    tools:context=".view.ui.activity.SellerProfileActivity"
     tools:showIn="@layout/activity_seller_profile"
     android:background="@color/colorBackground">
 

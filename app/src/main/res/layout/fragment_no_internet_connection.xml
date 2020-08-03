@@ -6,7 +6,7 @@
     android:id="@+id/refresher"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".paging_feed.ads.ADS">
+    tools:context=".view.ui.fragment.AdsFragment">
 
 
     <LinearLayout

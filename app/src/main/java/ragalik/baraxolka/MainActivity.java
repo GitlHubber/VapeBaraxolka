@@ -16,7 +16,6 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.View;
 import androidx.core.view.GravityCompat;
@@ -43,12 +42,12 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import ragalik.baraxolka.paging_feed.search.SearchActivity;
-import ragalik.baraxolka.other_logic.entrance.LogInFragment;
-import ragalik.baraxolka.other_logic.entrance.SignInFragment;
+import ragalik.baraxolka.view.ui.activity.SearchActivity;
+import ragalik.baraxolka.view.ui.fragment.LogInFragment;
+import ragalik.baraxolka.view.ui.fragment.SignInFragment;
 import ragalik.baraxolka.network.ApiClient;
 import ragalik.baraxolka.network.entities.AdsCount;
-import ragalik.baraxolka.paging_feed.ads.ADS;
+import ragalik.baraxolka.view.ui.fragment.AdsFragment;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -59,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String SERVER_URL = "http://ketrovsky.iam.by/scripts/";
 
     private LogInFragment logInFragment;
-    public static ADS adsFragment;
+    public static AdsFragment adsFragment;
     private SignInFragment signInFragment;
     private Dialog myDialog;
     public static SharedPreferences sp;
@@ -95,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         listItem = new ArrayList<>();
         myDialog = new Dialog(this);
         logInFragment = new LogInFragment();
-        adsFragment = new ADS();
+        adsFragment = new AdsFragment();
         moderator_count = new TextView(this);
 
         SharedPreferences.Editor editor = sp.edit();

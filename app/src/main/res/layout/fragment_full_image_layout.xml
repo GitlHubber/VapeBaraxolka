@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBlack"
-    tools:context=".other_logic.account.FullImageLayout">
+    tools:context=".view.ui.image_menu.FullImageLayout">
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/fullImagePager"

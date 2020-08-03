@@ -2635,7 +2635,6 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
-id rulesToolbar
 id saveEditInfoButton
 id save_non_transition_alpha
 id save_overlay_view
@@ -2781,9 +2780,6 @@ id textinput_suffix_text
 id thrid_group
 id time
 id title
-id title1R
-id title2R
-id title3R
 id titleDividerNoCustom
 id titleEditText
 id titleTextFullAd
@@ -2986,7 +2982,6 @@ layout fragment_no_internet_connection
 layout fragment_price
 layout fragment_report_dialog
 layout fragment_reports
-layout fragment_rules
 layout fragment_send_report_dialog
 layout fragment_sign_in
 layout fragment_sort

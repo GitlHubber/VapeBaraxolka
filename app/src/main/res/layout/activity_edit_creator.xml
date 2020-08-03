@@ -5,7 +5,7 @@
     android:id="@+id/editCreatorFrame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".other_logic.edit_creator.EditCreator">
+    tools:context=".view.ui.activity.EditCreatorActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
