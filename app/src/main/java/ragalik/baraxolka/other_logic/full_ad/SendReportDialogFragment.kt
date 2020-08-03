@@ -1,15 +1,10 @@
 package ragalik.baraxolka.other_logic.full_ad
 
-import android.content.Context
-import android.graphics.Color
 import android.os.Bundle
-import android.text.SpannableStringBuilder
-import android.text.Spanned
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.text.italic
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.android.synthetic.main.fragment_send_report_dialog.*
 import ragalik.baraxolka.MainActivity
@@ -46,7 +41,7 @@ class SendReportDialogFragment(private val adId : Int) : BottomSheetDialogFragme
         val call = ApiClient.getApi().insertAdReport(3, message, datetime, adId, MainActivity.sp.getInt("id", 0))
         call.enqueue(object : Callback<ServerResponse> {
             override fun onResponse(call: Call<ServerResponse>, response: Response<ServerResponse>) {
-                Toast.makeText(FullAdActivity.appCompatActivity, "Жалоба отправлена!", Toast.LENGTH_LONG).show()
+                Toast.makeText(MainActivity.activity, "Жалоба отправлена!", Toast.LENGTH_LONG).show()
                 dialog?.dismiss()
             }
 

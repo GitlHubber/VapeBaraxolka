@@ -155,7 +155,10 @@
             android:text="Сохранить"
             android:textAlignment="center"
             android:textColor="@color/colorAdsDate"
-            android:background="@color/colorPrimary"/>
+            android:background="@drawable/button_background_2"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:focusable="true"/>
 
     </LinearLayout>
 

@@ -1,21 +1,27 @@
 package ragalik.baraxolka.other_logic.full_ad;
 
-import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import android.provider.Settings;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import android.widget.ImageView;
+import android.view.ViewGroup;
+import android.view.ViewStub;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,7 +40,6 @@ import ragalik.baraxolka.R;
 import ragalik.baraxolka.MainActivity;
 import ragalik.baraxolka.paging_feed.DateTimeUtils;
 import ragalik.baraxolka.paging_feed.favourites.SetDeleteBookmark;
-import ragalik.baraxolka.paging_feed.search.SearchActivity;
 import ragalik.baraxolka.paging_feed.seller.SellerProfileActivity;
 import ragalik.baraxolka.network.ApiClient;
 import ragalik.baraxolka.network.entities.Ad;
@@ -49,38 +54,80 @@ public class FullAdActivity extends AppCompatActivity {
     private static ArrayList<String> urls;
 
     public static ViewPager viewPagerFullAd;
-    TextView title;
-    TextView category;
-    TextView subcategory;
-    TextView price;
-    TextView description;
-    TextView views;
-    TextView town;
-    TextView userNickname;
-    CircleImageView userImage;
-    TextView adNumber;
-    TextView date_time;
-    LinearLayout sellerLayout;
-    CircleIndicator indicator;
-    AppCompatCheckBox bookmark;
+    private TextView title;
+    private TextView category;
+    private TextView subcategory;
+    private TextView price;
+    private TextView description;
+    private TextView views;
+    private TextView town;
+    private TextView userNickname;
+    private CircleImageView userImage;
+    private TextView adNumber;
+    private TextView date_time;
+    private LinearLayout sellerLayout;
+    private CircleIndicator indicator;
+    private AppCompatCheckBox bookmark;
     private int user_id;
+    private Toolbar toolbar;
+    private LinearLayout noteLayout;
+    private LinearLayout bookmarkLayout;
+    private TextView noteText;
+    private TextView bookmarkText;
+
+    private ViewStub fullAdViewStub;
+
     //private AdView mAdView;
 
-    public static AppCompatActivity appCompatActivity;
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.full_ad_loader);
-        appCompatActivity = this;
+        setContentView(R.layout.activity_full_ad);
+
+//        if (getArguments() != null) {
+//            adId = getArguments().getInt("adId");
+//            getFullAdInfo(adId);
+//        }
+
+        getFullAdInfo(539);
+
+        fullAdViewStub = findViewById(R.id.fullAdViewStub);
+        fullAdViewStub.inflate();
+
         urls = new ArrayList<>();
 
-        Intent intent = getIntent();
-        Bundle bundle = intent.getExtras();
-        if (bundle != null) {
-            adId = (Integer)bundle.get("adId");
-            getFullAdInfo(adId);
-        }
+        AppCompatActivity appCompatActivity = this;
+        toolbar = findViewById(R.id.toolbar_full_ad);
+        appCompatActivity.setSupportActionBar(toolbar);
+        appCompatActivity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        appCompatActivity.getSupportActionBar().setDisplayShowTitleEnabled(false);
+        bookmark = findViewById(R.id.bookmark_button_full_ad);
+
+        //                mAdView = findViewById(R.id.FullAdAdView);
+//                AdRequest adRequest = new AdRequest.Builder().build();
+//                mAdView.loadAd(adRequest);
+
+        indicator = (CircleIndicator) findViewById(R.id.circleIndicatorFullAd);
+        viewPagerFullAd = findViewById(R.id.ivFullScreenAd);
+
+        title = findViewById(R.id.titleTextFullAd);
+        //numberPhotoFullAd = findViewById(R.id.numberPhotoFullAd);
+        category = findViewById(R.id.categoryTextFullAd);
+        subcategory = findViewById(R.id.typeTextFullAd);
+        price = findViewById(R.id.priceTextFullAd);
+        description = findViewById(R.id.descriptionTextFullAd);
+        views = findViewById(R.id.viewsTextFullAd);
+        town = findViewById(R.id.townTextFullAd);
+        userNickname = findViewById(R.id.sellerName);
+        userImage = findViewById(R.id.userImageFullAd);
+        adNumber = findViewById(R.id.numberAdTextFullAd);
+        date_time = findViewById(R.id.dateTextFullAd);
+        sellerLayout = findViewById(R.id.seller_profile_layout);
+
+        noteLayout = findViewById(R.id.fullAdNoteLayout);
+        bookmarkLayout = findViewById(R.id.fullAdBookmarkLayout);
+        noteText = findViewById(R.id.TW_full_ad_note);
+        bookmarkText = findViewById(R.id.TW_full_ad_bookmark);
     }
 
     private void setAdInfo (Ad ad) {
@@ -129,19 +176,19 @@ public class FullAdActivity extends AppCompatActivity {
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        MenuItem item = menu.findItem(R.id.action_to_report);
+        MenuItem reportItem = menu.findItem(R.id.action_to_report);
         if (MainActivity.sp.getInt("id", 0) != 0) {
-            item.setVisible(true);
+            reportItem.setVisible(true);
         } else {
-            item.setVisible(false);
+            reportItem.setVisible(false);
         }
+
         return super.onPrepareOptionsMenu(menu);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.full_ad_menu, menu);
-
         return true;
     }
 
@@ -161,30 +208,19 @@ public class FullAdActivity extends AppCompatActivity {
     private void getFullAdInfo (int adId) {
         user_id = MainActivity.sp.getInt("id", 0);
 
-        String phoneIdentificator = Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
+        String phoneIdentificator = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
 
         Call<FullAdResponse> call = ApiClient.getApi().getFullAd(adId, user_id, phoneIdentificator);
         call.enqueue(new Callback<FullAdResponse>() {
             @Override
             public void onResponse(Call<FullAdResponse> call, Response<FullAdResponse> response) {
-                setContentView(R.layout.activity_full_ad);
 
-                Toolbar toolbar = findViewById(R.id.toolbar_full_ad);
-                appCompatActivity.setSupportActionBar(toolbar);
-                bookmark = findViewById(R.id.bookmark_button_full_ad);
+                fullAdViewStub.setVisibility(View.GONE);
+
                 if (user_id == 0) {
                     bookmark.setVisibility(View.GONE);
                 }
 
-//                mAdView = findViewById(R.id.FullAdAdView);
-//                AdRequest adRequest = new AdRequest.Builder().build();
-//                mAdView.loadAd(adRequest);
-
-
-                if (getSupportActionBar() != null) {
-                    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-                    getSupportActionBar().setDisplayShowTitleEnabled(false);
-                }
                 if (response.body() != null) {
                     Ad ad = response.body().getAd().get(0);
 
@@ -203,51 +239,42 @@ public class FullAdActivity extends AppCompatActivity {
                     if (!ad.getImage5url().equals("null")) {
                         urls.add(ad.getImage5url());
                     }
-                    indicator = (CircleIndicator) findViewById(R.id.circleIndicatorFullAd);
 
-                    viewPagerFullAd = findViewById(R.id.ivFullScreenAd);
                     FullAdViewPagerAdapter fullAdViewPagerAdapter = new FullAdViewPagerAdapter(getApplicationContext(), urls, "AD");
                     viewPagerFullAd.setAdapter(fullAdViewPagerAdapter);
                     indicator.setViewPager(viewPagerFullAd);
 
-
-                    title = findViewById(R.id.titleTextFullAd);
-                    //numberPhotoFullAd = findViewById(R.id.numberPhotoFullAd);
-                    category = findViewById(R.id.categoryTextFullAd);
-                    subcategory = findViewById(R.id.typeTextFullAd);
-                    price = findViewById(R.id.priceTextFullAd);
-                    description = findViewById(R.id.descriptionTextFullAd);
-                    views = findViewById(R.id.viewsTextFullAd);
-                    town = findViewById(R.id.townTextFullAd);
-                    userNickname = findViewById(R.id.sellerName);
-                    userImage = findViewById(R.id.userImageFullAd);
-                    adNumber = findViewById(R.id.numberAdTextFullAd);
-                    date_time = findViewById(R.id.dateTextFullAd);
-
                     setAdInfo(ad);
 
                     if (user_id == 0) {
-                        bookmark.setVisibility(View.GONE);
+                        //bookmark.setVisibility(View.GONE);
+                        bookmarkLayout.setVisibility(View.GONE);
+                        noteLayout.setVisibility(View.GONE);
                     } else {
-                        bookmark.setVisibility(View.VISIBLE);
+                        //bookmark.setVisibility(View.VISIBLE);
+                        bookmarkLayout.setVisibility(View.VISIBLE);
+                        noteLayout.setVisibility(View.VISIBLE);
                         if (ad.isFavourite()) {
                             bookmark.setChecked(true);
+                            bookmarkText.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorAccent));
                         } else {
                             bookmark.setChecked(false);
+                            bookmarkText.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorSecondaryText));
                         }
                     }
 
-                    bookmark.setOnClickListener(v -> {
+                    bookmarkLayout.setOnClickListener(v -> {
                         if (bookmark.isChecked()) {
                             SetDeleteBookmark.getInstance().setDeleteBookmark(ad.getId(), bookmark, "set", getApplicationContext(), ad);
+                            bookmarkText.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorAccent));
                         } else {
                             SetDeleteBookmark.getInstance().setDeleteBookmark(ad.getId(), bookmark, "delete", getApplicationContext(), ad);
+                            bookmarkText.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorSecondaryText));
                         }
                     });
 
-                    sellerLayout = findViewById(R.id.seller_profile_layout);
                     sellerLayout.setOnClickListener(v -> {
-                        Intent myIntent = new Intent(FullAdActivity.this, SellerProfileActivity.class);
+                        Intent myIntent = new Intent(getApplicationContext(), SellerProfileActivity.class);
                         myIntent.putExtra("sellerId", ad.getIdUser());
                         v.getContext().startActivity(myIntent);
                     });

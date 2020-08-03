@@ -38,7 +38,6 @@
                 android:id="@+id/toolbarAccount"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@drawable/gradient_for_full_ad_toolbar"
                 android:title="@string/account"
                 app:layout_collapseMode="pin"
                 app:titleTextColor="@color/colorText" />
@@ -54,8 +53,8 @@
         android:layout_margin="@dimen/fab_margin"
         app:layout_anchor="@id/appBarLayoutAccount"
         app:layout_anchorGravity="bottom|end"
-        app:backgroundTint="@color/entranceStartColor"
-        android:tint="@color/colorAdsDate"
+        android:theme="@style/MyFloatingActionButton"
+        android:visibility="gone"
         android:src="@drawable/ic_baseline_photo_camera_24" />
 
 
@@ -103,7 +102,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="15dp">
+                    android:padding="15dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:focusable="true">
+
                     <TextView
                         android:id="@+id/account_phone"
                         android:layout_width="wrap_content"
@@ -122,10 +125,13 @@
 
                     <LinearLayout
                         android:id="@+id/hide_phone_layout"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:visibility="gone">
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:focusable="true">
 
                         <androidx.appcompat.widget.AppCompatCheckBox
                             android:id="@+id/cb_showHidePN"
@@ -157,7 +163,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="15dp">
+                    android:padding="15dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:focusable="true">
 
                     <TextView
                         android:id="@+id/account_town"
@@ -187,7 +196,10 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:visibility="gone"
-                    android:padding="15dp">
+                    android:padding="15dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:focusable="true">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -213,6 +225,8 @@
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/button_background"
                     android:text="Выйти из аккаунта"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:textColor="@color/colorAccent" />
                 </LinearLayout>
         </androidx.core.widget.NestedScrollView>

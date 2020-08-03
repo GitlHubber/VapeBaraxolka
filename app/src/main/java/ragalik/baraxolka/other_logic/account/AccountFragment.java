@@ -48,7 +48,6 @@ import ragalik.baraxolka.network.IApi;
 import ragalik.baraxolka.network.ApiClient;
 import ragalik.baraxolka.network.entities.ServerResponse;
 import ragalik.baraxolka.network.entities.User;
-import ragalik.baraxolka.paging_feed.my_reports.MyReportsActivity;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -88,8 +87,12 @@ public class AccountFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
+        return inflater.inflate(R.layout.fragment_account, container, false);
+    }
 
-        View view = inflater.inflate(R.layout.fragment_account, container, false);
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
         MainActivity.isActualFragment = false;
         MainActivity.invalidateSearchMenu();
@@ -101,6 +104,9 @@ public class AccountFragment extends Fragment {
             appCompatActivity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             appCompatActivity.getSupportActionBar().setDisplayShowTitleEnabled(false);
         }
+
+        accountViewStub = view.findViewById(R.id.account_view_stub);
+        accountViewStub.inflate();
 
         pnLayout = view.findViewById(R.id.account_pn_layout);
         regionLayout = view.findViewById(R.id.account_region_layout);
@@ -148,13 +154,9 @@ public class AccountFragment extends Fragment {
         hidePhoneLayout = view.findViewById(R.id.hide_phone_layout);
         townTV = view.findViewById(R.id.account_town);
 
-        accountViewStub = view.findViewById(R.id.account_view_stub);
-        accountViewStub.inflate();
         apiClient = ApiClient.getApi();
 
         getUserInfo();
-
-        return view;
     }
 
     @Override
@@ -233,8 +235,7 @@ public class AccountFragment extends Fragment {
         if (user.isReportExists() == 1) {
             reportsLayout.setVisibility(View.VISIBLE);
             reportsLayout.setOnClickListener(v -> {
-                Intent intent = new Intent(MainActivity.activity, MyReportsActivity.class);
-                startActivity(intent);
+                Navigation.findNavController(MainActivity.activity, R.id.fragment).navigate(R.id.myReportsFragment);
             });
         }
 
@@ -360,6 +361,7 @@ public class AccountFragment extends Fragment {
                     editor.apply();
 
                     accountViewStub.setVisibility(View.GONE);
+                    accountFab.setVisibility(View.VISIBLE);
                     startAccountView(user);
                 } else {
                     Toast.makeText(getContext(), "Ошибка загрузки профиля", Toast.LENGTH_LONG).show();

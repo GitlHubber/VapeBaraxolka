@@ -13,8 +13,11 @@
         <action
             android:id="@+id/action_splashScreenFragment_to_adsFragment"
             app:destination="@id/ADS"
-            app:popUpTo="@layout/fragment_splash_screen"
-            app:popUpToInclusive="true"/>
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/ADS"
@@ -28,7 +31,7 @@
         tools:layout="@layout/fragment_my_ads" />
     <fragment
         android:id="@+id/signIn"
-        android:name="ragalik.baraxolka.other_logic.entrance.SignIn"
+        android:name="ragalik.baraxolka.other_logic.entrance.SignInFragment"
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in" />
     <fragment
@@ -38,7 +41,7 @@
         tools:layout="@layout/fragment_favourites" />
     <fragment
         android:id="@+id/logIn"
-        android:name="ragalik.baraxolka.other_logic.entrance.LogIn"
+        android:name="ragalik.baraxolka.other_logic.entrance.LogInFragment"
         android:label="fragment_log_in"
         tools:layout="@layout/fragment_log_in" />
     <activity
@@ -92,6 +95,21 @@
             android:id="@+id/action_editAccountFragment_to_accountFragment"
             app:destination="@id/accountFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/myReportsFragment"
+        android:name="ragalik.baraxolka.paging_feed.my_reports.MyReportsFragment"
+        android:label="fragment_my_reports"
+        tools:layout="@layout/fragment_my_reports" />
+    <activity
+        android:id="@+id/fullAdActivity"
+        android:name="ragalik.baraxolka.other_logic.full_ad.FullAdActivity"
+        android:label="activity_full_ad"
+        tools:layout="@layout/activity_full_ad" />
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="ragalik.baraxolka.other_logic.entrance.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" />
 
 
 </navigation>

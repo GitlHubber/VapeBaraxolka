@@ -65,6 +65,9 @@ class Ad (user_id : Int? = null) {
 
     @field:SerializedName("reject_message")
     var rejectMessage: String? = null
+
+    @field:SerializedName("editor_id")
+    var editorId: Int? = null
 }
 
 class AdResponse {

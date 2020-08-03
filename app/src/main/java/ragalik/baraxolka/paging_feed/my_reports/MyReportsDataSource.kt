@@ -24,7 +24,7 @@ class MyReportsDataSource : PageKeyedDataSource<Int, Report>() {
                 if (response.isSuccessful) {
                     val apiResponse = response.body()!!
                     val responseItems = apiResponse.reports
-                    MyReportsActivity.myReportsProgressBar.isVisible = false
+                    MyReportsFragment.myReportsProgressBar.isVisible = false
 
                     responseItems?.let {
                         callback.onResult(responseItems, null, FIRST_PAGE + 4)

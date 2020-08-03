@@ -44,7 +44,7 @@ class ReportsAdapter(private val flag : String) : PagedListAdapter<Report, Recyc
             reportDialogFragment.setStyle(DialogFragment.STYLE_NORMAL, R.style.BottomSheetDialogTheme)
 
             val supportFragment = when (flag) {
-                "MY_REPORTS" -> MyReportsActivity.supportFragment
+                "MY_REPORTS" -> MyReportsFragment.supportFragment
                 "REPORTS" -> ReportsFragment.supportFragment
                 else -> throw Exception()
             }

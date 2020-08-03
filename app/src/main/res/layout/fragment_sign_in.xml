@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".other_logic.entrance.SignIn"
+    tools:context=".other_logic.entrance.SignInFragment"
     android:background="@color/colorBackground">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -232,15 +232,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:background="@drawable/button_background"
-                android:drawableEnd="@drawable/ic_arrow"
-                android:layout_marginTop="20dp"
-                android:text="Зарегистрироваться"
+                android:background="@drawable/button_background_2"
+                android:layout_marginTop="30dp"
+                android:text="Создать аккаунт"
                 android:textAllCaps="false"
-                android:paddingStart="30dp"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/colorAdsDate"
                 android:textStyle="italic"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:focusable="true"/>
 
 
 <!--            <LinearLayout-->

@@ -2,6 +2,7 @@ package ragalik.baraxolka.paging_feed
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.os.Bundle
 import android.text.SpannableStringBuilder
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.text.bold
 import androidx.core.view.isVisible
+import androidx.navigation.findNavController
 import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -26,7 +28,6 @@ import ragalik.baraxolka.network.entities.ReasonsResponse
 import ragalik.baraxolka.network.entities.ServerResponse
 import ragalik.baraxolka.other_logic.ad_creator.AdCreatorActivity
 import ragalik.baraxolka.other_logic.edit_creator.EditCreator
-import ragalik.baraxolka.other_logic.full_ad.FullAdActivity
 import ragalik.baraxolka.paging_feed.ads.ADS
 import ragalik.baraxolka.paging_feed.favourites.SetDeleteBookmark
 import ragalik.baraxolka.paging_feed.moderator.AdModerator
@@ -79,26 +80,29 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, RecyclerV
             val id = ad?.id
 
             view.setOnClickListener {
-                val myIntent = Intent(MainActivity.activity, FullAdActivity::class.java)
-                myIntent.putExtra("adId", ad?.id)
-                MainActivity.activity.startActivity(myIntent)
+                val bundle = Bundle()
+                bundle.putInt("adId", ad?.id!!)
+                it.findNavController().navigate(R.id.fullAdActivity, bundle)
+//                val myIntent = Intent(MainActivity.activity, FullAdFragment::class.java)
+//                myIntent.putExtra("adId", ad?.id)
+//                MainActivity.activity.startActivity(myIntent)
             }
 
-            view.bookmark_button_ads.setOnClickListener {
-                if (view.bookmark_button_ads.isChecked) {
-                    SetDeleteBookmark.getInstance().setDeleteBookmark(id!!, it.bookmark_button_ads, "set", MainActivity.activity, ad)
-                } else {
-                    SetDeleteBookmark.getInstance().setDeleteBookmark(id!!, it.bookmark_button_ads, "delete", MainActivity.activity, ad)
-                }
-            }
-
-            view.bookmark_button_ads.isVisible = MainActivity.sp.getInt("id", 0) != 0
+//            view.bookmark_button_ads.setOnClickListener {
+//                if (view.bookmark_button_ads.isChecked) {
+//                    SetDeleteBookmark.getInstance().setDeleteBookmark(id!!, it.bookmark_button_ads, "set", MainActivity.activity, ad)
+//                } else {
+//                    SetDeleteBookmark.getInstance().setDeleteBookmark(id!!, it.bookmark_button_ads, "delete", MainActivity.activity, ad)
+//                }
+//            }
+//
+//            view.bookmark_button_ads.isVisible = MainActivity.sp.getInt("id", 0) != 0
 
             if (flag == "MODERATOR") {
                 var rejectFlag = true
 
                 view.moderator_layout.visibility = View.VISIBLE
-                view.bookmark_button_ads.visibility = View.GONE
+         //       view.bookmark_button_ads.visibility = View.GONE
 
                 view.moderator_accept_button.setOnClickListener {
                     acceptRejectAd(id!!, true)
@@ -128,11 +132,11 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, RecyclerV
                 }
             } else if (flag == "REJECTED") {
                 view.rejected_ads_layout.visibility = View.VISIBLE
-                view.ad_edit_but.visibility = View.VISIBLE
+                view.edit_button_ads.visibility = View.VISIBLE
                 view.ad_delete_but.visibility = View.VISIBLE
-                view.bookmark_button_ads.visibility = View.GONE
+            //    view.bookmark_button_ads.visibility = View.GONE
 
-                view.ad_edit_but.setOnClickListener {
+                view.edit_button_ads.setOnClickListener {
                     val myIntent = Intent(it.context, EditCreator::class.java)
                     myIntent.putExtra("adId", ad?.id)
 
@@ -157,10 +161,10 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, RecyclerV
                     view.tw_reject_message.text = customRejectMes
                 }
             } else if (flag == "ACTIVE") {
-                view.ad_edit_but.visibility = View.VISIBLE
+                view.edit_button_ads.visibility = View.VISIBLE
                 view.ad_deactivate_but.visibility = View.VISIBLE
 
-                view.ad_edit_but.setOnClickListener{
+                view.edit_button_ads.setOnClickListener{
                     val myIntent = Intent(it.context, EditCreator::class.java)
                     myIntent.putExtra("adId", ad?.id)
 
@@ -172,7 +176,7 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, RecyclerV
                 }
             } else if (flag == "NON_ACTIVE") {
                 view.ad_delete_but.visibility = View.VISIBLE
-                view.bookmark_button_ads.visibility = View.GONE
+          //      view.bookmark_button_ads.visibility = View.GONE
 
                 view.ad_delete_but.setOnClickListener {
                     deleteDeactivateAd(id, it)
@@ -245,7 +249,7 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, RecyclerV
         private val title = view.tv_title
         private val location = view.tv_location
         private val datetime = view.ad_preview_date_time
-        private val isFavouritesButton = view.bookmark_button_ads
+        //private val isFavouritesButton = view.bookmark_button_ads
         private val price = view.ad_preview_price
 
         fun bind (ad: Ad) {
@@ -263,7 +267,7 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, RecyclerV
             }
 
             datetime.text = DateTimeUtils.getInstance()?.getNormalizedDatetime(ad.dateTime.toString())
-            isFavouritesButton.isChecked = ad.isFavourite!!
+      //      isFavouritesButton.isChecked = ad.isFavourite!!
             val intPrice = ad.price?.substring(ad.price!!.length - 3)
             if (intPrice == ".00") {
                 price.text = "${ad.price?.substring(0, ad.price!!.length - 3)} Руб."

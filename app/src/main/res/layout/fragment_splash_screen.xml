@@ -17,10 +17,10 @@
 
         <ImageView
             android:id="@+id/logotypeImg"
-            android:layout_width="wrap_content"
-            android:layout_height="333dp"
+            android:layout_width="270dp"
+            android:layout_height="270dp"
             android:visibility="visible"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="20dp"
             app:srcCompat="@drawable/ic_logo" />
 
         <TextView
@@ -28,11 +28,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/aldrich"
-            android:paddingBottom="5dp"
             android:text="Vape"
             android:visibility="visible"
             android:textColor="@color/colorText"
-            android:textSize="24sp" />
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/splashBaraxolka"
@@ -41,7 +40,7 @@
             android:fontFamily="@font/aldrich"
             android:text="Барахолка"
             android:textColor="@color/colorText"
-            android:textSize="24sp" />
+            android:textSize="25sp" />
     </LinearLayout>
 
 </LinearLayout>

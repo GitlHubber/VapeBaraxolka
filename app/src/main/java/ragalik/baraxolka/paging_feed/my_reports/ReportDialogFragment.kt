@@ -2,7 +2,6 @@ package ragalik.baraxolka.paging_feed.my_reports
 
 import android.content.Intent
 import android.os.Bundle
-import android.text.SpannableString
 import android.text.SpannableStringBuilder
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +9,6 @@ import android.view.ViewGroup
 import androidx.core.text.bold
 import androidx.fragment.app.DialogFragment
 import kotlinx.android.synthetic.main.fragment_report_dialog.*
-import kotlinx.android.synthetic.main.fragment_report_dialog.view.*
 import ragalik.baraxolka.R
 import ragalik.baraxolka.network.entities.Report
 import ragalik.baraxolka.other_logic.full_ad.FullAdActivity
@@ -54,7 +52,7 @@ class ReportDialogFragment(private val report : Report?, private val flag : Stri
         goto_ad_button.setOnClickListener {
             dialog?.dismiss()
             val intent = when (flag) {
-                "MY_REPORTS" -> Intent(MyReportsActivity.activity, FullAdActivity::class.java)
+                "MY_REPORTS" -> Intent(MyReportsFragment.activity, FullAdActivity::class.java)
                 "REPORTS" -> Intent(AdministratorActivity.activity, FullAdActivity::class.java)
                 else -> throw Exception()
             }

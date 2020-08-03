@@ -9,16 +9,13 @@
     <include layout="@layout/content_main" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab1"
+        android:id="@+id/mainActivityFab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         android:src="@drawable/ic_add_black_24dp"
-        android:tint="@color/colorAdsDate"
-        android:visibility="visible"
-        style="@style/Widget.MaterialComponents.FloatingActionButton"
-        app:backgroundTint="@color/colorAccent"
+        android:theme="@style/MyFloatingActionButton"
         app:fabSize="mini" />
 
 

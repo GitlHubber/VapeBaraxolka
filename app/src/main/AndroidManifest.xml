@@ -53,16 +53,6 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:name=".paging_feed.my_reports.MyReportsActivity"
-            android:label="@string/my_reports_activity"
-            android:parentActivityName=".other_logic.account.AccountFragment"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.SlidrActivityTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".other_logic.account.AccountFragment" />
-        </activity>
-        <activity
             android:name=".paging_feed.search.SearchActivity"
             android:label="@string/title_activity_search"
             android:parentActivityName=".MainActivity"
@@ -75,6 +65,16 @@
         <activity
             android:name=".other_logic.ad_creator.AdCreatorActivity"
             android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".other_logic.full_ad.FullAdActivity"
+            android:label="@string/title_activity_full_ad"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
@@ -101,17 +101,6 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".other_logic.full_ad.FullAdActivity" />
-        </activity>
-        <activity
-            android:name=".other_logic.full_ad.FullAdActivity"
-            android:label="@string/title_activity_full_ad"
-            android:launchMode="singleTop"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".MainActivity"

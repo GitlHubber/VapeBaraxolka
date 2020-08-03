@@ -6,26 +6,21 @@ import android.app.ProgressDialog;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
-import androidx.activity.OnBackPressedCallback;
-import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatAutoCompleteTextView;
 import androidx.appcompat.widget.AppCompatButton;
-import androidx.appcompat.widget.AppCompatSpinner;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.Navigation;
 
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
@@ -43,7 +38,7 @@ import retrofit2.Response;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SignIn extends Fragment implements View.OnClickListener {
+public class SignInFragment extends Fragment implements View.OnClickListener {
 
     private static final String NICKNAME = "[а-яА-Яa-zA-Z0-9#&_.+@]{1,18}";
     private static final String EMAIL = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
@@ -77,10 +72,14 @@ public class SignIn extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_sign_in, container, false);
+    }
 
-        View v = inflater.inflate(R.layout.fragment_sign_in, container, false);
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
-        toolbar = v.findViewById(R.id.toolbar_registration);
+        toolbar = view.findViewById(R.id.toolbar_registration);
         AppCompatActivity appCompatActivity = (AppCompatActivity) getActivity();
         if (appCompatActivity != null) {
             appCompatActivity.setSupportActionBar(toolbar);
@@ -92,16 +91,16 @@ public class SignIn extends Fragment implements View.OnClickListener {
         MainActivity.invalidateSearchMenu();
         MainActivity.fab.hide();
 
-        nickname = v.findViewById(R.id.si_nickname);
-        email = v.findViewById(R.id.si_email);
-        phoneNumber = v.findViewById(R.id.si_phone_number);
-        password = v.findViewById(R.id.si_password);
-        accept = v.findViewById(R.id.Registration_button);
+        nickname = view.findViewById(R.id.si_nickname);
+        email = view.findViewById(R.id.si_email);
+        phoneNumber = view.findViewById(R.id.si_phone_number);
+        password = view.findViewById(R.id.si_password);
+        accept = view.findViewById(R.id.Registration_button);
 
-        regionSpinner = v.findViewById(R.id.SIRegionSpinner);
-        townSpinner = v.findViewById(R.id.SITownSpinner);
-        regionLayout = v.findViewById(R.id.SIRegionSpinnerLayout);
-        townLayout = v.findViewById(R.id.SITownSpinnerLayout);
+        regionSpinner = view.findViewById(R.id.SIRegionSpinner);
+        townSpinner = view.findViewById(R.id.SITownSpinner);
+        regionLayout = view.findViewById(R.id.SIRegionSpinnerLayout);
+        townLayout = view.findViewById(R.id.SITownSpinnerLayout);
 
 //        privacyPolicyFragment = new PrivacyPolicy();
 //        privacyPolicyTW = v.findViewById(R.id.SIPrivacyPolicy);
@@ -110,7 +109,7 @@ public class SignIn extends Fragment implements View.OnClickListener {
         if (getContext() != null) {
             regionSpinner.setAdapter(ArrayAdapter.createFromResource(getContext(), R.array.Spinner_region_items, R.layout.dropdown_text_color));
             regionSpinner.setOnClickListener(v1 -> regionSpinner.showDropDown());
-            regionSpinner.setOnItemClickListener((parent, view, position, id) -> {
+            regionSpinner.setOnItemClickListener((parent, v, position, id) -> {
                 String text = parent.getItemAtPosition(position).toString();
                 isRegionSelected = true;
                 regionLayout.setHint("Регион");
@@ -153,14 +152,13 @@ public class SignIn extends Fragment implements View.OnClickListener {
                     townSpinner.setAdapter(adapterTown);
                     townFromSpinner = adapterTown.getItem(0).toString();
                     townSpinner.setText(townFromSpinner, false);
-                    townSpinner.setOnClickListener(v2 -> townSpinner.showDropDown());
+                    townSpinner.setOnClickListener(v1 -> townSpinner.showDropDown());
                 }
             });
-            townSpinner.setOnItemClickListener((parent, view, position, id) -> townFromSpinner = parent.getItemAtPosition(position).toString());
+            townSpinner.setOnItemClickListener((parent, v, position, id) -> townFromSpinner = parent.getItemAtPosition(position).toString());
         }
 
         accept.setOnClickListener(this);
-        return v;
     }
 
     private String dataValidate () {
@@ -208,7 +206,7 @@ public class SignIn extends Fragment implements View.OnClickListener {
 //            case (R.id.SIPrivacyPolicy) :
 //                if (getActivity() != null) {
 //                    FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-//                    fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right);
+//                    fragmentTransaction.setCustomAnimations(R.anim.up_to_bottom, R.anim.exit_to_right);
 //                    fragmentTransaction.replace(R.id.constrLayout, privacyPolicyFragment).commit();
 //                    getActivity().setTitle("Политика конфиденциальности");
 //                    InputMethodManager inputMM = (InputMethodManager) getActivity().getSystemService(Activity.INPUT_METHOD_SERVICE);
@@ -253,7 +251,7 @@ public class SignIn extends Fragment implements View.OnClickListener {
                     FragmentTransaction fragmentTransaction;
                     if (getActivity() != null) {
                         fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                        fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right);
+               //         fragmentTransaction.setCustomAnimations(R.anim.up_to_bottom, R.anim.exit_to_right);
                         fragmentTransaction.replace(R.id.constrLayout, MainActivity.adsFragment).commit();
                         MainActivity.showItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
                         SharedPreferences.Editor editor = MainActivity.sp.edit();

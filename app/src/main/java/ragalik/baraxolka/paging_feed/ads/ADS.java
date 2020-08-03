@@ -70,6 +70,7 @@ public class ADS extends Fragment {
         v = inflater.inflate(R.layout.fragment_ads, container, false);
         MainActivity.isActualFragment = true;
         MainActivity.invalidateSearchMenu();
+
         Toolbar toolbar = v.findViewById(R.id.ads_toolbar);
         MainActivity.navigationView.setCheckedItem(R.id.ADS);
         AppCompatActivity appCompatActivity = (AppCompatActivity) getActivity();

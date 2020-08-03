@@ -51,13 +51,25 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="10dp"
-                android:paddingTop="7dp">
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp">
 
-                <androidx.appcompat.widget.AppCompatCheckBox
-                    android:id="@+id/bookmark_button_ads"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:button="@drawable/bookmark_selection" />
+<!--                <androidx.appcompat.widget.AppCompatCheckBox-->
+<!--                    android:id="@+id/bookmark_button_ads"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:button="@drawable/bookmark_selection" />-->
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/edit_button_ads"
+                    android:layout_height="30dp"
+                    android:layout_width="30dp"
+                    android:visibility="gone"
+                    android:background="@drawable/ic_mode_edit_black_24dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:focusable="true" />
+
             </LinearLayout>
         </RelativeLayout>
 
@@ -247,26 +259,40 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/ad_edit_but"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Изменить"
-                android:gravity="center"
-                android:visibility="gone"
-                android:textColor="@color/colorAdsDate"
-                android:background="@color/entranceStartColor"/>
+                android:orientation="horizontal"
+                android:gravity="center">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/ad_deactivate_but"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Деактивировать"
-                android:textColor="@color/colorAdsDate"
-                android:gravity="center"
-                android:visibility="gone"
-                android:background="@color/entranceStartColor"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/ad_edit_but"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Изменить"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:layout_marginEnd="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:focusable="true"
+                    android:background="@drawable/button_background"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/ad_deactivate_but"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Деактивировать"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:textColor="@color/colorAccent"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:focusable="true"
+                    android:background="@drawable/button_background"/>
+
+            </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/ad_delete_but"
@@ -276,8 +302,11 @@
                 android:gravity="center"
                 android:visibility="gone"
                 android:text="Удалить"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:focusable="true"
                 android:textColor="@color/colorAdsDate"
-                android:background="@color/entranceStartColor"/>
+                android:background="@drawable/button_background_2"/>
 
         </LinearLayout>
     </LinearLayout>

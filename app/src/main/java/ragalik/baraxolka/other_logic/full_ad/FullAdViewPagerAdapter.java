@@ -1,11 +1,13 @@
 package ragalik.baraxolka.other_logic.full_ad;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.Navigation;
 import androidx.viewpager.widget.PagerAdapter;
 
 import com.github.chrisbanes.photoview.PhotoView;
@@ -13,6 +15,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+import ragalik.baraxolka.MainActivity;
 import ragalik.baraxolka.R;
 import ragalik.baraxolka.other_logic.account.FullImageLayout;
 
@@ -44,12 +47,9 @@ public class FullAdViewPagerAdapter extends PagerAdapter {
         PhotoView imageView = new PhotoView(context);
 
         if (flag.equals("AD")) {
-            imageView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                   // FragmentTransaction fragmentTransaction = FullAdActivity.appCompatActivity.getSupportFragmentManager().beginTransaction();
-                    //fragmentTransaction.replace(R.id.fullAdCoordinator, new FullImageLayout(position, urls)).addToBackStack("").commit();
-                }
+            imageView.setOnClickListener(view -> {
+//                FullAdFragmentDirections.ActionFullAdFragmentToFullImageLayout action = FullAdFragmentDirections.actionFullAdFragmentToFullImageLayout(position, urls);
+//                Navigation.findNavController(MainActivity.activity, R.id.fragment).navigate(action);
             });
 
             Picasso.get().invalidate(urls.get(position));

@@ -43,21 +43,13 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import ragalik.baraxolka.other_logic.account.AccountFragment;
-import ragalik.baraxolka.other_logic.activities.SettingsActivity;
-import ragalik.baraxolka.other_logic.ad_creator.AdCreatorActivity;
-import ragalik.baraxolka.paging_feed.administrator.AdministratorActivity;
 import ragalik.baraxolka.paging_feed.search.SearchActivity;
-import ragalik.baraxolka.other_logic.entrance.LogIn;
-import ragalik.baraxolka.other_logic.entrance.SignIn;
+import ragalik.baraxolka.other_logic.entrance.LogInFragment;
+import ragalik.baraxolka.other_logic.entrance.SignInFragment;
 import ragalik.baraxolka.network.ApiClient;
 import ragalik.baraxolka.network.entities.AdsCount;
 import ragalik.baraxolka.paging_feed.ads.ADS;
-import ragalik.baraxolka.paging_feed.moderator.AdModerator;
-import ragalik.baraxolka.paging_feed.favourites.FAVOURITES;
 
-import ragalik.baraxolka.other_logic.main_fragments.TechnicalSUPPORT;
-import ragalik.baraxolka.paging_feed.my_ads.MyADS;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -66,9 +58,9 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String SERVER_URL = "http://ketrovsky.iam.by/scripts/";
 
-    private LogIn logInFragment;
+    private LogInFragment logInFragment;
     public static ADS adsFragment;
-    private SignIn signInFragment;
+    private SignInFragment signInFragment;
     private Dialog myDialog;
     public static SharedPreferences sp;
     private static List<String> listItem;
@@ -78,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
     public static NavigationView navigationView;
     private Toolbar toolbar;
     private int entrance_count = 0;
-    public static Boolean isActualFragment = false;
+    public static boolean isActualFragment = false;
     public static DrawerLayout drawer;
     public static boolean isEntranceFromDialog = false;
     private NavController navController;
@@ -102,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
         listItem = new ArrayList<>();
         myDialog = new Dialog(this);
-        logInFragment = new LogIn();
+        logInFragment = new LogInFragment();
         adsFragment = new ADS();
         moderator_count = new TextView(this);
 
@@ -110,10 +102,11 @@ public class MainActivity extends AppCompatActivity {
         editor.putInt("entrance_counter", sp.getInt("entrance_counter", 0) + 1);
         editor.apply();
 
-        fab = findViewById(R.id.fab1);
+        fab = findViewById(R.id.mainActivityFab);
         fab.setOnClickListener(view -> {
-            Intent myIntent = new Intent(MainActivity.this, AdCreatorActivity.class);
-            startActivity(myIntent);
+            //Navigation.findNavController(this, R.id.fragment).navigate(R.id.adCreatorActivity);
+//            Intent myIntent = new Intent(MainActivity.this, AdCreatorActivity.class);
+//            startActivity(myIntent);
         });
 
         navController = Navigation.findNavController(this, R.id.fragment);
@@ -167,19 +160,19 @@ public class MainActivity extends AppCompatActivity {
             AppCompatButton sign = myDialog.findViewById(R.id.signButton);
             this.setTitle("Все объявления");
             myDialog.setOnCancelListener(dialog -> {
-                newTransaction(adsFragment, "Все объявления");
+                //newTransaction(adsFragment, "Все объявления");
                 myDialog.dismiss();
             });
             log.setOnClickListener(v -> {
                 isEntranceFromDialog = true;
                 myDialog.dismiss();
-                newTransaction(logInFragment, "Вход");
+                //newTransaction(logInFragment, "Вход");
             });
             sign.setOnClickListener(v -> {
                 isEntranceFromDialog = true;
-                signInFragment = new SignIn();
+                signInFragment = new SignInFragment();
                 myDialog.dismiss();
-                newTransaction(signInFragment, "Регистрация");
+                //newTransaction(signInFragment, "Регистрация");
             });
             hideItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
         } else if (isEntered()) {
@@ -190,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
                 editor.putInt("entrance_counter", 0);
                 editor.apply();
             }
-            newTransaction(adsFragment, "Все объявления");
+            //newTransaction(adsFragment, "Все объявления");
             hideItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
         }
     }
@@ -233,12 +226,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        MenuItem item = menu.findItem(R.id.option_search);
+        MenuItem searchItem = menu.findItem(R.id.option_search);
+
         if (isActualFragment) {
-            item.setVisible(true);
+            searchItem.setVisible(true);
         } else {
-            item.setVisible(false);
+            searchItem.setVisible(false);
         }
+
         return super.onPrepareOptionsMenu(menu);
     }
 
@@ -247,12 +242,12 @@ public class MainActivity extends AppCompatActivity {
         data.setText(sp.getString("nickname", ""));
     }
 
-    private void newTransaction (Fragment fragment, String fragmentName) {
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.setCustomAnimations(R.anim.enter_from_up, R.anim.exit_to_up);
-        fragmentTransaction.replace(R.id.constrLayout, fragment).commit();
-        this.setTitle(fragmentName);
-    }
+//    private void newTransaction (Fragment fragment, String fragmentName) {
+//        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+//       // fragmentTransaction.setCustomAnimations(R.anim.bottom_to_up, R.anim.exit_to_up);
+//        fragmentTransaction.replace(R.id.constrLayout, fragment).commit();
+//        this.setTitle(fragmentName);
+//    }
 
     private void readData () {
         TextView nickname = findViewById(R.id.drawer_nickname);
@@ -278,6 +273,32 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+
+        // var backPressedOnce = false
+//        var navController = findNavController(R.id.fragNavHost)
+//
+//        // Check if the current destination is actually the start sestination (Home screen)
+//        if (navController.graph.startDestination == navController.currentDestination?.id)
+//        {
+//            // Check if back is already pressed. If yes, then exit the app.
+//            if (backPressedOnce)
+//            {
+//                super.onBackPressed()
+//                return
+//            }
+//
+//            backPressedOnce = true
+//            Toast.makeText(this, "Press BACK again to exit", Toast.LENGTH_SHORT).show()
+//
+//            Handler().postDelayed(2000) {
+//            backPressedOnce = false
+//        }
+//        }
+//    else {
+//            super.onBackPressed()
+//        }
+
+
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {

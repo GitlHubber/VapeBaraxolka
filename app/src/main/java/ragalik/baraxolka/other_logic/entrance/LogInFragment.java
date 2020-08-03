@@ -6,6 +6,8 @@ import android.app.ProgressDialog;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
@@ -19,6 +21,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
@@ -35,7 +38,7 @@ import retrofit2.Response;
 import static ragalik.baraxolka.paging_feed.ads.ADS.adViewModel;
 
 
-public class LogIn extends Fragment implements View.OnClickListener {
+public class LogInFragment extends Fragment implements View.OnClickListener {
 
     private static final String EMAIL = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     private static final String EMAIL_START = "[a-zA-Z0-9._-]";
@@ -46,25 +49,31 @@ public class LogIn extends Fragment implements View.OnClickListener {
     private TextInputLayout numberOrEmail;
     private TextInputLayout password;
 
-    private SignIn signInFragment;
+    private SignInFragment signInFragment;
     private Toolbar toolbar;
     private static String numberOrEmailStr;
     private static String passwordStr;
     private static String inputManager;
     private AppCompatButton acceptLoginButton;
-    private AppCompatButton createAkkButton;
+    private TextView createAkkButton;
 
-    //private TextView forgotPassword;
-    //private ForgotPassword forgotPass;
+    private TextView forgotPassword;
+    private ForgotPasswordFragment forgotPass;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_log_in, container, false);
+        return inflater.inflate(R.layout.fragment_log_in, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
         MainActivity.isActualFragment = false;
         MainActivity.invalidateSearchMenu();
         MainActivity.fab.hide();
-        toolbar = v.findViewById(R.id.toolbar_authorization);
+        toolbar = view.findViewById(R.id.toolbar_authorization);
         AppCompatActivity appCompatActivity = (AppCompatActivity) getActivity();
         if (appCompatActivity != null) {
             appCompatActivity.setSupportActionBar(toolbar);
@@ -76,9 +85,9 @@ public class LogIn extends Fragment implements View.OnClickListener {
         MainActivity.drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        signInFragment = new SignIn();
+        signInFragment = new SignInFragment();
 
-        numberOrEmail = v.findViewById(R.id.PhNumberOrEmailLayout);
+        numberOrEmail = view.findViewById(R.id.PhNumberOrEmailLayout);
         numberOrEmail.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
@@ -97,7 +106,7 @@ public class LogIn extends Fragment implements View.OnClickListener {
             @Override
             public void afterTextChanged(Editable s) {}
         });
-        password = v.findViewById(R.id.LIPasswordLayout);
+        password = view.findViewById(R.id.LIPasswordLayout);
         password.getEditText().addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
@@ -110,21 +119,17 @@ public class LogIn extends Fragment implements View.OnClickListener {
             }
         });
 
-//        forgotPassword = v.findViewById(R.id.forgotPass);
-//        forgotPass = new ForgotPassword();
-//        forgotPassword.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        });
+        forgotPassword = view.findViewById(R.id.forgotPass);
+        forgotPass = new ForgotPasswordFragment();
+        forgotPassword.setOnClickListener(v1 -> {
+            Navigation.findNavController(MainActivity.activity, R.id.fragment).navigate(R.id.forgotPasswordFragment);
+            hideKeyboard(view);
+        });
 
-        acceptLoginButton = v.findViewById(R.id.AcceptLogInButton);
+        acceptLoginButton = view.findViewById(R.id.AcceptLogInButton);
         acceptLoginButton.setOnClickListener(this);
-        createAkkButton = v.findViewById(R.id.SignInLogInButton);
+        createAkkButton = view.findViewById(R.id.SignInLogInButton);
         createAkkButton.setOnClickListener(this);
-
-        return v;
     }
 
     private void hideKeyboard (View v) {
@@ -140,7 +145,7 @@ public class LogIn extends Fragment implements View.OnClickListener {
 //            case (R.id.forgotPass) :
 //                if (getActivity() != null) {
 //                    FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-//                    fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right);
+//                    fragmentTransaction.setCustomAnimations(R.anim.up_to_bottom, R.anim.exit_to_right);
 //                    fragmentTransaction.replace(R.id.constrLayout, forgotPass).commit();
 //                    getActivity().setTitle("Восстановление пароля");
 //                    hideKeyboard(v);
@@ -153,7 +158,7 @@ public class LogIn extends Fragment implements View.OnClickListener {
                 password.setCounterEnabled(false);
                 if (getActivity() != null) {
 //                    FragmentTransaction fragmentTrans = getActivity().getSupportFragmentManager().beginTransaction();
-//                    fragmentTrans.setCustomAnimations(R.anim.enter_from_up, R.anim.exit_to_up);
+//                    fragmentTrans.setCustomAnimations(R.anim.bottom_to_up, R.anim.exit_to_up);
 //                    fragmentTrans.replace(R.id.constrLayout, signInFragment).addToBackStack(null).commit();
 //                    getActivity().setTitle("Регистрация");
                     Navigation.findNavController(getActivity(), R.id.fragment).navigate(R.id.signIn);
@@ -215,7 +220,7 @@ public class LogIn extends Fragment implements View.OnClickListener {
                     }
 
 //                    FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-//                    fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right);
+//                    fragmentTransaction.setCustomAnimations(R.anim.up_to_bottom, R.anim.exit_to_right);
 //                    fragmentTransaction.replace(R.id.constrLayout, MainActivity.adsFragment).commit();
 //                    getActivity().setTitle("Объявления");
                     Navigation.findNavController(MainActivity.activity, R.id.fragment).navigate(R.id.ADS);

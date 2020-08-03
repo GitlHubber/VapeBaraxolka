@@ -1,6 +1,5 @@
 package ragalik.baraxolka.other_logic.account
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -42,6 +41,9 @@ class EditAccountFragment : Fragment() {
 
         (activity as AppCompatActivity).setSupportActionBar(toolbar_edit_activity)
         (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        MainActivity.isActualFragment = false
+        MainActivity.invalidateSearchMenu()
 
 //        Slidr.attach(this)
 

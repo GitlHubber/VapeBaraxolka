@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_checked="true"
-        android:drawable="@drawable/bookmark_tap" />
-    <item android:state_checked="false" android:drawable="@drawable/bookmark"/>
+        android:drawable="@drawable/ic_baseline_bookmark_24" />
+    <item android:state_checked="false" android:drawable="@drawable/ic_baseline_bookmarks_24"/>
 </selector>
