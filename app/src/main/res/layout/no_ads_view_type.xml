@@ -6,6 +6,7 @@
     android:layout_margin="10dp">
 
     <ImageView
+        android:id="@+id/no_ads_image"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="50dp"
@@ -18,8 +19,17 @@
         android:layout_height="wrap_content"
         android:textSize="26sp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="150dp"
         android:textColor="@color/colorText"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/no_ads_secondary_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="140dp"
+        android:textColor="@color/colorSecondaryText"
         android:gravity="center"/>
 
     <androidx.appcompat.widget.AppCompatButton

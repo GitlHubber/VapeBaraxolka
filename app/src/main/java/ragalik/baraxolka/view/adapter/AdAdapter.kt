@@ -2,6 +2,7 @@ package ragalik.baraxolka.view.adapter
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.text.SpannableStringBuilder
 import android.view.LayoutInflater
@@ -198,13 +199,17 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, RecyclerV
     }
 
     class NoAdsViewHolder (view : View) : RecyclerView.ViewHolder(view) {
+        private val image = view.no_ads_image
         private val message = view.no_ads_message
+        private val secondaryMessage = view.no_ads_secondary_message
         private val noAdsButton = view.no_ads_button
 
         fun bind (flag : String) {
             when (flag) {
                 "FAVOURITES" -> {
-                    message.text = "У вас нет закладок"
+                    image.setImageResource(R.drawable.ic_baseline_bookmark_border_24)
+                    message.text = "У вас еще нет закладок"
+                    secondaryMessage.text = "Вы можете добавлять их переходя в полное объявление"
                     noAdsButton.visibility = View.VISIBLE
                     noAdsButton.text = "Перейти к объявлениям"
                     noAdsButton.setOnClickListener {
@@ -214,6 +219,7 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, RecyclerV
                 }
                 "ACTIVE" -> {
                     message.text = "У вас нет активных объявлений"
+                    secondaryMessage.text = "Вы можете создать объявление прямо сейчас!"
                     noAdsButton.visibility = View.VISIBLE
                     noAdsButton.text = "Создать объявление"
                     noAdsButton.setOnClickListener {
@@ -222,7 +228,9 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, RecyclerV
                     }
                 }
                 "REJECTED" -> {
+                    image.setImageResource(R.drawable.ic_baseline_remove_circle_outline_24)
                     message.text = "У вас нет отклоненных объявлений"
+                    secondaryMessage.text = "Здесь находятся объявления, которые отклонил модератор"
                     noAdsButton.visibility = View.VISIBLE
                     noAdsButton.text = "Создать объявление"
                     noAdsButton.setOnClickListener {
@@ -231,13 +239,19 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, RecyclerV
                     }
                 }
                 "ON_MODERATE" -> {
+                    image.setImageResource(R.drawable.ic_baseline_redo_24)
                     message.text = "У вас нет объявлений на модерации"
+                    secondaryMessage.text = "После создания объявления оно попадает на модерацию"
                 }
                 "NON_ACTIVE" -> {
+                    image.setImageResource(R.drawable.ic_baseline_calendar_today_24)
                     message.text = "У вас нет неактивных объявлений"
+                    secondaryMessage.text = "Спустя 30 дней после одобрения, объявление станет неактивным и через 30 дней удалится"
                 }
                 "MODERATOR" -> {
+                    image.setImageResource(R.drawable.ic_baseline_emoji_food_beverage_24)
                     message.text = "Нет объявлений на модерации"
+                    secondaryMessage.text = "Можете выпить чашечку чая"
                 }
             }
         }

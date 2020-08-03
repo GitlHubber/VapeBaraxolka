@@ -55,7 +55,7 @@ class Ad (user_id : Int? = null) {
     var categoryName: String? = null
 
     @field:SerializedName("id_user")
-    var idUser: String? = null
+    var idUser: Int? = null
 
     @field:SerializedName("favourite")
     var isFavourite: Boolean? = null

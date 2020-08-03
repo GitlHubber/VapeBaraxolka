@@ -1873,10 +1873,15 @@ drawable ic_arrow_dark_theme
 drawable ic_baseline_assignment_24
 drawable ic_baseline_block_24
 drawable ic_baseline_bookmark_24
+drawable ic_baseline_bookmark_border_24
 drawable ic_baseline_bookmarks_24
+drawable ic_baseline_calendar_today_24
 drawable ic_baseline_delete_outline_24
+drawable ic_baseline_emoji_food_beverage_24
 drawable ic_baseline_person_24
 drawable ic_baseline_photo_camera_24
+drawable ic_baseline_redo_24
+drawable ic_baseline_remove_circle_outline_24
 drawable ic_baseline_report_24
 drawable ic_baseline_sentiment_very_dissatisfied_24
 drawable ic_bookmark
@@ -2355,6 +2360,9 @@ id fragment_container
 id fragment_container_view_tag
 id fullAdActivity
 id fullAdBookmarkLayout
+id fullAdDivider1
+id fullAdDivider2
+id fullAdDivider3
 id fullAdLinearLayout
 id fullAdNoteLayout
 id fullAdViewStub
@@ -2503,7 +2511,9 @@ id never
 id nightThemeSwitcher
 id noScroll
 id no_ads_button
+id no_ads_image
 id no_ads_message
+id no_ads_secondary_message
 id none
 id normal
 id notification_background

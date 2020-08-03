@@ -82,6 +82,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/fullAdDivider1"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/divider"
                 android:background="@color/colorAdCreatorImage" />
@@ -90,26 +91,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_margin="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
                 android:baselineAligned="false">
 
                 <LinearLayout
                     android:id="@+id/fullAdNoteLayout"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:background="@drawable/layout_background"
                     android:layout_weight="1"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:focusable="true">
 
-                    <androidx.appcompat.widget.AppCompatCheckBox
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:button="@drawable/ic_baseline_assignment_24" />
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:background="@drawable/ic_baseline_assignment_24" />
 
                     <TextView
                         android:id="@+id/TW_full_ad_note"
@@ -123,21 +127,23 @@
 
                 <LinearLayout
                     android:id="@+id/fullAdBookmarkLayout"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_gravity="center"
                     android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
                     android:layout_weight="1"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:focusable="true">
 
-                    <androidx.appcompat.widget.AppCompatCheckBox
+                    <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/bookmark_button_full_ad"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:button="@drawable/bookmark_selection" />
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:background="@drawable/ic_baseline_bookmark_24" />
 
                     <TextView
                         android:id="@+id/TW_full_ad_bookmark"
@@ -152,6 +158,7 @@
             </LinearLayout>
 
             <View
+                android:id="@+id/fullAdDivider2"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/divider"
                 android:layout_marginBottom="10dp"
@@ -161,13 +168,18 @@
                 android:id="@+id/titleTextFullAd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_margin="10dp"
                 android:text="Продам гараж"
                 android:textColor="@color/colorText"
                 android:textSize="23sp"
                 android:textStyle="bold" />
+
+            <View
+                android:id="@+id/fullAdDivider3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorAdCreatorImage" />
 
             <LinearLayout
                 android:layout_width="match_parent"

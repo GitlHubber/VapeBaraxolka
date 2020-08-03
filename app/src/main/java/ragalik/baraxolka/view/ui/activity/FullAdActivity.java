@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
@@ -34,7 +35,7 @@ import me.relex.circleindicator.CircleIndicator;
 import ragalik.baraxolka.R;
 import ragalik.baraxolka.MainActivity;
 import ragalik.baraxolka.utils.DateTimeUtils;
-import ragalik.baraxolka.utils.SetDeleteBookmark;
+import ragalik.baraxolka.utils.BookmarkUtils;
 import ragalik.baraxolka.network.ApiClient;
 import ragalik.baraxolka.network.entities.Ad;
 import ragalik.baraxolka.network.entities.FullAdResponse;
@@ -63,7 +64,7 @@ public class FullAdActivity extends AppCompatActivity {
     private TextView date_time;
     private LinearLayout sellerLayout;
     private CircleIndicator indicator;
-    private AppCompatCheckBox bookmark;
+    private AppCompatButton bookmark;
     private int user_id;
     private Toolbar toolbar;
     private LinearLayout noteLayout;
@@ -242,30 +243,32 @@ public class FullAdActivity extends AppCompatActivity {
 
                     setAdInfo(ad);
 
-                    if (user_id == 0) {
-                        //bookmark.setVisibility(View.GONE);
+                    if (user_id == 0 || user_id == ad.getIdUser()) {
                         bookmarkLayout.setVisibility(View.GONE);
                         noteLayout.setVisibility(View.GONE);
+                        findViewById(R.id.fullAdDivider1).setVisibility(View.GONE);
+                        findViewById(R.id.fullAdDivider2).setVisibility(View.GONE);
+                        findViewById(R.id.fullAdDivider3).setVisibility(View.VISIBLE);
                     } else {
-                        //bookmark.setVisibility(View.VISIBLE);
                         bookmarkLayout.setVisibility(View.VISIBLE);
                         noteLayout.setVisibility(View.VISIBLE);
+                        findViewById(R.id.fullAdDivider1).setVisibility(View.VISIBLE);
+                        findViewById(R.id.fullAdDivider2).setVisibility(View.VISIBLE);
+                        findViewById(R.id.fullAdDivider3).setVisibility(View.GONE);
                         if (ad.isFavourite()) {
-                            bookmark.setChecked(true);
                             bookmarkText.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorAccent));
+                            bookmark.setBackground(getDrawable(R.drawable.ic_baseline_bookmarks_24));
                         } else {
-                            bookmark.setChecked(false);
                             bookmarkText.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorSecondaryText));
+                            bookmark.setBackground(getDrawable(R.drawable.ic_baseline_bookmark_24));
                         }
                     }
 
                     bookmarkLayout.setOnClickListener(v -> {
-                        if (bookmark.isChecked()) {
-                            SetDeleteBookmark.getInstance().setDeleteBookmark(ad.getId(), bookmark, "set", getApplicationContext(), ad);
-                            bookmarkText.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorAccent));
+                        if (!ad.isFavourite()) {
+                            BookmarkUtils.getInstance().setDeleteBookmark(ad.getId(), "set", getApplicationContext(), ad, bookmarkText, bookmark);
                         } else {
-                            SetDeleteBookmark.getInstance().setDeleteBookmark(ad.getId(), bookmark, "delete", getApplicationContext(), ad);
-                            bookmarkText.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorSecondaryText));
+                            BookmarkUtils.getInstance().setDeleteBookmark(ad.getId(),"delete", getApplicationContext(), ad, bookmarkText, bookmark);
                         }
                     });
 

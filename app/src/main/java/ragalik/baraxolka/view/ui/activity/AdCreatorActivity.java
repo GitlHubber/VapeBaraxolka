@@ -97,8 +97,6 @@ public class AdCreatorActivity extends AppCompatActivity implements View.OnClick
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
-
         subcategorySpinner = findViewById(R.id.subcategorySpinner);
         categorySpinner = findViewById(R.id.categorySpinner);
         mainLabel = findViewById(R.id.ad_creator_main_label);
@@ -402,7 +400,6 @@ public class AdCreatorActivity extends AppCompatActivity implements View.OnClick
         String title = titleEditText.getEditText().getText().toString();
         String description = descriptionEditText.getEditText().getText().toString();
 
-
         for (int i = 0; i < uris.size(); ++i) {
             parts.set(i, MultipartBody.Part.createFormData("image" + (i + 1), "-" + (i + 1) + ".png", RequestBody.create(MediaType.parse("image/*"), files.get(i))));
         }
@@ -430,7 +427,6 @@ public class AdCreatorActivity extends AppCompatActivity implements View.OnClick
                 Toast.makeText(getApplicationContext(), "Обьявление создано!", Toast.LENGTH_LONG).show();
                 Intent myIntent = new Intent(appCompatActivity, MainActivity.class);
                 appCompatActivity.startActivity(myIntent);
-
             }
 
             @Override
@@ -453,9 +449,11 @@ class DecimalDigitsInputFilter implements InputFilter {
     @Override
     public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
 
-        Matcher matcher=mPattern.matcher(dest);
-        if(!matcher.matches())
+        Matcher matcher = mPattern.matcher(dest);
+        if (!matcher.matches()) {
             return "";
+        }
+
         return null;
     }
 
