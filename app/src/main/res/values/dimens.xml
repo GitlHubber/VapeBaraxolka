@@ -17,4 +17,11 @@
     <dimen name="divider">0.6dp</dimen>
     <dimen name="app_bar_height">180dp</dimen>
     <dimen name="text_margin">16dp</dimen>
+
+    <dimen name="appPadding">10dp</dimen>
+    <dimen name="horizontal_margin">16dp</dimen>
+    <dimen name="normal_text">16sp</dimen>
+    <dimen name="vertical_margin">10dp</dimen>
+    <dimen name="small_text">14sp</dimen>
+    <dimen name="vertical_large_margin">16dp</dimen>
 </resources>

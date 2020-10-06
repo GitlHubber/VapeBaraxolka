@@ -26,4 +26,6 @@
     <color name="colorBlack">#000</color>
     <color name="colorWhite">#FFF</color>
     <color name="colorTransparent">#0000</color>
+
+    <color name="colorGrey">#837E7E</color>
 </resources>

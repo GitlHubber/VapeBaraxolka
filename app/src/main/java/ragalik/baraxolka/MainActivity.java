@@ -26,6 +26,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
@@ -35,8 +36,10 @@ import java.util.List;
 
 import ragalik.baraxolka.network.ApiClient;
 import ragalik.baraxolka.network.entities.AdsCount;
+import ragalik.baraxolka.utils.FuncsKt;
 import ragalik.baraxolka.view.ui.activity.AdCreatorActivity;
 import ragalik.baraxolka.view.ui.activity.AdministratorActivity;
+import ragalik.baraxolka.view.ui.activity.RegisterActivity;
 import ragalik.baraxolka.view.ui.activity.SearchActivity;
 import ragalik.baraxolka.view.ui.activity.SettingsActivity;
 import ragalik.baraxolka.view.ui.fragment.AccountFragment;
@@ -60,7 +63,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private SignInFragment signInFragment;
     private Dialog myDialog;
     public static SharedPreferences sp;
-    private static List<String> listItem;
     public static FloatingActionButton fab;
     private static TextView moderator_count;
     public static Activity activity;
@@ -70,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public static DrawerLayout drawer;
     public static boolean isEntranceFromDialog = false;
     public static ImageView navigationPhoto;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,24 +87,34 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
 
+        initFields();
+        initFunc();
+
+//        SharedPreferences.Editor editor = sp.edit();
+//        editor.putInt("entrance_counter", sp.getInt("entrance_counter", 0) + 1);
+//        editor.apply();
+
+        //openStartFragment();
+    }
+
+    private void initFunc() {
+        if (mAuth.getCurrentUser() != null) {
+            setTitle("Все объявления");
+            FuncsKt.replaceFragment(this, new AdsFragment(), false);
+        } else {
+            FuncsKt.replaceActivity(this, new RegisterActivity());
+        }
+    }
+
+    private void initFields() {
         activity = this;
 
-        listItem = new ArrayList<>();
         myDialog = new Dialog(this);
         logInFragment = new LogInFragment();
         adsFragment = new AdsFragment();
         moderator_count = new TextView(this);
 
-        SharedPreferences.Editor editor = sp.edit();
-        editor.putInt("entrance_counter", sp.getInt("entrance_counter", 0) + 1);
-        editor.apply();
-
-        fab = findViewById(R.id.mainActivityFab);
-        fab.setOnClickListener(view -> {
-            //Navigation.findNavController(this, R.id.fragment).navigate(R.id.adCreatorActivity);
-            Intent myIntent = new Intent(MainActivity.this, AdCreatorActivity.class);
-            startActivity(myIntent);
-        });
+        mAuth = FirebaseAuth.getInstance();
 
         drawer = findViewById(R.id.drawer_layout);
         drawer.addDrawerListener(new DrawerLayout.DrawerListener() {
@@ -129,47 +142,52 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(R.id.ADS);
 
-        openStartFragment();
+        fab = findViewById(R.id.mainActivityFab);
+        fab.setOnClickListener(view -> {
+            Intent myIntent = new Intent(MainActivity.this, AdCreatorActivity.class);
+            startActivity(myIntent);
+        });
+
     }
 
-    private void openStartFragment () {
-        SharedPreferences.Editor editor = sp.edit();
-        entrance_count = sp.getInt("entrance_counter", 0);
-        if (entrance_count == 1 && !isEntered()) {
-            myDialog.setContentView(R.layout.start_login_window);
-            myDialog.show();
-            myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-            AppCompatButton log = myDialog.findViewById(R.id.logButton);
-            AppCompatButton sign = myDialog.findViewById(R.id.signButton);
-            this.setTitle("Все объявления");
-            myDialog.setOnCancelListener(dialog -> {
-                newTransaction(adsFragment, "Все объявления");
-                myDialog.dismiss();
-            });
-            log.setOnClickListener(v -> {
-                isEntranceFromDialog = true;
-                myDialog.dismiss();
-                newTransaction(logInFragment, "Вход");
-            });
-            sign.setOnClickListener(v -> {
-                isEntranceFromDialog = true;
-                signInFragment = new SignInFragment();
-                myDialog.dismiss();
-                newTransaction(signInFragment, "Регистрация");
-            });
-            hideItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
-        } else if (isEntered()) {
-            newTransaction(adsFragment, "Все объявления");
-            showItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
-        } else if (entrance_count > 1) {
-            if (entrance_count == 10) {
-                editor.putInt("entrance_counter", 0);
-                editor.apply();
-            }
-            newTransaction(adsFragment, "Все объявления");
-            hideItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
-        }
-    }
+//    private void openStartFragment () {
+//        SharedPreferences.Editor editor = sp.edit();
+//        entrance_count = sp.getInt("entrance_counter", 0);
+//        if (entrance_count == 1 && !isEntered()) {
+//            myDialog.setContentView(R.layout.start_login_window);
+//            myDialog.show();
+//            myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+//            AppCompatButton log = myDialog.findViewById(R.id.logButton);
+//            AppCompatButton sign = myDialog.findViewById(R.id.signButton);
+//            this.setTitle("Все объявления");
+//            myDialog.setOnCancelListener(dialog -> {
+//                newTransaction(adsFragment, "Все объявления");
+//                myDialog.dismiss();
+//            });
+//            log.setOnClickListener(v -> {
+//                isEntranceFromDialog = true;
+//                myDialog.dismiss();
+//                newTransaction(logInFragment, "Вход");
+//            });
+//            sign.setOnClickListener(v -> {
+//                isEntranceFromDialog = true;
+//                signInFragment = new SignInFragment();
+//                myDialog.dismiss();
+//                newTransaction(signInFragment, "Регистрация");
+//            });
+//            hideItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
+//        } else if (isEntered()) {
+//            newTransaction(adsFragment, "Все объявления");
+//            showItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
+//        } else if (entrance_count > 1) {
+//            if (entrance_count == 10) {
+//                editor.putInt("entrance_counter", 0);
+//                editor.apply();
+//            }
+//            newTransaction(adsFragment, "Все объявления");
+//            hideItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
+//        }
+//    }
 
     private boolean isEntered () {
         return (!sp.getString("nickname", "").equals(""));
@@ -262,6 +280,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private void newTransaction (Fragment fragment, String fragmentName) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
        // fragmentTransaction.setCustomAnimations(R.anim.bottom_to_up, R.anim.exit_to_up);
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.replace(R.id.constrLayout, fragment).commit();
         this.setTitle(fragmentName);
     }

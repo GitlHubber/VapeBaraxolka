@@ -28,12 +28,12 @@
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\mipmap-xxhdpi\\splash_logo_foreground.png"
     },
     {
-        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\anim_bottom_to_up.xml.flat",
-        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\anim\\bottom_to_up.xml"
-    },
-    {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_search.xml.flat",
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_search.xml"
+    },
+    {
+        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\anim_bottom_to_up.xml.flat",
+        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\anim\\bottom_to_up.xml"
     },
     {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_calendar_today_24.xml.flat",
@@ -44,12 +44,12 @@
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_keyboard_arrow_right_black_.xml"
     },
     {
-        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_report_dialog.xml.flat",
-        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_report_dialog.xml"
-    },
-    {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_report_dialog.xml.flat",
+        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_report_dialog.xml"
     },
     {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gradient_for_signin.xml.flat",
@@ -92,6 +92,10 @@
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_baseline_emoji_food_beverage_24.xml"
     },
     {
+        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\anim_from_left.xml.flat",
+        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\anim\\from_left.xml"
+    },
+    {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_filter_hdr_black_24dp.xml.flat",
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_filter_hdr_black_24dp.xml"
     },
@@ -104,10 +108,6 @@
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\layout\\activity_search.xml"
     },
     {
-        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\anim_from_left.xml.flat",
-        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\anim\\from_left.xml"
-    },
-    {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
@@ -116,16 +116,20 @@
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ad_creator_image_style.xml.flat",
-        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ad_creator_image_style.xml"
-    },
-    {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\menu_admin_bottom_nav.xml.flat",
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\menu\\admin_bottom_nav.xml"
     },
     {
+        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ad_creator_image_style.xml.flat",
+        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ad_creator_image_style.xml"
+    },
+    {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_hide_phone.xml.flat",
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_hide_phone.xml"
+    },
+    {
+        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_register_image.png.flat",
+        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\register_image.png"
     },
     {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
@@ -220,12 +224,12 @@
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\mipmap-anydpi-v26\\splash_logo.xml"
     },
     {
-        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gradient_for_signin_for_input.xml.flat",
-        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\gradient_for_signin_for_input.xml"
-    },
-    {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_splash_logo_foreground.png.flat",
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\mipmap-xhdpi\\splash_logo_foreground.png"
+    },
+    {
+        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gradient_for_signin_for_input.xml.flat",
+        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\gradient_for_signin_for_input.xml"
     },
     {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_reject_button_active.xml.flat",
@@ -238,6 +242,10 @@
     {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_see_photo.xml.flat",
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_see_photo.xml"
+    },
+    {
+        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_btn_next.xml.flat",
+        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_btn_next.xml"
     },
     {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_reject_button_selection.xml.flat",
@@ -308,6 +316,10 @@
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\font\\aldrich.xml"
     },
     {
+        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_register.xml.flat",
+        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\layout\\activity_register.xml"
+    },
+    {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_logo.xml.flat",
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_logo.xml"
     },
@@ -320,12 +332,16 @@
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\layout\\item_editor.xml"
     },
     {
-        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_enter_phone_number.xml.flat",
+        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_enter_phone_number.xml"
     },
     {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gradient_navigation.xml.flat",
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\gradient_navigation.xml"
+    },
+    {
+        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
@@ -408,12 +424,12 @@
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\layout\\item_report.xml"
     },
     {
-        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bookmark_selection.xml.flat",
-        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\bookmark_selection.xml"
-    },
-    {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bookmark_selection.xml.flat",
+        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\bookmark_selection.xml"
     },
     {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gradient_entrance.xml.flat",
@@ -484,12 +500,12 @@
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_wb_sunny_black_24dp.xml"
     },
     {
-        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_ads.xml.flat",
-        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_ads.xml"
-    },
-    {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_fab_plus.xml.flat",
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_fab_plus.xml"
+    },
+    {
+        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_ads.xml.flat",
+        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_ads.xml"
     },
     {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_technical_support.xml.flat",
@@ -540,12 +556,12 @@
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\thumb.xml"
     },
     {
-        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_price.xml.flat",
-        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_price.xml"
-    },
-    {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_bottom_sheet_arrow.xml.flat",
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_bottom_sheet_arrow.xml"
+    },
+    {
+        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_price.xml.flat",
+        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_price.xml"
     },
     {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_my_ads.xml.flat",
@@ -588,16 +604,16 @@
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\mipmap-xhdpi\\splash_logo_round.png"
     },
     {
-        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_splash_logo.png.flat",
-        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\mipmap-xhdpi\\splash_logo.png"
+        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_splash_logo_round.png.flat",
+        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\mipmap-xxxhdpi\\splash_logo_round.png"
     },
     {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_background_2.xml.flat",
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\button_background_2.xml"
     },
     {
-        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_splash_logo_round.png.flat",
-        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\mipmap-xxxhdpi\\splash_logo_round.png"
+        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_splash_logo.png.flat",
+        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\mipmap-xhdpi\\splash_logo.png"
     },
     {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_hide_phone_selection.xml.flat",
@@ -628,12 +644,12 @@
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_remove_photo.xml"
     },
     {
-        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_splash_logo.png.flat",
-        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\splash_logo.png"
-    },
-    {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_account_photo_style.xml.flat",
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\account_photo_style.xml"
+    },
+    {
+        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_splash_logo.png.flat",
+        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\splash_logo.png"
     },
     {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_plus.xml.flat",
@@ -676,20 +692,20 @@
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\gradient_white_to_nothing.xml"
     },
     {
-        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_add_circle_outline_black_24dp.xml.flat",
-        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_add_circle_outline_black_24dp.xml"
-    },
-    {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\xml_provider_paths.xml.flat",
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\xml\\provider_paths.xml"
     },
     {
-        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_photo_camera_24.xml.flat",
-        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_baseline_photo_camera_24.xml"
+        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_add_circle_outline_black_24dp.xml.flat",
+        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_add_circle_outline_black_24dp.xml"
     },
     {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_sex_image_24dp.xml.flat",
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_sex_image_24dp.xml"
+    },
+    {
+        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_photo_camera_24.xml.flat",
+        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_baseline_photo_camera_24.xml"
     },
     {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
@@ -744,12 +760,12 @@
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_log_in.xml"
     },
     {
-        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\menu_main.xml.flat",
-        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\menu\\main.xml"
-    },
-    {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_settings.xml.flat",
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\layout\\activity_settings.xml"
+    },
+    {
+        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\menu_main.xml.flat",
+        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\menu\\main.xml"
     },
     {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_mode_edit_black_24dp.xml.flat",
@@ -788,6 +804,10 @@
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\anim\\to_left.xml"
     },
     {
+        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_enter_code.xml.flat",
+        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\layout\\fragment_enter_code.xml"
+    },
+    {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_splash_logo.png.flat",
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\mipmap-xxxhdpi\\splash_logo.png"
     },
@@ -796,16 +816,16 @@
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_show_phone.xml"
     },
     {
+        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_edit_creator.xml.flat",
+        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\layout\\activity_edit_creator.xml"
+    },
+    {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ad_creator_main_photo_dark_theme.xml.flat",
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ad_creator_main_photo_dark_theme.xml"
     },
     {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\font_alfa_slab_one.xml.flat",
         "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\font\\alfa_slab_one.xml"
-    },
-    {
-        "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_edit_creator.xml.flat",
-        "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\layout\\activity_edit_creator.xml"
     },
     {
         "merged": "D:\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\anim_up_to_bottom.xml.flat",

@@ -59,4 +59,39 @@
         <item name="colorOnSecondary">@color/colorAccent</item>
     </style>
 
+    <style name="mainToolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
+    <style name="editText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/normal_text</item>
+        <item name="android:padding">@dimen/appPadding</item>
+        <item name="android:inputType">phone</item>
+        <item name="android:textColorHint">@color/colorGrey</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_margin">@dimen/horizontal_margin</item>
+    </style>
+
+    <style name="normalText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/normal_text</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:layout_marginStart">@dimen/horizontal_margin</item>
+    </style>
+
+    <style name="smallText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/small_text</item>
+        <item name="android:textColor">@color/colorGrey</item>
+        <item name="android:layout_marginStart">@dimen/horizontal_margin</item>
+    </style>
+
 </resources>

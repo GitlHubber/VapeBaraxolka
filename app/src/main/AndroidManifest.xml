@@ -23,25 +23,27 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".view.ui.activity.AdministratorActivity"
-            android:screenOrientation="portrait"
-            android:parentActivityName=".MainActivity"
+        <activity android:name=".view.ui.activity.RegisterActivity"
+            android:theme="@style/AppTheme">
+
+        </activity>
+        <activity
+            android:name=".view.ui.activity.AdministratorActivity"
             android:label="@string/admin_activity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.SlidrActivityTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
-        </activity>
-        <!-- <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" -->
+        </activity> <!-- <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" -->
         <!-- android:value="ca-app-pub-7944468475286818~3650093179"/> -->
         <activity
             android:name=".view.ui.activity.EditCreatorActivity"
             android:label="Изменение объявления"
-            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme">
-
-        </activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"></activity>
         <activity
             android:name=".view.ui.activity.FilterActivity"
             android:label="@string/title_activity_filter"
@@ -108,12 +110,11 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <meta-data

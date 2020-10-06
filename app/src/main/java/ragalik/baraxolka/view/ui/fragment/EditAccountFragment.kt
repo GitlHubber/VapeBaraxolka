@@ -10,7 +10,6 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_edit_account.*
 import ragalik.baraxolka.MainActivity
 import ragalik.baraxolka.R
