@@ -122,7 +122,8 @@ public class LogInFragment extends Fragment implements View.OnClickListener {
         forgotPassword = view.findViewById(R.id.forgotPass);
         forgotPass = new ForgotPasswordFragment();
         forgotPassword.setOnClickListener(v1 -> {
-            Navigation.findNavController(MainActivity.activity, R.id.fragment).navigate(R.id.forgotPasswordFragment);
+            getActivity().getSupportFragmentManager().beginTransaction().
+                    addToBackStack(null).replace(R.id.constrLayout, new ForgotPasswordFragment()).commit();
             hideKeyboard(view);
         });
 
@@ -161,7 +162,8 @@ public class LogInFragment extends Fragment implements View.OnClickListener {
 //                    fragmentTrans.setCustomAnimations(R.anim.bottom_to_up, R.anim.exit_to_up);
 //                    fragmentTrans.replace(R.id.constrLayout, signInFragment).addToBackStack(null).commit();
 //                    getActivity().setTitle("Регистрация");
-                    Navigation.findNavController(getActivity(), R.id.fragment).navigate(R.id.signIn);
+                    getActivity().getSupportFragmentManager().beginTransaction().
+                            addToBackStack(null).replace(R.id.constrLayout, new SignInFragment()).commit();
                     hideKeyboard(v);
                 }
                 break;
@@ -223,7 +225,8 @@ public class LogInFragment extends Fragment implements View.OnClickListener {
 //                    fragmentTransaction.setCustomAnimations(R.anim.up_to_bottom, R.anim.exit_to_right);
 //                    fragmentTransaction.replace(R.id.constrLayout, MainActivity.adsFragment).commit();
 //                    getActivity().setTitle("Объявления");
-                    Navigation.findNavController(MainActivity.activity, R.id.fragment).navigate(R.id.ADS);
+                    getActivity().getSupportFragmentManager().beginTransaction().
+                            addToBackStack(null).replace(R.id.constrLayout, new AdsFragment()).commit();
 
                     if (!MainActivity.isEntranceFromDialog) {
                         adViewModel.getLiveDataSource().getValue().invalidate();

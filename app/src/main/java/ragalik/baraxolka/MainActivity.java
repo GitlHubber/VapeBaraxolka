@@ -7,53 +7,51 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.AppCompatButton;
-import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
-
-import android.view.View;
 import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
-import android.view.MenuItem;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
 
-import androidx.drawerlayout.widget.DrawerLayout;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import android.view.Menu;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.ImageView;
-import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.List;
 
-import ragalik.baraxolka.view.ui.activity.SearchActivity;
-import ragalik.baraxolka.view.ui.fragment.LogInFragment;
-import ragalik.baraxolka.view.ui.fragment.SignInFragment;
 import ragalik.baraxolka.network.ApiClient;
 import ragalik.baraxolka.network.entities.AdsCount;
+import ragalik.baraxolka.view.ui.activity.AdCreatorActivity;
+import ragalik.baraxolka.view.ui.activity.AdministratorActivity;
+import ragalik.baraxolka.view.ui.activity.SearchActivity;
+import ragalik.baraxolka.view.ui.activity.SettingsActivity;
+import ragalik.baraxolka.view.ui.fragment.AccountFragment;
+import ragalik.baraxolka.view.ui.fragment.AdModeratorFragment;
 import ragalik.baraxolka.view.ui.fragment.AdsFragment;
-
+import ragalik.baraxolka.view.ui.fragment.FavouritesFragment;
+import ragalik.baraxolka.view.ui.fragment.LogInFragment;
+import ragalik.baraxolka.view.ui.fragment.MyAdsFragment;
+import ragalik.baraxolka.view.ui.fragment.SignInFragment;
+import ragalik.baraxolka.view.ui.fragment.TechnicalSupportFragment;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     public static final String SERVER_URL = "http://ketrovsky.iam.by/scripts/";
 
@@ -67,13 +65,10 @@ public class MainActivity extends AppCompatActivity {
     private static TextView moderator_count;
     public static Activity activity;
     public static NavigationView navigationView;
-    private Toolbar toolbar;
     private int entrance_count = 0;
     public static boolean isActualFragment = false;
     public static DrawerLayout drawer;
     public static boolean isEntranceFromDialog = false;
-    private NavController navController;
-    private AppBarConfiguration appBarConfiguration;
     public static ImageView navigationPhoto;
 
     @Override
@@ -104,11 +99,10 @@ public class MainActivity extends AppCompatActivity {
         fab = findViewById(R.id.mainActivityFab);
         fab.setOnClickListener(view -> {
             //Navigation.findNavController(this, R.id.fragment).navigate(R.id.adCreatorActivity);
-//            Intent myIntent = new Intent(MainActivity.this, AdCreatorActivity.class);
-//            startActivity(myIntent);
+            Intent myIntent = new Intent(MainActivity.this, AdCreatorActivity.class);
+            startActivity(myIntent);
         });
 
-        navController = Navigation.findNavController(this, R.id.fragment);
         drawer = findViewById(R.id.drawer_layout);
         drawer.addDrawerListener(new DrawerLayout.DrawerListener() {
             @Override
@@ -131,19 +125,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDrawerStateChanged(int newState) {}
         });
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph())
-                .setDrawerLayout(drawer)
-                .build();
         navigationView = findViewById(R.id.nav_view);
-//        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, navController);
-        navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
-
-        });
-
-
-        //navigationView.setNavigationItemSelectedListener(this);
-        //navigationView.setCheckedItem(R.id.ADS);
+        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setCheckedItem(R.id.ADS);
 
         openStartFragment();
     }
@@ -159,30 +143,30 @@ public class MainActivity extends AppCompatActivity {
             AppCompatButton sign = myDialog.findViewById(R.id.signButton);
             this.setTitle("Все объявления");
             myDialog.setOnCancelListener(dialog -> {
-                //newTransaction(adsFragment, "Все объявления");
+                newTransaction(adsFragment, "Все объявления");
                 myDialog.dismiss();
             });
             log.setOnClickListener(v -> {
                 isEntranceFromDialog = true;
                 myDialog.dismiss();
-                //newTransaction(logInFragment, "Вход");
+                newTransaction(logInFragment, "Вход");
             });
             sign.setOnClickListener(v -> {
                 isEntranceFromDialog = true;
                 signInFragment = new SignInFragment();
                 myDialog.dismiss();
-                //newTransaction(signInFragment, "Регистрация");
+                newTransaction(signInFragment, "Регистрация");
             });
             hideItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
         } else if (isEntered()) {
-            // newTransaction(adsFragment, "Все объявления");
+            newTransaction(adsFragment, "Все объявления");
             showItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
         } else if (entrance_count > 1) {
             if (entrance_count == 10) {
                 editor.putInt("entrance_counter", 0);
                 editor.apply();
             }
-            //newTransaction(adsFragment, "Все объявления");
+            newTransaction(adsFragment, "Все объявления");
             hideItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
         }
     }
@@ -193,18 +177,52 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickImage(View v){
         if (!isEntered()) {
-            Navigation.findNavController(this, R.id.fragment).navigate(R.id.logIn);
+            newTransaction(logInFragment, "Вход");
         } else {
-            Navigation.findNavController(this, R.id.fragment).navigate(R.id.accountFragment);
+            newTransaction(new AccountFragment(), "Вход");
         }
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
     }
 
     @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.fragment);
-        return NavigationUI.navigateUp(navController, appBarConfiguration)
-                || super.onSupportNavigateUp();
+    public boolean onNavigationItemSelected(MenuItem item) {
+        FragmentTransaction fragmentTransaction = this.getSupportFragmentManager().beginTransaction();
+        // Toolbar toolbar = findViewById(R.id.toolbar);
+
+        int id = item.getItemId();
+
+        if (id == R.id.ADS) {
+            fragmentTransaction.replace(R.id.constrLayout, new AdsFragment()).commit();
+            //   toolbar.setTitle("Объявления");
+        } else if (id == R.id.MY_ADS) {
+            fragmentTransaction.replace(R.id.constrLayout, new MyAdsFragment()).commit();   //Нужно раскомментить при готовых май адс!
+            //toolbar.stTitle("Мои объявления");
+        } else if (id == R.id.FAVOURITES) {
+            fragmentTransaction.replace(R.id.constrLayout, new FavouritesFragment()).commit();
+            // toolbar.setTitle("Закладки");
+        }
+//        else if (id == R.id.RULES) {
+//            fragmentTransaction.replace(R.id.constrLayout, new RULES()).commit();
+//           // toolbar.setTitle("Правила");
+//        }
+        else if (id == R.id.Technical_SUPPORT) {
+            fragmentTransaction.replace(R.id.constrLayout, new TechnicalSupportFragment()).commit();
+            // toolbar.setTitle("Техническая поддержка");
+        } else if (id == R.id.SETTINGS) {
+            Intent myIntent = new Intent(MainActivity.this, SettingsActivity.class);
+            startActivity(myIntent);
+        } else if (id == R.id.MODERATOR) {
+            fragmentTransaction.replace(R.id.constrLayout, new AdModeratorFragment()).commit();
+        } else if (id == R.id.ADMIN) {
+            //fragmentTransaction.replace(R.id.constrLayout, new Administrator()).commit();
+            Intent myIntent = new Intent(MainActivity.this, AdministratorActivity.class);
+            startActivity(myIntent);
+        }
+
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
 
     public static void createUserData(int id, String nickname, String email, String phoneNumber, String region, String town, String statusName) {
@@ -241,12 +259,12 @@ public class MainActivity extends AppCompatActivity {
         data.setText(sp.getString("nickname", ""));
     }
 
-//    private void newTransaction (Fragment fragment, String fragmentName) {
-//        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-//       // fragmentTransaction.setCustomAnimations(R.anim.bottom_to_up, R.anim.exit_to_up);
-//        fragmentTransaction.replace(R.id.constrLayout, fragment).commit();
-//        this.setTitle(fragmentName);
-//    }
+    private void newTransaction (Fragment fragment, String fragmentName) {
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+       // fragmentTransaction.setCustomAnimations(R.anim.bottom_to_up, R.anim.exit_to_up);
+        fragmentTransaction.replace(R.id.constrLayout, fragment).commit();
+        this.setTitle(fragmentName);
+    }
 
     private void readData () {
         TextView nickname = findViewById(R.id.drawer_nickname);

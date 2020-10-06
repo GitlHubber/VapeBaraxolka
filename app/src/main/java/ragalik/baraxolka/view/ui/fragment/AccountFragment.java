@@ -16,8 +16,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
@@ -50,6 +52,7 @@ import ragalik.baraxolka.network.entities.ServerResponse;
 import ragalik.baraxolka.network.entities.User;
 import ragalik.baraxolka.view.ui.image_menu.AccountImageMenu;
 import ragalik.baraxolka.utils.PathUtils;
+import ragalik.baraxolka.view.ui.image_menu.FullImageLayout;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -93,6 +96,12 @@ public class AccountFragment extends Fragment {
     }
 
     @Override
+    public void onStart() {
+        super.onStart();
+
+    }
+
+    @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
@@ -116,13 +125,13 @@ public class AccountFragment extends Fragment {
         accountFab = view.findViewById(R.id.account_fab);
 
         pnLayout.setOnClickListener(v -> {
-            AccountFragmentDirections.ActionAccountFragmentToEditAccountFragment action = AccountFragmentDirections.actionAccountFragmentToEditAccountFragment("phone");
-            Navigation.findNavController(MainActivity.activity, R.id.fragment).navigate(action);
+            getActivity().getSupportFragmentManager().beginTransaction().
+                    addToBackStack(null).replace(R.id.constrLayout, new EditAccountFragment("phone")).commit();
         });
 
         regionLayout.setOnClickListener(v -> {
-            AccountFragmentDirections.ActionAccountFragmentToEditAccountFragment action = AccountFragmentDirections.actionAccountFragmentToEditAccountFragment("region");
-            Navigation.findNavController(MainActivity.activity, R.id.fragment).navigate(action);
+            getActivity().getSupportFragmentManager().beginTransaction().
+                    addToBackStack(null).replace(R.id.constrLayout, new EditAccountFragment("region")).commit();
         });
 
         signOut = view.findViewById(R.id.signOutButtonAccount);
@@ -135,7 +144,8 @@ public class AccountFragment extends Fragment {
                 MainActivity.removeData(MainActivity.activity);
                 MainActivity.removeGroupFromNV(0, MainActivity.activity);
 
-                Navigation.findNavController(MainActivity.activity, R.id.fragment).navigate(R.id.ADS);
+                getActivity().getSupportFragmentManager().beginTransaction().
+                        addToBackStack(null).replace(R.id.constrLayout, new AdsFragment()).commit();
 
                 MainActivity.hideItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES, R.id.MODERATOR, R.id.ADMIN);
 
@@ -237,7 +247,8 @@ public class AccountFragment extends Fragment {
         if (user.isReportExists() == 1) {
             reportsLayout.setVisibility(View.VISIBLE);
             reportsLayout.setOnClickListener(v -> {
-                Navigation.findNavController(MainActivity.activity, R.id.fragment).navigate(R.id.myReportsFragment);
+                getActivity().getSupportFragmentManager().beginTransaction().
+                        addToBackStack(null).replace(R.id.constrLayout, new MyReportsFragment()).commit();
             });
         }
 
@@ -313,11 +324,8 @@ public class AccountFragment extends Fragment {
                 ArrayList<String> arrayList = new ArrayList<>();
                 arrayList.add(MainActivity.sp.getString("image", ""));
 
-                AccountFragmentDirections.ActionAccountFragmentToFullImageLayout action = AccountFragmentDirections.actionAccountFragmentToFullImageLayout(0, arrayList);
-                Navigation.findNavController(MainActivity.activity, R.id.fragment).navigate(action);
-
-//                FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-//                fragmentTransaction.replace(R.id.accountCoordinator, new FullImageLayout(0, arrayList)).addToBackStack("").commit();
+                FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.accountCoordinator, new FullImageLayout(0, arrayList)).addToBackStack("").commit();
             }
         });
 

@@ -32,6 +32,7 @@ import ragalik.baraxolka.view.ui.fragment.AdsFragment
 import ragalik.baraxolka.view.ui.fragment.AdModeratorFragment
 import ragalik.baraxolka.view.ui.fragment.MyAdsFragment
 import ragalik.baraxolka.utils.DateTimeUtils
+import ragalik.baraxolka.view.ui.activity.FullAdActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -82,10 +83,9 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, RecyclerV
             view.setOnClickListener {
                 val bundle = Bundle()
                 bundle.putInt("adId", ad?.id!!)
-                it.findNavController().navigate(R.id.fullAdActivity, bundle)
-//                val myIntent = Intent(MainActivity.activity, FullAdFragment::class.java)
-//                myIntent.putExtra("adId", ad?.id)
-//                MainActivity.activity.startActivity(myIntent)
+                val myIntent = Intent(MainActivity.activity, FullAdActivity::class.java)
+                myIntent.putExtra("adId", ad.id!!)
+                MainActivity.activity.startActivity(myIntent)
             }
 
 //            view.bookmark_button_ads.setOnClickListener {

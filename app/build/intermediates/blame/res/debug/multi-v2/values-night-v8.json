@@ -1,8 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "D:\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
+                {
+                    "source": "D:\\VapeBaraxolka\\app\\src\\main\\res\\values-night\\colors.xml",
+                    "from": {
+                        "startLines": "4,11,7,8,16,9,2,3,6,5,14,13,19,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "157,458,300,348,623,404,57,105,249,204,569,515,721,670",
+                        "endColumns": "45,53,46,54,43,50,46,50,49,43,50,52,47,49",
+                        "endOffsets": "198,507,342,398,662,450,99,151,294,243,615,563,764,715"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,101,155,202,257,301,352,399,450,500,544,595,648,696",
+                        "endColumns": "45,53,46,54,43,50,46,50,49,43,50,52,47,49",
+                        "endOffsets": "96,150,197,252,296,347,394,445,495,539,590,643,691,741"
+                    }
+                },
                 {
                     "source": "C:\\Users\\Ragalik\\.gradle\\caches\\transforms-2\\files-2.1\\7cda725925055eac79d15cf7226c4cea\\appcompat-1.1.0\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
@@ -18,23 +35,6 @@
                         "startOffsets": "746,816,900,984,1080,1182,1284,3240",
                         "endColumns": "69,83,83,95,101,101,93,88",
                         "endOffsets": "811,895,979,1075,1177,1279,1373,3324"
-                    }
-                },
-                {
-                    "source": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\src\\main\\res\\values-night\\colors.xml",
-                    "from": {
-                        "startLines": "4,11,7,8,16,9,2,3,6,5,14,13,19,18",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "157,458,300,348,623,404,57,105,249,204,569,515,721,670",
-                        "endColumns": "45,53,46,54,43,50,46,50,49,43,50,52,47,49",
-                        "endOffsets": "198,507,342,398,662,450,99,151,294,243,615,563,764,715"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,101,155,202,257,301,352,399,450,500,544,595,648,696",
-                        "endColumns": "45,53,46,54,43,50,46,50,49,43,50,52,47,49",
-                        "endOffsets": "96,150,197,252,296,347,394,445,495,539,590,643,691,741"
                     }
                 },
                 {

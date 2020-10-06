@@ -26,17 +26,16 @@ public class FullImageLayout extends Fragment {
     private int position;
     private ArrayList<String> urls;
 
+    public FullImageLayout(int position, ArrayList<String> urls) {
+        this.position = position;
+        this.urls = urls;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_full_image_layout, container, false);
-
-        if (getArguments() != null) {
-            this.position = FullImageLayoutArgs.fromBundle(getArguments()).getPosition();
-            this.urls = FullImageLayoutArgs.fromBundle(getArguments()).getUrls();
-        }
 
         fullAdViewPagerAdapter = new FullAdViewPagerAdapter(getActivity(), urls, "Image");
         return view;

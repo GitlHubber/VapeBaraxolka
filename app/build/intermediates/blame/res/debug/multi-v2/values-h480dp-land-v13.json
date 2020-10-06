@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h480dp-land-v13\\values-h480dp-land-v13.xml",
+            "outputFile": "D:\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h480dp-land-v13\\values-h480dp-land-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Ragalik\\.gradle\\caches\\transforms-2\\files-2.1\\5076204530634cb7b2f51d19fd64ff3c\\material-1.3.0-alpha02\\res\\values-h480dp-land-v13\\values-h480dp-land-v13.xml",

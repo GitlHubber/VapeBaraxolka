@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\ADROID_STUDIO_PROJECTS\\GIT_CLONE\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-da\\values-da.xml",
+            "outputFile": "D:\\VapeBaraxolka\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-da\\values-da.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Ragalik\\.gradle\\caches\\transforms-2\\files-2.1\\8aa42541eca51b01696e82a1b35acfce\\navigation-ui-2.3.0\\res\\values-da\\values-da.xml",

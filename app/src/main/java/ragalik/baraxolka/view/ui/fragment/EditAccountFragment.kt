@@ -21,12 +21,11 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class EditAccountFragment : Fragment() {
+class EditAccountFragment(val edit_flag: String) : Fragment() {
 
     val PHONE_NUMBER : String = "(^\\+375\\d{9})"
 
     companion object {
-        private lateinit var edit_flag : String
         private var isRegionSelected : Boolean = false
         private var regionFromSpinner: String = ""
         private var townFromSpinner : String = ""
@@ -47,8 +46,6 @@ class EditAccountFragment : Fragment() {
         MainActivity.invalidateSearchMenu()
 
 //        Slidr.attach(this)
-
-        edit_flag = arguments?.let { EditAccountFragmentArgs.fromBundle(it).editFlag }.toString()
 
         when (edit_flag) {
             "phone" -> {
@@ -118,7 +115,7 @@ class EditAccountFragment : Fragment() {
                         val call = ApiClient.getApi().setPhoneNumber(phoneNumber, email)
                         call.enqueue(object : Callback<ServerResponse> {
                             override fun onResponse(call: Call<ServerResponse>, response: Response<ServerResponse>) {
-                                findNavController().navigate(R.id.action_editAccountFragment_to_accountFragment)
+                                activity?.supportFragmentManager?.popBackStack()
                                 Toast.makeText(activity, "Добавлен номер телефона!", Toast.LENGTH_LONG).show()
                             }
 
@@ -139,7 +136,7 @@ class EditAccountFragment : Fragment() {
                     val call = ApiClient.getApi().setRegion(regionFromSpinner, townFromSpinner, email)
                     call.enqueue(object : Callback<ServerResponse> {
                         override fun onResponse(call: Call<ServerResponse>, response: Response<ServerResponse>) {
-                            findNavController().navigate(R.id.action_editAccountFragment_to_accountFragment)
+                            activity?.supportFragmentManager?.popBackStack()
                             Toast.makeText(activity, "Регион изменен", Toast.LENGTH_LONG).show()
                         }
 
