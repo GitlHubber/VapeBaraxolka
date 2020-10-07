@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,7 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
-import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
@@ -31,11 +29,11 @@ import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import ragalik.baraxolka.network.ApiClient;
 import ragalik.baraxolka.network.entities.AdsCount;
+import ragalik.baraxolka.utils.AppConstantsKt;
+import ragalik.baraxolka.utils.AppDatabaseHelperKt;
+import ragalik.baraxolka.utils.AppDrawer;
 import ragalik.baraxolka.utils.FuncsKt;
 import ragalik.baraxolka.view.ui.activity.AdCreatorActivity;
 import ragalik.baraxolka.view.ui.activity.AdministratorActivity;
@@ -54,7 +52,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity {
 
     public static final String SERVER_URL = "http://ketrovsky.iam.by/scripts/";
 
@@ -66,27 +64,31 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public static FloatingActionButton fab;
     private static TextView moderator_count;
     public static Activity activity;
-    public static NavigationView navigationView;
+    //public static NavigationView navigationView;
     private int entrance_count = 0;
     public static boolean isActualFragment = false;
-    public static DrawerLayout drawer;
+    //public static DrawerLayout drawer;
     public static boolean isEntranceFromDialog = false;
     public static ImageView navigationPhoto;
     private FirebaseAuth mAuth;
+
+    public Toolbar mToolbar;
+    public AppDrawer mAppDrawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         sp = getPreferences(MODE_PRIVATE);
-//        toolbar = findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
+
+        AppConstantsKt.APP_ACTIVITY = this;
+
         if (sp.getString("theme", "").equals("Night")) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
-
+        AppDatabaseHelperKt.initFirebase();
         initFields();
         initFunc();
 
@@ -109,6 +111,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private void initFields() {
         activity = this;
 
+        mToolbar = findViewById(R.id.mainToolbar);
+        setSupportActionBar(mToolbar);
+        mAppDrawer = new AppDrawer();
+        mAppDrawer.create();
+
         myDialog = new Dialog(this);
         logInFragment = new LogInFragment();
         adsFragment = new AdsFragment();
@@ -116,36 +123,35 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         mAuth = FirebaseAuth.getInstance();
 
-        drawer = findViewById(R.id.drawer_layout);
-        drawer.addDrawerListener(new DrawerLayout.DrawerListener() {
-            @Override
-            public void onDrawerSlide(@NonNull View drawerView, float slideOffset) {
-
-                if(getCurrentFocus() != null)
-                {
-                    InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
-                    inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
-                }
-                updateNotify();
-            }
-
-            @Override
-            public void onDrawerOpened(@NonNull View drawerView) {}
-
-            @Override
-            public void onDrawerClosed(@NonNull View drawerView) {}
-
-            @Override
-            public void onDrawerStateChanged(int newState) {}
-        });
-        navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-        navigationView.setCheckedItem(R.id.ADS);
+//        drawer = findViewById(R.id.drawer_layout);
+//        drawer.addDrawerListener(new DrawerLayout.DrawerListener() {
+//            @Override
+//            public void onDrawerSlide(@NonNull View drawerView, float slideOffset) {
+//
+//                if(getCurrentFocus() != null)
+//                {
+//                    InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+//                    inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+//                }
+//                updateNotify();
+//            }
+//
+//            @Override
+//            public void onDrawerOpened(@NonNull View drawerView) {}
+//
+//            @Override
+//            public void onDrawerClosed(@NonNull View drawerView) {}
+//
+//            @Override
+//            public void onDrawerStateChanged(int newState) {}
+//        });
+//        navigationView = findViewById(R.id.nav_view);
+//        navigationView.setNavigationItemSelectedListener(this);
+//        navigationView.setCheckedItem(R.id.ADS);
 
         fab = findViewById(R.id.mainActivityFab);
         fab.setOnClickListener(view -> {
-            Intent myIntent = new Intent(MainActivity.this, AdCreatorActivity.class);
-            startActivity(myIntent);
+            FuncsKt.replaceActivity(this, new AdCreatorActivity());
         });
 
     }
@@ -193,55 +199,55 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return (!sp.getString("nickname", "").equals(""));
     }
 
-    public void onClickImage(View v){
-        if (!isEntered()) {
-            newTransaction(logInFragment, "Вход");
-        } else {
-            newTransaction(new AccountFragment(), "Вход");
-        }
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-    }
-
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        FragmentTransaction fragmentTransaction = this.getSupportFragmentManager().beginTransaction();
-        // Toolbar toolbar = findViewById(R.id.toolbar);
-
-        int id = item.getItemId();
-
-        if (id == R.id.ADS) {
-            fragmentTransaction.replace(R.id.constrLayout, new AdsFragment()).commit();
-            //   toolbar.setTitle("Объявления");
-        } else if (id == R.id.MY_ADS) {
-            fragmentTransaction.replace(R.id.constrLayout, new MyAdsFragment()).commit();   //Нужно раскомментить при готовых май адс!
-            //toolbar.stTitle("Мои объявления");
-        } else if (id == R.id.FAVOURITES) {
-            fragmentTransaction.replace(R.id.constrLayout, new FavouritesFragment()).commit();
-            // toolbar.setTitle("Закладки");
-        }
-//        else if (id == R.id.RULES) {
-//            fragmentTransaction.replace(R.id.constrLayout, new RULES()).commit();
-//           // toolbar.setTitle("Правила");
+//    public void onClickImage(View v){
+//        if (!isEntered()) {
+//            newTransaction(logInFragment, "Вход");
+//        } else {
+//            newTransaction(new AccountFragment(), "Вход");
 //        }
-        else if (id == R.id.Technical_SUPPORT) {
-            fragmentTransaction.replace(R.id.constrLayout, new TechnicalSupportFragment()).commit();
-            // toolbar.setTitle("Техническая поддержка");
-        } else if (id == R.id.SETTINGS) {
-            Intent myIntent = new Intent(MainActivity.this, SettingsActivity.class);
-            startActivity(myIntent);
-        } else if (id == R.id.MODERATOR) {
-            fragmentTransaction.replace(R.id.constrLayout, new AdModeratorFragment()).commit();
-        } else if (id == R.id.ADMIN) {
-            //fragmentTransaction.replace(R.id.constrLayout, new Administrator()).commit();
-            Intent myIntent = new Intent(MainActivity.this, AdministratorActivity.class);
-            startActivity(myIntent);
-        }
+//        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+//        drawer.closeDrawer(GravityCompat.START);
+//    }
 
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
+//    @Override
+//    public boolean onNavigationItemSelected(MenuItem item) {
+//        FragmentTransaction fragmentTransaction = this.getSupportFragmentManager().beginTransaction();
+//        // Toolbar toolbar = findViewById(R.id.toolbar);
+//
+//        int id = item.getItemId();
+//
+//        if (id == R.id.ADS) {
+//            fragmentTransaction.replace(R.id.constrLayout, new AdsFragment()).commit();
+//            //   toolbar.setTitle("Объявления");
+//        } else if (id == R.id.MY_ADS) {
+//            fragmentTransaction.replace(R.id.constrLayout, new MyAdsFragment()).commit();   //Нужно раскомментить при готовых май адс!
+//            //toolbar.stTitle("Мои объявления");
+//        } else if (id == R.id.FAVOURITES) {
+//            fragmentTransaction.replace(R.id.constrLayout, new FavouritesFragment()).commit();
+//            // toolbar.setTitle("Закладки");
+//        }
+////        else if (id == R.id.RULES) {
+////            fragmentTransaction.replace(R.id.constrLayout, new RULES()).commit();
+////           // toolbar.setTitle("Правила");
+////        }
+//        else if (id == R.id.Technical_SUPPORT) {
+//            fragmentTransaction.replace(R.id.constrLayout, new TechnicalSupportFragment()).commit();
+//            // toolbar.setTitle("Техническая поддержка");
+//        } else if (id == R.id.SETTINGS) {
+//            Intent myIntent = new Intent(MainActivity.this, SettingsActivity.class);
+//            startActivity(myIntent);
+//        } else if (id == R.id.MODERATOR) {
+//            fragmentTransaction.replace(R.id.constrLayout, new AdModeratorFragment()).commit();
+//        } else if (id == R.id.ADMIN) {
+//            //fragmentTransaction.replace(R.id.constrLayout, new Administrator()).commit();
+//            Intent myIntent = new Intent(MainActivity.this, AdministratorActivity.class);
+//            startActivity(myIntent);
+//        }
+//
+//        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+//        drawer.closeDrawer(GravityCompat.START);
+//        return true;
+//    }
 
     public static void createUserData(int id, String nickname, String email, String phoneNumber, String region, String town, String statusName) {
         SharedPreferences.Editor editor = sp.edit();
@@ -259,23 +265,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         activity.invalidateOptionsMenu();
     }
 
-    @Override
-    public boolean onPrepareOptionsMenu(Menu menu) {
-        MenuItem searchItem = menu.findItem(R.id.option_search);
+//    @Override
+//    public boolean onPrepareOptionsMenu(Menu menu) {
+//        MenuItem searchItem = menu.findItem(R.id.option_search);
+//
+//        if (isActualFragment) {
+//            searchItem.setVisible(true);
+//        } else {
+//            searchItem.setVisible(false);
+//        }
+//
+//        return super.onPrepareOptionsMenu(menu);
+//    }
 
-        if (isActualFragment) {
-            searchItem.setVisible(true);
-        } else {
-            searchItem.setVisible(false);
-        }
-
-        return super.onPrepareOptionsMenu(menu);
-    }
-
-    public static void setNavHeaderText (Activity activity) {
-        TextView data = activity.findViewById(R.id.drawer_nickname);
-        data.setText(sp.getString("nickname", ""));
-    }
+//    public static void setNavHeaderText (Activity activity) {
+//        TextView data = activity.findViewById(R.id.drawer_nickname);
+//        data.setText(sp.getString("nickname", ""));
+//    }
 
     private void newTransaction (Fragment fragment, String fragmentName) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
@@ -334,31 +340,31 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //            super.onBackPressed()
 //        }
 
-
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
+        super.onBackPressed();
+//        if (drawer.isDrawerOpen(GravityCompat.START)) {
+//            drawer.closeDrawer(GravityCompat.START);
+//        } else {
+//
+//        }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        readData();
-
-        navigationPhoto = findViewById(R.id.navigationDrawerPhoto);
-
-        if (!MainActivity.sp.getString("image", "").equals("null") && !MainActivity.sp.getString("image", "").equals("")) {
-            String temp = MainActivity.sp.getString("image", "");
-            Picasso.get().invalidate(temp);
-            Picasso.get().load(temp).networkPolicy(NetworkPolicy.NO_CACHE).memoryPolicy(MemoryPolicy.NO_CACHE).into(navigationPhoto);
-        } else {
-            navigationPhoto.setImageResource(R.drawable.gradient_navigation);
-        }
-
-        return true;
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.main, menu);
+//        readData();
+//
+//        navigationPhoto = findViewById(R.id.navigationDrawerPhoto);
+//
+//        if (!MainActivity.sp.getString("image", "").equals("null") && !MainActivity.sp.getString("image", "").equals("")) {
+//            String temp = MainActivity.sp.getString("image", "");
+//            Picasso.get().invalidate(temp);
+//            Picasso.get().load(temp).networkPolicy(NetworkPolicy.NO_CACHE).memoryPolicy(MemoryPolicy.NO_CACHE).into(navigationPhoto);
+//        } else {
+//            navigationPhoto.setImageResource(R.drawable.gradient_navigation);
+//        }
+//
+//        return true;
+//    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -372,44 +378,44 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
-    public static void checkUserStatus() {
-        if (sp.getString("status_name", "").equals("АДМИНИСТРАТОР")) {
-            createAdminField();
-            createEditorField();
-        } else if (sp.getString("status_name", "").equals("РЕДАКТОР")) {
-            createEditorField();
-        }
-    }
+//    public static void checkUserStatus() {
+//        if (sp.getString("status_name", "").equals("АДМИНИСТРАТОР")) {
+//            createAdminField();
+//            createEditorField();
+//        } else if (sp.getString("status_name", "").equals("РЕДАКТОР")) {
+//            createEditorField();
+//        }
+//    }
 
-    public static void removeGroupFromNV(int id, Activity activity) {
-        NavigationView navigationView = activity.findViewById(R.id.nav_view);
-        Menu menu = navigationView.getMenu();
-        menu.removeGroup(id);
-    }
+//    public static void removeGroupFromNV(int id, Activity activity) {
+//        NavigationView navigationView = activity.findViewById(R.id.nav_view);
+//        Menu menu = navigationView.getMenu();
+//        menu.removeGroup(id);
+//    }
+//
+//    private static void createAdminField() {
+//        NavigationView navigationView = MainActivity.activity.findViewById(R.id.nav_view);
+//        Menu menu = navigationView.getMenu();
+//        MenuItem administrator = menu.findItem(R.id.ADMIN);
+//        administrator.setVisible(true);
+//        createEditorField();
+//    }
+//
+//    private static void createEditorField() {
+//        NavigationView navigationView = MainActivity.activity.findViewById(R.id.nav_view);
+//        Menu menu = navigationView.getMenu();
+//        MenuItem moderator = menu.findItem(R.id.MODERATOR);
+//        moderator.setVisible(true);
+//        moderator_count = (TextView) moderator.getActionView();
+//    }
 
-    private static void createAdminField() {
-        NavigationView navigationView = MainActivity.activity.findViewById(R.id.nav_view);
-        Menu menu = navigationView.getMenu();
-        MenuItem administrator = menu.findItem(R.id.ADMIN);
-        administrator.setVisible(true);
-        createEditorField();
-    }
-
-    private static void createEditorField() {
-        NavigationView navigationView = MainActivity.activity.findViewById(R.id.nav_view);
-        Menu menu = navigationView.getMenu();
-        MenuItem moderator = menu.findItem(R.id.MODERATOR);
-        moderator.setVisible(true);
-        moderator_count = (TextView) moderator.getActionView();
-    }
-
-    public static void hideItemsNavigationDrawer(int... items) {
-        Menu menu = navigationView.getMenu();
-
-        for (int item : items) {
-            menu.findItem(item).setVisible(false);
-        }
-    }
+//    public static void hideItemsNavigationDrawer(int... items) {
+//        Menu menu = navigationView.getMenu();
+//
+//        for (int item : items) {
+//            menu.findItem(item).setVisible(false);
+//        }
+//    }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -419,13 +425,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
-    public static void showItemsNavigationDrawer(int... items) {
-        Menu menu = navigationView.getMenu();
-
-        for (int item : items) {
-            menu.findItem(item).setVisible(true);
-        }
-    }
+//    public static void showItemsNavigationDrawer(int... items) {
+//        Menu menu = navigationView.getMenu();
+//
+//        for (int item : items) {
+//            menu.findItem(item).setVisible(true);
+//        }
+//    }
 
     private void updateNotify () {
         Call<AdsCount> call = ApiClient.getApi().getAdsCount(3);

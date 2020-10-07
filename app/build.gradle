@@ -77,6 +77,7 @@ dependencies {
 
     //Firebase
     implementation 'com.google.firebase:firebase-auth:19.4.0'
+    implementation 'com.google.firebase:firebase-database:19.5.0'
 
     //Paging library
     implementation "androidx.paging:paging-runtime:2.1.2"
@@ -85,6 +86,10 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     implementation 'com.r0adkll:slidableactivity:2.1.0'
+
+    implementation "com.mikepenz:materialdrawer-nav:7.0.0"
+
+    implementation("io.coil-kt:coil:1.0.0-rc3")
 
     //AdMob
 //    implementation 'com.google.android.gms:play-services-ads:19.2.0'

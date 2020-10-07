@@ -34,13 +34,13 @@
                 android:scaleType="centerCrop"
                 app:layout_collapseMode="parallax" />
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbarAccount"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:title="@string/account"
-                app:layout_collapseMode="pin"
-                app:titleTextColor="@color/colorText" />
+<!--            <androidx.appcompat.widget.Toolbar-->
+<!--                android:id="@+id/toolbarAccount"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="?attr/actionBarSize"-->
+<!--                android:title="@string/account"-->
+<!--                app:layout_collapseMode="pin"-->
+<!--                app:titleTextColor="@color/colorText" />-->
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 

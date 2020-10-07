@@ -12,6 +12,14 @@
                         "endLines": "2,3,4,5,19,33,34,35,38,42,43,44,45,49",
                         "endColumns": "134,134,74,86,12,12,118,126,12,12,114,106,112,12",
                         "endOffsets": "185,320,395,482,1366,2262,2381,2508,2730,2954,3069,3176,3289,3519"
+                    },
+                    "to": {
+                        "startLines": "3,4,5,6,7,21,35,36,37,40,44,45,46,47",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "107,242,377,452,539,1423,2319,2438,2565,2787,3011,3126,3233,3346",
+                        "endLines": "3,4,5,6,20,34,35,36,39,43,44,45,46,50",
+                        "endColumns": "134,134,74,86,12,12,118,126,12,12,114,106,112,12",
+                        "endOffsets": "237,372,447,534,1418,2314,2433,2560,2782,3006,3121,3228,3341,3571"
                     }
                 },
                 {
@@ -25,12 +33,22 @@
                         "endOffsets": "200"
                     },
                     "to": {
-                        "startLines": "50",
+                        "startLines": "51",
                         "startColumns": "4",
-                        "startOffsets": "3524",
-                        "endLines": "52",
+                        "startOffsets": "3576",
+                        "endLines": "53",
                         "endColumns": "12",
-                        "endOffsets": "3669"
+                        "endOffsets": "3721"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Ragalik\\.gradle\\caches\\transforms-2\\files-2.1\\2d501a27eb117456b436180ee995e9e4\\jetified-materialize-1.2.1\\res\\values-v23\\values-v23.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "51",
+                        "endOffsets": "102"
                     }
                 },
                 {
@@ -44,12 +62,12 @@
                         "endOffsets": "315,588"
                     },
                     "to": {
-                        "startLines": "53,57",
+                        "startLines": "54,58",
                         "startColumns": "4,4",
-                        "startOffsets": "3674,3939",
-                        "endLines": "56,60",
+                        "startOffsets": "3726,3991",
+                        "endLines": "57,61",
                         "endColumns": "10,10",
-                        "endOffsets": "3934,4207"
+                        "endOffsets": "3986,4259"
                     }
                 }
             ]

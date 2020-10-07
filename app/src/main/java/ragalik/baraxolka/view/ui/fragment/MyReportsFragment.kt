@@ -15,15 +15,11 @@ import kotlinx.android.synthetic.main.fragment_my_reports.*
 import ragalik.baraxolka.MainActivity
 import ragalik.baraxolka.R
 import ragalik.baraxolka.feed.viewmodel.MyReportsViewModel
+import ragalik.baraxolka.utils.APP_ACTIVITY
 import ragalik.baraxolka.view.adapter.ReportsAdapter
 
 
-class MyReportsFragment : Fragment() {
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        super.onCreateView(inflater, container, savedInstanceState)
-        return inflater.inflate(R.layout.fragment_my_reports, container, false)
-    }
+class MyReportsFragment : BaseFragment(R.layout.fragment_my_reports) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -32,12 +28,14 @@ class MyReportsFragment : Fragment() {
 
         MainActivity.isActualFragment = false
         MainActivity.invalidateSearchMenu()
+        MainActivity.fab.hide()
 
         supportFragment = activity?.supportFragmentManager!!
+        APP_ACTIVITY.mToolbar.title = "Мои жалобы"
 
-        (activity as AppCompatActivity).setSupportActionBar(myReportsToolbar)
-        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        myReportsToolbar.title = "Мои жалобы"
+//        (activity as AppCompatActivity).setSupportActionBar(myReportsToolbar)
+//        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
+//        myReportsToolbar.title = "Мои жалобы"
 
         myReportsProgressBar = view.findViewById(R.id.progress_my_reports)
 
@@ -63,7 +61,7 @@ class MyReportsFragment : Fragment() {
         val myReportsAdapter = ReportsAdapter("MY_REPORTS")
         MyReportsRecyclerView?.layoutManager = LinearLayoutManager(context)
         itemViewModel = ViewModelProvider(this).get(MyReportsViewModel::class.java)
-        itemViewModel!!.myReportsPagedList.observe(viewLifecycleOwner, Observer { myReportsAdapter.submitList(it) })
+        itemViewModel!!.myReportsPagedList.observe(viewLifecycleOwner, { myReportsAdapter.submitList(it) })
         MyReportsRecyclerView?.adapter = myReportsAdapter
     }
 }

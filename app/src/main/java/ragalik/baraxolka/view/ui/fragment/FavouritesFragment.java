@@ -22,13 +22,14 @@ import android.widget.ProgressBar;
 import ragalik.baraxolka.R;
 import ragalik.baraxolka.MainActivity;
 import ragalik.baraxolka.feed.viewmodel.FavouritesViewModel;
+import ragalik.baraxolka.utils.AppConstantsKt;
 import ragalik.baraxolka.view.adapter.AdAdapter;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FavouritesFragment extends Fragment {
+public class FavouritesFragment extends BaseFragment {
 
     private RecyclerView favouritesRecyclerView;
     private SwipeRefreshLayout swipeRefreshLayout;
@@ -37,20 +38,13 @@ public class FavouritesFragment extends Fragment {
     private boolean isReloaded;
 
     public FavouritesFragment() {
-        // Required empty public constructor
+        super(R.layout.fragment_favourites);
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         isReloaded = false;
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_favourites, container, false);
     }
 
     @Override
@@ -66,17 +60,19 @@ public class FavouritesFragment extends Fragment {
 
         MainActivity.isActualFragment = false;
         MainActivity.invalidateSearchMenu();
-        Toolbar toolbar = view.findViewById(R.id.toolbar_favourites);
-        AppCompatActivity appCompatActivity = (AppCompatActivity) getActivity();
-        if (appCompatActivity != null) {
-            appCompatActivity.setSupportActionBar(toolbar);
-            toolbar.setTitle("Закладки");
-        }
+//        Toolbar toolbar = view.findViewById(R.id.toolbar_favourites);
+//        AppCompatActivity appCompatActivity = (AppCompatActivity) getActivity();
+//        if (appCompatActivity != null) {
+//            appCompatActivity.setSupportActionBar(toolbar);
+//            toolbar.setTitle("Закладки");
+//        }
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                getActivity(), MainActivity.drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        MainActivity.drawer.addDrawerListener(toggle);
-        toggle.syncState();
+        AppConstantsKt.APP_ACTIVITY.mToolbar.setTitle("Закладки");
+
+//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+//                getActivity(), MainActivity.drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+//        MainActivity.drawer.addDrawerListener(toggle);
+//        toggle.syncState();
 
         MainActivity.fab.hide();
 

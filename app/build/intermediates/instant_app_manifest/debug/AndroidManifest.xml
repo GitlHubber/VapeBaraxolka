@@ -33,7 +33,8 @@
         android:usesCleartextTraffic="true" >
         <activity
             android:name="ragalik.baraxolka.view.ui.activity.RegisterActivity"
-            android:theme="@style/AppTheme" >
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
         </activity>
         <activity
             android:name="ragalik.baraxolka.view.ui.activity.AdministratorActivity"
@@ -142,6 +143,12 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths" />
         </provider>
+        <provider
+            android:name="com.mikepenz.iconics.IconicsContentProvider"
+            android:authorities="ragalik.baraxolka.iconics.core.provider"
+            android:enabled="@bool/is_iconics_content_provider_enabled"
+            android:exported="false"
+            android:initOrder="100" />
 
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
@@ -158,6 +165,9 @@
             <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
         </service>
 
         <activity
@@ -168,6 +178,7 @@
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
             android:authorities="ragalik.baraxolka.firebaseinitprovider"
+            android:directBootAware="true"
             android:exported="false"
             android:initOrder="100" />
 

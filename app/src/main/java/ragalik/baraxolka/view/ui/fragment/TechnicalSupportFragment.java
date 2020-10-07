@@ -4,42 +4,31 @@ package ragalik.baraxolka.view.ui.fragment;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-
-import ragalik.baraxolka.R;
 import ragalik.baraxolka.MainActivity;
+import ragalik.baraxolka.R;
+import ragalik.baraxolka.utils.AppConstantsKt;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class TechnicalSupportFragment extends Fragment {
+public class TechnicalSupportFragment extends BaseFragment {
 
     private TextView link;
-    //private AdView mAdView;
 
     public TechnicalSupportFragment() {
-        // Required empty public constructor
+        super(R.layout.fragment_technical_support);
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_technical_support, container, false);
+    //private AdView mAdView;
 
-        return v;
-    }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -49,21 +38,23 @@ public class TechnicalSupportFragment extends Fragment {
         MainActivity.isActualFragment = false;
         MainActivity.invalidateSearchMenu();
 
-        Toolbar toolbar = view.findViewById(R.id.supportToolbar);
-        AppCompatActivity appCompatActivity = (AppCompatActivity) getActivity();
-        if (appCompatActivity != null) {
-            appCompatActivity.setSupportActionBar(toolbar);
-            toolbar.setTitle("Техническая поддержка");
-        }
+//        Toolbar toolbar = view.findViewById(R.id.supportToolbar);
+//        AppCompatActivity appCompatActivity = (AppCompatActivity) getActivity();
+//        if (appCompatActivity != null) {
+//            appCompatActivity.setSupportActionBar(toolbar);
+//            toolbar.setTitle("Техническая поддержка");
+//        }
+
+        AppConstantsKt.APP_ACTIVITY.mToolbar.setTitle("Техническая поддержка");
 
 //        mAdView = getActivity().findViewById(R.id.SupportAdView);
 //        AdRequest adRequest = new AdRequest.Builder().build();
 //        mAdView.loadAd(adRequest);
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                getActivity(), MainActivity.drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        MainActivity.drawer.addDrawerListener(toggle);
-        toggle.syncState();
+//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+//                getActivity(), MainActivity.drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+//        MainActivity.drawer.addDrawerListener(toggle);
+//        toggle.syncState();
 
         link = view.findViewById(R.id.VKGroupLink);
         link.setOnClickListener(v -> {

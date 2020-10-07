@@ -26,29 +26,26 @@ class EnterCodeFragment(val phoneNumber: String, val id: String) : BaseFragment(
         val credential = PhoneAuthProvider.getCredential(id, code)
         AUTH.signInWithCredential(credential).addOnCompleteListener { task ->
             if (task.isSuccessful) {
+                val uid = AUTH.currentUser?.uid.toString()
+                val dateMap = mutableMapOf<String, Any>()
+                dateMap[CHILD_ID] = uid
+                dateMap[CHILD_PHONE] = phoneNumber
+                dateMap[CHILD_USERNAME] = uid
 
-                showToast("Добро пожаловать")
-                (activity as RegisterActivity).replaceActivity(MainActivity())
-//                val uid = AUTH.currentUser?.uid.toString()
-//                val dateMap = mutableMapOf<String, Any>()
-//                dateMap[CHILD_ID] = uid
-//                dateMap[CHILD_PHONE] = phoneNumber
-//                dateMap[CHILD_USERNAME] = uid
-//
-//                REF_DATABASE_ROOT.child(NODE_PHONES).child(phoneNumber).setValue(uid)
-//                        .addOnFailureListener { task1 ->
-//                            showToast(task1.message.toString())
-//                        }
-//                        .addOnSuccessListener {
-//                            REF_DATABASE_ROOT.child(NODE_USERS).child(uid).updateChildren(dateMap)
-//                                    .addOnSuccessListener {
-//                                        showToast("Добро пожаловать")
-//                                        (activity as RegisterActivity).replaceActivity(MainActivity())
-//                                    }
-//                                    .addOnFailureListener { task2 ->
-//                                        showToast(task2.message.toString())
-//                                    }
-//                        }
+                REF_DATABASE_ROOT.child(NODE_PHONES).child(phoneNumber).setValue(uid)
+                        .addOnFailureListener { task1 ->
+                            showToast(task1.message.toString())
+                        }
+                        .addOnSuccessListener {
+                            REF_DATABASE_ROOT.child(NODE_USERS).child(uid).updateChildren(dateMap)
+                                    .addOnSuccessListener {
+                                        showToast("Добро пожаловать")
+                                        (activity as RegisterActivity).replaceActivity(MainActivity())
+                                    }
+                                    .addOnFailureListener { task2 ->
+                                        showToast(task2.message.toString())
+                                    }
+                        }
             } else {
                 showToast(task.exception?.message.toString())
             }

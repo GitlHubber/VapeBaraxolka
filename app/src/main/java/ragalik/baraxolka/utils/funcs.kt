@@ -14,13 +14,12 @@ fun showToast(message: String) {
     Toast.makeText(MainActivity.activity, message, Toast.LENGTH_SHORT).show()
 }
 
-fun AppCompatActivity.replaceActivity (activity: AppCompatActivity) {
+fun AppCompatActivity.replaceActivity(activity: AppCompatActivity) {
     val intent = Intent(this, activity::class.java)
     startActivity(intent)
-    finish()
 }
 
-fun AppCompatActivity.replaceFragment (fragment: Fragment, addStack: Boolean = true) {
+fun AppCompatActivity.replaceFragment(fragment: Fragment, addStack: Boolean = true) {
     if (addStack) {
         supportFragmentManager.beginTransaction()
                 .addToBackStack(null)
@@ -42,7 +41,7 @@ fun hideKeyboard() {
     imm.hideSoftInputFromWindow(MainActivity.activity.window.decorView.windowToken, 0)
 }
 
-fun Fragment.replaceFragment (fragment: Fragment) {
+fun Fragment.replaceFragment(fragment: Fragment) {
     fragmentManager?.beginTransaction()
             ?.addToBackStack(null)
             ?.replace(

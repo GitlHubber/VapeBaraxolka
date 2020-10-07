@@ -3,21 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.ui.fragment.FavouritesFragment">
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_favourites"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:title="@string/favourites"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
-
-    </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/refresherFavourites"

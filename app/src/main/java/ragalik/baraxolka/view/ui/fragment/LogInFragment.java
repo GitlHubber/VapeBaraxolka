@@ -79,10 +79,10 @@ public class LogInFragment extends Fragment implements View.OnClickListener {
             toolbar.setTitle("Вход");
         }
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                getActivity(), MainActivity.drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        MainActivity.drawer.addDrawerListener(toggle);
-        toggle.syncState();
+//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+//                getActivity(), MainActivity.drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+//        MainActivity.drawer.addDrawerListener(toggle);
+//        toggle.syncState();
 
         signInFragment = new SignInFragment();
 
@@ -217,7 +217,7 @@ public class LogInFragment extends Fragment implements View.OnClickListener {
                     MainActivity.createUserData(user.getId(), user.getNickname(), user.getEmail(), user.getPhoneNumber(), user.getRegion(), user.getTown(), user.getStatusName());
 
                     if (getActivity() != null) {
-                        MainActivity.setNavHeaderText(getActivity());
+                       // MainActivity.setNavHeaderText(getActivity());
                     }
 
 //                    FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
@@ -236,7 +236,7 @@ public class LogInFragment extends Fragment implements View.OnClickListener {
                     editor.apply();
 
                     Toast.makeText(getContext(), "Добро пожаловать, " + user.getNickname() + "!", Toast.LENGTH_SHORT).show();
-                    MainActivity.showItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
+                   // MainActivity.showItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
                 } else if (!response.body().getSuccess() && response.body().getCorrectEmail()) {
                     password.setError("Неверно введен пароль!");
                     Toast.makeText(getContext(), "Неверно введен пароль!", Toast.LENGTH_LONG).show();

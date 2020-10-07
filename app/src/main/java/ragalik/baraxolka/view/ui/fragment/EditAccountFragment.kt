@@ -1,26 +1,22 @@
 package ragalik.baraxolka.view.ui.fragment
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.AdapterView.OnItemClickListener
 import android.widget.ArrayAdapter
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_edit_account.*
 import ragalik.baraxolka.MainActivity
 import ragalik.baraxolka.R
 import ragalik.baraxolka.network.ApiClient
 import ragalik.baraxolka.network.entities.ServerResponse
-
+import ragalik.baraxolka.utils.APP_ACTIVITY
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class EditAccountFragment(val edit_flag: String) : Fragment() {
+class EditAccountFragment(val edit_flag: String) : BaseFragment(R.layout.fragment_edit_account) {
 
     val PHONE_NUMBER : String = "(^\\+375\\d{9})"
 
@@ -30,19 +26,22 @@ class EditAccountFragment(val edit_flag: String) : Fragment() {
         private var townFromSpinner : String = ""
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        super.onCreateView(inflater, container, savedInstanceState)
-        return inflater.inflate(R.layout.fragment_edit_account, container, false)
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        (activity as AppCompatActivity).setSupportActionBar(toolbar_edit_activity)
-        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
+//        (activity as AppCompatActivity).setSupportActionBar(toolbar_edit_activity)
+//        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
 
         MainActivity.isActualFragment = false
         MainActivity.invalidateSearchMenu()
+        MainActivity.fab.hide()
+
+//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+//                getActivity(), MainActivity.drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+//        MainActivity.drawer.addDrawerListener(toggle);
+//        toggle.syncState();
+
 
 //        Slidr.attach(this)
 
@@ -50,14 +49,14 @@ class EditAccountFragment(val edit_flag: String) : Fragment() {
             "phone" -> {
                 account_edit_layout.hint = "Номер телефона"
                 tw_account_edit.text = "После указания номера телефона, его НЕЛЬЗЯ будет изменить!"
-                toolbar_edit_activity.title = "Добавление номера тел."
+                APP_ACTIVITY.mToolbar.title = "Добавление номера тел."
                 tw_account_edit_title.text = "Укажите номер телефона"
                 edit_region_layout.visibility = View.GONE
             }
             "region" -> {
                 account_edit_layout.visibility = View.GONE
                 tw_account_edit.text = "Вы можете изменить регион в любой момент."
-                toolbar_edit_activity.title = "Указание региона"
+                APP_ACTIVITY.mToolbar.title = "Указание региона"
                 tw_account_edit_title.visibility = View.GONE
                 EditRegionSpinner.setAdapter(ArrayAdapter.createFromResource(MainActivity.activity, R.array.Spinner_region_items, R.layout.dropdown_text_color))
                 EditRegionSpinner.setOnClickListener {
@@ -71,7 +70,7 @@ class EditAccountFragment(val edit_flag: String) : Fragment() {
                     tw_select_town.text = "Укажите город проживания"
                     EditTownTextEdit.hint = "Выберите город"
 
-                    lateinit var adapterTown : ArrayAdapter<CharSequence>
+                    lateinit var adapterTown: ArrayAdapter<CharSequence>
 
                     when (text) {
                         "Не указано" -> {
@@ -91,7 +90,8 @@ class EditAccountFragment(val edit_flag: String) : Fragment() {
                         "Гродненская обл." -> adapterTown = ArrayAdapter.createFromResource(MainActivity.activity, R.array.GrodnoRegion, R.layout.dropdown_text_color)
                         "Минская обл." -> adapterTown = ArrayAdapter.createFromResource(MainActivity.activity, R.array.MinskRegion, R.layout.dropdown_text_color)
                         "Могилевская обл." -> adapterTown = ArrayAdapter.createFromResource(MainActivity.activity, R.array.MogilevRegion, R.layout.dropdown_text_color)
-                        else -> {}
+                        else -> {
+                        }
                     }
                     regionFromSpinner = text
                     EditTownSpinner.setAdapter(adapterTown)

@@ -28,6 +28,8 @@ import com.google.android.material.chip.Chip;
 import ragalik.baraxolka.MainActivity;
 import ragalik.baraxolka.R;
 import ragalik.baraxolka.feed.viewmodel.AdViewModel;
+import ragalik.baraxolka.utils.AppConstantsKt;
+import ragalik.baraxolka.utils.FuncsKt;
 import ragalik.baraxolka.view.ui.activity.FilterActivity;
 import ragalik.baraxolka.view.ui.activity.SearchActivity;
 import ragalik.baraxolka.view.adapter.AdAdapter;
@@ -50,46 +52,53 @@ public class AdsFragment extends Fragment {
     private Chip searchChip;
     private Chip filterChip;
     private Chip categoryChip;
+    Toolbar toolbar;
+
 
     private RecyclerView adsRecyclerView;
     private boolean isReloaded;
-    private static View v;
+
+    public AdsFragment() {
+        super(R.layout.fragment_ads);
+    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         isReloaded = false;
-        MainActivity.checkUserStatus();
+        //MainActivity.checkUserStatus();
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        v = inflater.inflate(R.layout.fragment_ads, container, false);
+    public void onViewCreated(@NonNull View view, @Nullable final Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
         MainActivity.isActualFragment = true;
         MainActivity.invalidateSearchMenu();
+        AppConstantsKt.APP_ACTIVITY.mToolbar.setTitle("Объявления");
 
-        Toolbar toolbar = v.findViewById(R.id.ads_toolbar);
-        MainActivity.navigationView.setCheckedItem(R.id.ADS);
-        AppCompatActivity appCompatActivity = (AppCompatActivity) getActivity();
-        if (appCompatActivity != null) {
-            appCompatActivity.setSupportActionBar(toolbar);
-            toolbar.setTitle("Все объявления");
-        }
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                getActivity(), MainActivity.drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        MainActivity.drawer.addDrawerListener(toggle);
-        toggle.syncState();
-        progressBar = v.findViewById(R.id.progress_ads);
+//        toolbar = view.findViewById(R.id.ads_toolbar);
+//        AppCompatActivity appCompatActivity = (AppCompatActivity) getActivity();
+//        if (appCompatActivity != null) {
+//            appCompatActivity.setSupportActionBar(toolbar);
+//            toolbar.setTitle("Все объявления");
+//        }
+       // AppConstantsKt.APP_ACTIVITY.mAppDrawer.enableDrawer(toolbar);
+//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+//                getActivity(), MainActivity.drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+//        MainActivity.drawer.addDrawerListener(toggle);
+//        toggle.syncState();
+
+        progressBar = view.findViewById(R.id.progress_ads);
         if (isReloaded) {
             progressBar.setVisibility(View.GONE);
         } else {
             progressBar.setVisibility(View.VISIBLE);
         }
 
-        searchChip = v.findViewById(R.id.search_chip);
-        filterChip = v.findViewById(R.id.filter_chip);
-        categoryChip = v.findViewById(R.id.category_chip);
+        searchChip = view.findViewById(R.id.search_chip);
+        filterChip = view.findViewById(R.id.filter_chip);
+        categoryChip = view.findViewById(R.id.category_chip);
 
         searchChip.setOnClickListener(v -> {
             Intent myIntent = new Intent(MainActivity.activity, SearchActivity.class);
@@ -121,15 +130,9 @@ public class AdsFragment extends Fragment {
         }
 
         setRetainInstance(true);
-        return v;
-    }
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable final Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
 
         swipeRefreshLayout = view.findViewById(R.id.refresherAds);
-        adsRecyclerView = v.findViewById(R.id.ADSRecyclerView);
+        adsRecyclerView = view.findViewById(R.id.ADSRecyclerView);
         showAds();
 
         swipeRefreshLayout.setOnRefreshListener(() -> {
@@ -210,4 +213,5 @@ public class AdsFragment extends Fragment {
         super.onDestroyView();
         isReloaded = true;
     }
+
 }

@@ -35,6 +35,8 @@ import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
 
+import org.apache.http.auth.AUTH;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -48,6 +50,9 @@ import ragalik.baraxolka.network.IApi;
 import ragalik.baraxolka.network.ApiClient;
 import ragalik.baraxolka.network.entities.ServerResponse;
 import ragalik.baraxolka.network.entities.User;
+import ragalik.baraxolka.utils.AppConstantsKt;
+import ragalik.baraxolka.utils.AppDatabaseHelperKt;
+import ragalik.baraxolka.utils.FuncsKt;
 import ragalik.baraxolka.view.ui.image_menu.AccountImageMenu;
 import ragalik.baraxolka.utils.PathUtils;
 import ragalik.baraxolka.view.ui.image_menu.FullImageLayout;
@@ -56,7 +61,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class AccountFragment extends Fragment {
+public class AccountFragment extends BaseFragment {
 
     private static final int PICK_FILE_REQUEST = 1000;
 
@@ -84,20 +89,12 @@ public class AccountFragment extends Fragment {
     private LinearLayout regionLayout;
     private LinearLayout reportsLayout;
 
-   // private AdView mAdView;
-
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        super.onCreateView(inflater, container, savedInstanceState);
-        return inflater.inflate(R.layout.fragment_account, container, false);
+    public AccountFragment() {
+        super(R.layout.fragment_account);
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
+    // private AdView mAdView;
 
-    }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -105,14 +102,17 @@ public class AccountFragment extends Fragment {
 
         MainActivity.isActualFragment = false;
         MainActivity.invalidateSearchMenu();
+        MainActivity.fab.hide();
 
-        toolbar = view.findViewById(R.id.toolbarAccount);
-        final AppCompatActivity appCompatActivity = (AppCompatActivity) getActivity();
-        if (appCompatActivity != null) {
-            appCompatActivity.setSupportActionBar(toolbar);
-            appCompatActivity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            appCompatActivity.getSupportActionBar().setDisplayShowTitleEnabled(false);
-        }
+
+//        toolbar = view.findViewById(R.id.toolbarAccount);
+//        final AppCompatActivity appCompatActivity = (AppCompatActivity) getActivity();
+//        if (appCompatActivity != null) {
+//            appCompatActivity.setSupportActionBar(toolbar);
+//            appCompatActivity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//            appCompatActivity.getSupportActionBar().setDisplayShowTitleEnabled(false);
+//        }
+//
 
         accountViewStub = view.findViewById(R.id.account_view_stub);
         accountViewStub.inflate();
@@ -139,15 +139,17 @@ public class AccountFragment extends Fragment {
             builder.setMessage("Вы действительно хотите выйти из аккаунта?");
             builder.setPositiveButton("Да", (dialog, which) -> {
                 dialog.dismiss();
-                MainActivity.removeData(MainActivity.activity);
-                MainActivity.removeGroupFromNV(0, MainActivity.activity);
+//                MainActivity.removeData(MainActivity.activity);
+                //MainActivity.removeGroupFromNV(0, MainActivity.activity);
+
+                AppDatabaseHelperKt.getAUTH().signOut();
 
                 getActivity().getSupportFragmentManager().beginTransaction().
                         addToBackStack(null).replace(R.id.constrLayout, new AdsFragment()).commit();
 
-                MainActivity.hideItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES, R.id.MODERATOR, R.id.ADMIN);
-
-                Toast.makeText(appCompatActivity, "Вы вышли из аккаунта", Toast.LENGTH_SHORT).show();
+//                MainActivity.hideItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES, R.id.MODERATOR, R.id.ADMIN);
+//
+//                Toast.makeText(appCompatActivity, "Вы вышли из аккаунта", Toast.LENGTH_SHORT).show();
             });
             builder.setNegativeButton("Нет", ( dialog, which) -> dialog.dismiss());
             AlertDialog alertDialog = builder.create();
@@ -236,7 +238,7 @@ public class AccountFragment extends Fragment {
     }
 
     private void startAccountView(User user) {
-        toolbar.setTitle(user.getNickname());
+        AppConstantsKt.APP_ACTIVITY.mToolbar.setTitle(user.getNickname());
 
 //        mAdView = findViewById(R.id.AccountAdView);
 //        AdRequest adRequest = new AdRequest.Builder().build();
@@ -336,8 +338,8 @@ public class AccountFragment extends Fragment {
         if (!MainActivity.sp.getString("image", "null").equals("null")) {
             String temp = user.getImage();
             Picasso.get().invalidate(temp);
-            Picasso.get().load(temp).networkPolicy(NetworkPolicy.NO_CACHE).memoryPolicy(MemoryPolicy.NO_CACHE).into(accountPhoto);
-            Picasso.get().load(temp).networkPolicy(NetworkPolicy.NO_CACHE).memoryPolicy(MemoryPolicy.NO_CACHE).into(MainActivity.navigationPhoto);
+//            Picasso.get().load(temp).networkPolicy(NetworkPolicy.NO_CACHE).memoryPolicy(MemoryPolicy.NO_CACHE).into(accountPhoto);
+//            Picasso.get().load(temp).networkPolicy(NetworkPolicy.NO_CACHE).memoryPolicy(MemoryPolicy.NO_CACHE).into(MainActivity.navigationPhoto);
         } else {
             accountPhoto.setImageResource(R.drawable.gradient_navigation);
             MainActivity.navigationPhoto.setImageResource(R.drawable.gradient_navigation);

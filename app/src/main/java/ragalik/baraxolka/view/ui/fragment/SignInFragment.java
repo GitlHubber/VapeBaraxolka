@@ -246,14 +246,14 @@ public class SignInFragment extends Fragment implements View.OnClickListener {
                 pDialog.dismiss();
                 if (getActivity() != null && response.body().getSuccess()) {
                     MainActivity.createUserData(response.body().getIdUser(), nicknameFromEditText, emailFromEditText, phoneNumberFromEditText, regionFromSpinner, townFromSpinner, "1");
-                    MainActivity.setNavHeaderText(getActivity());
+                    //MainActivity.setNavHeaderText(getActivity());
 
                     FragmentTransaction fragmentTransaction;
                     if (getActivity() != null) {
                         fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
                //         fragmentTransaction.setCustomAnimations(R.anim.up_to_bottom, R.anim.exit_to_right);
                         fragmentTransaction.replace(R.id.constrLayout, MainActivity.adsFragment).commit();
-                        MainActivity.showItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
+                       // MainActivity.showItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
                         SharedPreferences.Editor editor = MainActivity.sp.edit();
                         editor.putString("image", "null");
                         editor.apply();

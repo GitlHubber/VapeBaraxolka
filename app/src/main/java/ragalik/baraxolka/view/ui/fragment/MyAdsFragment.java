@@ -31,6 +31,7 @@ import ragalik.baraxolka.feed.viewmodel.MyAdsViewModel;
 import ragalik.baraxolka.network.ApiClient;
 import ragalik.baraxolka.network.IApi;
 import ragalik.baraxolka.network.entities.AdsCount;
+import ragalik.baraxolka.utils.AppConstantsKt;
 import ragalik.baraxolka.view.adapter.AdAdapter;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -40,7 +41,7 @@ import retrofit2.Response;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MyAdsFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
+public class MyAdsFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener {
 
     private ViewPager mPager;
     public static TabLayout mTab_layout;
@@ -77,34 +78,16 @@ public class MyAdsFragment extends Fragment implements SwipeRefreshLayout.OnRefr
     public static String[] TABS= {"0\nАктивные", "0\nНа модерации", "0\nОтклоненные", "0\nНеактивные"};
 
     public MyAdsFragment() {
-
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_my_ads, container, false);
-        MainActivity.isActualFragment = false;
-        MainActivity.invalidateSearchMenu();
-
-        toolbar = view.findViewById(R.id.toolbar_myAds);
-
-        AppCompatActivity appCompatActivity = (AppCompatActivity) getActivity();
-        if (appCompatActivity != null) {
-            appCompatActivity.setSupportActionBar(toolbar);
-            toolbar.setTitle("Мои объявления");
-        }
-
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                getActivity(), MainActivity.drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        MainActivity.drawer.addDrawerListener(toggle);
-        toggle.syncState();
-        return view;
+        super(R.layout.fragment_my_ads);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        MainActivity.isActualFragment = false;
+        MainActivity.invalidateSearchMenu();
+        AppConstantsKt.APP_ACTIVITY.mToolbar.setTitle("Мои объявления");
 
         MainActivity.fab.hide();
 
