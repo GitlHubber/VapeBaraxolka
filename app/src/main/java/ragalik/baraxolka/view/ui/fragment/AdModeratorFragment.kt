@@ -1,67 +1,47 @@
-package ragalik.baraxolka.view.ui.fragment;
+package ragalik.baraxolka.view.ui.fragment
+
+import android.content.Context
+import android.os.Bundle
+import android.view.View
+import android.widget.ProgressBar
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import ragalik.baraxolka.MainActivity
+import ragalik.baraxolka.R
+import ragalik.baraxolka.feed.viewmodel.AdModeratorViewModel
+import ragalik.baraxolka.utils.APP_ACTIVITY
+import ragalik.baraxolka.view.adapter.AdAdapter
 
 
-import android.content.Context;
-import android.os.Bundle;
+class AdModeratorFragment : BaseFragment(R.layout.fragment_ad_moderator) {
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+    private lateinit var swipeRefreshLayout: SwipeRefreshLayout
+    private lateinit var adModeratorView: RecyclerView
+    private var isReloaded = false
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ProgressBar;
-
-import ragalik.baraxolka.R;
-import ragalik.baraxolka.MainActivity;
-import ragalik.baraxolka.feed.viewmodel.AdModeratorViewModel;
-import ragalik.baraxolka.utils.AppConstantsKt;
-import ragalik.baraxolka.view.adapter.AdAdapter;
-
-/**
- * A simple {@link Fragment} subclass.
- */
-public class AdModeratorFragment extends BaseFragment {
-
-    public static Context context;
-
-    private SwipeRefreshLayout swipeRefreshLayout;
-    public static AdModeratorViewModel itemViewModel;
-    private RecyclerView adModeratorView;
-    public static ProgressBar progressBar;
-    private boolean isReloaded;
-
-    public AdModeratorFragment() {
-        super(R.layout.fragment_ad_moderator);
+    companion object {
+        lateinit var context: Context
+        lateinit var itemViewModel: AdModeratorViewModel
+        lateinit var progressBar: ProgressBar
     }
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        isReloaded = false;
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        isReloaded = false
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        setRetainInstance(true);
-        MainActivity.isActualFragment = false;
-        MainActivity.invalidateSearchMenu();
-
-        progressBar = view.findViewById(R.id.progress_moderator);
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        retainInstance = true
+        MainActivity.isActualFragment = false
+        MainActivity.invalidateSearchMenu()
+        progressBar = view.findViewById(R.id.progress_moderator)
         if (isReloaded) {
-            progressBar.setVisibility(View.GONE);
+            progressBar.visibility = View.GONE
         } else {
-            progressBar.setVisibility(View.VISIBLE);
+            progressBar.visibility = View.VISIBLE
         }
 
 //        Toolbar toolbar = view.findViewById(R.id.adModeratorToolbar);
@@ -70,40 +50,29 @@ public class AdModeratorFragment extends BaseFragment {
 //            appCompatActivity.setSupportActionBar(toolbar);
 //            toolbar.setTitle("Объявления модератора");
 //        }
-
-        AppConstantsKt.APP_ACTIVITY.mToolbar.setTitle("Объявления модератора");
-
-//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-//                getActivity(), MainActivity.drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-//        MainActivity.drawer.addDrawerListener(toggle);
-//        toggle.syncState();
-
-        context = getContext();
-
-        swipeRefreshLayout = view.findViewById(R.id.refresherModerator);
-        swipeRefreshLayout.setOnRefreshListener(() -> {
-            itemViewModel.getLiveDataSource().getValue().invalidate();
-            swipeRefreshLayout.setRefreshing(false);
-            progressBar.setVisibility(View.VISIBLE);
-        });
-        adModeratorView = view.findViewById(R.id.ModeratorAdsView);
-        getAds();
-        MainActivity.fab.hide();
+        APP_ACTIVITY.mToolbar.title = "Объявления модератора"
+        Companion.context = context!!
+        swipeRefreshLayout = view.findViewById(R.id.refresherModerator)
+        swipeRefreshLayout.setOnRefreshListener {
+            itemViewModel.liveDataSource.value!!.invalidate()
+            swipeRefreshLayout.isRefreshing = false
+            progressBar.visibility = View.VISIBLE
+        }
+        adModeratorView = view.findViewById(R.id.ModeratorAdsView)
+        getAds()
+        MainActivity.fab.hide()
     }
 
-    private void getAds () {
-        AdAdapter adModeratorAdapter = new AdAdapter("MODERATOR");
-        adModeratorView.setLayoutManager(new LinearLayoutManager(getActivity()));
-
-        itemViewModel = new ViewModelProvider(this).get(AdModeratorViewModel.class);
-        itemViewModel.getAdModeratorPagedList().observe(getViewLifecycleOwner(), adModeratorAdapter::submitList);
-
-        adModeratorView.setAdapter(adModeratorAdapter);
+    private fun getAds() {
+        val adModeratorAdapter = AdAdapter("MODERATOR")
+        adModeratorView.layoutManager = LinearLayoutManager(activity)
+        itemViewModel = ViewModelProvider(this).get(AdModeratorViewModel::class.java)
+        itemViewModel.adModeratorPagedList.observe(viewLifecycleOwner, { adModeratorAdapter.submitList(it) })
+        adModeratorView.adapter = adModeratorAdapter
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        isReloaded = true;
+    override fun onDestroyView() {
+        super.onDestroyView()
+        isReloaded = true
     }
 }

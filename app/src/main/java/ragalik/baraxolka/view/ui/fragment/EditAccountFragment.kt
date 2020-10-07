@@ -100,7 +100,7 @@ class EditAccountFragment(val edit_flag: String) : BaseFragment(R.layout.fragmen
                     EditTownSpinner.setOnClickListener {
                         EditTownSpinner.showDropDown()
                     }
-                    EditTownSpinner.onItemClickListener = OnItemClickListener { parent: AdapterView<*>, _: View?, position: Int, _: Long -> townFromSpinner = parent.getItemAtPosition(position).toString() }
+                    EditTownSpinner.onItemClickListener = OnItemClickListener { _: AdapterView<*>, _: View?, position1: Int, _: Long -> townFromSpinner = parent.getItemAtPosition(position1).toString() }
                 }
             }
         }

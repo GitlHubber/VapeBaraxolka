@@ -2,19 +2,15 @@ package ragalik.baraxolka.utils
 
 import android.graphics.drawable.Drawable
 import android.net.Uri
-import android.provider.Settings
 import android.view.View
 import android.widget.ImageView
-import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import coil.load
-import coil.request.ImageRequest
 import coil.transform.BlurTransformation
 import com.mikepenz.materialdrawer.AccountHeader
 import com.mikepenz.materialdrawer.AccountHeaderBuilder
 import com.mikepenz.materialdrawer.Drawer
 import com.mikepenz.materialdrawer.DrawerBuilder
-import com.mikepenz.materialdrawer.holder.ImageHolder
 import com.mikepenz.materialdrawer.model.DividerDrawerItem
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem
 import com.mikepenz.materialdrawer.model.ProfileDrawerItem
@@ -27,6 +23,7 @@ import ragalik.baraxolka.R
 import ragalik.baraxolka.view.ui.activity.AdministratorActivity
 import ragalik.baraxolka.view.ui.activity.SettingsActivity
 import ragalik.baraxolka.view.ui.fragment.*
+import ragalik.baraxolka.view.ui.fragment.my_ads.MyAdsFragment
 
 class AppDrawer {
 

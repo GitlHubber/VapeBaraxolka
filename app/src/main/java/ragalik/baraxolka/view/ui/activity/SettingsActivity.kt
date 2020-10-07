@@ -1,52 +1,42 @@
-package ragalik.baraxolka.view.ui.activity;
+package ragalik.baraxolka.view.ui.activity
 
-import android.content.SharedPreferences;
-import android.os.Bundle;
+import android.os.Bundle
+import android.widget.CompoundButton
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.widget.SwitchCompat
+import androidx.appcompat.widget.Toolbar
+import com.r0adkll.slidr.Slidr
+import ragalik.baraxolka.MainActivity
+import ragalik.baraxolka.R
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
-import androidx.appcompat.widget.SwitchCompat;
-import androidx.appcompat.widget.Toolbar;
+class SettingsActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
-import com.r0adkll.slidr.Slidr;
+        setContentView(R.layout.activity_settings)
+        val toolbar = findViewById<Toolbar>(R.id.toolbar_settings)
+        toolbar.title = "Настройки"
+        setSupportActionBar(toolbar)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
-import ragalik.baraxolka.MainActivity;
-import ragalik.baraxolka.R;
+        Slidr.attach(this)
 
-public class SettingsActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
-        Toolbar toolbar = findViewById(R.id.toolbar_settings);
-        toolbar.setTitle("Настройки");
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        Slidr.attach(this);
-
-        SwitchCompat nightThemeSwitcher = findViewById(R.id.nightThemeSwitcher);
-
-        if (MainActivity.sp.getString("theme", "").equals("Night")) {
-            nightThemeSwitcher.setChecked(true);
-        } else {
-            nightThemeSwitcher.setChecked(false);
+        val nightThemeSwitcher = findViewById<SwitchCompat>(R.id.nightThemeSwitcher)
+        nightThemeSwitcher.isChecked = MainActivity.sp.getString("theme", "") == "Night"
+        nightThemeSwitcher.setOnCheckedChangeListener { _: CompoundButton?, isChecked: Boolean ->
+            val editor = MainActivity.sp.edit()
+            if (isChecked) {
+                editor.putString("theme", "Night")
+            } else {
+                editor.putString("theme", "Day")
+            }
+            editor.apply()
+            if (isChecked) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
         }
-
-        nightThemeSwitcher.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            SharedPreferences.Editor editor = MainActivity.sp.edit();
-            if (isChecked) {
-                editor.putString("theme", "Night");
-            } else {
-                editor.putString("theme", "Day");
-            }
-            editor.apply();
-            if (isChecked) {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-            } else {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-            }
-        });
     }
 }

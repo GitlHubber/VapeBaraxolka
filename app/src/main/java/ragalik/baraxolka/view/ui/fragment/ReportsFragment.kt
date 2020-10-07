@@ -59,7 +59,7 @@ class ReportsFragment : Fragment() {
         val reportsAdapter = ReportsAdapter("REPORTS")
         ReportsRecyclerView?.layoutManager = LinearLayoutManager(activity)
         itemViewModel = ViewModelProvider(this).get(ReportsViewModel::class.java)
-        itemViewModel!!.reportsPagedList.observe(viewLifecycleOwner, Observer { reportsAdapter.submitList(it) })
+        itemViewModel!!.reportsPagedList.observe(viewLifecycleOwner, { reportsAdapter.submitList(it) })
         ReportsRecyclerView?.adapter = reportsAdapter
     }
 

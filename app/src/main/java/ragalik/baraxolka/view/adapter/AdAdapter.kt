@@ -28,9 +28,12 @@ import ragalik.baraxolka.view.ui.activity.AdCreatorActivity
 import ragalik.baraxolka.view.ui.activity.EditCreatorActivity
 import ragalik.baraxolka.view.ui.fragment.AdsFragment
 import ragalik.baraxolka.view.ui.fragment.AdModeratorFragment
-import ragalik.baraxolka.view.ui.fragment.MyAdsFragment
+import ragalik.baraxolka.view.ui.fragment.my_ads.MyAdsFragment
 import ragalik.baraxolka.utils.DateTimeUtils
 import ragalik.baraxolka.view.ui.activity.FullAdActivity
+import ragalik.baraxolka.view.ui.fragment.my_ads.MyActiveAds
+import ragalik.baraxolka.view.ui.fragment.my_ads.MyNonActiveAds
+import ragalik.baraxolka.view.ui.fragment.my_ads.MyRejectedAds
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -185,7 +188,6 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, RecyclerV
         } else {
             (holder as NoAdsViewHolder).bind(flag)
         }
-
     }
 
     override fun getItemViewType(position: Int): Int {
@@ -303,17 +305,17 @@ class AdAdapter(private val flag: String = "") : PagedListAdapter <Ad, RecyclerV
                     when (flag) {
                         "ACTIVE" -> {
                             MyAdsFragment.getAdCount(1, MainActivity.sp.getInt("id", 0))
-                            MyAdsFragment.activeViewModel.liveDataSource.value?.invalidate()
+                            MyActiveAds.activeViewModel.liveDataSource.value?.invalidate()
                             Toast.makeText(view.context, "Объявление деактивировано", Toast.LENGTH_LONG).show()
                         }
                         "NON_ACTIVE" -> {
                             MyAdsFragment.getAdCount(4, MainActivity.sp.getInt("id", 0))
-                            MyAdsFragment.nonActiveViewModel.liveDataSource.value?.invalidate()
+                            MyNonActiveAds.nonActiveViewModel.liveDataSource.value?.invalidate()
                             Toast.makeText(view.context, "Объявление удалено", Toast.LENGTH_LONG).show()
                         }
                         "REJECTED" -> {
                             MyAdsFragment.getAdCount(2, MainActivity.sp.getInt("id", 0))
-                            MyAdsFragment.rejectedViewModel.liveDataSource.value?.invalidate()
+                            MyRejectedAds.rejectedViewModel.liveDataSource.value?.invalidate()
                             Toast.makeText(view.context, "Объявление удалено", Toast.LENGTH_LONG).show()
                         }
                     }

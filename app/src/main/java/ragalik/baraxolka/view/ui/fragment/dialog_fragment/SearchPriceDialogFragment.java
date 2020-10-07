@@ -18,9 +18,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import ragalik.baraxolka.R;
 import ragalik.baraxolka.view.ui.activity.SearchActivity;
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class SearchPriceDialogFragment extends BottomSheetDialogFragment {
 
     private EditText fromPrice;

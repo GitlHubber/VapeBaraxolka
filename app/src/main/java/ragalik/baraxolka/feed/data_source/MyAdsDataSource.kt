@@ -7,7 +7,7 @@ import ragalik.baraxolka.view.ui.activity.SellerProfileActivity
 import ragalik.baraxolka.network.ApiClient
 import ragalik.baraxolka.network.entities.Ad
 import ragalik.baraxolka.network.entities.AdResponse
-import ragalik.baraxolka.view.ui.fragment.MyAdsFragment
+import ragalik.baraxolka.view.ui.fragment.my_ads.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -21,10 +21,10 @@ class MyAdsDataSource(private val adStatus : Int = 0, private val sellerId : Int
             override fun onFailure(call: Call<AdResponse>, t: Throwable) {
                 if (!isSeller) {
                     when (adStatus) {
-                        1 -> MyAdsFragment.pb_active.isVisible = false
-                        2 -> MyAdsFragment.pb_rejected.isVisible = false
-                        3 -> MyAdsFragment.pb_on_moderate.isVisible = false
-                        4 -> MyAdsFragment.pb_non_active.isVisible = false
+                        1 -> MyActiveAds.pb_active.isVisible = false
+                        2 -> MyRejectedAds.pb_rejected.isVisible = false
+                        3 -> MyOnModerateAds.pb_on_moderate.isVisible = false
+                        4 -> MyNonActiveAds.pb_non_active.isVisible = false
                         else -> {}
                     }
                 } else {
@@ -43,10 +43,10 @@ class MyAdsDataSource(private val adStatus : Int = 0, private val sellerId : Int
 
                     if (!isSeller) {
                         when (adStatus) {
-                            1 -> MyAdsFragment.pb_active.isVisible = false
-                            2 -> MyAdsFragment.pb_rejected.isVisible = false
-                            3 -> MyAdsFragment.pb_on_moderate.isVisible = false
-                            4 -> MyAdsFragment.pb_non_active.isVisible = false
+                            1 -> MyActiveAds.pb_active.isVisible = false
+                            2 -> MyRejectedAds.pb_rejected.isVisible = false
+                            3 -> MyOnModerateAds.pb_on_moderate.isVisible = false
+                            4 -> MyNonActiveAds.pb_non_active.isVisible = false
                             else -> {}
                         }
                     } else {
