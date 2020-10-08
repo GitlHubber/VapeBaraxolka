@@ -1,10 +1,10 @@
-#Wed Oct 07 04:19:48 MSK 2020
+#Wed Oct 07 14:10:11 MSK 2020
 path.2=classes2.dex
 path.1=classes.dex
 path.0=classes.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.2=D\:\\VapeBaraxolka\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
-base.1=D\:\\VapeBaraxolka\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
-base.0=D\:\\VapeBaraxolka\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.2=D\:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.1=D\:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
+base.0=D\:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
