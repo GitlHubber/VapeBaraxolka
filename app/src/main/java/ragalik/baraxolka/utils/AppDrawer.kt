@@ -184,7 +184,7 @@ class AppDrawer {
                 .addProfiles(mCurrentProfile)
                 .withOnAccountHeaderProfileImageListener(object : AccountHeader.OnAccountHeaderProfileImageListener {
                     override fun onProfileImageClick(view: View, profile: IProfile<*>, current: Boolean): Boolean {
-                        APP_ACTIVITY.replaceFragment(AccountFragment())
+                        //APP_ACTIVITY.replaceFragment(AccountActivity())
                         return false
                     }
 

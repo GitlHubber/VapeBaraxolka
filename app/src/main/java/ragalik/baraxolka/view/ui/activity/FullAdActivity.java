@@ -86,7 +86,7 @@ public class FullAdActivity extends AppCompatActivity {
 //            getFullAdInfo(adId);
 //        }
 
-        getFullAdInfo(539);
+        getFullAdInfo(getIntent().getIntExtra("adId", 0));
 
         fullAdViewStub = findViewById(R.id.fullAdViewStub);
         fullAdViewStub.inflate();

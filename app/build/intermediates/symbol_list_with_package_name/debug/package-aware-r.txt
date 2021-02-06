@@ -2675,6 +2675,7 @@ id addAdButton
 id adjust_height
 id adjust_width
 id administratorToolbar
+id ads_toolbar
 id alertTitle
 id aligned
 id all
@@ -2813,7 +2814,6 @@ id customPanel
 id cut
 id dTextFullAd
 id dark
-id dataContainer
 id dateTextFullAd
 id date_picker_actions
 id decelerate
@@ -2840,6 +2840,7 @@ id dragLeft
 id dragRight
 id dragStart
 id dragUp
+id drawer_layout
 id drawer_nickname
 id dropdown_menu
 id easeIn
@@ -2963,7 +2964,6 @@ id list_item
 id logButton
 id logotypeImg
 id mainActivityFab
-id mainToolbar
 id masked
 id material_clock_display
 id material_clock_face
@@ -3076,6 +3076,7 @@ id nTextFullAd
 id name
 id nameLabel
 id nav_controller_view_tag
+id nav_view
 id navigationDrawerPhoto
 id navigation_header_container
 id never
@@ -3371,6 +3372,7 @@ id titleEditText
 id titleTextFullAd
 id title_template
 id toggle
+id toolbarAccount
 id toolbarSeller
 id toolbar_authorization
 id toolbar_edit_activity

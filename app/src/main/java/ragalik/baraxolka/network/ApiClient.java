@@ -3,7 +3,6 @@ package ragalik.baraxolka.network;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import java.io.IOException;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
 
@@ -14,7 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
 
-    private static final String BASE_URL = "http://ketrovsky.iam.by/";
+    private static final String BASE_URL = "http://192.168.1.2";
     private static Retrofit retrofit;
     private static IApi iApi;
 

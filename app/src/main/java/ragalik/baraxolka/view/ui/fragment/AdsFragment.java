@@ -3,6 +3,8 @@ package ragalik.baraxolka.view.ui.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -12,29 +14,19 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
-
-
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ProgressBar;
-
 
 import com.google.android.material.chip.Chip;
 
 import ragalik.baraxolka.MainActivity;
 import ragalik.baraxolka.R;
+import ragalik.baraxolka.feed.factory.SearchViewModelFactory;
 import ragalik.baraxolka.feed.viewmodel.AdViewModel;
-import ragalik.baraxolka.utils.AppConstantsKt;
-import ragalik.baraxolka.utils.FuncsKt;
+import ragalik.baraxolka.feed.viewmodel.SearchViewModel;
+import ragalik.baraxolka.view.adapter.AdAdapter;
 import ragalik.baraxolka.view.ui.activity.FilterActivity;
 import ragalik.baraxolka.view.ui.activity.SearchActivity;
-import ragalik.baraxolka.view.adapter.AdAdapter;
-import ragalik.baraxolka.feed.viewmodel.SearchViewModel;
-import ragalik.baraxolka.feed.factory.SearchViewModelFactory;
 
 
 /**
@@ -75,19 +67,19 @@ public class AdsFragment extends Fragment {
 
         MainActivity.isActualFragment = true;
         MainActivity.invalidateSearchMenu();
-        AppConstantsKt.APP_ACTIVITY.mToolbar.setTitle("Объявления");
+        //AppConstantsKt.APP_ACTIVITY.mToolbar.setTitle("Объявления");
 
-//        toolbar = view.findViewById(R.id.ads_toolbar);
-//        AppCompatActivity appCompatActivity = (AppCompatActivity) getActivity();
-//        if (appCompatActivity != null) {
-//            appCompatActivity.setSupportActionBar(toolbar);
-//            toolbar.setTitle("Все объявления");
-//        }
-       // AppConstantsKt.APP_ACTIVITY.mAppDrawer.enableDrawer(toolbar);
-//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-//                getActivity(), MainActivity.drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-//        MainActivity.drawer.addDrawerListener(toggle);
-//        toggle.syncState();
+        toolbar = view.findViewById(R.id.ads_toolbar);
+        AppCompatActivity appCompatActivity = (AppCompatActivity) getActivity();
+        if (appCompatActivity != null) {
+            appCompatActivity.setSupportActionBar(toolbar);
+            toolbar.setTitle("Все объявления");
+        }
+        //AppConstantsKt.APP_ACTIVITY.mAppDrawer.enableDrawer(toolbar);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                getActivity(), MainActivity.drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        MainActivity.drawer.addDrawerListener(toggle);
+        toggle.syncState();
 
         progressBar = view.findViewById(R.id.progress_ads);
         if (isReloaded) {

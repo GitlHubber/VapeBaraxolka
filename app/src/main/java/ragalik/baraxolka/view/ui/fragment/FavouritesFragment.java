@@ -2,27 +2,20 @@ package ragalik.baraxolka.view.ui.fragment;
 
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ProgressBar;
-
-import ragalik.baraxolka.R;
 import ragalik.baraxolka.MainActivity;
+import ragalik.baraxolka.R;
 import ragalik.baraxolka.feed.viewmodel.FavouritesViewModel;
-import ragalik.baraxolka.utils.AppConstantsKt;
 import ragalik.baraxolka.view.adapter.AdAdapter;
 
 
@@ -67,7 +60,7 @@ public class FavouritesFragment extends BaseFragment {
 //            toolbar.setTitle("Закладки");
 //        }
 
-        AppConstantsKt.APP_ACTIVITY.mToolbar.setTitle("Закладки");
+        //AppConstantsKt.APP_ACTIVITY.mToolbar.setTitle("Закладки");
 
 //        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
 //                getActivity(), MainActivity.drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);

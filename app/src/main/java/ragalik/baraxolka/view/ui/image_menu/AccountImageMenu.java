@@ -31,13 +31,13 @@ import ragalik.baraxolka.R;
 import ragalik.baraxolka.MainActivity;
 import ragalik.baraxolka.network.ApiClient;
 import ragalik.baraxolka.network.entities.ServerResponse;
-import ragalik.baraxolka.view.ui.fragment.AccountFragment;
+import ragalik.baraxolka.view.ui.activity.AccountActivity;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 import static android.Manifest.permission.*;
-import static ragalik.baraxolka.view.ui.fragment.AccountFragment.outputFileUri;
+import static ragalik.baraxolka.view.ui.activity.AccountActivity.outputFileUri;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -177,7 +177,7 @@ public class AccountImageMenu extends BottomSheetDialogFragment {
                 pDialog.dismiss();
                 if (response.body() != null) {
                     Toast.makeText(MainActivity.activity, "Изображение успешно удалено!", Toast.LENGTH_LONG).show();
-                    AccountFragment.accountPhoto.setImageResource(R.drawable.gradient_navigation);
+                    AccountActivity.accountPhoto.setImageResource(R.drawable.gradient_navigation);
                     MainActivity.navigationPhoto.setImageResource(R.drawable.gradient_navigation);
 
                     SharedPreferences.Editor editor = MainActivity.sp.edit();

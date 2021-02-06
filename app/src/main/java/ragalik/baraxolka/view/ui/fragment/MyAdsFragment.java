@@ -87,7 +87,7 @@ public class MyAdsFragment extends BaseFragment implements SwipeRefreshLayout.On
 
         MainActivity.isActualFragment = false;
         MainActivity.invalidateSearchMenu();
-        AppConstantsKt.APP_ACTIVITY.mToolbar.setTitle("Мои объявления");
+        //AppConstantsKt.APP_ACTIVITY.mToolbar.setTitle("Мои объявления");
 
         MainActivity.fab.hide();
 

@@ -56,6 +56,16 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
+            android:name=".view.ui.fragment.EditAccountFragment"
+            android:label="@string/title_activity_account_edit"
+            android:parentActivityName=".view.ui.activity.AccountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.SlidrActivityTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.ui.activity.AccountActivity" />
+        </activity>
+        <activity
             android:name=".view.ui.activity.SearchActivity"
             android:label="@string/title_activity_search"
             android:parentActivityName=".MainActivity"
@@ -78,6 +88,15 @@
         <activity
             android:name=".view.ui.activity.FullAdActivity"
             android:label="@string/title_activity_full_ad"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".view.ui.activity.AccountActivity"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">

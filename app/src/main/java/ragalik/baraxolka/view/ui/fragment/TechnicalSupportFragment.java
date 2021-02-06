@@ -13,7 +13,6 @@ import androidx.fragment.app.Fragment;
 
 import ragalik.baraxolka.MainActivity;
 import ragalik.baraxolka.R;
-import ragalik.baraxolka.utils.AppConstantsKt;
 
 
 /**
@@ -45,7 +44,7 @@ public class TechnicalSupportFragment extends BaseFragment {
 //            toolbar.setTitle("Техническая поддержка");
 //        }
 
-        AppConstantsKt.APP_ACTIVITY.mToolbar.setTitle("Техническая поддержка");
+        //AppConstantsKt.APP_ACTIVITY.mToolbar.setTitle("Техническая поддержка");
 
 //        mAdView = getActivity().findViewById(R.id.SupportAdView);
 //        AdRequest adRequest = new AdRequest.Builder().build();

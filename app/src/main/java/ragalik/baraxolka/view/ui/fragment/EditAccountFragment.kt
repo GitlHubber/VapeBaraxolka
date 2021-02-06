@@ -1,24 +1,28 @@
 package ragalik.baraxolka.view.ui.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.AdapterView.OnItemClickListener
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.fragment_edit_account.*
 import ragalik.baraxolka.MainActivity
 import ragalik.baraxolka.R
 import ragalik.baraxolka.network.ApiClient
 import ragalik.baraxolka.network.entities.ServerResponse
 import ragalik.baraxolka.utils.APP_ACTIVITY
+import ragalik.baraxolka.view.ui.activity.AccountActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class EditAccountFragment(val edit_flag: String) : BaseFragment(R.layout.fragment_edit_account) {
+class EditAccountFragment(val edit_flag: String, contentLayoutId: Int) : AppCompatActivity() {
 
     val PHONE_NUMBER : String = "(^\\+375\\d{9})"
+
 
     companion object {
         private var isRegionSelected : Boolean = false
@@ -26,10 +30,11 @@ class EditAccountFragment(val edit_flag: String) : BaseFragment(R.layout.fragmen
         private var townFromSpinner : String = ""
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.fragment_edit_account)
 
-//        (activity as AppCompatActivity).setSupportActionBar(toolbar_edit_activity)
+        //        (activity as AppCompatActivity).setSupportActionBar(toolbar_edit_activity)
 //        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
 
@@ -49,14 +54,14 @@ class EditAccountFragment(val edit_flag: String) : BaseFragment(R.layout.fragmen
             "phone" -> {
                 account_edit_layout.hint = "Номер телефона"
                 tw_account_edit.text = "После указания номера телефона, его НЕЛЬЗЯ будет изменить!"
-                APP_ACTIVITY.mToolbar.title = "Добавление номера тел."
+                //APP_ACTIVITY.mToolbar.title = "Добавление номера тел."
                 tw_account_edit_title.text = "Укажите номер телефона"
                 edit_region_layout.visibility = View.GONE
             }
             "region" -> {
                 account_edit_layout.visibility = View.GONE
                 tw_account_edit.text = "Вы можете изменить регион в любой момент."
-                APP_ACTIVITY.mToolbar.title = "Указание региона"
+                //APP_ACTIVITY.mToolbar.title = "Указание региона"
                 tw_account_edit_title.visibility = View.GONE
                 EditRegionSpinner.setAdapter(ArrayAdapter.createFromResource(MainActivity.activity, R.array.Spinner_region_items, R.layout.dropdown_text_color))
                 EditRegionSpinner.setOnClickListener {
@@ -114,16 +119,16 @@ class EditAccountFragment(val edit_flag: String) : BaseFragment(R.layout.fragmen
                         val call = ApiClient.getApi().setPhoneNumber(phoneNumber, email)
                         call.enqueue(object : Callback<ServerResponse> {
                             override fun onResponse(call: Call<ServerResponse>, response: Response<ServerResponse>) {
-                                activity?.supportFragmentManager?.popBackStack()
-                                Toast.makeText(activity, "Добавлен номер телефона!", Toast.LENGTH_LONG).show()
+                                supportFragmentManager?.popBackStack()
+                                Toast.makeText(applicationContext, "Добавлен номер телефона!", Toast.LENGTH_LONG).show()
                             }
 
                             override fun onFailure(call: Call<ServerResponse>, t: Throwable) {
-                                Toast.makeText(activity, "Такой номер телефона уже существует!", Toast.LENGTH_LONG).show()
+                                Toast.makeText(applicationContext, "Такой номер телефона уже существует!", Toast.LENGTH_LONG).show()
                             }
                         })
                     } else {
-                        Toast.makeText(activity, "Введен некорректный номер тел.", Toast.LENGTH_LONG).show()
+                        Toast.makeText(applicationContext, "Введен некорректный номер тел.", Toast.LENGTH_LONG).show()
                     }
                 }
                 "region" -> {
@@ -135,8 +140,10 @@ class EditAccountFragment(val edit_flag: String) : BaseFragment(R.layout.fragmen
                     val call = ApiClient.getApi().setRegion(regionFromSpinner, townFromSpinner, email)
                     call.enqueue(object : Callback<ServerResponse> {
                         override fun onResponse(call: Call<ServerResponse>, response: Response<ServerResponse>) {
-                            activity?.supportFragmentManager?.popBackStack()
-                            Toast.makeText(activity, "Регион изменен", Toast.LENGTH_LONG).show()
+//                            supportFragmentManager?.popBackStack()
+                            val intent = Intent(applicationContext, AccountActivity::class.java)
+                            startActivity(intent)
+                            Toast.makeText(applicationContext, "Регион изменен", Toast.LENGTH_LONG).show()
                         }
 
                         override fun onFailure(call: Call<ServerResponse>, t: Throwable) {}

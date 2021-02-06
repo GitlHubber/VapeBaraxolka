@@ -63,6 +63,16 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
+            android:name="ragalik.baraxolka.view.ui.fragment.EditAccountFragment"
+            android:label="@string/title_activity_account_edit"
+            android:parentActivityName="ragalik.baraxolka.view.ui.activity.AccountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.SlidrActivityTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.ui.activity.AccountActivity" />
+        </activity>
+        <activity
             android:name="ragalik.baraxolka.view.ui.activity.SearchActivity"
             android:label="@string/title_activity_search"
             android:parentActivityName="ragalik.baraxolka.MainActivity"
@@ -85,6 +95,15 @@
         <activity
             android:name="ragalik.baraxolka.view.ui.activity.FullAdActivity"
             android:label="@string/title_activity_full_ad"
+            android:parentActivityName="ragalik.baraxolka.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name="ragalik.baraxolka.view.ui.activity.AccountActivity"
             android:parentActivityName="ragalik.baraxolka.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" >

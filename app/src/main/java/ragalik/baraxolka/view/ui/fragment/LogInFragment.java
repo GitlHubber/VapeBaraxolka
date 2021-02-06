@@ -236,7 +236,7 @@ public class LogInFragment extends Fragment implements View.OnClickListener {
                     editor.apply();
 
                     Toast.makeText(getContext(), "Добро пожаловать, " + user.getNickname() + "!", Toast.LENGTH_SHORT).show();
-                   // MainActivity.showItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
+                    MainActivity.showItemsNavigationDrawer(R.id.MY_ADS, R.id.FAVOURITES);
                 } else if (!response.body().getSuccess() && response.body().getCorrectEmail()) {
                     password.setError("Неверно введен пароль!");
                     Toast.makeText(getContext(), "Неверно введен пароль!", Toast.LENGTH_LONG).show();

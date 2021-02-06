@@ -88,12 +88,12 @@
         "source": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\report_dialog_background.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_delete_outline_24.xml.flat",
-        "source": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_baseline_delete_outline_24.xml"
-    },
-    {
         "merged": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_show_phone.xml.flat",
         "source": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_show_phone.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_delete_outline_24.xml.flat",
+        "source": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_baseline_delete_outline_24.xml"
     },
     {
         "merged": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\menu_admin_bottom_nav.xml.flat",
@@ -148,16 +148,16 @@
         "source": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_baseline_emoji_food_beverage_24.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_eye_views.xml.flat",
-        "source": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\eye_views.xml"
+        "merged": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\anim_to_left.xml.flat",
+        "source": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\src\\main\\res\\anim\\to_left.xml"
     },
     {
         "merged": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gradient_for_signin.xml.flat",
         "source": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\gradient_for_signin.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\anim_to_left.xml.flat",
-        "source": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\src\\main\\res\\anim\\to_left.xml"
+        "merged": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_eye_views.xml.flat",
+        "source": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\eye_views.xml"
     },
     {
         "merged": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_administrator.xml.flat",
@@ -180,12 +180,12 @@
         "source": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\anim_to_right.xml.flat",
-        "source": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\src\\main\\res\\anim\\to_right.xml"
-    },
-    {
         "merged": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_add_circle_outline_black_24dp.xml.flat",
         "source": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ic_add_circle_outline_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\anim_to_right.xml.flat",
+        "source": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\src\\main\\res\\anim\\to_right.xml"
     },
     {
         "merged": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_eye_off.xml.flat",
@@ -220,12 +220,12 @@
         "source": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\src\\main\\res\\menu\\main.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ad_creator_image_style.xml.flat",
-        "source": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ad_creator_image_style.xml"
-    },
-    {
         "merged": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gradient_ads.xml.flat",
         "source": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\gradient_ads.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ad_creator_image_style.xml.flat",
+        "source": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\src\\main\\res\\drawable\\ad_creator_image_style.xml"
     },
     {
         "merged": "D:\\AndroidProjects\\GIT\\VapeBaraxolka\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_splash_logo.png.flat",

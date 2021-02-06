@@ -1,20 +1,20 @@
 -- Merging decision tree log ---
 provider#androidx.core.content.FileProvider
-INJECTED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:129:9-137:20
+INJECTED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:148:9-156:20
 	android:grantUriPermissions
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:133:13-47
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:152:13-47
 	android:authorities
 		INJECTED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:131:13-60
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:150:13-60
 	android:exported
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:132:13-37
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:151:13-37
 	android:name
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:130:13-62
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:149:13-62
 manifest
-ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-140:12
-INJECTED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-140:12
-INJECTED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-140:12
-INJECTED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-140:12
+ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-159:12
+INJECTED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-159:12
+INJECTED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-159:12
+INJECTED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-159:12
 MERGED from [androidx.databinding:viewbinding:4.0.1] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\8752683190d7f6a7be510ec96632d69d\jetified-viewbinding-4.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.mikepenz:materialdrawer-nav:7.0.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\6db9a15256aec754a44b7a270b779a31\jetified-materialdrawer-nav-7.0.0\AndroidManifest.xml:2:1-11:12
 MERGED from [com.mikepenz:materialdrawer:7.0.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\ccbf0a1749fe0b76c33d23533ff836d8\jetified-materialdrawer-7.0.0\AndroidManifest.xml:2:1-11:12
@@ -97,22 +97,22 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\kirill\.gradle\c
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\649a3ea3bc5733c0a068804870ac4850\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.exifinterface:exifinterface:1.3.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\bbeeea84244085779b0587d139ac8c31\exifinterface-1.3.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\6295c01040b92ab999b6241320436e5b\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-140:12
-INJECTED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-140:12
-INJECTED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-140:12
+INJECTED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-159:12
+INJECTED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-159:12
+INJECTED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-159:12
 	package
 		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:4:5-32
 		INJECTED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml
 		INJECTED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-140:12
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-159:12
 		INJECTED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-140:12
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:1-159:12
 		INJECTED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:2:11-69
@@ -147,7 +147,7 @@ ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml
 	android:xlargeScreens
 		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:15:9-37
 application
-ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:17:5-138:19
+ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:17:5-157:19
 MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\efc0e795a512355c1df35f630f597dc3\jetified-materialsearchview-1.4.0\AndroidManifest.xml:11:5-20
 MERGED from [com.miguelcatalan:materialsearchview:1.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\efc0e795a512355c1df35f630f597dc3\jetified-materialsearchview-1.4.0\AndroidManifest.xml:11:5-20
 MERGED from [com.google.android.material:material:1.3.0-alpha03] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\c4a96cc63fd4720e07e3486f6d553be2\material-1.3.0-alpha03\AndroidManifest.xml:22:5-20
@@ -258,100 +258,122 @@ ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml
 		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:53:13-63
 	android:name
 		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:49:13-60
-activity#ragalik.baraxolka.view.ui.activity.SearchActivity
+activity#ragalik.baraxolka.view.ui.fragment.EditAccountFragment
 ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:58:9-67:20
 	android:screenOrientation
 		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:62:13-49
 	android:parentActivityName
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:61:13-55
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:61:13-75
 	android:label
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:60:13-58
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:60:13-64
 	android:theme
 		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:63:13-63
 	android:name
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:59:13-60
-activity#ragalik.baraxolka.view.ui.activity.AdCreatorActivity
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:59:13-65
+activity#ragalik.baraxolka.view.ui.activity.SearchActivity
 ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:68:9-77:20
 	android:screenOrientation
 		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:72:13-49
 	android:parentActivityName
 		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:71:13-55
 	android:label
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:70:13-60
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:70:13-58
 	android:theme
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:73:13-44
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:73:13-63
 	android:name
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:69:13-63
-activity#ragalik.baraxolka.view.ui.activity.FullAdActivity
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:69:13-60
+activity#ragalik.baraxolka.view.ui.activity.AdCreatorActivity
 ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:78:9-87:20
 	android:screenOrientation
 		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:82:13-49
 	android:parentActivityName
 		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:81:13-55
 	android:label
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:80:13-59
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:80:13-60
 	android:theme
 		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:83:13-44
 	android:name
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:79:13-60
-activity#ragalik.baraxolka.view.ui.activity.SettingsActivity
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:79:13-63
+activity#ragalik.baraxolka.view.ui.activity.FullAdActivity
 ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:88:9-97:20
 	android:screenOrientation
 		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:92:13-49
 	android:parentActivityName
 		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:91:13-55
 	android:label
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:90:13-60
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:90:13-59
 	android:theme
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:93:13-63
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:93:13-44
 	android:name
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:89:13-62
-activity#ragalik.baraxolka.view.ui.activity.SellerProfileActivity
-ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:98:9-107:20
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:89:13-60
+activity#ragalik.baraxolka.view.ui.activity.AccountActivity
+ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:98:9-106:20
 	android:screenOrientation
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:102:13-49
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:101:13-49
 	android:parentActivityName
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:101:13-74
-	android:label
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:100:13-66
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:100:13-55
 	android:theme
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:103:13-44
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:102:13-44
 	android:name
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:99:13-67
-activity#ragalik.baraxolka.MainActivity
-ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:108:9-119:20
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:99:13-61
+activity#ragalik.baraxolka.view.ui.activity.SettingsActivity
+ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:107:9-116:20
 	android:screenOrientation
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:112:13-49
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:111:13-49
+	android:parentActivityName
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:110:13-55
 	android:label
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:110:13-45
-	android:launchMode
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:111:13-43
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:109:13-60
 	android:theme
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:113:13-44
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:112:13-63
 	android:name
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:109:13-41
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:108:13-62
+activity#ragalik.baraxolka.view.ui.activity.SellerProfileActivity
+ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:117:9-126:20
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:121:13-49
+	android:parentActivityName
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:120:13-74
+	android:label
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:119:13-66
+	android:theme
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:122:13-44
+	android:name
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:118:13-67
+activity#ragalik.baraxolka.MainActivity
+ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:127:9-138:20
+	android:screenOrientation
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:131:13-49
+	android:label
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:129:13-45
+	android:launchMode
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:130:13-43
+	android:theme
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:132:13-44
+	android:name
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:128:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:114:13-118:29
+ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:133:13-137:29
 action#android.intent.action.MAIN
-ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:115:17-69
+ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:134:17-69
 	android:name
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:115:25-66
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:134:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:117:17-77
+ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:136:17-77
 	android:name
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:117:27-74
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:136:27-74
 meta-data#preloaded_fonts
-ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:121:9-123:57
+ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:140:9-142:57
 	android:resource
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:123:13-54
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:142:13-54
 	android:name
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:122:13-43
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:141:13-43
 uses-library#org.apache.http.legacy
-ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:125:9-127:40
+ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:144:9-146:40
 	android:required
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:127:13-37
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:146:13-37
 	android:name
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:126:13-50
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:145:13-50
 uses-sdk
 INJECTED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml
@@ -531,11 +553,11 @@ INJECTED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.
 		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml
 		INJECTED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:134:13-136:58
+ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:153:13-155:58
 	android:resource
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:136:17-55
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:155:17-55
 	android:name
-		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:135:17-67
+		ADDED from D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:154:17-67
 provider#com.mikepenz.iconics.IconicsContentProvider
 ADDED from [com.mikepenz:iconics-core:4.0.2] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\40fbdff5ca5b045dc46c8630a22e872f\jetified-iconics-core-4.0.2\AndroidManifest.xml:27:9-32:39
 	android:enabled

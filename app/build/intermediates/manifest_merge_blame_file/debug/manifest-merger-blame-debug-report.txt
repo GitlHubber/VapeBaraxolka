@@ -35,7 +35,7 @@
 20-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:15:9-37
 21
 22    <application
-22-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:17:5-138:19
+22-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:17:5-157:19
 23        android:allowBackup="true"
 23-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:18:9-35
 24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -116,12 +116,12 @@
 64        </activity>
 65        <activity
 65-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:58:9-67:20
-66            android:name="ragalik.baraxolka.view.ui.activity.SearchActivity"
-66-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:59:13-60
-67            android:label="@string/title_activity_search"
-67-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:60:13-58
-68            android:parentActivityName="ragalik.baraxolka.MainActivity"
-68-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:61:13-55
+66            android:name="ragalik.baraxolka.view.ui.fragment.EditAccountFragment"
+66-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:59:13-65
+67            android:label="@string/title_activity_account_edit"
+67-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:60:13-64
+68            android:parentActivityName="ragalik.baraxolka.view.ui.activity.AccountActivity"
+68-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:61:13-75
 69            android:screenOrientation="portrait"
 69-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:62:13-49
 70            android:theme="@style/AppTheme.SlidrActivityTheme" >
@@ -130,21 +130,21 @@
 71-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:37:13-39:49
 72                android:name="android.support.PARENT_ACTIVITY"
 72-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:38:17-63
-73                android:value=".MainActivity" />
+73                android:value=".view.ui.activity.AccountActivity" />
 73-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:39:17-46
 74        </activity>
 75        <activity
 75-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:68:9-77:20
-76            android:name="ragalik.baraxolka.view.ui.activity.AdCreatorActivity"
-76-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:69:13-63
-77            android:label="@string/title_activity_settings"
-77-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:70:13-60
+76            android:name="ragalik.baraxolka.view.ui.activity.SearchActivity"
+76-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:69:13-60
+77            android:label="@string/title_activity_search"
+77-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:70:13-58
 78            android:parentActivityName="ragalik.baraxolka.MainActivity"
 78-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:71:13-55
 79            android:screenOrientation="portrait"
 79-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:72:13-49
-80            android:theme="@style/AppTheme" >
-80-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:73:13-44
+80            android:theme="@style/AppTheme.SlidrActivityTheme" >
+80-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:73:13-63
 81            <meta-data
 81-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:37:13-39:49
 82                android:name="android.support.PARENT_ACTIVITY"
@@ -154,10 +154,10 @@
 84        </activity>
 85        <activity
 85-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:78:9-87:20
-86            android:name="ragalik.baraxolka.view.ui.activity.FullAdActivity"
-86-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:79:13-60
-87            android:label="@string/title_activity_full_ad"
-87-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:80:13-59
+86            android:name="ragalik.baraxolka.view.ui.activity.AdCreatorActivity"
+86-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:79:13-63
+87            android:label="@string/title_activity_settings"
+87-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:80:13-60
 88            android:parentActivityName="ragalik.baraxolka.MainActivity"
 88-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:81:13-55
 89            android:screenOrientation="portrait"
@@ -173,16 +173,16 @@
 94        </activity>
 95        <activity
 95-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:88:9-97:20
-96            android:name="ragalik.baraxolka.view.ui.activity.SettingsActivity"
-96-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:89:13-62
-97            android:label="@string/title_activity_settings"
-97-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:90:13-60
+96            android:name="ragalik.baraxolka.view.ui.activity.FullAdActivity"
+96-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:89:13-60
+97            android:label="@string/title_activity_full_ad"
+97-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:90:13-59
 98            android:parentActivityName="ragalik.baraxolka.MainActivity"
 98-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:91:13-55
 99            android:screenOrientation="portrait"
 99-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:92:13-49
-100            android:theme="@style/AppTheme.SlidrActivityTheme" >
-100-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:93:13-63
+100            android:theme="@style/AppTheme" >
+100-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:93:13-44
 101            <meta-data
 101-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:37:13-39:49
 102                android:name="android.support.PARENT_ACTIVITY"
@@ -191,175 +191,211 @@
 103-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:39:17-46
 104        </activity>
 105        <activity
-105-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:98:9-107:20
-106            android:name="ragalik.baraxolka.view.ui.activity.SellerProfileActivity"
-106-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:99:13-67
-107            android:label="@string/title_activity_seller_profile"
-107-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:100:13-66
-108            android:parentActivityName="ragalik.baraxolka.view.ui.activity.FullAdActivity"
-108-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:101:13-74
-109            android:screenOrientation="portrait"
-109-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:102:13-49
-110            android:theme="@style/AppTheme" >
-110-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:103:13-44
-111            <meta-data
-111-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:37:13-39:49
-112                android:name="android.support.PARENT_ACTIVITY"
-112-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:38:17-63
-113                android:value=".view.ui.activity.FullAdActivity" />
-113-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:39:17-46
-114        </activity>
-115        <activity
-115-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:108:9-119:20
-116            android:name="ragalik.baraxolka.MainActivity"
-116-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:109:13-41
-117            android:label="@string/app_name"
-117-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:110:13-45
-118            android:launchMode="singleTop"
-118-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:111:13-43
-119            android:screenOrientation="portrait"
-119-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:112:13-49
-120            android:theme="@style/AppTheme" >
-120-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:113:13-44
-121            <intent-filter>
-121-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:114:13-118:29
-122                <action android:name="android.intent.action.MAIN" />
-122-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:115:17-69
-122-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:115:25-66
-123
-124                <category android:name="android.intent.category.LAUNCHER" />
-124-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:117:17-77
-124-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:117:27-74
-125            </intent-filter>
-126        </activity>
-127
-128        <meta-data
-128-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:121:9-123:57
-129            android:name="preloaded_fonts"
-129-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:122:13-43
-130            android:resource="@array/preloaded_fonts" />
-130-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:123:13-54
-131
-132        <uses-library
-132-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:125:9-127:40
-133            android:name="org.apache.http.legacy"
-133-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:126:13-50
-134            android:required="false" />
-134-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:127:13-37
-135
-136        <provider
-137            android:name="androidx.core.content.FileProvider"
-137-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:130:13-62
-138            android:authorities="ragalik.baraxolka.provider"
-138-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:131:13-60
-139            android:exported="false"
-139-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:132:13-37
-140            android:grantUriPermissions="true" >
-140-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:133:13-47
-141            <meta-data
-141-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:134:13-136:58
-142                android:name="android.support.FILE_PROVIDER_PATHS"
-142-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:135:17-67
-143                android:resource="@xml/provider_paths" />
-143-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:136:17-55
-144        </provider>
-145        <provider
-145-->[com.mikepenz:iconics-core:4.0.2] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\40fbdff5ca5b045dc46c8630a22e872f\jetified-iconics-core-4.0.2\AndroidManifest.xml:27:9-32:39
-146            android:name="com.mikepenz.iconics.IconicsContentProvider"
-146-->[com.mikepenz:iconics-core:4.0.2] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\40fbdff5ca5b045dc46c8630a22e872f\jetified-iconics-core-4.0.2\AndroidManifest.xml:28:13-71
-147            android:authorities="ragalik.baraxolka.iconics.core.provider"
-147-->[com.mikepenz:iconics-core:4.0.2] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\40fbdff5ca5b045dc46c8630a22e872f\jetified-iconics-core-4.0.2\AndroidManifest.xml:29:13-73
-148            android:enabled="@bool/is_iconics_content_provider_enabled"
-148-->[com.mikepenz:iconics-core:4.0.2] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\40fbdff5ca5b045dc46c8630a22e872f\jetified-iconics-core-4.0.2\AndroidManifest.xml:30:13-72
-149            android:exported="false"
-149-->[com.mikepenz:iconics-core:4.0.2] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\40fbdff5ca5b045dc46c8630a22e872f\jetified-iconics-core-4.0.2\AndroidManifest.xml:31:13-37
-150            android:initOrder="100" />
-150-->[com.mikepenz:iconics-core:4.0.2] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\40fbdff5ca5b045dc46c8630a22e872f\jetified-iconics-core-4.0.2\AndroidManifest.xml:32:13-36
-151
-152        <activity
-152-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\d4f3adfe18749174d34fdddfbe508f53\jetified-firebase-auth-19.4.0\AndroidManifest.xml:24:9-31:50
-153            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
-153-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\d4f3adfe18749174d34fdddfbe508f53\jetified-firebase-auth-19.4.0\AndroidManifest.xml:25:13-85
-154            android:excludeFromRecents="true"
-154-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\d4f3adfe18749174d34fdddfbe508f53\jetified-firebase-auth-19.4.0\AndroidManifest.xml:26:13-46
-155            android:exported="true"
-155-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\d4f3adfe18749174d34fdddfbe508f53\jetified-firebase-auth-19.4.0\AndroidManifest.xml:27:13-36
-156            android:launchMode="singleTask"
-156-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\d4f3adfe18749174d34fdddfbe508f53\jetified-firebase-auth-19.4.0\AndroidManifest.xml:28:13-44
-157            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
-157-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\d4f3adfe18749174d34fdddfbe508f53\jetified-firebase-auth-19.4.0\AndroidManifest.xml:29:13-102
-158            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-158-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\d4f3adfe18749174d34fdddfbe508f53\jetified-firebase-auth-19.4.0\AndroidManifest.xml:30:13-72
-159
-160        <service
-160-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\d4f3adfe18749174d34fdddfbe508f53\jetified-firebase-auth-19.4.0\AndroidManifest.xml:33:9-39:19
-161            android:name="com.google.firebase.components.ComponentDiscoveryService"
-161-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\d4f3adfe18749174d34fdddfbe508f53\jetified-firebase-auth-19.4.0\AndroidManifest.xml:34:13-84
-162            android:directBootAware="true"
-162-->[com.google.firebase:firebase-common:19.3.1] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\39959047d195b084d88922f8ab1b2087\jetified-firebase-common-19.3.1\AndroidManifest.xml:35:13-43
-163            android:exported="false" >
-163-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\d4f3adfe18749174d34fdddfbe508f53\jetified-firebase-auth-19.4.0\AndroidManifest.xml:35:13-37
-164            <meta-data
-164-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\d4f3adfe18749174d34fdddfbe508f53\jetified-firebase-auth-19.4.0\AndroidManifest.xml:36:13-38:85
-165                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-165-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\d4f3adfe18749174d34fdddfbe508f53\jetified-firebase-auth-19.4.0\AndroidManifest.xml:37:17-109
-166                android:value="com.google.firebase.components.ComponentRegistrar" />
-166-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\d4f3adfe18749174d34fdddfbe508f53\jetified-firebase-auth-19.4.0\AndroidManifest.xml:38:17-82
-167            <meta-data
-167-->[com.google.firebase:firebase-database:19.5.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\b6f5916d0533b6f07ff42552a7094a67\jetified-firebase-database-19.5.0\AndroidManifest.xml:32:13-34:85
-168                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-168-->[com.google.firebase:firebase-database:19.5.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\b6f5916d0533b6f07ff42552a7094a67\jetified-firebase-database-19.5.0\AndroidManifest.xml:33:17-109
-169                android:value="com.google.firebase.components.ComponentRegistrar" />
-169-->[com.google.firebase:firebase-database:19.5.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\b6f5916d0533b6f07ff42552a7094a67\jetified-firebase-database-19.5.0\AndroidManifest.xml:34:17-82
-170        </service>
-171
-172        <activity
-172-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\f019dcc02ec88c0fd97ba4052d56e05b\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
-173            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-173-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\f019dcc02ec88c0fd97ba4052d56e05b\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
-174            android:exported="false"
-174-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\f019dcc02ec88c0fd97ba4052d56e05b\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
-175            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-175-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\f019dcc02ec88c0fd97ba4052d56e05b\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
-176
-177        <provider
-177-->[com.google.firebase:firebase-common:19.3.1] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\39959047d195b084d88922f8ab1b2087\jetified-firebase-common-19.3.1\AndroidManifest.xml:26:9-31:39
-178            android:name="com.google.firebase.provider.FirebaseInitProvider"
-178-->[com.google.firebase:firebase-common:19.3.1] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\39959047d195b084d88922f8ab1b2087\jetified-firebase-common-19.3.1\AndroidManifest.xml:27:13-77
-179            android:authorities="ragalik.baraxolka.firebaseinitprovider"
-179-->[com.google.firebase:firebase-common:19.3.1] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\39959047d195b084d88922f8ab1b2087\jetified-firebase-common-19.3.1\AndroidManifest.xml:28:13-72
-180            android:directBootAware="true"
-180-->[com.google.firebase:firebase-common:19.3.1] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\39959047d195b084d88922f8ab1b2087\jetified-firebase-common-19.3.1\AndroidManifest.xml:29:13-43
-181            android:exported="false"
-181-->[com.google.firebase:firebase-common:19.3.1] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\39959047d195b084d88922f8ab1b2087\jetified-firebase-common-19.3.1\AndroidManifest.xml:30:13-37
-182            android:initOrder="100" />
-182-->[com.google.firebase:firebase-common:19.3.1] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\39959047d195b084d88922f8ab1b2087\jetified-firebase-common-19.3.1\AndroidManifest.xml:31:13-36
-183
-184        <meta-data
-184-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\a30b5786e64e9dafd46c9c41cfeeb514\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
-185            android:name="com.google.android.gms.version"
-185-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\a30b5786e64e9dafd46c9c41cfeeb514\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
-186            android:value="@integer/google_play_services_version" />
-186-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\a30b5786e64e9dafd46c9c41cfeeb514\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
-187
-188        <provider
-188-->[com.squareup.picasso:picasso:2.71828] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\e5345c2c185b35e4b20b7a5af7a32e17\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
-189            android:name="com.squareup.picasso.PicassoProvider"
-189-->[com.squareup.picasso:picasso:2.71828] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\e5345c2c185b35e4b20b7a5af7a32e17\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
-190            android:authorities="ragalik.baraxolka.com.squareup.picasso"
-190-->[com.squareup.picasso:picasso:2.71828] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\e5345c2c185b35e4b20b7a5af7a32e17\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
-191            android:exported="false" />
-191-->[com.squareup.picasso:picasso:2.71828] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\e5345c2c185b35e4b20b7a5af7a32e17\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
-192        <provider
-192-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\ba8e7c276bf5dd1e64f55b5fedd0582b\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
-193            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-193-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\ba8e7c276bf5dd1e64f55b5fedd0582b\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
-194            android:authorities="ragalik.baraxolka.lifecycle-process"
-194-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\ba8e7c276bf5dd1e64f55b5fedd0582b\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
-195            android:exported="false"
-195-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\ba8e7c276bf5dd1e64f55b5fedd0582b\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
-196            android:multiprocess="true" />
-196-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\ba8e7c276bf5dd1e64f55b5fedd0582b\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
-197    </application>
-198
-199</manifest>
+105-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:98:9-106:20
+106            android:name="ragalik.baraxolka.view.ui.activity.AccountActivity"
+106-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:99:13-61
+107            android:parentActivityName="ragalik.baraxolka.MainActivity"
+107-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:100:13-55
+108            android:screenOrientation="portrait"
+108-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:101:13-49
+109            android:theme="@style/AppTheme" >
+109-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:102:13-44
+110            <meta-data
+110-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:37:13-39:49
+111                android:name="android.support.PARENT_ACTIVITY"
+111-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:38:17-63
+112                android:value=".MainActivity" />
+112-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:39:17-46
+113        </activity>
+114        <activity
+114-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:107:9-116:20
+115            android:name="ragalik.baraxolka.view.ui.activity.SettingsActivity"
+115-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:108:13-62
+116            android:label="@string/title_activity_settings"
+116-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:109:13-60
+117            android:parentActivityName="ragalik.baraxolka.MainActivity"
+117-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:110:13-55
+118            android:screenOrientation="portrait"
+118-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:111:13-49
+119            android:theme="@style/AppTheme.SlidrActivityTheme" >
+119-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:112:13-63
+120            <meta-data
+120-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:37:13-39:49
+121                android:name="android.support.PARENT_ACTIVITY"
+121-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:38:17-63
+122                android:value=".MainActivity" />
+122-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:39:17-46
+123        </activity>
+124        <activity
+124-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:117:9-126:20
+125            android:name="ragalik.baraxolka.view.ui.activity.SellerProfileActivity"
+125-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:118:13-67
+126            android:label="@string/title_activity_seller_profile"
+126-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:119:13-66
+127            android:parentActivityName="ragalik.baraxolka.view.ui.activity.FullAdActivity"
+127-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:120:13-74
+128            android:screenOrientation="portrait"
+128-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:121:13-49
+129            android:theme="@style/AppTheme" >
+129-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:122:13-44
+130            <meta-data
+130-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:37:13-39:49
+131                android:name="android.support.PARENT_ACTIVITY"
+131-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:38:17-63
+132                android:value=".view.ui.activity.FullAdActivity" />
+132-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:39:17-46
+133        </activity>
+134        <activity
+134-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:127:9-138:20
+135            android:name="ragalik.baraxolka.MainActivity"
+135-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:128:13-41
+136            android:label="@string/app_name"
+136-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:129:13-45
+137            android:launchMode="singleTop"
+137-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:130:13-43
+138            android:screenOrientation="portrait"
+138-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:131:13-49
+139            android:theme="@style/AppTheme" >
+139-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:132:13-44
+140            <intent-filter>
+140-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:133:13-137:29
+141                <action android:name="android.intent.action.MAIN" />
+141-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:134:17-69
+141-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:134:25-66
+142
+143                <category android:name="android.intent.category.LAUNCHER" />
+143-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:136:17-77
+143-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:136:27-74
+144            </intent-filter>
+145        </activity>
+146
+147        <meta-data
+147-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:140:9-142:57
+148            android:name="preloaded_fonts"
+148-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:141:13-43
+149            android:resource="@array/preloaded_fonts" />
+149-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:142:13-54
+150
+151        <uses-library
+151-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:144:9-146:40
+152            android:name="org.apache.http.legacy"
+152-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:145:13-50
+153            android:required="false" />
+153-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:146:13-37
+154
+155        <provider
+156            android:name="androidx.core.content.FileProvider"
+156-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:149:13-62
+157            android:authorities="ragalik.baraxolka.provider"
+157-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:150:13-60
+158            android:exported="false"
+158-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:151:13-37
+159            android:grantUriPermissions="true" >
+159-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:152:13-47
+160            <meta-data
+160-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:153:13-155:58
+161                android:name="android.support.FILE_PROVIDER_PATHS"
+161-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:154:17-67
+162                android:resource="@xml/provider_paths" />
+162-->D:\AndroidProjects\GIT\VapeBaraxolka\app\src\main\AndroidManifest.xml:155:17-55
+163        </provider>
+164        <provider
+164-->[com.mikepenz:iconics-core:4.0.2] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\40fbdff5ca5b045dc46c8630a22e872f\jetified-iconics-core-4.0.2\AndroidManifest.xml:27:9-32:39
+165            android:name="com.mikepenz.iconics.IconicsContentProvider"
+165-->[com.mikepenz:iconics-core:4.0.2] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\40fbdff5ca5b045dc46c8630a22e872f\jetified-iconics-core-4.0.2\AndroidManifest.xml:28:13-71
+166            android:authorities="ragalik.baraxolka.iconics.core.provider"
+166-->[com.mikepenz:iconics-core:4.0.2] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\40fbdff5ca5b045dc46c8630a22e872f\jetified-iconics-core-4.0.2\AndroidManifest.xml:29:13-73
+167            android:enabled="@bool/is_iconics_content_provider_enabled"
+167-->[com.mikepenz:iconics-core:4.0.2] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\40fbdff5ca5b045dc46c8630a22e872f\jetified-iconics-core-4.0.2\AndroidManifest.xml:30:13-72
+168            android:exported="false"
+168-->[com.mikepenz:iconics-core:4.0.2] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\40fbdff5ca5b045dc46c8630a22e872f\jetified-iconics-core-4.0.2\AndroidManifest.xml:31:13-37
+169            android:initOrder="100" />
+169-->[com.mikepenz:iconics-core:4.0.2] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\40fbdff5ca5b045dc46c8630a22e872f\jetified-iconics-core-4.0.2\AndroidManifest.xml:32:13-36
+170
+171        <activity
+171-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\d4f3adfe18749174d34fdddfbe508f53\jetified-firebase-auth-19.4.0\AndroidManifest.xml:24:9-31:50
+172            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+172-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\d4f3adfe18749174d34fdddfbe508f53\jetified-firebase-auth-19.4.0\AndroidManifest.xml:25:13-85
+173            android:excludeFromRecents="true"
+173-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\d4f3adfe18749174d34fdddfbe508f53\jetified-firebase-auth-19.4.0\AndroidManifest.xml:26:13-46
+174            android:exported="true"
+174-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\d4f3adfe18749174d34fdddfbe508f53\jetified-firebase-auth-19.4.0\AndroidManifest.xml:27:13-36
+175            android:launchMode="singleTask"
+175-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\d4f3adfe18749174d34fdddfbe508f53\jetified-firebase-auth-19.4.0\AndroidManifest.xml:28:13-44
+176            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+176-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\d4f3adfe18749174d34fdddfbe508f53\jetified-firebase-auth-19.4.0\AndroidManifest.xml:29:13-102
+177            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+177-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\d4f3adfe18749174d34fdddfbe508f53\jetified-firebase-auth-19.4.0\AndroidManifest.xml:30:13-72
+178
+179        <service
+179-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\d4f3adfe18749174d34fdddfbe508f53\jetified-firebase-auth-19.4.0\AndroidManifest.xml:33:9-39:19
+180            android:name="com.google.firebase.components.ComponentDiscoveryService"
+180-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\d4f3adfe18749174d34fdddfbe508f53\jetified-firebase-auth-19.4.0\AndroidManifest.xml:34:13-84
+181            android:directBootAware="true"
+181-->[com.google.firebase:firebase-common:19.3.1] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\39959047d195b084d88922f8ab1b2087\jetified-firebase-common-19.3.1\AndroidManifest.xml:35:13-43
+182            android:exported="false" >
+182-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\d4f3adfe18749174d34fdddfbe508f53\jetified-firebase-auth-19.4.0\AndroidManifest.xml:35:13-37
+183            <meta-data
+183-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\d4f3adfe18749174d34fdddfbe508f53\jetified-firebase-auth-19.4.0\AndroidManifest.xml:36:13-38:85
+184                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+184-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\d4f3adfe18749174d34fdddfbe508f53\jetified-firebase-auth-19.4.0\AndroidManifest.xml:37:17-109
+185                android:value="com.google.firebase.components.ComponentRegistrar" />
+185-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\d4f3adfe18749174d34fdddfbe508f53\jetified-firebase-auth-19.4.0\AndroidManifest.xml:38:17-82
+186            <meta-data
+186-->[com.google.firebase:firebase-database:19.5.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\b6f5916d0533b6f07ff42552a7094a67\jetified-firebase-database-19.5.0\AndroidManifest.xml:32:13-34:85
+187                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+187-->[com.google.firebase:firebase-database:19.5.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\b6f5916d0533b6f07ff42552a7094a67\jetified-firebase-database-19.5.0\AndroidManifest.xml:33:17-109
+188                android:value="com.google.firebase.components.ComponentRegistrar" />
+188-->[com.google.firebase:firebase-database:19.5.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\b6f5916d0533b6f07ff42552a7094a67\jetified-firebase-database-19.5.0\AndroidManifest.xml:34:17-82
+189        </service>
+190
+191        <activity
+191-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\f019dcc02ec88c0fd97ba4052d56e05b\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+192            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+192-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\f019dcc02ec88c0fd97ba4052d56e05b\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+193            android:exported="false"
+193-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\f019dcc02ec88c0fd97ba4052d56e05b\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+194            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+194-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\f019dcc02ec88c0fd97ba4052d56e05b\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+195
+196        <provider
+196-->[com.google.firebase:firebase-common:19.3.1] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\39959047d195b084d88922f8ab1b2087\jetified-firebase-common-19.3.1\AndroidManifest.xml:26:9-31:39
+197            android:name="com.google.firebase.provider.FirebaseInitProvider"
+197-->[com.google.firebase:firebase-common:19.3.1] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\39959047d195b084d88922f8ab1b2087\jetified-firebase-common-19.3.1\AndroidManifest.xml:27:13-77
+198            android:authorities="ragalik.baraxolka.firebaseinitprovider"
+198-->[com.google.firebase:firebase-common:19.3.1] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\39959047d195b084d88922f8ab1b2087\jetified-firebase-common-19.3.1\AndroidManifest.xml:28:13-72
+199            android:directBootAware="true"
+199-->[com.google.firebase:firebase-common:19.3.1] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\39959047d195b084d88922f8ab1b2087\jetified-firebase-common-19.3.1\AndroidManifest.xml:29:13-43
+200            android:exported="false"
+200-->[com.google.firebase:firebase-common:19.3.1] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\39959047d195b084d88922f8ab1b2087\jetified-firebase-common-19.3.1\AndroidManifest.xml:30:13-37
+201            android:initOrder="100" />
+201-->[com.google.firebase:firebase-common:19.3.1] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\39959047d195b084d88922f8ab1b2087\jetified-firebase-common-19.3.1\AndroidManifest.xml:31:13-36
+202
+203        <meta-data
+203-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\a30b5786e64e9dafd46c9c41cfeeb514\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+204            android:name="com.google.android.gms.version"
+204-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\a30b5786e64e9dafd46c9c41cfeeb514\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+205            android:value="@integer/google_play_services_version" />
+205-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\a30b5786e64e9dafd46c9c41cfeeb514\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+206
+207        <provider
+207-->[com.squareup.picasso:picasso:2.71828] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\e5345c2c185b35e4b20b7a5af7a32e17\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+208            android:name="com.squareup.picasso.PicassoProvider"
+208-->[com.squareup.picasso:picasso:2.71828] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\e5345c2c185b35e4b20b7a5af7a32e17\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+209            android:authorities="ragalik.baraxolka.com.squareup.picasso"
+209-->[com.squareup.picasso:picasso:2.71828] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\e5345c2c185b35e4b20b7a5af7a32e17\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+210            android:exported="false" />
+210-->[com.squareup.picasso:picasso:2.71828] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\e5345c2c185b35e4b20b7a5af7a32e17\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+211        <provider
+211-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\ba8e7c276bf5dd1e64f55b5fedd0582b\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+212            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+212-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\ba8e7c276bf5dd1e64f55b5fedd0582b\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+213            android:authorities="ragalik.baraxolka.lifecycle-process"
+213-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\ba8e7c276bf5dd1e64f55b5fedd0582b\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+214            android:exported="false"
+214-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\ba8e7c276bf5dd1e64f55b5fedd0582b\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+215            android:multiprocess="true" />
+215-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\kirill\.gradle\caches\transforms-2\files-2.1\ba8e7c276bf5dd1e64f55b5fedd0582b\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+216    </application>
+217
+218</manifest>
